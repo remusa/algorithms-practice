@@ -1,3 +1,3 @@
 # Algorithms Practice
 
-Firecode.io and Leetcode solutions
+Firecode.io, Leetcode and HackerRank solutions
