@@ -1,4 +1,4 @@
-def linear_search(L, v):
+def linear_search(L, item):
     """ (list, object) -> int
 
     Return the index of the first occurrence of v in L, or
@@ -14,8 +14,8 @@ def linear_search(L, v):
 
     i = 0
 
-    while i != len(L) and v != L[i]:
-        i = i + 1
+    while i != len(L) and item != L[i]:
+        i += 1
 
     if i == len(L):
         return -1

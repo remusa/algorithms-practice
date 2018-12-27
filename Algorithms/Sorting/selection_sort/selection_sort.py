@@ -29,9 +29,10 @@ def selection_sort(L):
     """
 
     for i in range(len(L)):
-        # Find the index of the smallest item in L[i:] and swap that
-        # item with the item at index i.
+        # Find the index of the smallest item in L[i:]
         index_of_smallest = get_index_of_smallest(L, i)
+
+        # Swap the smallest item with the item at index i
         L[index_of_smallest], L[i] = L[i], L[index_of_smallest]
 
 

@@ -1,4 +1,4 @@
-def binary_search(L, v):
+def binary_search(L, item):
     """ (list, object) -> int
 
     Precondition: L is sorted from smallest to largest, and
@@ -15,17 +15,27 @@ def binary_search(L, v):
     -1
     """
 
-    b = 0
-    e = len(L) - 1
+    start = 0
+    end = len(L) - 1
 
-    while b <= e:
-        m = (b + e) // 2
-        if L[m] < v:
-            b = m + 1
+    while start <= end:
+        mid = (start + end) // 2
+
+        if L[mid] == item:
+            return mid
+        elif L[mid] < item:
+            start = mid + 1
         else:
-            e = m - 1
+            end = mid - 1
 
-    if b == len(L) or L[b] != v:
-        return -1
-    else:
-        return b
+    return -1
+    # if start == len(L) or L[start] != item:
+    #     return -1
+    # else:
+    #     return start
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()

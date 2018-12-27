@@ -1,5 +1,5 @@
 def quick_sort(L, p, r):
-    """ (list) -> NoneType
+    """ (list, int, p) -> NoneType
 
     Complexity:
         - Best-case/avg-case: O(n)
@@ -24,7 +24,7 @@ def partition(L, p, r):
 
     >>> L = [3, 7, 12, 14, 2, 6, 9, 11]
     >>> partition(L, 0, len(L) - 1)
-    2
+    5
     """
 
     q = p
@@ -42,7 +42,7 @@ def partition(L, p, r):
         # If array[j] <= array[r], swap array[j] with array[q],
         #   increment q, and increment j.
         if L[j] <= L[r]:
-            L[j], L[r] = L[r], L[j]
+            L[j], L[q] = L[q], L[j]
             q += 1
 
         j += 1
@@ -60,8 +60,3 @@ if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
-
-    # L = [3, 7, 12, 14, 2, 6, 9, 11]
-    # print(L)
-    # quick_sort(L, 0, len(L) - 1)
-    # print(L)
