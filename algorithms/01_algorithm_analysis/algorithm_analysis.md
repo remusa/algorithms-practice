@@ -1,11 +1,22 @@
 # Analyzing Algorithms
 
-Up to now our focus has been on writing correct code. Next, we'll focus on:
+Sources:
+  * [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 - YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)
 
-- analyzing our algorithms, and
-- determining the amount of time algorithms take to run.
+## O(1) - Constant Time
 
-## Linear Running Time Functions
+```python
+def print_length(L):
+    """ (list) -> NoneType
+
+    Print the length of a list.
+	"""
+
+    length = len(L)
+    print(length)
+```
+
+## O(n) - Linear Time
 
 Function 1:
 
@@ -80,9 +91,10 @@ We can plot this as well:
 
 The number of steps is still proportional to n.
 
-Both function 1 and 2 are linear functions: the runtime grows linearly with respect to the size of input.
+Both function 1 and 2 are linear functions: the runtime grows linearly with
+respect to the size of input.
 
-## Quadratic Functions
+## O(N^2) - Quadratic Functions
 
 Function 3:
 
@@ -157,7 +169,10 @@ Plotting the graph, we get:
 
 Function 3 is quadratic: the runtime grows quadratically with respect to the size of input.
 
-## Logarithmic Functions
+## O(log N) - Logarithmic Functions
+
+* **Divide and conquer**: like in binary search, each iteration eliminates *at least*
+  half of the possibilities.
 
 Function 1
 
