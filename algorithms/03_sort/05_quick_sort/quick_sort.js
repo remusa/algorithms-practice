@@ -1,12 +1,12 @@
 // Swaps two items in an array, changing the original array
 function swap(array, firstIndex, secondIndex) {
-    let temp = array[firstIndex];
-    array[firstIndex] = array[secondIndex];
-    array[secondIndex] = temp;
-};
+    let temp = array[firstIndex]
+    array[firstIndex] = array[secondIndex]
+    array[secondIndex] = temp
+}
 
 function partition(array, p, r) {
-    let q = p;
+    let q = p
     for (let j = p; j < r; j++) {
         // Compare array[j] with array[r], for j = p, p+1,...r-1
         // maintaining that:
@@ -19,22 +19,22 @@ function partition(array, p, r) {
         // If array[j] <= array[r], swap array[j] with array[q],
         //   increment q, and increment j.
         if (array[j] <= array[r]) {
-            swap(array, j, q);
-            q++;
+            swap(array, j, q)
+            q++
         }
     }
 
     // Once all elements in array[p..r-1]
     //  have been compared with array[r],
     //  swap array[r] with array[q], and return q.
-    swap(array, r, q);
-    return q;
-};
+    swap(array, r, q)
+    return q
+}
 
 function quickSort(array, p, r) {
     if (p < r) {
-        let q = partition(array, p, r);
-        quickSort(array, p, q - 1);
-        quickSort(array, q + 1, r);
+        let q = partition(array, p, r)
+        quickSort(array, p, q - 1)
+        quickSort(array, q + 1, r)
     }
-};
+}

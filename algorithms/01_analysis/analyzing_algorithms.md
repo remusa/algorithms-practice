@@ -12,7 +12,7 @@ Function 1:
 ```python
 def print_ints(n):
     """ (int) -> NoneType
-    
+
     Print the integers from 1 to n, inclusive.
 	"""
 
@@ -73,8 +73,7 @@ When the function is called, the value that n refers to is twice the number of i
 
 - when n refers to 10, it prints 5 integers
 - when n refers to 20, it prints 10 integers
-- when n refers to 40, it prints 20 integers
-
+- when n refers to 40, it prints 20 inte
 We can plot this as well:
 
 - plot of linear runtime, steps = n/2
@@ -111,6 +110,7 @@ The function call above prints 4 pairs of integers.
 ```
 
 Output 2:
+
 ```python
 print_pairs(3)
 1 1
@@ -148,13 +148,11 @@ The function call above prints 16 pairs of integers.
 ```
 
 - For argument n, the print function is called n2 times.
-
 - When reading the code, notice that the print function call is inside a for loop, which loops n times. This for loop is also within a for loop that executes n times.
 - Therefore:
   - n (iterations of the outside loop) * n (iterations of the inside loop) = n2 iterations
 
 Plotting the graph, we get:
-
 - plot of quadratic time, steps = n^2
 
 Function 3 is quadratic: the runtime grows quadratically with respect to the size of input.
@@ -182,6 +180,7 @@ In this example, the step size varies. It size of the first step is 1, the next 
 How many values would be printed for different values of n?
 
 Output 1:
+
 ```python
 print_double_step(4)
 1
@@ -191,6 +190,7 @@ When n refers to 4, 3 integers are printed.
 ```
 
 Output 2:
+
 ```python
 print_double_step(5)
 1
@@ -202,6 +202,7 @@ When n refers to 5, 3 integers are printed.
 It's not until n refers to 8 that more than 3 integers are printed.
 
 Output 3:
+
 ```python
 print_double_step(8)
 1

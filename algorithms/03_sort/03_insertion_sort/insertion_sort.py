@@ -22,7 +22,6 @@ def insert(L, i):
         L[j] = L[j - 1]
         j = j - 1
 
-
     # Put the value where it belongs.
     L[j] = value
 
@@ -42,6 +41,7 @@ def insertion_sort(L):
         insert(L, i)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()
