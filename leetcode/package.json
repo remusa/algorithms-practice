@@ -1,0 +1,12 @@
+{
+    "name": "leetcode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "jest.config.js",
+    "scripts": {
+        "test": "jest --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
