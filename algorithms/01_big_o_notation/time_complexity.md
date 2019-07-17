@@ -18,7 +18,6 @@ Your employers will want to know that the code you write will not take too long 
 
 The take-away from this video is that Big O Notation helps you identify where there could be problems (sometimes BIG problems) in speed and memory when your site or app grows.
 
-
 ## A FEW EXAMPLES
 
 Time complexity is commonly estimated by counting the number of elementary operations (elementary operation = an operation that takes a fixed amount of time to preform) performed in the algorithm.

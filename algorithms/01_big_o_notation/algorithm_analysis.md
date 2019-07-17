@@ -1,7 +1,8 @@
 # Analyzing Algorithms
 
 Sources:
-  * [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 - YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)
+    * [Learn to Program: Crafting Quality Code | Coursera](https://www.coursera.org/learn/program-code)
+    * [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 - YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)
 
 ## O(1) - Constant Time
 
@@ -32,6 +33,7 @@ def print_ints(n):
 ```
 
 Output:
+
 ```python
 print_ints(10)
 1
@@ -71,6 +73,7 @@ def print_odd_ints(n):
 ```
 
 Output:
+
 ```python
 print_odd_ints(10)
 1
