@@ -52,12 +52,30 @@ inception()
 ## Recursive vs. Iterative
 
 * Anything that can be implemented iteratively can be implemented recursively.
-
-
-## Tail Call Optimization
-
-*
+* Advantages of recursion:
+  * DRY.
+  * Readability.
+* Disadvantages of recursion:
+  * Creates a large stack.
+  * Doesn't scale nicely unless implementing *memoization* or *dynamic
+    programming* (like fibonnaci is `O(2^n)`).
 
 ## When to use Recursion
 
-*
+* Every time you are using a tree or converting something into a tree.
+* When the problem is *traversing* or *searching* through **trees and graphs**.
+* **Divide-and-Conquer** can be used to solve a problem:
+  1. Problem can be divided in subproblems that are smaller instances of the
+      same problem.
+      * Merge sort.
+      * Quick sort.
+      * Tree traversals.
+      * Graph traversals.
+  2. Each instance of the subproblem is identical in nature.
+  3. The solutions of each subproblem can be combined to solve the problem.
+* When interacting with data structures that you don't know how deep they are
+    (can't know how many loops you'll have to go through, like **tree
+    traversals**).
+
+## Tail Call Optimization
+
