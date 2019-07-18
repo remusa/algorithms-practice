@@ -8,19 +8,23 @@
 ## Big-O Notation
 
 * Measures the perfomance of code as the number of inputs increases.
+* Expresses the runtime in terms of *how quickly it grows relative to the input, as the input gets arbitrarily large*.
 * Calculates the number of operations a computer has to perform (how many steps
   it takes to complete something).
 
+* Note: **Beware of premature optimization**. Sometimes optimizing time or space negatively impacts readability or coding time. For a young startup it might be more important to write code that's easy to ship quickly or easy to understand later, even if this means it's less time and space efficient than it could be.
+
 ## Big-O 4 Rules
 
-* Note: rule of thumb:
-  * Same indentation (assignments, declarations, calculations) add.
-  * Nested indentation (nested loops) multiply.
+* Rule 0. Generally:
+  * Same indentation (assignments, declarations, calculations) **add**.
+  * Nested indentation (nested loops) **multiply**.
 
 * Rule 1. Worst Case. Big-O only cares about the worst case.
 * Rule 2. Remove Constants: `O(3 + 4N) = O(N)`. We can ignore variable
   declarations, assignments and small calculations.
 * Rule 3. Different Terms for Different Inputs.
+* Rule 4. Drop Non Dominants. Only keep the biggest (**dominant**) term and eliminate the rest.
 
 ```javascript
 // n, m (boxes and boxes2 are different inputs)
@@ -36,8 +40,6 @@ function compressTwoBoxes(boxes, boxes2) {
 
 // O(n + m)
 ```
-
-* Rule 4. Drop Non Dominants. Only keep the biggest (**dominant**) term and eliminate the rest.
 
 ```javascript
 function printAllNumbersThenAllPairSums(numbers) {
@@ -55,6 +57,22 @@ function printAllNumbersThenAllPairSums(numbers) {
 } // 1 + (n * 1) + 1 + (n * n * 1) = 2 + n + (n^2) = O(n^2)
 
 printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
+```
+
+* Note: `N` could be the actual input, or the size of the input
+
+```javascript
+function sayHiNTimes(n) {
+  for (let i = 0; i < n; i++) {
+    console.log('hi');
+  }
+}
+
+function printAllItems(items) {
+  items.forEach(item => {
+    console.log(item);
+  });
+}
 ```
 
 ## Common Examples
@@ -163,9 +181,8 @@ void nFacRuntimeFunc(int n) {
   * *Heap*: where we store variables that we assign values.
   * *Stack*: keep track of function calls.
 
-* **Stack overflow**: programming error when too much memory is used on the call stack.
-
-## Space Complexity
+* **Stack overflow**: programming error when too much memory is used on the call
+  stack.
 
 * **Space Complexity**: we don't care how big the input is, only about what
   happens *inside* the function (allocations, creation of variables).
@@ -173,6 +190,7 @@ void nFacRuntimeFunc(int n) {
   * Data structures: create an array.
   * Function calls.
   * Allocations.
+
 
 ```javascript
 function boooo(array) {
@@ -183,3 +201,48 @@ function boooo(array) {
 
 boooo([1, 2, 3, 4, 5])  // O(1)
 ```
+
+* Note: usually when we talk about space complexity, we're talking about *additional space*, so we don't include space taken up by the inputs.
+
+```javascript
+// this function takes constant space even though the input has (n) items
+function getLargestItem(items) {
+  let largest = -Number.MAX_VALUE
+
+  items.forEach(item => {
+    if (item > largest) {
+      largest = item
+    }
+  })
+
+  return largest
+}
+```
+
+## Examples
+
+* `O(1)`: we have a fixed number of variables.
+
+```javascript
+function sayHiNTimes(n) {
+  for (let i = 0; i < n; i++) {
+    console.log('hi')
+  }
+}
+```
+
+* `O(n)`: the size of an array scales with the size of the input.
+
+```javascript
+function arrayOfHiNTimes(n) {
+  const hiArray = []
+
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = 'hi'
+  }
+
+  return hiArray
+}
+```
+
+* `O(n)`: the size of an array scales with the size of the input.

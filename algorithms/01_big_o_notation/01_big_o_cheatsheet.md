@@ -1,7 +1,8 @@
 #Big-O Cheat Sheet
 
-## Big OsO(1) Constant- no loops
+## Big O
 
+* **O(1) Constant**: no loops.
 * **O(log N) Logarithmic**: usually searching algorithms have log n if they are sorted (Binary Search).
 * **O(n) Linear**: for loops, while loops through n items.
 * **O(n log(n)) Log Linear**: usually sorting operations.
@@ -24,12 +25,13 @@ Notes:
 
 ## Rule Book
 
-* Rule 1: Always worst case.
+* Rule 0: Big-O always represents the worst case.
+* Rule 1:
+  * Different steps are **added (+)**.
+  * Nested steps are **multiplied (*)** (ex.: nested loops).
 * Rule 2: Remove constants.
-* Rule 3: Different inputs should have different variables. O(a+b). A and B
-  arrays nested would be O(a*b).
-  - **add (+)** for steps in order.
-  - **multiply (*)** for nested steps.
+* Rule 3: Different inputs => different variables. O(a+b).
+  * Example: A and B arrays nested would be `O(a*b)`.
 * Rule 4: Drop non-dominant terms. Keep the greatest exponent.
 
 ## What causes Space Complexity?
