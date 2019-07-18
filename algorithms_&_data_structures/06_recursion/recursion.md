@@ -48,3 +48,16 @@ function inception() {
 
 inception()
 ```
+
+## Recursive vs. Iterative
+
+* Anything that can be implemented iteratively can be implemented recursively.
+
+
+## Tail Call Optimization
+
+*
+
+## When to use Recursion
+
+*
