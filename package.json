@@ -8,5 +8,24 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "jest": {
+        "testPathIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ]
+    },
+    "//eslintConfig": {
+        "extends": [
+            "wesbos"
+        ]
+    },
+    "//babel": {
+        "presets": [
+            "es2015",
+            "preset-env"
+        ],
+        "plugins": [
+            "@babel/plugin-transform-modules-commonjs"
+        ]
+    }
 }

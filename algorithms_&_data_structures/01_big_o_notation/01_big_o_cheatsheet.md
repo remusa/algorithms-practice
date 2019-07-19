@@ -16,7 +16,7 @@
   * Iterating through half a collection is still O(n)
   * Two separate collections: O(a * b)
 
-## What can cause time in a function?
+## What causes time complexity?
 
 * Operations (+, -, *, /)
 * Comparisons (<, >, ==)
@@ -30,11 +30,11 @@
   * Different steps are **added (+)**.
   * Nested steps are **multiplied (*)** (ex.: nested loops).
 * Rule 2: Remove constants.
-* Rule 3: Different inputs => different variables. O(a+b).
-  * Example: A and B arrays nested would be `O(a*b)`.
-* Rule 4: Drop non-dominant terms. Keep the greatest exponent.
+* Rule 3: Different inputs => different variables. `O(a+b)`.
+  * Example: `a` and `b` arrays nested would be `O(a*b)`.
+* Rule 4: Drop non-dominant terms. Keep the fastest growing term (biggest exponent).
 
-## What causes Space Complexity?
+## What causes space complexity?
 
 * Variables
 * Data Structures
