@@ -10,8 +10,13 @@ function reverseStringOneLiner(str) {
 }
 
 function reverseStringIterative(str) {
-    // check input for empty | 1 letter | not a string
-    if (!str || str.length < 2 || typeof str !== 'string') {
+    if (str.length === 0) {
+        return ''
+    }
+    if (str.length === 1) {
+        return str
+    }
+    if (!str || typeof str !== 'string') {
         return 'Not a string or string is already reversed'
     }
 

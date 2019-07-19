@@ -8,14 +8,13 @@
 // Memoized fibonacci: 832040 | 59 calculations
 // Bottom-up fibonacci: 832040 | 29 calculations
 
-let calculations = 0
-
 // Original function
+let calculations = 0
 
 function fibonacci(n) {
     calculations++
 
-    if (n < 2) {
+    if (n <= 1) {
         return n
     }
 
@@ -25,7 +24,6 @@ function fibonacci(n) {
 console.log(`Original fibonacci: ${fibonacci(30)} | ${calculations} calculations`)
 
 // Memoized (top-down approach)
-
 let calculationsMemo = 0
 
 function memoize() {
@@ -50,8 +48,7 @@ function memoize() {
 const fibonacciMemoized = memoize()
 console.log(`Memoized fibonacci: ${fibonacciMemoized(30)} | ${calculationsMemo} calculations`)
 
-// Bottom up approach (avoids using recursion)
-
+// Bottom-up approach (avoids using recursion)
 let calculationsBottomUp = 0
 
 function fibonacciBottomUp(n) {

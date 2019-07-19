@@ -17,7 +17,7 @@ function fibonacciIterative(n) {
 
 // O(2^n) - exponential
 function fibonacciRecursive(n) {
-    if (n < 2) {
+    if (n <= 1) {
         return n
     }
 
