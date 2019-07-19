@@ -2,7 +2,7 @@
 
 Linear Search searches for a value in a list, starting at index `0`, working towards the end of the list. If the value is not contained in the list, then linear search will examine all items in the list. Linear search can be applied to both sorted and unsorted lists. However, if the list is sorted, then a faster searching algorithm, called binary search, may be used.
 
-## Binary Search
+## Binary Search Algorithm
 
 The binary search algorithm is used to find a value in a sorted list. To understand binary search, let us look at the following diagram:
 

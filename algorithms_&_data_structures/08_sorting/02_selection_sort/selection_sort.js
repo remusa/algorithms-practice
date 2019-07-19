@@ -19,10 +19,18 @@ function indexOfMinimum(array, startIndex) {
 }
 
 function selectionSort(array) {
+    const arr = [...array]
     let minIndex
 
-    for (let index = 0; index < array.length; index++) {
-        minIndex = indexOfMinimum(array, index)
-        swap(array, index, minIndex)
+    for (let index = 0; index < arr.length; index++) {
+        minIndex = indexOfMinimum(arr, index)
+
+        swap(arr, index, minIndex)
     }
+
+    return arr
+}
+
+module.exports = {
+    selectionSort
 }

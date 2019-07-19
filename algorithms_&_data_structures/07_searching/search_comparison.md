@@ -1,6 +1,6 @@
 # Comparing Search Algorithms
 
-We have seen two ways to search for a value in a list. Linear search works on both unsorted and sorted lists. Binary search works only on sorted lists. 
+We have seen two ways to search for a value in a list. Linear search works on both unsorted and sorted lists. Binary search works only on sorted lists.
 
 Let's take a deeper look at each of the searching algorithms.
 
@@ -10,11 +10,11 @@ Let's take a deeper look at each of the searching algorithms.
 
 Let us consider the following example in order to understand the number of steps linear search will take to complete:
 
-| 1    | 2    | 3    | 4    | 5    |
-| ---- | ---- | ---- | ---- | ---- |
-|      |      |      |      |      |
+| 1   | 2   | 3   | 4   | 5   |
+| --- | --- | --- | --- | --- |
+|     |     |     |     |     |
 
-Let us look for the value `6`, which does not occur in the list. We compare `6` to the item at index `0`, which is `1`, and since this is not the value we are looking for, we will move on to the next item. Next, we compare `6` to `2`. Again, we move on. We will compare `6` to `3`, then `4`, and then `5`. So, for a list of 5 items, we examined all 5 items in the list. 
+Let us look for the value `6`, which does not occur in the list. We compare `6` to the item at index `0`, which is `1`, and since this is not the value we are looking for, we will move on to the next item. Next, we compare `6` to `2`. Again, we move on. We will compare `6` to `3`, then `4`, and then `5`. So, for a list of 5 items, we examined all 5 items in the list.
 
 Let us make a table of the number of iterations we make as the number of items in the list grows:
 
@@ -50,13 +50,13 @@ This is very interesting! If a list has 128 items to begin with, then after only
 
 `log2(n)` is the logarithm base `2` of `n`, and we can think of that as the number of times we divide `n` by 2 in order to reach 1. Here is quick table of values and their logarithms of base `2`:
 
-| n    | log_2(n) |
-| ---- | -------- |
-| 2    | 1        |
-| 4    | 2        |
-| 8    | 3        |
-| 16   | 4        |
-| 32   | 5        |
+| n   | log_2(n) |
+| --- | -------- |
+| 2   | 1        |
+| 4   | 2        |
+| 8   | 3        |
+| 16  | 4        |
+| 32  | 5        |
 
 ## Time to Run Linear and Binary Search
 
@@ -143,4 +143,7 @@ Looking at the above code, `cProfile` is able to give us a nice breakdown of the
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 ```
 
-In the above profile, we see that `len` is called only once, as opposed to 10,000,002 times in the previous version of `linear_search(L, v)`. Also, the total time of linear search dropped down to about 2 seconds in this faster implementation of linear search.
+In the above profile, we see that `len` is called only once, as opposed to
+10,000,002 times in the previous version of `linear_search(L, v)`. Also, the
+total time of linear search dropped down to about 2 seconds in this faster
+implementation of linear search.

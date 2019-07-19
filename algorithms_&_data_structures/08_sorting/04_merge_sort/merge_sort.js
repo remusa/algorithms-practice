@@ -7,6 +7,8 @@ function mergeSort(array, p, r) {
         mergeSort(array, q + 1, r)
         merge(array, p, q, r)
     }
+
+    return array
 }
 
 //  Takes in an array that has two sorted subarrays,
@@ -61,4 +63,16 @@ function merge(array, p, q, r) {
         j++
         k++
     }
+}
+
+const ex1 = mergeSort([2, 3, 1])
+const ex2 = mergeSort([9, 5, 8, 7, 2, 6, 1, 3, 4])
+const ex3 = mergeSort([99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0])
+
+console.log(ex1)
+console.log(ex2)
+console.log(ex3)
+
+module.exports = {
+    mergeSort,
 }

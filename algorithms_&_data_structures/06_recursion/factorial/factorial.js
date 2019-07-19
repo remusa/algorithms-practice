@@ -29,7 +29,7 @@ function factorialRecursive(number) {
     return number * factorialRecursive(number - 1)
 }
 
-console.log('factorialRecursive(5) = ', factorialRecursive(5))
+console.log(`factorialRecursive(5) = ${factorialRecursive(5)}`)
 
 module.exports = {
     factorialIterative,
