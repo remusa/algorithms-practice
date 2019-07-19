@@ -12,10 +12,10 @@
 2
 >>> L.index('d')
 4
->>> 
+>>>
 ```
 
-Notice that the value produced by `L.index('a')` is `0` (the index of the first occurrence of `'a'`), and not `3` (the index of the second occurrence of `'a'`). 
+Notice that the value produced by `L.index('a')` is `0` (the index of the first occurrence of `'a'`), and not `3` (the index of the second occurrence of `'a'`).
 
 When `L.index('d')` is executed, it first examines the item at index `0` of `L`, which is `'a'`. Since that is not the value we are looking for, it moves on to index `1`, which contains `'b'`. Again, this is not what we are looking for, so it moves on. This pattern continues, until it finds `'d'` at index `4`. This way of searching is called *linear*, which refers to items arranged in a line. Essentially, we are searching for items in a linear manner.
 
@@ -127,12 +127,12 @@ def linear_search(L, v):
     >>> linear_search([2, 3, 5, 3], 8)
     -1
     """
-    
+
     i = 0
-    
+
     while i != len(L) and v != L[i]:
         i = i + 1
-    
+
     if i == len(L):
         return -1
     else:

@@ -1,3 +1,4 @@
 # Algorithms Practice
 
-Firecode.io, Leetcode and HackerRank solutions
+* Data Structures and Algorithms notes.
+* Leetcode and HackerRank solutions
