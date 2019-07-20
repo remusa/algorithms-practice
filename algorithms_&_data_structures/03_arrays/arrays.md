@@ -8,15 +8,48 @@
 const strings = ['a', 'b', 'c', 'd']
 ```
 
-* Advantages:
-  * Constant time `O(1)` to find items by index.
-  * Constant time `O(1)` to add/remove to then *end*.
-* Disadvantages:
-  * Linear time `O(n)` to add/remove items to the *end* if array is dynamic and
-    it needs to be rebuilt.
-  * Linear time `O(n)` to add/remove items to the *beginning/middle*.
+## Array Operations
 
-## Operations
+### Cheatsheet
+
+#### Static Arrays
+
+| Operation | Worst case |
+| --------- | ---------- |
+| space     | `O(n)`     |
+| lookup    | `O(1)`     |
+| append    | `O(1)`     |
+| insert    | `O(n)`     |
+| delete    | `O(n)`     |
+
+* **Strengths**:
+  * *Fast lookups*: constant time `O(1)` to retrieve items.
+  * *Fast appends/deletions*: constant time `O(1)` to add/remove to then *end*.
+
+* **Weaknesses**:
+  * *Slow appends/deletions*: linear time `O(n)` to add/remove items to the *beginning/middle*.
+
+### Dynamic Arrays
+
+| Operation | Average case | Worst case |
+| --------- | ------------ | ---------- |
+| space     | `O(n)`       | `O(n)`     |
+| lookup    | `O(1)`       | `O(1)`     |
+| append    | `O(1)`       | `O(n)`     |
+| insert    | `O(n)`       | `O(n)`     |
+| delete    | `O(n)`       | `O(n)`     |
+
+* Advantages:
+  * **Fast lookups**: constant time `O(1)` to retrieve items.
+  * **Fast appends/deletions**: constant time `O(1)` to add/remove to then *end*.
+
+* Disadvantages:
+  * **Slow appends/deletions**: linear time `O(n)` to add/remove items to the *beginning/middle*.
+  * **Costly insertions/deletions**: linear time `O(n)` to add/remove items to the *end* if they array needs to expand.
+    * Size of the array is usually *doubled*.
+    * Each element is copied into the new array.
+
+## Array Operations
 
 * Lookup.
   * With index `O(1)`.
@@ -53,9 +86,3 @@ strings.splice(2, 0, 'alien') // [ 'x', 'a', 'alien', 'b', 'c', 'd' ]
 * **Dynamic arrays**: expands as needed, copies and rebuilds the array at a new
   location if/when more memory is needed.
   * Append can be `O(n)` if array needs to be rebuilt.
-
-## Array Implementation
-
-*
-
-## How to use arrays
