@@ -41,7 +41,7 @@ class HashTable {
         console.log(this.data.length)
         for (let i = 0; i < this.data.length; i++) {
             if (this.data[i]) {
-                keysArray.push(this.data[i][0][0])
+                keysArray.push(this.data[i][0][0]) // second 0 is the key
             }
         }
         return keysArray
