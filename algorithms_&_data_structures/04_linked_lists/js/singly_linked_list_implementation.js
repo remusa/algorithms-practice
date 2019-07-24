@@ -193,26 +193,6 @@ class SinglyLinkedList {
     }
 }
 
-// const myLinkedList = new SinglyLinkedList()
-
-// myLinkedList.append(10)
-// myLinkedList.append(5)
-// myLinkedList.append(16)
-// myLinkedList.prepend(1)
-
-// console.log(myLinkedList.lookup(16))
-
-// myLinkedList.insert(2, 99)
-// console.log(myLinkedList.getValues())
-// myLinkedList.insert(20, 88)
-// console.log(myLinkedList.getValues())
-
-// console.log(myLinkedList.delete(4))
-// console.log(myLinkedList.getValues())
-
-// myLinkedList.reverse()
-// console.log(myLinkedList.getValues())
-
 module.exports = {
     Node,
     SinglyLinkedList,

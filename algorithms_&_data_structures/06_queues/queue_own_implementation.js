@@ -1,7 +1,9 @@
+const LinkedList = require('../linked_list_singly_implementation')
+
 class Queue {
     constructor() {
-        this.first = null
-        this.last = null
+        this.top = null
+        this.bottom = null
         this.length = 0
     }
 

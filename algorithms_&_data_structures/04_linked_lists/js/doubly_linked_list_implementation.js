@@ -171,27 +171,6 @@ class DoublyLinkedList {
     }
 }
 
-// const myLinkedList = new DoublyLinkedList()
-
-// myLinkedList.append(10)
-// myLinkedList.append(5)
-// myLinkedList.append(16)
-// console.log(myLinkedList.printList())
-
-// myLinkedList.prepend(1)
-// console.log(myLinkedList.printList())
-
-// myLinkedList.lookup(16)
-// console.log(myLinkedList.printList())
-
-// myLinkedList.insert(2, 99)
-// console.log(myLinkedList.printList())
-// myLinkedList.insert(20, 88)
-// console.log(myLinkedList.printList())
-
-// console.log(myLinkedList.delete(4)) // delete the 16
-// console.log(myLinkedList.printList())
-
 module.exports = {
     Node,
     DoublyLinkedList,

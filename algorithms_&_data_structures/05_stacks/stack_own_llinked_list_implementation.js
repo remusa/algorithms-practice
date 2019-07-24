@@ -1,15 +1,10 @@
-class Node {
-    constructor(value, next = null) {
-        this.value = value
-        this.next = next
-    }
-}
+const linkedList = require('../04_linked_lists/js/singly_linked_list_implementation')
+const Node = linkedList.Node
+const SinglyLinkedList = linkedList.SinglyLinkedList
 
 class Stack {
     constructor() {
-        this.top = null
-        this.bottom = null
-        this.length = 0
+        this.linkedList = new SinglyLinkedList()
     }
 
     // O(1)
@@ -92,6 +87,36 @@ class Stack {
         return arr
     }
 }
+
+// const myStack = new Stack()
+
+// myStack.push(7)
+// myStack.push(3)
+// myStack.push(6)
+// console.log(myStack.getValues())
+
+// console.log(`PEEK: ${myStack.peek()}`)
+
+// console.log(`POPPED: ${Object.entries(myStack.pop())}`)
+// console.log(myStack.printStack())
+// console.log(`POPPED: ${Object.entries(myStack.pop())}`)
+// console.log(myStack.printStack())
+// console.log(`POPPED: ${Object.entries(myStack.pop())}`)
+// console.log(myStack.printStack())
+
+// console.log(myStack)
+
+// myStack.push(8)
+// myStack.push(9)
+// myStack.push(1)
+// console.log(myStack.printStack())
+
+// console.log(`POPPED: ${Object.entries(myStack.pop())}`)
+// console.log(myStack.printStack())
+// console.log(`POPPED: ${Object.entries(myStack.pop())}`)
+// console.log(myStack.printStack())
+
+// console.log(myStack)
 
 module.exports = {
     Stack,
