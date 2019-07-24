@@ -12,37 +12,25 @@ class Stack {
     // O(1)
     push(value) {
         this.array.push(value)
-        return this.printStack()
+        return this
     }
 
     // O(1)
     pop() {
-        this.array.pop()
-        return this.printStack()
+        return this.array.pop()
     }
 
     printStack() {
         return this.array
     }
+
+    getValues() {
+        const arr = []
+        this.array.map(value => arr.push(value))
+        return arr
+    }
 }
 
-const myStack = new Stack()
-myStack.push(7)
-myStack.push(3)
-myStack.push(6)
-console.log(myStack.printStack())
-
-myStack.pop()
-console.log(myStack.printStack())
-
-console.log(myStack.peek())
-
-myStack.push(8)
-myStack.push(9)
-myStack.push(1)
-console.log(myStack.printStack())
-
-myStack.pop()
-console.log(myStack.printStack())
-myStack.pop()
-console.log(myStack.printStack())
+module.exports = {
+    Stack,
+}

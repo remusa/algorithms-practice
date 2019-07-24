@@ -1,10 +1,11 @@
-const ll = require('../04_linked_lists/linked_list_doubly_implementation')
-const Node = ll.Node
-const SinglyLinkedList = ll.SinglyLinkedList
+const linkedList = require('../04_linked_lists/js/singly_linked_list_implementation')
+const Node = linkedList.Node
+const SinglyLinkedList = linkedList.SinglyLinkedList
 
 class Stack {
     constructor() {
         this.data = new SinglyLinkedList()
+
         this.top = null
         this.bottom = null
         this.length = 0
