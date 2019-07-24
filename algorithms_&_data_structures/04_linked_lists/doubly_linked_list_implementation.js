@@ -96,13 +96,17 @@ class DoublyLinkedList {
 
         // 3. Traverse the list and find the previous and following nodes of the specified index
         let leader = this.traverseToIndex(index - 1)
-        let follower = leader.next // same as getting this.traverseToIndex(index)
+        let follower = leader.next // this.traverseToIndex(index)
 
         // 4. Update the leader to point to the new node
         leader.next = newNode
 
-        // 5. Point the new node to the follower
+        // 5. Point the new node to the follower's next and previous pointers
         newNode.next = follower
+        newNode.previous = leader
+
+        // 6. Point the follower previous to the new node
+        follower.previous = newNode
 
         this.length++
         return this.printList()
@@ -129,15 +133,19 @@ class DoublyLinkedList {
         // 3. Traverse the list and find the previous and following nodes of the specified index
         let leader = this.traverseToIndex(index - 1)
         let nodeToDelete = leader.next
+        let follower = nodeToDelete.next
 
-        // 4. Update the pointer of the leader
+        // 4. Update the next pointer of the leader to skip the node to be deleted
         leader.next = nodeToDelete.next
 
-        // 5. Delete the node
+        // 5. Update the previous pointer to skip the node to be deleted
+        follower.previous = nodeToDelete.previous
+
+        // 6. Delete the node
         // delete nodeToDelete
 
         this.length--
-        return this.printList()
+        return nodeToDelete
     }
 
     printList() {
@@ -164,11 +172,10 @@ console.log(myLinkedList.printList())
 myLinkedList.lookup(16)
 console.log(myLinkedList.printList())
 
-// myLinkedList.insert(2, 99)
-// console.log(myLinkedList.printList())
+myLinkedList.insert(2, 99)
+console.log(myLinkedList.printList())
+myLinkedList.insert(20, 88)
+console.log(myLinkedList.printList())
 
-// myLinkedList.insert(20, 88)
-// console.log(myLinkedList.printList())
-
-// myLinkedList.delete(4)
-// console.log(myLinkedList.printList())
+console.log(myLinkedList.delete(4)) // delete the 16
+console.log(myLinkedList.printList())

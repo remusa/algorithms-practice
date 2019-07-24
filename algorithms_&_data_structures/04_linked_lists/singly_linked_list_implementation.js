@@ -130,7 +130,7 @@ class SinglyLinkedList {
         // delete nodeToDelete
 
         this.length--
-        return this.printList()
+        return nodeToDelete
     }
 
     printList() {
@@ -156,7 +156,6 @@ console.log(myLinkedList.printList())
 
 myLinkedList.insert(2, 99)
 console.log(myLinkedList.printList())
-
 myLinkedList.insert(20, 88)
 console.log(myLinkedList.printList())
 
