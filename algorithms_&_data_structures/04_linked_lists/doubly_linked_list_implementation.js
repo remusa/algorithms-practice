@@ -157,6 +157,43 @@ class DoublyLinkedList {
         }
         return nodes
     }
+
+    // reverse() {
+    //     // 0. Check if there's only 1 element in the list
+    //     if (!this.head.next) {
+    //         return this.head
+    //     }
+
+    //     // 1. Get the first 2 nodes
+    //     let first = this.head
+    //     let second = first.next
+
+    //     // 2. Point the tail to the head (inverting it)
+    //     this.tail = this.head
+
+    //     // 3. Traverse the linked list
+    //     while (second) {
+    //         // 4. Save the next node
+    //         const temp = second.next
+
+    //         // 5. Point the next node of the current node to the previous node
+    //         second.next = first
+
+    //         // 6. Switch the first node to be the second
+    //         first = second
+
+    //         // 7. Switch the second node to be the saved one (third)
+    //         second = temp
+    //     }
+
+    //     // 8. Point the head to null (because it would be the tail's next)
+    //     this.head.next = null
+
+    //     // 9. Point the head to be the first element
+    //     this.head = first
+
+    //     return this.printList()
+    // }
 }
 
 const myLinkedList = new DoublyLinkedList()
