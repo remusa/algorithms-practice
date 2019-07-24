@@ -201,3 +201,8 @@ console.log(myLinkedList.printList())
 
 myLinkedList.reverse()
 console.log(myLinkedList.printList())
+
+module.exports = {
+    Node,
+    SinglyLinkedList,
+}

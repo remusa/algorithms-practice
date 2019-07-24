@@ -24,3 +24,5 @@
 * Queues are implemented with *linked lists* (*dynamic arrays* are possible but messy).
   * To *enqueue*, insert at the tail of the linked list.
   * To *dequeue*, remove at the head of the linked list.
+* Using *dynamic arrays* means we have to shift the elements every time and
+  element is added at the beginning`O(n)`. Removing elements is still `O(1)`.

@@ -2,10 +2,10 @@
 
 * **Stacks**: stores items in a last-in, first-out (*LIFO*) order.
 * **Uses**:
+  * *Depth-first search*: uses a stack to keep track of which nodes to visit next.
   * *Call stack*: the call stack is a stack that tracks function calls in a
     program. When a function returns, we "pop" the last one that "pushed" a
     function call.
-  * *Depth-first search*: uses a stack to keep track of which nodes to visit next.
   * *String parsing*: stacks are useful for string parsing.
 
 ## Stack Operations
@@ -13,6 +13,7 @@
 | Operation | Worst case |
 | --------- | ---------- |
 | space     | `O(n)`     |
+| lookup    | `O(n)`     |
 | push      | `O(1)`     |
 | pop       | `O(1)`     |
 | peek      | `O(1)`     |
@@ -22,9 +23,12 @@
 
 ## Stack Implementation
 
-* Stacks can be implemented either with a *linked list* or a *dynamic array*.
+* Stacks can be implemented either with *linked lists* or *dynamic arrays*.
+  * Using *dynamic arrays* is more *cache-friendly* since the elements are next to
+    each other in memory.
+  * Using *linked lists* is more *memory expensive* due to having to hold the pointers.
 
 |                | Stack Push     | Stack Pop           |
 | -------------- | -------------- | ------------------- |
-| Linked Lists   | insert at head | remove at head      |
 | Dynamic Arrays | append         | remove last element |
+| Linked Lists   | insert at head | remove at head      |
