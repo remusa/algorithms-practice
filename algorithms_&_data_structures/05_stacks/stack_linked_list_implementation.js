@@ -1,5 +1,10 @@
+const ll = require('../04_linked_lists/linked_list_doubly_implementation')
+const Node = ll.Node
+const SinglyLinkedList = ll.SinglyLinkedList
+
 class Stack {
     constructor() {
+        this.data = new SinglyLinkedList()
         this.top = null
         this.bottom = null
         this.length = 0
@@ -23,30 +28,10 @@ class Stack {
 
     // O(1)
     isEmpty() {
-        if (this.length === 0) {
-            return true
-        }
-        return false
+        return this.length === 0
+    }
+
+    printStack() {
+        return this.data.printList()
     }
 }
-
-const myStack = new Stack()
-myStack.push(7)
-myStack.push(3)
-myStack.push(6)
-console.log(myStack.printStack())
-
-myStack.pop()
-console.log(myStack.printStack())
-
-console.log(myStack.peek())
-
-myStack.push(8)
-myStack.push(9)
-myStack.push(1)
-console.log(myStack.printStack())
-
-myStack.pop()
-console.log(myStack.printStack())
-myStack.pop()
-console.log(myStack.printStack())

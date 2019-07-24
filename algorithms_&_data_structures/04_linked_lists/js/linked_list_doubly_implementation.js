@@ -23,7 +23,7 @@ class DoublyLinkedList {
             // 3. Update the current head and tail to the new node
             this.head = newNode
             this.tail = newNode
-            return this.printList()
+            return this
         }
 
         // 4. Point the tail (end of the list) to the new node
@@ -36,7 +36,7 @@ class DoublyLinkedList {
         this.tail = newNode
 
         this.length++
-        return this.printList()
+        return this
     }
 
     // O(1)
@@ -49,7 +49,7 @@ class DoublyLinkedList {
             // 3. Update the current head and tail to the new node
             this.head = newNode
             this.tail = newNode
-            return this.printList()
+            return this
         }
 
         // 4. Point the new node to the head
@@ -62,7 +62,7 @@ class DoublyLinkedList {
         this.head = newNode
 
         this.length++
-        return this.printList()
+        return this
     }
 
     // O(n)
@@ -109,7 +109,7 @@ class DoublyLinkedList {
         follower.previous = newNode
 
         this.length++
-        return this.printList()
+        return this
     }
 
     // O(n)
@@ -157,25 +157,42 @@ class DoublyLinkedList {
         }
         return nodes
     }
+
+    getValues() {
+        const arr = []
+
+        this.printList()
+            .map(node => {
+                arr.push(node.value)
+            })
+            .toString()
+
+        return arr
+    }
 }
 
-const myLinkedList = new DoublyLinkedList()
+// const myLinkedList = new DoublyLinkedList()
 
-myLinkedList.append(10)
-myLinkedList.append(5)
-myLinkedList.append(16)
-console.log(myLinkedList.printList())
+// myLinkedList.append(10)
+// myLinkedList.append(5)
+// myLinkedList.append(16)
+// console.log(myLinkedList.printList())
 
-myLinkedList.prepend(1)
-console.log(myLinkedList.printList())
+// myLinkedList.prepend(1)
+// console.log(myLinkedList.printList())
 
-myLinkedList.lookup(16)
-console.log(myLinkedList.printList())
+// myLinkedList.lookup(16)
+// console.log(myLinkedList.printList())
 
-myLinkedList.insert(2, 99)
-console.log(myLinkedList.printList())
-myLinkedList.insert(20, 88)
-console.log(myLinkedList.printList())
+// myLinkedList.insert(2, 99)
+// console.log(myLinkedList.printList())
+// myLinkedList.insert(20, 88)
+// console.log(myLinkedList.printList())
 
-console.log(myLinkedList.delete(4)) // delete the 16
-console.log(myLinkedList.printList())
+// console.log(myLinkedList.delete(4)) // delete the 16
+// console.log(myLinkedList.printList())
+
+module.exports = {
+    Node,
+    DoublyLinkedList,
+}

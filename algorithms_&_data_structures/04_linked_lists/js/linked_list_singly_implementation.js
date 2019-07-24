@@ -22,7 +22,7 @@ class SinglyLinkedList {
             // 3. Update the current head and tail to the new node
             this.head = newNode
             this.tail = newNode
-            return this.printList()
+            return this
         }
 
         // 4. Point the tail to the new node
@@ -32,7 +32,7 @@ class SinglyLinkedList {
         this.tail = newNode
 
         this.length++
-        return this.printList()
+        return this
     }
 
     // O(1)
@@ -45,7 +45,7 @@ class SinglyLinkedList {
             // 3. Update the current head and tail to the new node
             this.head = newNode
             this.tail = newNode
-            return this.printList()
+            return this
         }
 
         // 4. Point the new node to the head
@@ -55,7 +55,7 @@ class SinglyLinkedList {
         this.head = newNode
 
         this.length++
-        return this.printList()
+        return this
     }
 
     // O(n)
@@ -98,7 +98,7 @@ class SinglyLinkedList {
         newNode.next = follower
 
         this.length++
-        return this.printList()
+        return this
     }
 
     // O(n)
@@ -143,6 +143,18 @@ class SinglyLinkedList {
         return nodes
     }
 
+    getValues() {
+        const arr = []
+
+        this.printList()
+            .map(node => {
+                arr.push(node.value)
+            })
+            .toString()
+
+        return arr
+    }
+
     reverse() {
         // 0. Check if there's only 1 element in the list
         if (!this.head.next) {
@@ -177,30 +189,29 @@ class SinglyLinkedList {
         // 9. Point the head to be the first element
         this.head = first
 
-        return this.printList()
+        return this
     }
 }
 
-const myLinkedList = new SinglyLinkedList()
+// const myLinkedList = new SinglyLinkedList()
 
-myLinkedList.append(10)
-myLinkedList.append(5)
-myLinkedList.append(16)
-myLinkedList.prepend(1)
+// myLinkedList.append(10)
+// myLinkedList.append(5)
+// myLinkedList.append(16)
+// myLinkedList.prepend(1)
 
-myLinkedList.lookup(16)
-console.log(myLinkedList.printList())
+// console.log(myLinkedList.lookup(16))
 
-myLinkedList.insert(2, 99)
-console.log(myLinkedList.printList())
-myLinkedList.insert(20, 88)
-console.log(myLinkedList.printList())
+// myLinkedList.insert(2, 99)
+// console.log(myLinkedList.getValues())
+// myLinkedList.insert(20, 88)
+// console.log(myLinkedList.getValues())
 
-myLinkedList.delete(4)
-console.log(myLinkedList.printList())
+// console.log(myLinkedList.delete(4))
+// console.log(myLinkedList.getValues())
 
-myLinkedList.reverse()
-console.log(myLinkedList.printList())
+// myLinkedList.reverse()
+// console.log(myLinkedList.getValues())
 
 module.exports = {
     Node,

@@ -1,9 +1,4 @@
-class Node {
-    constructor() {
-        this.value = null
-        this.next = null
-    }
-}
+// const LinkedList = require('../linked_list_singly_implementation')
 
 class Queue {
     constructor() {
