@@ -34,10 +34,11 @@ spanish.sort((a, b) => {
   * Selection Sort.
   * Shell Sort.
   * Quick Sort.
-* Stability matters if, and only if, the problem to solve requires
-  retention of that relative order. If you don't need stability, we can use a
-  fast, memory-sipping algorithm from a library, like *heapsort* or *quicksort*.
+* Stability matters *if, and only if*, the problem to solve requires
+  retention of that relative order. If we don't need stability, we can use a
+  fast, memory-sipping algorithm like *heapsort* or *quicksort*.
 
 ## Resources
 
+* [Sorting (article) | Selection sort | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 * [What is stability in sorting algorithms and why is it important? - Stack Overflow](https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important)
