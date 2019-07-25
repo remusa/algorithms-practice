@@ -112,7 +112,7 @@ The `cProfile` module allows us to *profile* a piece of code. By profile, we mea
 
 Looking at the above code, `cProfile` is able to give us a nice breakdown of the function calls involved in each searching algorithm. We see that all function calls take 0.000 seconds in binary search. However, in linear search, the total time spent is more than 9 seconds, and we notice that the function call to `len` happens 10,000,002 times. This presents an opportunity for us to save time. In our linear search algorithm, we can save a huge amount of time by storing the length of the list into a local variable. The new and faster linear search algorithm is shown below, as well as its running time:
 
-```
+```python
 >>> def linear_search(L, v):
       """ (list, object) -> int
       Return the index of the first occurrence of v in L,
