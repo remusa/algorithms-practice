@@ -36,7 +36,7 @@ spanish.sort((a, b) => {
   * Quick Sort.
 * Stability matters *if, and only if*, the problem to solve requires
   retention of that relative order. If we don't need stability, we can use a
-  fast, memory-sipping algorithm like *heapsort* or *quicksort*.
+  fast, memory-sipping algorithm like *quicksort* or *heapsort*.
 
 ## Resources
 
