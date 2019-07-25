@@ -4,7 +4,7 @@
 | ---------- | ------------- | ------------- | ------------- | ------ | ------ |
 | complexity | `O(n log(n))` | `O(n log(n))` | `O(n log(n))` | `O(n)` | `yes`  |
 
-* **Merge sort**: *divide-and-conquer* algorithm that sorts smaller
+* **Merge sort**: *divide-and-conquer* algorithm that sorts two smaller
   subarrays before merging them together.
 * *Comparison-based algorithm*.
 * *Stable algorithm*: it means that if we have equivalent elements (like 6 and

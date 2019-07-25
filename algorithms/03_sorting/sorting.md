@@ -38,6 +38,10 @@ spanish.sort((a, b) => {
   retention of that relative order. If we don't need stability, we can use a
   fast, memory-sipping algorithm like *quicksort* or *heapsort*.
 
+## Picking a sorting algorithm
+
+*
+
 ## Resources
 
 * [Sorting (article) | Selection sort | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
