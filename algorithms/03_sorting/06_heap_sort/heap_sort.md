@@ -2,9 +2,11 @@
 
 | Heap Sort  | Worst case    | Average case  | Best case     | Space  | Stable |
 | ---------- | ------------- | ------------- | ------------- | ------ | ------ |
-| complexity | `O(n log(n))` | `Θ(n log(n))` | `Ω(n log(n))` | `O(1)` | `no`   |
+| complexity | `O(n log(n))` | `O(n log(n))` | `O(n log(n))` | `O(1)` | `no`   |
 
-* **Heap Sort**: .
+* **Heap Sort**: like an improved selection sort.
+* Divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. The improvement consists of the use of a *heap data structure* rather than a linear-time search to find the maximum.
+* *Comparison-based algorithm*.
 * *Unstable algorithm*: does not distinguish between two or more items, even if
   they're equivalent.
 
