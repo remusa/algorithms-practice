@@ -4,6 +4,8 @@ describe('Queue (linked list) tests', () => {
     it('should perform the operations on a queue (linked list implementation)', () => {
         const myQueue = new queueLinkedList.Queue()
 
+        expect(myQueue.peek()).toEqual(null)
+
         myQueue.queue(7)
         expect(myQueue.getValues()).toEqual([7])
         myQueue.queue(3)
