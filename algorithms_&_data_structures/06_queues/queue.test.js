@@ -29,5 +29,11 @@ describe('Queue (linked list) tests', () => {
         expect(myQueue.getValues()).toEqual([6, 8, 9, 1])
         expect(myQueue.dequeue().value).toEqual(6)
         expect(myQueue.getValues()).toEqual([8, 9, 1])
+
+        expect(myQueue.dequeue().value).toEqual(8)
+        expect(myQueue.dequeue().value).toEqual(9)
+        expect(myQueue.dequeue().value).toEqual(1)
+        expect(myQueue.dequeue()).toEqual(null)
+        expect(myQueue.dequeue()).toEqual(null)
     })
 })
