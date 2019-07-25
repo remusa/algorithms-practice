@@ -1,4 +1,6 @@
-// Takes in an array that has two sorted subarrays, from [p..q] and [q+1..r], and merges the array
+/*
+ * Takes in an array that has two sorted subarrays, from [p..q] and [q+1..r], and merges the array
+ */
 function merge(left, right) {
     const sorted = []
 
