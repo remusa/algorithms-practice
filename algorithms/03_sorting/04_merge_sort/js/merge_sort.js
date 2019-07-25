@@ -1,66 +1,57 @@
-//  Takes in an array that has two sorted subarrays,
-//  from [p..q] and [q+1..r], and merges the array
-function merge(array, p, q, r) {
-    const lowHalf = []
-    const highHalf = []
+// Takes in an array that has two sorted subarrays, from [p..q] and [q+1..r], and merges the array
+function merge(left, right) {
+    const sorted = []
 
-    let k = p
-    let i
-    let j
+    // Initialize the left and right halves indices
+    let i = 0
+    let j = 0
 
-    //  Fill in the temporary arrays
-    for (i = 0; k <= q; i++, k++) {
-        lowHalf[i] = array[k]
-    }
-
-    for (j = 0; k <= r; j++, k++) {
-        highHalf[j] = array[k]
-    }
-
-    // Reset the indices
-    k = p
-    i = 0
-    j = 0
-
-    //  Repeatedly compare the lowest untaken element in
-    //  lowHalf with the lowest untaken element in highHalf
-    //  and copy the lower of the two back into array
-    while (i < lowHalf.length && j < highHalf.length) {
-        if (lowHalf[i] < highHalf[j]) {
-            array[k] = lowHalf[i]
+    // Compare the lowest indices of both halves and copy the smaller element into the sorted array
+    while (i < left.length && j < right.length) {
+        if (left[i] < right[j]) {
+            sorted.push(left[i])
             i++
         } else {
-            array[k] = highHalf[j]
+            sorted.push(right[j])
             j++
         }
-        k++
     }
 
-    //  Once one of lowHalf and highHalf has been fully copied
-    //  back into array, copy the remaining elements from the
-    //  other temporary array back into the array
-    while (i < lowHalf.length) {
-        array[k] = lowHalf[i]
+    // At this point, one of the two halves has been completed copied, so we
+    // copy the remaining elements of the other half
+    while (i < left.length) {
+        sorted.push(left[i])
         i++
-        k++
     }
-
-    while (j < lowHalf.length) {
-        array[k] = highHalf[j]
+    while (j < right.length) {
+        sorted.push(right[j])
         j++
-        k++
     }
+    return sorted
+
+    // Another option is to concat the remaining elements
+    // return sorted.concat(left.slice(i)).concat(right.slice(j))
 }
 
-// Takes in an array and recursively merge sorts it
-export function mergeSort(array, p, r) {
-    if (p < r) {
-        const q = Math.floor((p + r) / 2)
-
-        mergeSort(array, p, q)
-        mergeSort(array, q + 1, r)
-        merge(array, p, q, r)
+/*
+ * Takes in an array and recursively merge sorts it
+ */
+export function mergeSort(array) {
+    // If array is empty or there's only 1 element then it's already sorted
+    if (array.length <= 1) {
+        return array
     }
 
-    return array
+    const mid = Math.floor(array.length / 2)
+
+    // Divide the original array into two halves
+    const leftArray = array.slice(0, mid)
+    const rightArray = array.slice(mid)
+
+    // Recursively sort both halves of the array
+    const leftSorted = mergeSort(leftArray)
+    const rightSorted = mergeSort(rightArray)
+
+    // Merge the sorted subarrays
+    return merge(leftSorted, rightSorted)
 }

@@ -1,4 +1,5 @@
 import { mergeSort } from './merge_sort'
+// import { mergeSort } from './merge_sort_2'
 
 describe('merge sort tests', () => {
     it('should return sorted array using merge sort', () => {
