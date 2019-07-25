@@ -16,12 +16,16 @@
 
 ## Sorting function
 
-*
+* Compare the lowest indices of both halves and copy the smaller element into the sorted array.
+* At this point, one of the two halves has been completed copied, so we copy the
+  remaining elements of the other half into the sorted array.
 
 ## Merge function
 
 * Takes in a list that has two sorted subarrays, from [start..middle] and
   [middle+1..end], and merges the lists.
+* Divide the original array into two halves and recursively sort both halves of the array.
+* Merge the sorted subarrays.
 
 ## Example
 
