@@ -1,10 +1,14 @@
 # Selection Sort
 
 | Selection Sort | Worst case | Average case | Best case | Space  | Stable |
-| ----------- | ---------- | ------------ | --------- | ------ | ------ |
-| complexity  | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
+| -------------- | ---------- | ------------ | --------- | ------ | ------ |
+| complexity     | `O(n^2)`   | `O(n^2)`     | `O(n^2)`  | `O(1)` | `no`   |
 
-* **Selection sort**: .
+* **Selection sort**: scans the list of items for the smallest element and then
+  swaps that element for the one in the first position.
+* Selection sort is an *in-place* comparison sort.
+* Inefficient on large lists.
+* Generally, *insertion sort* performs better.
 
 ## Example
 
@@ -64,3 +68,9 @@ sorted 	  ||	unsorted
 ```
 
 There is only one item left in the unsorted part, therefore the list is sorted.
+
+## References
+
+* [Selection sort - Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
+* [Select-sort with Gypsy folk dance -
+  YouTube](https://www.youtube.com/watch?v=Ns4TPTC8whw)

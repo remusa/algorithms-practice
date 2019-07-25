@@ -1,8 +1,7 @@
-// Swaps two items in an array, changing the original array
-function swap(array, firstIndex, secondIndex) {
-    let temp = array[firstIndex]
-    array[firstIndex] = array[secondIndex]
-    array[secondIndex] = temp
+function swap(arr, first, second) {
+    const temp = arr[first]
+    arr[first] = arr[second]
+    arr[second] = temp
 }
 
 function partition(array, p, r) {
@@ -33,22 +32,10 @@ function partition(array, p, r) {
     return q
 }
 
-function quickSort(array, p, r) {
+export function quickSort(array, p, r) {
     if (p < r) {
         let q = partition(array, p, r)
         quickSort(array, p, q - 1)
         quickSort(array, q + 1, r)
     }
-}
-
-const ex1 = quickSort([2, 3, 1])
-const ex2 = quickSort([9, 5, 8, 7, 2, 6, 1, 3, 4])
-const ex3 = quickSort([99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0])
-
-console.log(ex1)
-console.log(ex2)
-console.log(ex3)
-
-module.exports = {
-    quickSort,
 }

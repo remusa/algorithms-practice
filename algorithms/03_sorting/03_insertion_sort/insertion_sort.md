@@ -1,10 +1,16 @@
 # Insertion Sort
 
-## Time Complexity
+| Insertion Sort | Worst case | Average case | Best case | Space  | Stable |
+| -------------- | ---------- | ------------ | --------- | ------ | ------ |
+| complexity     | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
 
-    - worst-case: O(n²)
-    - best-case: O(n)
-    - average-case: O(n²)
+* **Insertion sort**: works by selecting the first element of the list and
+  looking at the next item. If it's smaller, we swap them. Then we select
+  the next index of the list with the previously sorted items, and we *insert*
+  it in the correct position.
+* Useful when list is *already or almost* sorted.
+* Inefficient on large lists.
+* Generally, *insertion sort* performs better than *selection sort*.
 
 ## Example
 
@@ -100,3 +106,9 @@ Since `5` is greater than `3`, the `5` is inserted after the `3`.
 ```
 
 Our list is now sorted.
+
+## References
+
+* [Insertion sort - Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
+* [Insert-sort with Romanian folk dance -
+  YouTube](https://www.youtube.com/watch?v=ROalU379l3U)

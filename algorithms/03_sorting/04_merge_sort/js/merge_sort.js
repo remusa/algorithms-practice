@@ -1,21 +1,8 @@
-// Takes in an array and recursively merge sorts it
-function mergeSort(array, p, r) {
-    if (p < r) {
-        let q = Math.floor((p + r) / 2)
-
-        mergeSort(array, p, q)
-        mergeSort(array, q + 1, r)
-        merge(array, p, q, r)
-    }
-
-    return array
-}
-
 //  Takes in an array that has two sorted subarrays,
 //  from [p..q] and [q+1..r], and merges the array
 function merge(array, p, q, r) {
-    let lowHalf = []
-    let highHalf = []
+    const lowHalf = []
+    const highHalf = []
 
     let k = p
     let i
@@ -65,14 +52,15 @@ function merge(array, p, q, r) {
     }
 }
 
-const ex1 = mergeSort([2, 3, 1])
-const ex2 = mergeSort([9, 5, 8, 7, 2, 6, 1, 3, 4])
-const ex3 = mergeSort([99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0])
+// Takes in an array and recursively merge sorts it
+export function mergeSort(array, p, r) {
+    if (p < r) {
+        const q = Math.floor((p + r) / 2)
 
-console.log(ex1)
-console.log(ex2)
-console.log(ex3)
+        mergeSort(array, p, q)
+        mergeSort(array, q + 1, r)
+        merge(array, p, q, r)
+    }
 
-module.exports = {
-    mergeSort,
+    return array
 }

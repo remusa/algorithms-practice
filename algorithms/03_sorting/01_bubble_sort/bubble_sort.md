@@ -90,3 +90,9 @@ unsorted	|| 	 sorted
 ```
 
 This pass is complete. The list is now sorted!
+
+## References
+
+* [Bubble sort - Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+* [Algorithms: Bubble Sort - HackerRank](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
+* [Bubble-sort with Hungarian ("Csángó") folk dance - YouTube](https://www.youtube.com/watch?v=lyZQPjUT5B4)
