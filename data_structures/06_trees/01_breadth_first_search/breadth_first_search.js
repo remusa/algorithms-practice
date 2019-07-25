@@ -22,7 +22,7 @@ Queue.prototype.isEmpty = function() {
 const doBFS = function(graph, source) {
     const bfsInfo = []
 
-    for (const i = 0; i < graph.length; i++) {
+    for (let i = 0; i < graph.length; i++) {
         bfsInfo[i] = {
             distance: null,
             predecessor: null,
@@ -41,7 +41,7 @@ const doBFS = function(graph, source) {
         const u = queue.dequeue()
 
         //  For each neighbor v of u that has not been visited:
-        for (const i = 0; i < graph[u].length; i++) {
+        for (let i = 0; i < graph[u].length; i++) {
             const v = graph[u][i]
 
             if (bfsInfo[v].distance === null) {
