@@ -1,5 +1,5 @@
 function swap(array, firstIndex, secondIndex) {
-    let temp = array[firstIndex]
+    const temp = array[firstIndex]
     array[firstIndex] = array[secondIndex]
     array[secondIndex] = temp
 }
@@ -18,7 +18,7 @@ function indexOfMinimum(array, startIndex) {
     return minIndex
 }
 
-function selectionSort(array) {
+export function selectionSort(array) {
     const arr = [...array]
     let minIndex
 
@@ -29,8 +29,4 @@ function selectionSort(array) {
     }
 
     return arr
-}
-
-module.exports = {
-    selectionSort
 }

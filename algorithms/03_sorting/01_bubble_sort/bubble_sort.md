@@ -1,6 +1,19 @@
 # Bubble Sort
 
-Let's look at an example:
+| Bubble Sort | Worst case | Average case | Best case | Space  | Stable |
+| ----------- | ---------- | ------------ | --------- | ------ | ------ |
+| complexity  | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
+
+* **Bubble sort**: comparison algorithm uses the idea of *bubbling up* the
+  largest value using multiple passes.
+* Compares each pair of adjacent items and swaps them if they are in the wrong
+  order.
+* It works by taking the first unsorted element of the array and walking through
+  the rest of the array, comparing it with the element in the next index. If the
+  second element is smaller, we *swap* the values until the largest element is
+  sorted at the end.
+* Elements are sorted by the end, moving the largest element to the last
+  unsorted index.
 
 ## Example
 

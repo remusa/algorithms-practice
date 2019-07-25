@@ -1,6 +1,10 @@
 # Selection Sort
 
-Let's start with an example:
+| Selection Sort | Worst case | Average case | Best case | Space  | Stable |
+| ----------- | ---------- | ------------ | --------- | ------ | ------ |
+| complexity  | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
+
+* **Selection sort**: .
 
 ## Example
 

@@ -18,6 +18,7 @@ def bubble_sort(L):
         # to index 'end'.
         for i in range(end):
             if L[i] > L[i + 1]:
+                # Swap the values
                 L[i], L[i + 1] = L[i + 1], L[i]
 
         end -= 1

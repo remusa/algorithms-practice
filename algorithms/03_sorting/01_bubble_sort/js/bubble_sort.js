@@ -1,24 +1,28 @@
-function bubbleSort(array) {
-    const arr = [...array]
-    const length = array.length
+function swap(arr, first, second) {
+    const temp = arr[first] // temporary variable to hold the current number
+    arr[first] = arr[second] // replace current number with adjacent number
+    arr[second] = temp // replace adjacent number with current number
+}
 
-    //Number of passes
+export function bubbleSort(array) {
+    const { length } = array
+    const arr = [...array]
+
+    // Walk through the unsorted part of the array
     for (let i = 0; i < length; i++) {
-        //Notice that j < (length - i)
+        // j < (length - i)
+        // On each iteration, compare the index we're at with the next one
         for (let j = 0; j < length; j++) {
-            //Compare the adjacent positions
+            // Compare the adjacent pair
             if (arr[j] > arr[j + 1]) {
-                //Swap the numbers
-                let temp = arr[j] // temporary variable to hold the current number
-                arr[j] = arr[j + 1] // replace current number with adjacent number
-                arr[j + 1] = temp // replace adjacent number with current number
+                // Swap the numbers
+                swap(arr, j, j + 1)
+
+                // ES6 syntax
+                // [array[j], array[j + 1]] = [array[j + 1], array[j]]
             }
         }
     }
 
     return arr
-}
-
-module.exports = {
-    bubbleSort,
 }
