@@ -4,13 +4,22 @@
 | -------------- | ---------- | ------------ | --------- | ------ | ------ |
 | complexity     | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
 
-* **Insertion sort**: works by selecting the first element of the list and
+* **Insertion sort**: sorts the list starting from the beginning and *inserting*
+  the unsorted elements in the corresponding place of the already sorted list.
+* It works by selecting the first element of the list and
   looking at the next item. If it's smaller, we swap them. Then we select
-  the next index of the list with the previously sorted items, and we *insert*
+  the next index of the list and compare it with the previously sorted items, and we *insert*
   it in the correct position.
+* Insertion sort doesn't modify the already sorted elements.
 * Useful when list is *already or almost* sorted.
 * Inefficient on large lists.
 * Generally, *insertion sort* performs better than *selection sort*.
+
+## Insert function
+
+* To insert an element into its correct position, we repeatedly compare it with
+  the elements to its left, going right to left.
+* Each time we find that the key is less than an element to its left, we slide that element one position to the right, since we know that the key will have to go to that element's left.
 
 ## Example
 
@@ -112,3 +121,6 @@ Our list is now sorted.
 * [Insertion sort - Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 * [Insert-sort with Romanian folk dance -
   YouTube](https://www.youtube.com/watch?v=ROalU379l3U)
+* [Insertion sort (article) | Algorithms | Khan
+  Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
+* [Insertion sort pseudocode (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort-pseudocode)

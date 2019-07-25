@@ -74,3 +74,5 @@ There is only one item left in the unsorted part, therefore the list is sorted.
 * [Selection sort - Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
 * [Select-sort with Gypsy folk dance -
   YouTube](https://www.youtube.com/watch?v=Ns4TPTC8whw)
+* [Selection sort pseudocode (article) | Khan
+  Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/selection-sort-pseudocode)
