@@ -16,3 +16,28 @@ spanish.sort((a, b) => {
     return a.localeCompare(b)
 })
 ```
+
+## Stability in sorting algorithms
+
+* **Stability**: a sorting algorithm is stable if two objects with equal keys
+  appear in the same order in the sorted output as they appear in the input
+  array.
+* A *stable* sort preserves the original order of the input set, whereas the *unstable* algorithm does not distinguish between two or more items.
+* *Stable algorithms*:
+  * Bubble Sort.
+  * Insertion Sort.
+  * Merge Sort.
+  * Counting Sort.
+  * Tim Sort.
+* *Unstable algorithms*:
+  * Heap Sort.
+  * Selection Sort.
+  * Shell Sort.
+  * Quick Sort.
+* Stability matters if, and only if, the problem to solve requires
+  retention of that relative order. If you don't need stability, we can use a
+  fast, memory-sipping algorithm from a library, like *heapsort* or *quicksort*.
+
+## Resources
+
+* [What is stability in sorting algorithms and why is it important? - Stack Overflow](https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important)

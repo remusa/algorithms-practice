@@ -7,6 +7,8 @@
 * **Merge sort**: *divide-and-conquer* algorithm that sorts smaller
   subarrays before merging them together.
 * *Comparison-based algorithm*.
+* *Stable algorithm*: it means that if we have equivalent elements (like 6 and
+  6), these elements will keep the original order in the array.
 * Solves the subproblems *recursively* (each subproblem is smaller than the
   original problem).
 * Steps:

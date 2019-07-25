@@ -51,7 +51,10 @@
     "eslintConfig": {
         "extends": [
             "wesbos"
-        ]
+        ],
+        "rules": {
+            "jest/no-large-snapshots": 0
+        }
     },
     "babel": {
         "presets": [
