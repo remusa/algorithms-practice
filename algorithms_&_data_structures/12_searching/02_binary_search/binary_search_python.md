@@ -70,6 +70,7 @@ def binary_search(L, v):
 
     while b <= e:
         m = (b + e) // 2
+
         if L[m] < v:
             b = m + 1
         else:
@@ -81,13 +82,25 @@ def binary_search(L, v):
         return b
 ```
 
-In the above function, the main `while` loop continues to loop as long as `b` is less than `e`. Once `b` is greater than `e`, than our search is complete. Inside the loop, we first set `m` to the middle index between index `b` and index `e`. Inside the `while` loop, there is an `if` statement. If the item at position `m` is less than `v`, then we advance `b` to be the index just to the right of `m`. However, if the item at index `m` is greater than `v`, then we decrease `e` so that it is the index to the left of `m`.
+In the above function, the main `while` loop continues to loop as long as `b` is
+less than `e`. Once `b` is greater than `e`, than our search is complete.
+
+Inside the loop, we first set `m` to the middle index between index `b` and
+index `e`. Inside the `while` loop, there is an `if` statement.
+
+If the item at position `m` is less than `v`, then we advance `b` to be the
+index just to the right of `m`.
+
+However, if the item at index `m` is greater than `v`, then we decrease `e` so that it is the index to the left of `m`.
 
 Finally, at the end of our function, we have one last `if` statement. When the
-`while` loop ends, there are two reasons why it might have ended. First, if all
-the items in the list are less than `v`, then `b` will end up being equal to the
-length of the list, and will refer to an index outside of the list; we check
-whether `b` is equal to the length of `L`, and if it is, then we return` -1`.
+`while` loop ends, there are two reasons why it might have ended.
+
+First, if all the items in the list are less than `v`, then `b` will end up
+being equal to the length of the list, and will refer to an index outside of the
+list; we check whether `b` is equal to the length of `L`, and if it is, then we
+return `-1`.
+
 Finally, we check the item at location `b`. After all, it is possible that `v`
 is not contained in the list. If `L[b]` is equal to `v`, then we return `b`.
 Otherwise we will return `-1`.

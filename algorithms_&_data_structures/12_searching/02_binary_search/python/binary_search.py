@@ -13,6 +13,8 @@ def binary_search(L, item):
     2
     >>> binary_search([2, 3, 5, 7], 8)
     -1
+    >>> binary_search([2, 3, 5, 7], 7)
+    3
     """
 
     start = 0

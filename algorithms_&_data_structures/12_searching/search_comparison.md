@@ -1,8 +1,6 @@
 # Comparing Search Algorithms
 
-We have seen two ways to search for a value in a list. Linear search works on both unsorted and sorted lists. Binary search works only on sorted lists.
-
-Let's take a deeper look at each of the searching algorithms.
+Linear search works on both unsorted and sorted lists. Binary search works only on sorted lists.
 
 ## Comparing Linear Search and Binary Search
 
