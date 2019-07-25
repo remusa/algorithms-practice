@@ -30,7 +30,7 @@ class Stack {
             this.top = newNode
             this.bottom = newNode
         } else {
-            // 3. Point the node below to the current top
+            // 3. Save the current top
             const previousTop = this.top
             // 4. Point the top to the new node
             this.top = newNode
