@@ -10,10 +10,20 @@
   looking at the next item. If it's smaller, we swap them. Then we select
   the next index of the list and compare it with the previously sorted items, and we *insert*
   it in the correct position.
-* Insertion sort doesn't modify the already sorted elements.
+* *Stable*: doesn't modify the already sorted elements.
 * Useful when list is *already or almost* sorted.
 * Inefficient on large lists.
 * Generally, *insertion sort* performs better than *selection sort*.
+
+## Algorithm
+
+```
+for i = 2:n,
+    for (k = i; k > 1 and a[k] < a[k-1]; k--)
+        swap a[k,k-1]
+    → invariant: a[1..i] is sorted
+end
+```
 
 ## Insert function
 
@@ -119,8 +129,10 @@ Our list is now sorted.
 ## References
 
 * [Insertion sort - Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
-* [Insert-sort with Romanian folk dance -
-  YouTube](https://www.youtube.com/watch?v=ROalU379l3U)
 * [Insertion sort (article) | Algorithms | Khan
   Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
 * [Insertion sort pseudocode (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort-pseudocode)
+* [Insertion Sort - Sorting Algorithm Animations |
+  Toptal](https://www.toptal.com/developers/sorting-algorithms/insertion-sort)
+* [Insert-sort with Romanian folk dance -
+  YouTube](https://www.youtube.com/watch?v=ROalU379l3U)

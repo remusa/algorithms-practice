@@ -7,8 +7,22 @@
 * **Selection sort**: scans the list of items for the smallest element and then
   swaps that element for the one in the first position.
 * Selection sort is an *in-place* comparison sort.
+* *Unstable algorithm*: does not distinguish between two or more items, even if
+  they're equivalent.
 * Inefficient on large lists.
 * Generally, *insertion sort* performs better.
+
+## Algorithm
+
+```
+for i = 1:n,
+    k = i
+    for j = i+1:n, if a[j] < a[k], k = j
+    → invariant: a[k] smallest of a[i..n]
+    swap a[i,k]
+    → invariant: a[1..i] in final position
+end
+```
 
 ## Example
 
@@ -76,3 +90,5 @@ There is only one item left in the unsorted part, therefore the list is sorted.
   YouTube](https://www.youtube.com/watch?v=Ns4TPTC8whw)
 * [Selection sort pseudocode (article) | Khan
   Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/selection-sort-pseudocode)
+* [Selection Sort - Sorting Algorithm Animations |
+  Toptal](https://www.toptal.com/developers/sorting-algorithms/selection-sort)

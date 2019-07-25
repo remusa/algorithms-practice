@@ -6,6 +6,8 @@
 
 * **Bubble sort**: comparison algorithm uses the idea of *bubbling up* the
   largest value using multiple passes.
+* *Stable*: doesn't modify the already sorted elements.
+* *Slow*: bubble sort always requires *2 passes* through the data.
 * Compares each pair of adjacent items and swaps them if they are in the wrong
   order.
 * It works by taking the first unsorted element of the array and walking through
@@ -14,6 +16,20 @@
   sorted at the end.
 * Elements are sorted by the end, moving the largest element to the last
   unsorted index.
+
+## Algorithm
+
+```
+for i = 1:n,
+    swapped = false
+    for j = n:i+1,
+        if a[j] < a[j-1],
+            swap a[j,j-1]
+            swapped = true
+    → invariant: a[1..i] in final position
+    break if not swapped
+end
+```
 
 ## Example
 
@@ -95,4 +111,6 @@ This pass is complete. The list is now sorted!
 
 * [Bubble sort - Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
 * [Algorithms: Bubble Sort - HackerRank](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
+* [Bubble Sort - Sorting Algorithm Animations |
+  Toptal](https://www.toptal.com/developers/sorting-algorithms/bubble-sort)
 * [Bubble-sort with Hungarian ("Csángó") folk dance - YouTube](https://www.youtube.com/watch?v=lyZQPjUT5B4)

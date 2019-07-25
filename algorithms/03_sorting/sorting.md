@@ -40,9 +40,57 @@ spanish.sort((a, b) => {
 
 ## Picking a sorting algorithm
 
-*
+* Note: it's *matematically impossible* to beat `O(n log(n))`, because it means
+  we have to sort by comparison.
+
+* **Bubble sort**: teaching purposes (almost never).
+* **Selection sort**: teaching purposes (almost never).
+* **Insertion sort**: if the *input is small* or items are *already or almost sorted*.
+* **Merge sort**: *very fast* (average and worst cases are both `O(nlog(n))`).
+  Space complexity can be a problem in large data sets.
+* **Quick sort**: if *memory space* is a problem (very large data sets). Better
+  than *merge sort* if pivot is picked properly. Worst case is really slow
+  `O(n^2)`.
+* **Heap sort**: better space complexity than *quick sort*, but slower on average.
+
+* **Radix sort**: *non-comparison sort* algorithm.
+* **Counting sort**: *non-comparison sort* algorithm.
+
+```javascript
+//#1 - Sort 10 schools around your house by distance:
+Insertion sort (small dataset)
+
+//#2 - eBay sorts listings by the current Bid amount:
+Radix or counting sort (bids are fixed-length integers)
+
+//#3 - Sport scores on ESPN
+Quick sort (efficient in time/space complexity, scores probably aren't already sorted)
+
+//#4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+Merge sort (worst case is better than quick sort and we aren't sorting in memory)
+
+//#5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+Insertion sort (old reviews are probably already sorted)
+
+//#6 - Temperature Records for the past 50 years in Canada
+Radix or counting sort (if temperatures have no decimal places)
+Quick sort (if decimal places)
+
+//#7 - Large user name database needs to be sorted. Data is very random.
+Merge sort (if we have enough memory)
+Quick sort (if not worried about worst case and I can pick a good pivot)
+
+//#8 - You want to teach sorting for the first time
+Bubble sort, selection sort
+```
 
 ## Resources
 
 * [Sorting (article) | Selection sort | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 * [What is stability in sorting algorithms and why is it important? - Stack Overflow](https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important)
+* [Sorting Algorithms | Brilliant Math & Science
+  Wiki](https://brilliant.org/wiki/sorting-algorithms/)
+* [Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!)
+  @ericdrowell](https://www.bigocheatsheet.com/)
+* [Sorting Algorithms Animations |
+  Toptal](https://www.toptal.com/developers/sorting-algorithms)

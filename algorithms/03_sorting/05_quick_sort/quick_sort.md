@@ -31,11 +31,32 @@
      array[q+1..r], are greater than the pivot and are sorted. The array[p..r]
      is already sorted.
 
+## Algorithm
+
+```
+_# choose pivot_
+swap a[1,rand(1,n)]
+
+_# 2-way partition_
+k = 1
+for i = 2:n, if a[i] < a[1], swap a[++k,i]
+swap a[1,k]
+_→ invariant: a[1..k-1] < a[k] <= a[k+1..n]_
+
+_# recursive sorts_
+sort a[1..k-1]
+sort a[k+1,n]
+```
+
 ## References
 
+* [Quicksort - Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
 * [Algorithms: Quicksort - HackerRank](https://www.youtube.com/watch?v=SLauY6PpjW4)
 * [Quicksort algorithm overview | Quick sort (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/overview-of-quicksort)
 * [Linear-time partitioning (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/linear-time-partitioning)
-* [Quicksort - Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
 * [Algorithms: Quicksort -
   HackerRank](https://www.youtube.com/watch?v=SLauY6PpjW4)
+* [Quick Sort - Sorting Algorithm Animations |
+  Toptal](https://www.toptal.com/developers/sorting-algorithms/quick-sort)
+* [Quick-sort with Hungarian (Küküllőmenti legényes) folk dance -
+  YouTube](https://www.youtube.com/watch?v=ywWBy6J5gz8)

@@ -16,6 +16,27 @@
   2. *Conquer*: the subproblems by solving them recursively. If they are small enough, solve the subproblems as base cases.
   3. *Combine*: the solutions to the subproblems into the solution for the original problem.
 
+## Algorithm
+
+```
+# split in half
+m = n / 2
+
+# recursive sorts
+sort a[1..m]
+sort a[m+1..n]
+
+# merge sorted sub-arrays using temp array
+b = copy of a[1..m]
+i = 1, j = m+1, k = 1
+while i <= m and j <= n,
+    a[k++] = (a[j] < b[i]) ? a[j++] : b[i++]
+    → invariant: a[1..k] in final position
+while i <= m,
+    a[k++] = b[i++]
+    → invariant: a[1..k] in final position
+```
+
 ## Sorting function
 
 * Compare the lowest indices of both halves and copy the smaller element into the sorted array.
@@ -42,3 +63,7 @@
 * [Algorithms: Merge Sort - HackerRank](https://www.youtube.com/watch?v=KF2j-9iSf4Q)
 * [Merge sort algorithm overview (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort)
 * [Linear-time merging (article) | Merge sort | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/linear-time-merging)
+* [Merge Sort - Sorting Algorithm Animations |
+  Toptal](https://www.toptal.com/developers/sorting-algorithms/merge-sort)
+* [Merge-sort with Transylvanian-saxon (German) folk dance -
+  YouTube](https://www.youtube.com/watch?v=XaqR3G_NVoo)

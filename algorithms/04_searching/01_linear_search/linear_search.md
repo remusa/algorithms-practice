@@ -143,3 +143,8 @@ Here are some important details for the above function:
 
 1. The `while` loop has two conditions for when to end the loop. First, we will continue looping while the index `i` is not equal to the length of the list. And since the index starts from 0, we will be examining each item in the list in a forward manner. Second, we will continue looping as long as `v`, the value we are searching for, is not in the current position of the list `v!=L[i]`. In other words, if `v` is in the current position of the list, then we know we have found the item we are looking for, and we can exit the `while` loop.
 2. There is an `if` statement after the while loop ends. This is because there are two possible reasons why the while loop could have exited. First is the case when we have not found the item we are looking for, and this happens when the index `i` is equal to the length of the list `(i == len(L))`. In this case we return -1. Otherwise, if `i` is not equal to the length of the list, then `i` is less than the length of the list, so we must return `i`. This is because `i` is the index at which we found the value `v`, and that is precisely why the while loop ended before `i` became equal to the length of the list.
+
+## Resources
+
+* [LINEAR search with FLAMENCO dance -
+  YouTube](https://www.youtube.com/watch?v=-PuqKbu9K3U)
