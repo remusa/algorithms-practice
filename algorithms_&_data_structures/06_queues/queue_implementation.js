@@ -21,7 +21,7 @@ class Queue {
     }
 
     // O(1)
-    queue(value) {
+    enqueue(value) {
         // 1. Create the new node
         const newNode = new Node(value)
 
@@ -53,7 +53,7 @@ class Queue {
         const dequeuedNode = this.first
 
         // 3. If there's only 1 element in the queue
-        if (this.first === this.queue) {
+        if (this.first === this.enqueue) {
             this.first = null
             this.last = null
         }

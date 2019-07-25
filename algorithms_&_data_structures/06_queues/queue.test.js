@@ -6,11 +6,11 @@ describe('Queue (linked list) tests', () => {
 
         expect(myQueue.peek()).toEqual(null)
 
-        myQueue.queue(7)
+        myQueue.enqueue(7)
         expect(myQueue.getValues()).toEqual([7])
-        myQueue.queue(3)
+        myQueue.enqueue(3)
         expect(myQueue.getValues()).toEqual([7, 3])
-        myQueue.queue(6)
+        myQueue.enqueue(6)
         expect(myQueue.getValues()).toEqual([7, 3, 6])
 
         expect(myQueue.dequeue().value).toEqual(7)
@@ -18,11 +18,11 @@ describe('Queue (linked list) tests', () => {
 
         expect(myQueue.peek().value).toEqual(3)
 
-        myQueue.queue(8)
+        myQueue.enqueue(8)
         expect(myQueue.getValues()).toEqual([3, 6, 8])
-        myQueue.queue(9)
+        myQueue.enqueue(9)
         expect(myQueue.getValues()).toEqual([3, 6, 8, 9])
-        myQueue.queue(1)
+        myQueue.enqueue(1)
         expect(myQueue.getValues()).toEqual([3, 6, 8, 9, 1])
 
         expect(myQueue.dequeue().value).toEqual(3)
