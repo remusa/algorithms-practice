@@ -53,7 +53,8 @@
             "wesbos"
         ],
         "rules": {
-            "jest/no-large-snapshots": 0
+            "jest/no-large-snapshots": 0,
+            "no-lonely-if": 0
         }
     },
     "babel": {

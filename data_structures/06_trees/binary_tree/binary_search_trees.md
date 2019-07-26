@@ -58,10 +58,16 @@ log 100 = 2
   3. Parent nodes can only have a *maximum of 2 children*.
 
 * **Strengths**:
-  * *Very efficient*: all operations are `O(log(n))` in average.
+  * *Very efficient*: all operations are `O(log(n))` in average, better than
+    `O(n)`. *Balanced* trees are prefered.
+  * *Ordered*: elements are sorted in hierarchichal order.
+  * *Flexible size*: .
 * **Weaknesses**:
-  * *Unbalanced are slower*: if every parent has only one child, it can turn out into a
-    *linked list*, then we have to traverse the entire tree for every operation `O(n)`.
+  * *Unbalanced trees are slow*: if every parent has only one child, it can turn out into a
+    *linked list*, then we have to traverse the entire tree for every operation
+    `O(n)`.
+  * *No O(1)` operations*: we have to traverse the tree for any operations,
+    which is `O(log(n))`.
 
 ## Binary Tree Implementation
 
