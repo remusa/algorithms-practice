@@ -1,5 +1,13 @@
 # Stacks
 
+| Operation | Worst case |
+| --------- | ---------- |
+| space     | `O(n)`     |
+| lookup    | `O(n)`     |
+| push      | `O(1)`     |
+| pop       | `O(1)`     |
+| peek      | `O(1)`     |
+
 * **Stacks**: stores items in a last-in, first-out (*LIFO*) order.
 * **Uses**:
   * *Depth-first search*: uses a stack to keep track of which nodes to visit next.
@@ -8,15 +16,7 @@
     function call.
   * *String parsing*: stacks are useful for string parsing.
 
-## Stack Operations
-
-| Operation | Worst case |
-| --------- | ---------- |
-| space     | `O(n)`     |
-| lookup    | `O(n)`     |
-| push      | `O(1)`     |
-| pop       | `O(1)`     |
-| peek      | `O(1)`     |
+## Strengths and Weaknesses
 
 * **Strengths**:
   * *Fast operations*: all stack operations take  `O(1)` time.
@@ -32,3 +32,7 @@
 | -------------- | -------------- | ------------------- |
 | Dynamic Arrays | append         | remove last element |
 | Linked Lists   | insert at head | remove at head      |
+
+## Resources
+
+* [Stack Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/stack?)

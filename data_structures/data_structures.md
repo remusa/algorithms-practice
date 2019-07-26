@@ -42,3 +42,7 @@
 * **Traversal**: access each data once.
 * **Searching**: find the location of a data item if it exists.
 * **Sorting**: order values.
+
+## Resources
+
+* [Data Structures for Coding Interviews: Computer Science in Plain English | Interview Cake](https://www.interviewcake.com/article/python/data-structures-coding-interview)

@@ -1,5 +1,12 @@
 # Hash Tables
 
+| Operation | Average case | Worst case |
+| --------- | ------------ | ---------- |
+| space     | `O(n)`       | `O(n)`     |
+| lookup    | `O(1)`       | `O(n)`     |
+| insert    | `O(1)`       | `O(n)`     |
+| delete    | `O(1)`       | `O(n)`     |
+
 * Key-value pairs.
 * Hash tables are **unordered**.
 * *Hash function*: a function that generates a value of fixed length for each
@@ -31,20 +38,7 @@ user.scream()               // O(1)
 * **Hash collisions**: when the hash table stores more than 1 value in the same
   address by storing a *linked list* inside of the address.
 
-## Sets
-
-* **Set**: similar to a hash table except it only *stores keys without values*.
-* Difference with **sets**: `sets` don't allow for duplicate values.
-* Useful when tracking groups of items (like nodes visited in a graph, characters seen in a string).
-
-## Hash Table Operations
-
-| Operation | Average case | Worst case |
-| --------- | ------------ | ---------- |
-| space     | `O(n)`       | `O(n)`     |
-| lookup    | `O(1)`       | `O(n)`     |
-| insert    | `O(1)`       | `O(n)`     |
-| delete    | `O(1)`       | `O(n)`     |
+## Strengths and Weaknesses
 
 * Operations normally cost `O(1)`, but in the worst-case scenario they can take `O(n)`:
   * When you have to walk through all of the values for a single lookup.
@@ -52,11 +46,9 @@ user.scream()               // O(1)
   hash map exceeds the number of indices in the underlying array. We could expand
   the array, allocating a bigger one and rehashing all of the existing keys to
   the new one (`O(n)`).
-
 * **Strengths**:
   * *Fast lookups*: constant time `O(1)` to retrieve items *on average*.
   * *Flexible keys*: most data types can be used for keys, as long as they're *hashable*.
-
 * **Weaknesses**:
   * *Fast lookups*: linear time `O(n)` to retrieve items *worst case*.
   * *Unordered*: keys aren't stored in order.
@@ -66,6 +58,12 @@ user.scream()               // O(1)
   * *Not cache-friendly*: many hash table implementations use linked lists, which don't put data next to each other in memory.
   * *Cost of hashing function*: the cost of the hashing function can be greater
     can be high.
+
+## Sets
+
+* **Set**: similar to a hash table except it only *stores keys without values*.
+* Difference with **sets**: `sets` don't allow for duplicate values.
+* Useful when tracking groups of items (like nodes visited in a graph, characters seen in a string).
 
 ## Hash Table Implementation
 
@@ -132,3 +130,7 @@ class HashTable {
 * **Sets**:
   * Only stores the *keys*.
   * Values are inserted a single time (no duplicates).
+
+## Resources
+
+* [Hash Table/Hash Map Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/hash-map?)

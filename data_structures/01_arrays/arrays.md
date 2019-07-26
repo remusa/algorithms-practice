@@ -8,11 +8,7 @@
 const strings = ['a', 'b', 'c', 'd']
 ```
 
-## Array Operations
-
-### Cheatsheet
-
-#### Static Arrays
+## Static Arrays
 
 | Operation | Worst case |
 | --------- | ---------- |
@@ -25,11 +21,10 @@ const strings = ['a', 'b', 'c', 'd']
 * **Strengths**:
   * *Fast lookups*: constant time `O(1)` to retrieve items.
   * *Fast appends/deletions*: constant time `O(1)` to add/remove to then *end*.
-
 * **Weaknesses**:
   * *Slow appends/deletions*: linear time `O(n)` to add/remove items to the *beginning/middle*.
 
-### Dynamic Arrays
+## Dynamic Arrays
 
 | Operation | Average case | Worst case |
 | --------- | ------------ | ---------- |
@@ -39,15 +34,21 @@ const strings = ['a', 'b', 'c', 'd']
 | insert    | `O(n)`       | `O(n)`     |
 | delete    | `O(n)`       | `O(n)`     |
 
-* Advantages:
-  * **Fast lookups**: constant time `O(1)` to retrieve items.
-  * **Fast appends/deletions**: constant time `O(1)` to add/remove to then *end*.
-
-* Disadvantages:
-  * **Slow appends/deletions**: linear time `O(n)` to add/remove items to the *beginning/middle*.
-  * **Costly insertions/deletions**: linear time `O(n)` to add/remove items to the *end* if they array needs to expand.
+* **Strengths**:
+  * *Fast lookups*: constant time `O(1)` to retrieve items.
+  * *Fast appends/deletions*: constant time `O(1)` to add/remove to then *end*.
+* **Weaknesses**:
+  * *Slow appends/deletions*: linear time `O(n)` to add/remove items to the *beginning/middle*.
+  * *Costly insertions/deletions*: linear time `O(n)` to add/remove items to the *end* if they array needs to expand.
     * Size of the array is usually *doubled*.
     * Each element is copied into the new array.
+
+## Static vs. Dynamic Arrays
+
+* **Static arrays**: specify the size of the array at time of creation.
+* **Dynamic arrays**: expands as needed, copies and rebuilds the array at a new
+  location if/when more memory is needed.
+  * Append can be `O(n)` if array needs to be rebuilt.
 
 ## Array Operations
 
@@ -80,9 +81,7 @@ strings.unshift('x') // ['x', 'a', 'b', 'c', 'd']
 strings.splice(2, 0, 'alien') // [ 'x', 'a', 'alien', 'b', 'c', 'd' ]
 ```
 
-## Static vs. Dynamic Arrays
+## Resources
 
-* **Static arrays**: specify the size of the array at time of creation.
-* **Dynamic arrays**: expands as needed, copies and rebuilds the array at a new
-  location if/when more memory is needed.
-  * Append can be `O(n)` if array needs to be rebuilt.
+* [Array Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/array?)
+* [Dynamic Array Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/dynamic-array)

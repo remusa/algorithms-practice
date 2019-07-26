@@ -1,5 +1,14 @@
 # Linked Lists
 
+| Operation | Worst case | Doubly-Linked |
+| --------- | ---------- | ------------- |
+| space     | `O(n)`     | `O()`         |
+| prepend   | `O(1)`     | `O()`         |
+| append    | `O(1)`     | `O()`         |
+| lookup    | `O(n)`     | `O()`         |
+| insert    | `O(n)`     | `O()`         |
+| delete    | `O(n)`     | `O()`         |
+
 * **Linked lists**: organizes items sequentially, with each item storing a
   pointer to the next one.
 * **Node**: item in a linked list.
@@ -10,16 +19,7 @@
 * **Tail**: last node of the list.
 * Used for *stacks* and *queues* because they only need fast operations on the ends.
 
-## Linked Lists Operations
-
-| Operation | Worst case | Doubly-Linked |
-| --------- | ---------- | ------------- |
-| space     | `O(n)`     | `O()`         |
-| prepend   | `O(1)`     | `O()`         |
-| append    | `O(1)`     | `O()`         |
-| lookup    | `O(n)`     | `O()`         |
-| insert    | `O(n)`     | `O()`         |
-| delete    | `O(n)`     | `O()`         |
+## Strengths and Weaknesses
 
 * **Strengths**:
   * *Fast operations on the ends*: adding and removing elements at either end of a linked list is `O(1)`.
@@ -228,3 +228,7 @@ Remove(head, value)
   return false
 end Remove
 ```
+
+## Resources
+
+* [Linked List Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/linked-list?)

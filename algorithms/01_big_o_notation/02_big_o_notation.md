@@ -246,3 +246,7 @@ function arrayOfHiNTimes(n) {
 ```
 
 * `O(n)`: the size of an array scales with the size of the input.
+
+## Resources
+
+* [Big O Notation | Interview Cake](https://www.interviewcake.com/article/python/big-o-notation-time-and-space-complexity?)
