@@ -14,5 +14,7 @@ describe('binary search tree tests', () => {
 
         expect(bstTree.search(999)).toEqual(null)
         expect(bstTree.search(170)).toEqual({ value: 170, left: null, right: null })
+
+        expect(bstTree.delete(1)).toEqual({ value: 1, left: null, right: null })
     })
 })

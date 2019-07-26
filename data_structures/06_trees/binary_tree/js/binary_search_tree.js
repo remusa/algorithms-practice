@@ -23,7 +23,6 @@ class BinarySearchTree {
         while (currentNode) {
             // Check if we found the node
             if (currentNode.value === value) {
-                console.log(`FOUND ${value}: ${JSON.stringify(currentNode)}`)
                 return currentNode
             }
             // Go to the left
@@ -36,7 +35,6 @@ class BinarySearchTree {
             }
         }
 
-        console.log(`NOT FOUND ${value}`)
         return null
     }
 
@@ -109,7 +107,97 @@ class BinarySearchTree {
     }
 
     // O(log(n))
-    delete(value) {}
+    delete(value) {
+        if (!this.root) {
+            return null
+        }
+
+        let parentNode = null
+        let currentNode = this.root
+
+        // Traverse the tree
+        while (currentNode) {
+            if (value < currentNode.value) {
+                parentNode = currentNode
+                currentNode = currentNode.left
+            } else if (currentNode.value > value) {
+                parentNode = currentNode
+                currentNode = currentNode.right
+            } else if (currentNode.value === value) {
+                const deletedNode = currentNode
+
+                // Option 1: No right child
+                if (!currentNode.right) {
+                    if (!parentNode) {
+                        this.root = currentNode.left
+                    } else {
+                        // If parent > current value, make current left child a
+                        // child of parent
+                        if (currentNode.value < parentNode.value) {
+                            parentNode.left = currentNode.left
+                        }
+                        // if parent < current value, make left child a right of
+                        // parent
+                        else if (currentNode.value > parentNode.value) {
+                            parentNode.right = currentNode.left
+                        }
+                    }
+                }
+
+                // Option 2: Right child which doesn't have a left child
+                else if (!currentNode.right.left) {
+                    currentNode.right.left = currentNode.left
+
+                    if (!parentNode) {
+                        this.root = currentNode.right
+                    } else {
+                        // if parent > current, make right child of the left the
+                        // parent
+                        if (currentNode.value < parentNode) {
+                            parentNode.left = currentNode.right
+                        }
+
+                        // if parent < current, make right child a right child
+                        // the parent
+                        else if (currentNode.value > parentNode.value) {
+                            parentNode.right = currentNode.right
+                        }
+                    }
+                }
+
+                // Option 3: Right child that has a left child
+                else {
+                    // Find the right's child's left most child
+                    let leftMostParent = currentNode.right
+                    let leftMost = leftMostParent.left
+
+                    while (leftMost.left) {
+                        leftMostParent = leftMost
+                        leftMost = leftMost.left
+                    }
+
+                    // Parent's left subtree is now leftMost's right subtree
+                    leftMostParent.left = leftMost.right
+                    leftMost.left = currentNode.left
+                    leftMost.right = currentNode.right
+
+                    if (!parentNode) {
+                        this.root = leftMost
+                    } else {
+                        if (currentNode.value < parentNode.value) {
+                            parentNode.left = leftMost
+                        } else if (currentNode.value > parentNode.value) {
+                            parentNode.right = leftMost
+                        }
+                    }
+                }
+
+                return deletedNode
+            }
+        }
+
+        return null
+    }
 
     // O(log(n))
     // traverse() {}
@@ -136,10 +224,17 @@ function traverse(node) {
     return parent
 }
 
-// JSON.stringify(traverse(bstTree.root))
+JSON.stringify(traverse(bstTree.root))
+
+console.log(`${JSON.stringify(bstTree.delete(1))}`)
+
+JSON.stringify(traverse(bstTree.root))
 
 //     9
 //  4     20
 // 1  6  15  170
 
-export { BinarySearchTree }
+// export { BinarySearchTree }
+module.exports = {
+    BinarySearchTree,
+}
