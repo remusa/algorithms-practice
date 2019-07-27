@@ -17,3 +17,4 @@
 
 * [Priority queue - Wikipedia](https://en.wikipedia.org/wiki/Priority_queue)
 * [Priority Queue Introduction - YouTube](https://www.youtube.com/watch?v=wptevk0bshY)
+* [Implementation of Priority Queue in Javascript - GeeksforGeeks](https://www.geeksforgeeks.org/implementation-priority-queue-javascript/)

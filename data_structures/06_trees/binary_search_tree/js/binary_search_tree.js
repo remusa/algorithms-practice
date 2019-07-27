@@ -199,8 +199,36 @@ class BinarySearchTree {
         return null
     }
 
-    // O(log(n))
-    // traverse() {}
+    // function traverse(node) {
+    //     const parent = { value: node.value }
+    //     parent.left = node.left === null ? null : traverse(node.left)
+    //     parent.right = node.right === null ? null : traverse(node.right)
+    //     console.log(`${parent.value}`)
+    //     return parent
+    // }
+
+    inOrderTraversal() {
+        const inorder = []
+
+        function traversal(node) {
+            // Left
+            if (node.left) {
+                traversal(node.left)
+            }
+
+            // Root
+            inorder.push(node.value)
+
+            // Right
+            if (node.right) {
+                traversal(node.right)
+            }
+        }
+
+        traversal(this.root)
+
+        return inorder
+    }
 }
 
 const bstTree = new BinarySearchTree()
@@ -224,11 +252,13 @@ function traverse(node) {
     return parent
 }
 
-JSON.stringify(traverse(bstTree.root))
+// JSON.stringify(traverse(bstTree.root))
 
-console.log(`${JSON.stringify(bstTree.delete(1))}`)
+// console.log(`${JSON.stringify(bstTree.delete(1))}`)
 
-JSON.stringify(traverse(bstTree.root))
+// JSON.stringify(traverse(bstTree.root))
+
+console.log(`${bstTree.inOrderTraversal()}`)
 
 //     9
 //  4     20

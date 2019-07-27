@@ -1,12 +1,12 @@
 # Binary Trees
 
-| Operation | Average case | Worst case |
-| --------- | ------------ | ---------- |
-| space     | `O(n)`       | `O(n)`     |
-| access    | `O(log(n))`  | `O(n)`     |
-| search    | `O(log(n))`  | `O(n)`     |
-| insert    | `O(log(n))`  | `O(n)`     |
-| delete    | `O(log(n))`  | `O(n)`     |
+| Operation | Worst case  |
+| --------- | ----------- |
+| space     | `O(n)`      |
+| access    | `O(log(n))` |
+| search    | `O(log(n))` |
+| insert    | `O(log(n))` |
+| delete    | `O(log(n))` |
 
 * **Binary trees**: tree where every node has two or fewer children (`n < 2`. Children
   are called `left` and `right`.
@@ -68,6 +68,14 @@ log 100 = 2
     `O(n)`.
   * *No O(1)` operations*: we have to traverse the tree for any operations,
     which is `O(log(n))`.
+
+## Tree Traversals
+
+* *Preorder*: `root` -> `left` -> `right`.
+* *Inorder*: `left` -> `root` -> `right`.
+* *Postorder*: `right` -> `left` -> `root`.
+
+* Note: trees are typically traversed *inorder*.
 
 ## Binary Tree Implementation
 
