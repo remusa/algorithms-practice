@@ -16,6 +16,7 @@
 * *Ordered*: all the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string.
 * Values tend only to be associated with leaves, and with some inner nodes that correspond to keys of interest.
 * *Empty root node*: top node or root typically equals an empty string.
+* Each node stores a character or a word.
 
 ## Strenghts and Weaknesses
 
@@ -25,6 +26,21 @@
   * *Fast operations*: insertion and deletion are very fast (`O(log(n))`).
   * *Space efficient*: prefixes are stored in only 1 location, so duplicates
     aren't stored.
+
+# Optimizations
+
+* Don´t look up each prefix from the root (build on past calls) by:
+  * Keeping state within the trie.
+  * Returning the node reference.
+
+## Implementation
+
+```javascript
+class Node {
+    HashMap(<Character, Node)
+    boolean isCompleteWord
+}
+```
 
 ## Resources
 

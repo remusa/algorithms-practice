@@ -244,19 +244,17 @@ bstTree.insert(1)
 bstTree.search(999)
 bstTree.search(170)
 
-function traverse(node) {
-    const parent = { value: node.value }
-    parent.left = node.left === null ? null : traverse(node.left)
-    parent.right = node.right === null ? null : traverse(node.right)
-    console.log(`${parent.value}`)
-    return parent
-}
+// function traverse(node) {
+//     const parent = { value: node.value }
+//     parent.left = node.left === null ? null : traverse(node.left)
+//     parent.right = node.right === null ? null : traverse(node.right)
+//     console.log(`${parent.value}`)
+//     return parent
+// }
 
-// JSON.stringify(traverse(bstTree.root))
+console.log(`${bstTree.inOrderTraversal()}`)
 
-// console.log(`${JSON.stringify(bstTree.delete(1))}`)
-
-// JSON.stringify(traverse(bstTree.root))
+console.log(`DELETING: ${JSON.stringify(bstTree.delete(1))}`)
 
 console.log(`${bstTree.inOrderTraversal()}`)
 
