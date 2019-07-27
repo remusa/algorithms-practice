@@ -1,9 +1,5 @@
 # Analyzing Algorithms
 
-Sources:
-    * [Learn to Program: Crafting Quality Code | Coursera](https://www.coursera.org/learn/program-code)
-    * [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 - YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)
-
 ## O(1) - Constant Time
 
 ```python
@@ -239,3 +235,9 @@ Starting with n referring to 1, each time that n is doubled, it prints one extra
 This function is logarithmic and as the input size increases, the running time grows more slowly than for linear and quadratic functions.
 
 plot of logarithmic time, steps = log(n)
+
+## Resources
+
+* [Learn to Program: Crafting Quality Code | Coursera](https://www.coursera.org/learn/program-code)
+* [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 -
+  YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)
