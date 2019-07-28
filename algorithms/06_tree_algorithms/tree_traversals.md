@@ -3,6 +3,13 @@
 ## InOrder Traversal
 
 ```
+Algorithm Inorder(tree)
+   1. Traverse the left subtree, i.e., call Inorder(left-subtree)
+   2. Visit the root.
+   3. Traverse the right subtree, i.e., call Inorder(right-subtree)
+```
+
+```
 inorder(root)
   Pre: root is the root node of the BST
   Post: the nodes in the BST have been visited in inorder
@@ -17,6 +24,13 @@ end inorder
 ## PreOrder Traversal
 
 ```
+Algorithm Preorder(tree)
+   1. Visit the root.
+   2. Traverse the left subtree, i.e., call Preorder(left-subtree)
+   3. Traverse the right subtree, i.e., call Preorder(right-subtree)
+```
+
+```
 preorder(root)
   Pre: root is the root node of the BST
   Post: the nodes in the BST have been visited in preorder
@@ -29,6 +43,13 @@ end preorder
 ```
 
 ## PostOrder Traversal
+
+```
+Algorithm Postorder(tree)
+   1. Traverse the left subtree, i.e., call Postorder(left-subtree)
+   2. Traverse the right subtree, i.e., call Postorder(right-subtree)
+   3. Visit the root.
+```
 
 ```
 postorder(root)

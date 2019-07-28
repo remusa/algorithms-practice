@@ -27,7 +27,7 @@
   * *Space efficient*: prefixes are stored in only 1 location, so duplicates
     aren't stored.
 
-# Optimizations
+## Optimizations
 
 * Don´t look up each prefix from the root (build on past calls) by:
   * Keeping state within the trie.
