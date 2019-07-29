@@ -115,9 +115,22 @@ const graph = [
 * **Topological Sort**: arranges the nodes in a directed, acyclic graph in a special order based on incoming edges.
 * **Minimum Spanning Tree**: finds the cheapest set of edges needed to reach all nodes in a weighted graph.
 
+## Find shortest path algorithms
+
+* Useful when finding shortest path, but unlike *BFS*, they take into account weights.
+
+* **Dijkstra**:
+  * Determines the shortest path from one node in a graph to *every other node* within the same graph, provided that the nodes are reachable from the starting node.
+  * *Faster than Bellman-Ford*: on average.
+* **Bellman-Ford**:
+  * Can accomodate *negative weights*.
+  * *Slow*: time complexity of `O(n^2)`.
+
 ## Resources
 
 * [Graph Data Structure: Directed, Acyclic, etc | Interview Cake](https://www.interviewcake.com/concept/javascript/graph)
 * [Describing graphs (article) | Algorithms | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
 * [Representing graphs (article) | Algorithms | Khan
   Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs)
+* [Finding The Shortest Path, With A Little Help From
+  Dijkstra](https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e)

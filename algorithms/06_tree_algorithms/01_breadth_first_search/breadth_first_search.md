@@ -5,6 +5,10 @@
 | space     | ``         |
 | search    | `O(n)`     |
 
+* *Time complexity*: `O(V + E)` where `V` is the number of nodes and E the
+  number of edges. You need to traverse all nodes.
+* *Space complexity*: `O(V)` as well - since at worst case you need to hold all vertices in the queue.
+
 * **Breadth-first search (BFS)**: algorithm for exploring a tree or a graph. In
   a BFS, you first explore all the nodes one step away, then all the nodes two
   steps away, etc.
@@ -91,3 +95,6 @@ end BFS
 * [Tree Traversals (Inorder, Preorder and Postorder) - GeeksforGeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
 * [BFS vs DFS for Binary Tree -
   GeeksforGeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
+* [algorithm - What is the time and space complexity of a breadth first and
+  depth first tree traversal? - Stack
+  Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
