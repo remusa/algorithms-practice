@@ -1,5 +1,8 @@
-import { Queue } from '../../../04_queues/js/queue_implementation'
-import { Stack } from '../../../03_stacks/js/stack_linked_list_implementation'
+// import { Queue } from '../../../04_queues/js/queue_implementation'
+// import { Stack } from '../../../03_stacks/js/stack_linked_list_implementation'
+
+const queue = require('../../../04_queues/js/queue_implementation')
+const stack = require('../../../03_stacks/js/stack_linked_list_implementation')
 
 class BinaryTreeNode {
     constructor(value) {
@@ -202,85 +205,197 @@ class BinarySearchTree {
         return null
     }
 
-    breadthFirstSearch() {
-        const queue = new Queue()
-        const currentNode = this.root
+    // Iterative approach - O(h)
+    breadthFirstSearch(value) {
+        // Put the starting node on a queue and mark it as visited
+        const myQueue = new queue.Queue()
+        myQueue.enqueue(this.root)
+
+        // While the queue isn't empty
+        while (!myQueue.isEmpty()) {
+            // Dequeue first node of the queue
+            const currentNode = myQueue.dequeue()
+            console.log(`${JSON.stringify(currentNode)}`)
+
+            // If it is the node we are searching for exit and return the node
+            if (currentNode.value === value) {
+                return currentNode
+            }
+
+            // Put unvisited children in the queue
+
+            // Traverse left branch
+            if (currentNode.left) {
+                myQueue.enqueue(currentNode.left)
+            }
+
+            // Traverse right branch
+            if (currentNode.right) {
+                myQueue.enqueue(currentNode.right)
+            }
+        }
+
+        return null
     }
 
-    depthFirstSearch() {
-        const stack = new Stack()
+    depthFirstSearch(value) {
+        // Put the starting node on a stack and mark it as visited
+        const myStack = new stack.Stack()
+        myStack.push(this.root)
+
+        // While the stack isn't empty
+        while (!myStack.isEmpty()) {
+            // Pop top node of the stack
+            const currentNode = myStack.pop()
+
+            // If it is the node we are searching for exit and return the node
+            if (currentNode.value === value) {
+                return currentNode
+            }
+
+            // Traverse left branch
+            if (currentNode.left) {
+                myStack.push(currentNode.left)
+            }
+
+            // Traverse right branch
+            if (currentNode.right) {
+                myStack.push(currentNode.right)
+            }
+        }
+
+        return null
+    }
+
+    bfsTraversalIterative() {
+        const list = []
+        // Put the starting node on a queue and marked it as visited
+        const myQueue = []
+        myQueue.push(this.root)
+
+        // While the queue isn't empty
+        while (myQueue.length > 0) {
+            // Dequeue first node of the queue
+            const currentNode = myQueue.shift()
+            list.push(currentNode.value)
+
+            // Put unvisited children in the queue
+
+            // Traverse left branch
+            if (currentNode.left) {
+                myQueue.push(currentNode.left)
+            }
+
+            // Traverse right branch
+            if (currentNode.right) {
+                myQueue.push(currentNode.right)
+            }
+        }
+
+        return list
+    }
+
+    bfsTraversalRecursive(queueR, list) {
+        if (!queueR.length) {
+            return list
+        }
+
+        // Dequeue first node of the queue
+        const currentNode = queueR.shift()
+        list.push(currentNode.value)
+
+        // Put unvisited children in the queue
+
+        // Traverse left branch
+        if (currentNode.left) {
+            queueR.push(currentNode.left)
+        }
+
+        // Traverse right branch
+        if (currentNode.right) {
+            queueR.push(currentNode.right)
+        }
+
+        return this.bfsTraversalRecursive(queueR, list)
     }
 
     // inorder = left -> root -> right
-    inOrderTraversal() {
-        const inorder = []
-        function traversal(node) {
-            // Left
-            if (node.left) {
-                traversal(node.left)
-            }
-            // Root
-            inorder.push(node.value)
-            // Right
-            if (node.right) {
-                traversal(node.right)
-            }
+    inOrderTraversal(node, list) {
+        // Left
+        if (node.left) {
+            this.inOrderTraversal(node.left, list)
         }
-        traversal(this.root)
-        return inorder
+        // Root
+        list.push(node.value)
+        // Right
+        if (node.right) {
+            this.inOrderTraversal(node.right, list)
+        }
+
+        return list
     }
 
     // preorder = root -> left -> right
-    preOrderTraversal() {
-        const preorder = []
-        function traversal(node) {
-            // Root
-            preorder.push(node.value)
-            // Left
-            if (node.left) {
-                traversal(node.left)
-            }
-            // Right
-            if (node.right) {
-                traversal(node.right)
-            }
+    preOrderTraversal(node, list) {
+        // Root
+        list.push(node.value)
+        // Left
+        if (node.left) {
+            this.preOrderTraversal(node.left, list)
         }
-        traversal(this.root)
-        return preorder
+        // Right
+        if (node.right) {
+            this.preOrderTraversal(node.right, list)
+        }
+
+        return list
     }
 
     // postorder = right -> left -> root
-    postOrderTraversal() {
-        const postorder = []
-        function traversal(node) {
-            // Left
-            if (node.left) {
-                traversal(node.left)
-            }
-            // Right
-            if (node.right) {
-                traversal(node.right)
-            }
-            // Root
-            postorder.push(node.value)
+    postOrderTraversal(node, list) {
+        // Left
+        if (node.left) {
+            this.postOrderTraversal(node.left, list)
         }
-        traversal(this.root)
-        return postorder
+        // Right
+        if (node.right) {
+            this.postOrderTraversal(node.right, list)
+        }
+        // Root
+        list.push(node.value)
+
+        return list
     }
 }
 
-// const bstTree = new BinarySearchTree()
+//     9
+//  4     20
+// 1  6  15  170
 
-// bstTree.insert(9)
-// bstTree.insert(4)
-// bstTree.insert(6)
-// bstTree.insert(20)
-// bstTree.insert(170)
-// bstTree.insert(15)
-// bstTree.insert(1)
+const bstTree = new BinarySearchTree()
+
+bstTree.insert(9)
+bstTree.insert(4)
+bstTree.insert(6)
+bstTree.insert(20)
+bstTree.insert(170)
+bstTree.insert(15)
+bstTree.insert(1)
+
+console.log(`BFS: ${bstTree.breadthFirstSearch(1)}`)
+// console.log(`BFS: ${bstTree.breadthFirstSearch(99)}`)
+
+// console.log(`DFS: ${bstTree.depthFirstSearch(1)}`)
+
+// console.log(`${bstTree.inOrderTraversal(bstTree.root, [])}`)
+// console.log(`${bstTree.preOrderTraversal(bstTree.root, [])}`)
+// console.log(`${bstTree.postOrderTraversal(bstTree.root, [])}`)
 
 // bstTree.search(999)
 // bstTree.search(170)
+
+// console.log(`DELETING: ${JSON.stringify(bstTree.delete(1))}`)
+// console.log(`${bstTree.inOrderTraversal()}`)
 
 // function traverse(node) {
 //     const parent = { value: node.value }
@@ -290,19 +405,7 @@ class BinarySearchTree {
 //     return parent
 // }
 
-// console.log(`${bstTree.inOrderTraversal()}`)
-// console.log(`${bstTree.preOrderTraversal()}`)
-// console.log(`${bstTree.postOrderTraversal()}`)
-
-// console.log(`DELETING: ${JSON.stringify(bstTree.delete(1))}`)
-
-// console.log(`${bstTree.inOrderTraversal()}`)
-
-//     9
-//  4     20
-// 1  6  15  170
-
-export { BinarySearchTree }
-// module.exports = {
-//     BinarySearchTree,
-// }
+// export { BinarySearchTree }
+module.exports = {
+    BinarySearchTree,
+}

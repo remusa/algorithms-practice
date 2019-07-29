@@ -19,14 +19,20 @@ describe('binary search tree tests', () => {
         expect(bstTree.search(999)).toEqual(null)
         expect(bstTree.search(170)).toEqual({ value: 170, left: null, right: null })
 
-        // BFS & DFS
-        // expect(bstTree.breadthFirstSearch()).toEqual([9, 4, 20, 1, 6, 15, 170])
-        // expect(bstTree.depthFirstSearch()).toEqual([9, 4, 1, 6, 20, 15, 170])
-
         // Tree traversals
-        expect(bstTree.inOrderTraversal()).toEqual([1, 4, 6, 9, 15, 20, 170])
-        expect(bstTree.preOrderTraversal()).toEqual([9, 4, 1, 6, 20, 15, 170])
-        expect(bstTree.postOrderTraversal()).toEqual([1, 6, 4, 15, 170, 20, 9])
+        // expect(bstTree.inOrderTraversal(bstTree.root, [])).toEqual([1, 4, 6, 9, 15, 20, 170])
+        // expect(bstTree.preOrderTraversal(bstTree.root, [])).toEqual([9, 4, 1, 6, 20, 15, 170])
+        // expect(bstTree.postOrderTraversal(bstTree.root, [])).toEqual([1, 6, 4, 15, 170, 20, 9])
+
+        // BFS
+        // expect(bstTree.breadthFirstSearch(1)).toEqual(1)
+        // expect(bstTree.breadthFirstSearch(99)).toEqual(null)
+        expect(bstTree.bfsTraversalIterative()).toEqual([9, 4, 20, 1, 6, 15, 170])
+        expect(bstTree.bfsTraversalRecursive([bstTree.root], [])).toEqual([9, 4, 20, 1, 6, 15, 170])
+
+        // DFS
+        // expect(bstTree.dfsTraversalIterative()).toEqual([9, 4, 1, 6, 20, 15, 170])
+        // expect(bstTree.dfsTraversalRecursive()).toEqual([9, 4, 1, 6, 20, 15, 170])
 
         expect(bstTree.delete(1).value).toEqual(1)
         expect(bstTree.inOrderTraversal()).toEqual([4, 6, 9, 15, 20, 170])

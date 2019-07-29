@@ -86,15 +86,12 @@ class Queue {
     getValues() {
         const arr = []
         this.printQueue()
-            .map(node => {
-                arr.push(node.value)
-            })
+            .map(node => arr.push(node.value))
             .toString()
         return arr
     }
 }
 
 module.exports = {
-    Node,
     Queue,
 }
