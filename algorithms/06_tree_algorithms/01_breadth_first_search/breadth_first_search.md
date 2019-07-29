@@ -1,5 +1,10 @@
 # Breadth-first Search
 
+| Operation | Worst case |
+| --------- | ---------- |
+| space     | ``         |
+| search    | `O(n)`     |
+
 * **Breadth-first search (BFS)**: algorithm for exploring a tree or a graph. In
   a BFS, you first explore all the nodes one step away, then all the nodes two
   steps away, etc.
@@ -19,7 +24,9 @@
   * *BFS* will find the *shortest path* between the starting point and any other
     reachable node. *DFS* will not necessarily find the shortest path.
 * **Disadvantages**:
-  * *BFS* requires more memory than a *DFS* (generally).
+  * *Requires more memory* than *DFS* (generally) because we need to take
+    note of all the nodes on a given level while searching that level (track
+    every node and its children in order).
 
 ## Steps
 

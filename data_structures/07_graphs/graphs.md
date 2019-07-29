@@ -97,6 +97,13 @@ const graph = [
 
 ## Algorithms
 
+* Finding the shortest path: BFS.
+* If you know a solution is not far from the root of the tree: BFS.
+* If the tree is very deep and solutions are rare: BFS (DFS will take a long time).
+* If the tree is very wide: DFS (BFS will need too much memory).
+* If solutions are frequent but located deep in the tree: DFS.
+* Determining whether a path exists between two nodes: DFS.
+
 * Is there a path between two nodes in this undirected graph? Run DFS or BFS from one node and see if you reach the other one.
 * What's the shortest path between two nodes in this undirected, unweighted graph? Run BFS from one node and backtrack once you reach the second. Note: BFS always finds the shortest path, assuming the graph is undirected and unweighted. DFS does not always find the shortest path.
 * Can this undirected graph be colored with two colors? Run BFS, assigning colors as nodes are visited. Abort if we ever try to assign a node a color different from the one it was assigned earlier.

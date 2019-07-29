@@ -1,3 +1,6 @@
+import { Queue } from '../../../04_queues/js/queue_implementation'
+import { Stack } from '../../../03_stacks/js/stack_linked_list_implementation'
+
 class BinaryTreeNode {
     constructor(value) {
         this.value = value
@@ -199,50 +202,85 @@ class BinarySearchTree {
         return null
     }
 
-    // function traverse(node) {
-    //     const parent = { value: node.value }
-    //     parent.left = node.left === null ? null : traverse(node.left)
-    //     parent.right = node.right === null ? null : traverse(node.right)
-    //     console.log(`${parent.value}`)
-    //     return parent
-    // }
+    breadthFirstSearch() {
+        const queue = new Queue()
+        const currentNode = this.root
+    }
 
+    depthFirstSearch() {
+        const stack = new Stack()
+    }
+
+    // inorder = left -> root -> right
     inOrderTraversal() {
         const inorder = []
-
         function traversal(node) {
             // Left
             if (node.left) {
                 traversal(node.left)
             }
-
             // Root
             inorder.push(node.value)
-
             // Right
             if (node.right) {
                 traversal(node.right)
             }
         }
-
         traversal(this.root)
-
         return inorder
+    }
+
+    // preorder = root -> left -> right
+    preOrderTraversal() {
+        const preorder = []
+        function traversal(node) {
+            // Root
+            preorder.push(node.value)
+            // Left
+            if (node.left) {
+                traversal(node.left)
+            }
+            // Right
+            if (node.right) {
+                traversal(node.right)
+            }
+        }
+        traversal(this.root)
+        return preorder
+    }
+
+    // postorder = right -> left -> root
+    postOrderTraversal() {
+        const postorder = []
+        function traversal(node) {
+            // Left
+            if (node.left) {
+                traversal(node.left)
+            }
+            // Right
+            if (node.right) {
+                traversal(node.right)
+            }
+            // Root
+            postorder.push(node.value)
+        }
+        traversal(this.root)
+        return postorder
     }
 }
 
-const bstTree = new BinarySearchTree()
+// const bstTree = new BinarySearchTree()
 
-bstTree.insert(9)
-bstTree.insert(4)
-bstTree.insert(6)
-bstTree.insert(20)
-bstTree.insert(170)
-bstTree.insert(15)
-bstTree.insert(1)
+// bstTree.insert(9)
+// bstTree.insert(4)
+// bstTree.insert(6)
+// bstTree.insert(20)
+// bstTree.insert(170)
+// bstTree.insert(15)
+// bstTree.insert(1)
 
-bstTree.search(999)
-bstTree.search(170)
+// bstTree.search(999)
+// bstTree.search(170)
 
 // function traverse(node) {
 //     const parent = { value: node.value }
@@ -252,17 +290,19 @@ bstTree.search(170)
 //     return parent
 // }
 
-console.log(`${bstTree.inOrderTraversal()}`)
+// console.log(`${bstTree.inOrderTraversal()}`)
+// console.log(`${bstTree.preOrderTraversal()}`)
+// console.log(`${bstTree.postOrderTraversal()}`)
 
-console.log(`DELETING: ${JSON.stringify(bstTree.delete(1))}`)
+// console.log(`DELETING: ${JSON.stringify(bstTree.delete(1))}`)
 
-console.log(`${bstTree.inOrderTraversal()}`)
+// console.log(`${bstTree.inOrderTraversal()}`)
 
 //     9
 //  4     20
 // 1  6  15  170
 
-// export { BinarySearchTree }
-module.exports = {
-    BinarySearchTree,
-}
+export { BinarySearchTree }
+// module.exports = {
+//     BinarySearchTree,
+// }

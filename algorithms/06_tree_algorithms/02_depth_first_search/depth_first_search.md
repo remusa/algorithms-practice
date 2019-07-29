@@ -1,6 +1,11 @@
 # Depth-first Search
 
-* **Breadth-first search (BFS)**: algorithm for exploring a tree or a graph. In
+| Operation | Worst case |
+| --------- | ---------- |
+| space     | ``         |
+| search    | `O(n)`     |
+
+* **Depth-first search (BFS)**: algorithm for exploring a tree or a graph. In
   a DFS, you go as deep as possible down one path before backing up and trying a
   different node.
 * Similar to walking through a *maze* and exploring each path until hitting a
@@ -15,10 +20,12 @@
 ## Comparison with Depth-first Search
 
 * **Advantages**:
-  * *DFS* requires less memory than *BFS* (generally).
-  * *DFS* can be easily implemented with **recursion**.
+  * *Requires less memory* than *BFS* (generally), because it's not
+    neccessary to store all the child pointers at each level.
+  * *Will find if a path exists*.
+  * *DFS* can be implemented with **recursion**.
 * **Disadvantages**:
-  * *DFS* doesn't necessarily find the shortest path to a node, while *BFS* does.
+  * *DFS* doesn't always find the shortest path to a node, while *BFS* does.
 
 ## Pseudocode
 

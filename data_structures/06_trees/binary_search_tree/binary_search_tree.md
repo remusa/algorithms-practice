@@ -66,16 +66,74 @@ log 100 = 2
   * *Unbalanced trees are slow*: if every parent has only one child, it can turn out into a
     *linked list*, then we have to traverse the entire tree for every operation
     `O(n)`.
-  * *No O(1)` operations*: we have to traverse the tree for any operations,
-    which is `O(log(n))`.
+  * *No `O(1)` operations*: we have to traverse the tree for any operations, which is `O(log(n))`.
 
 ## Tree Traversals
 
-* *Preorder*: `root` -> `left` -> `right`.
-* *Inorder*: `left` -> `root` -> `right`.
-* *Postorder*: `right` -> `left` -> `root`.
+* *Inorder*: `left` -> `root` -> `right`. Useful for **searching** in a tree.
+* *Preorder*: `root` -> `left` -> `right`. Useful for making a **copy** of a tree.
+* *Postorder*: `right` -> `left` -> `root`. Useful for **deleting** a tree.
 
 * Note: trees are typically traversed *inorder*.
+
+```javascript
+// inorder = left -> root -> right
+    inOrderTraversal() {
+        const inorder = []
+        function traversal(node) {
+            // Left
+            if (node.left) {
+                traversal(node.left)
+            }
+            // Root
+            inorder.push(node.value)
+            // Right
+            if (node.right) {
+                traversal(node.right)
+            }
+        }
+        traversal(this.root)
+        return inorder
+    }
+
+    // preorder = root -> left -> right
+    preOrderTraversal() {
+        const preorder = []
+        function traversal(node) {
+            // Root
+            preorder.push(node.value)
+            // Left
+            if (node.left) {
+                traversal(node.left)
+            }
+            // Right
+            if (node.right) {
+                traversal(node.right)
+            }
+        }
+        traversal(this.root)
+        return preorder
+    }
+
+    // postorder = right -> left -> root
+    postOrderTraversal() {
+        const postorder = []
+        function traversal(node) {
+            // Left
+            if (node.left) {
+                traversal(node.left)
+            }
+            // Right
+            if (node.right) {
+                traversal(node.right)
+            }
+            // Root
+            postorder.push(node.value)
+        }
+        traversal(this.root)
+        return postorder
+    }
+```
 
 ## Binary Tree Implementation
 
