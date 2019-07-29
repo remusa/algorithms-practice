@@ -3,7 +3,7 @@
 */
 
 // O(n)
-function arrayIntersection(nums1, nums2) {
+function intersection(nums1, nums2) {
     const intersection = {}
 
     for (const num of nums1) {
@@ -16,7 +16,7 @@ function arrayIntersection(nums1, nums2) {
 }
 
 // O(n)
-function arrayIntersection2(nums1, nums2) {
+function intersection2(nums1, nums2) {
     const set = new Set(nums1)
     const filteredSet = new Set(nums2.filter(n => set.has(n)))
 
@@ -24,6 +24,6 @@ function arrayIntersection2(nums1, nums2) {
 }
 
 module.exports = {
-    arrayIntersection,
-    arrayIntersection2,
+    intersection,
+    intersection2,
 }
