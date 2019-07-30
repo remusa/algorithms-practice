@@ -38,7 +38,7 @@ function majorityElement(array) {
     return parseInt(max)
 }
 
-// O(n log(n))
+// O(n log(n)) -> log (n) depending on the sorted algorithm
 // if we sort an array of numbers, the majority element will represent at least 50% of the elements, so it will always end up at the Math.floor(nums.length / 2)th index.
 function majorityElement2(array) {
     const sorted = [...array].sort()
