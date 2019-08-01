@@ -273,8 +273,6 @@ class SinglyLinkedList {
         }
         return this
     }
-
-    2
 }
 
 module.exports = {

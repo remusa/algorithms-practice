@@ -2,7 +2,7 @@ class Node {
     constructor(value, next = null, previous = null) {
         this.value = value
         this.next = next
-        this.previous = previous
+        this.prev = previous
     }
 }
 
@@ -10,10 +10,10 @@ class DoublyLinkedList {
     constructor() {
         this.head = null
         this.tail = null
-        this.length = 1
+        this.length = 0
     }
 
-    // O(1)
+    // O(1) -> adds to the end
     append(value) {
         // 1. Create the new node
         const newNode = new Node(value)
@@ -30,7 +30,7 @@ class DoublyLinkedList {
         this.tail.next = newNode
 
         // 5. Point the new node previous pointer to the tail
-        newNode.previous = this.tail
+        newNode.prev = this.tail
 
         // 6. Update the tail to the new node
         this.tail = newNode
@@ -39,7 +39,28 @@ class DoublyLinkedList {
         return this
     }
 
-    // O(1)
+    // O(1) -> removes from the end
+    pop() {
+        if (!this.head) {
+            return null
+        }
+
+        const poppedNode = this.tail
+
+        if (this.length === 1) {
+            this.head = null
+            this.tail = null
+        } else {
+            this.tail = poppedNode.prev
+            this.tail.next = null
+            poppedNode.prev = null
+        }
+
+        this.length--
+        return poppedNode
+    }
+
+    // O(1) -> adds to the front (unshift)
     prepend(value) {
         // 1. Create the new node
         const newNode = new Node(value)
@@ -55,14 +76,35 @@ class DoublyLinkedList {
         // 4. Point the new node to the head
         newNode.next = this.head
 
-        // 5. Point the new node previous pointer to null
-        this.head.previous = newNode
+        // 5. Point the new node previous pointer to the new node
+        this.head.prev = newNode
 
         // 6. Update the head to the new node
         this.head = newNode
 
         this.length++
         return this
+    }
+
+    // O(1) -> removes from the front (shift)
+    shift() {
+        if (!this.head) {
+            return null
+        }
+
+        const currentHead = this.head
+
+        if (this.length === 1) {
+            this.head = null
+            this.tail = null
+        } else {
+            this.head = currentHead.next
+            this.head.prev = null
+            currentHead.next = null
+        }
+
+        this.length--
+        return currentHead
     }
 
     // O(n)
@@ -95,32 +137,46 @@ class DoublyLinkedList {
         const newNode = new Node(value)
 
         // 3. Traverse the list and find the previous and following nodes of the specified index
-        let leader = this.traverseToIndex(index - 1)
-        let follower = leader.next // this.traverseToIndex(index)
+        const leader = this.get(index - 1)
+        const follower = leader.next // this.traverseToIndex(index)
 
         // 4. Update the leader to point to the new node
         leader.next = newNode
 
         // 5. Point the new node to the follower's next and previous pointers
         newNode.next = follower
-        newNode.previous = leader
+        newNode.prev = leader
 
         // 6. Point the follower previous to the new node
-        follower.previous = newNode
+        follower.prev = newNode
 
         this.length++
         return this
     }
 
     // O(n)
-    traverseToIndex(index) {
+    get(index) {
         let currentNode = this.head
-        let count = 0
-        while (count < index) {
+        let counter = 0
+
+        while (counter < index) {
             currentNode = currentNode.next
-            count++
+            counter++
         }
+
         return currentNode
+    }
+
+    // O(n)
+    set(index, value) {
+        const foundNode = this.get(index)
+
+        if (!foundNode) {
+            return null
+        }
+
+        foundNode.value = value
+        return foundNode
     }
 
     // O(n)
@@ -131,15 +187,15 @@ class DoublyLinkedList {
         }
 
         // 3. Traverse the list and find the previous and following nodes of the specified index
-        let leader = this.traverseToIndex(index - 1)
-        let nodeToDelete = leader.next
-        let follower = nodeToDelete.next
+        const leader = this.get(index - 1)
+        const nodeToDelete = leader.next
+        const follower = nodeToDelete.next
 
         // 4. Update the next pointer of the leader to skip the node to be deleted
         leader.next = nodeToDelete.next
 
         // 5. Update the previous pointer to skip the node to be deleted
-        follower.previous = nodeToDelete.previous
+        follower.prev = nodeToDelete.prev
 
         // 6. Delete the node
         // delete nodeToDelete
