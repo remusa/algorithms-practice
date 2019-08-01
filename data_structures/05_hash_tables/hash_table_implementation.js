@@ -37,14 +37,27 @@ class HashTable {
     }
 
     keys() {
-        const keysArray = []
-        console.log(this.data.length)
+        const keysArr = []
         for (let i = 0; i < this.data.length; i++) {
             if (this.data[i]) {
-                keysArray.push(this.data[i][0][0]) // second 0 is the key
+                keysArr.push(this.data[i][0][0]) // second 0 is the key
             }
         }
-        return keysArray
+        return keysArr
+    }
+
+    values() {
+        const valuesArr = []
+        for (let i = 0; i < this.data.length; i++) {
+            if (this.data[i]) {
+                for (let j = 0; j < this.data[i].length; j++) {
+                    if (!valuesArr.includes(this.data[i][j][1])) {
+                        valuesArr.push(this.data[i][j][1])
+                    }
+                }
+            }
+        }
+        return valuesArr
     }
 }
 
