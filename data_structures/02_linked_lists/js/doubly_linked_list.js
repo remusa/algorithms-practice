@@ -1,11 +1,12 @@
 class Node {
-    constructor(value, next = null) {
+    constructor(value, next = null, previous = null) {
         this.value = value
         this.next = next
+        this.previous = previous
     }
 }
 
-class SinglyLinkedList {
+class DoublyLinkedList {
     constructor() {
         this.head = null
         this.tail = null
@@ -25,10 +26,13 @@ class SinglyLinkedList {
             return this
         }
 
-        // 4. Point the tail to the new node
+        // 4. Point the tail (end of the list) to the new node
         this.tail.next = newNode
 
-        // 5. Update the tail to the new node
+        // 5. Point the new node previous pointer to the tail
+        newNode.previous = this.tail
+
+        // 6. Update the tail to the new node
         this.tail = newNode
 
         this.length++
@@ -51,7 +55,10 @@ class SinglyLinkedList {
         // 4. Point the new node to the head
         newNode.next = this.head
 
-        // 5. Update the head to the new node
+        // 5. Point the new node previous pointer to null
+        this.head.previous = newNode
+
+        // 6. Update the head to the new node
         this.head = newNode
 
         this.length++
@@ -89,13 +96,17 @@ class SinglyLinkedList {
 
         // 3. Traverse the list and find the previous and following nodes of the specified index
         let leader = this.traverseToIndex(index - 1)
-        let follower = leader.next // same as getting this.traverseToIndex(index)
+        let follower = leader.next // this.traverseToIndex(index)
 
         // 4. Update the leader to point to the new node
         leader.next = newNode
 
-        // 5. Point the new node to the follower
+        // 5. Point the new node to the follower's next and previous pointers
         newNode.next = follower
+        newNode.previous = leader
+
+        // 6. Point the follower previous to the new node
+        follower.previous = newNode
 
         this.length++
         return this
@@ -122,11 +133,15 @@ class SinglyLinkedList {
         // 3. Traverse the list and find the previous and following nodes of the specified index
         let leader = this.traverseToIndex(index - 1)
         let nodeToDelete = leader.next
+        let follower = nodeToDelete.next
 
-        // 4. Update the pointer of the leader
+        // 4. Update the next pointer of the leader to skip the node to be deleted
         leader.next = nodeToDelete.next
 
-        // 5. Delete the node
+        // 5. Update the previous pointer to skip the node to be deleted
+        follower.previous = nodeToDelete.previous
+
+        // 6. Delete the node
         // delete nodeToDelete
 
         this.length--
@@ -154,46 +169,8 @@ class SinglyLinkedList {
 
         return arr
     }
-
-    reverse() {
-        // 0. Check if there's only 1 element in the list
-        if (!this.head.next) {
-            return this.head
-        }
-
-        // 1. Get the first 2 nodes
-        let first = this.head
-        let second = first.next
-
-        // 2. Point the tail to the head (inverting it)
-        this.tail = this.head
-
-        // 3. Traverse the linked list
-        while (second) {
-            // 4. Save the next node
-            const temp = second.next
-
-            // 5. Point the next node of the current node to the previous node
-            second.next = first
-
-            // 6. Switch the first node to be the second
-            first = second
-
-            // 7. Switch the second node to be the saved one (third)
-            second = temp
-        }
-
-        // 8. Point the head to null (because it would be the tail's next)
-        this.head.next = null
-
-        // 9. Point the head to be the first element
-        this.head = first
-
-        return this
-    }
 }
 
 module.exports = {
-    Node,
-    SinglyLinkedList,
+    DoublyLinkedList,
 }

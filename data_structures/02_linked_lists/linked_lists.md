@@ -1,13 +1,15 @@
 # Linked Lists
 
-| Operation | Worst case | Doubly-Linked |
-| --------- | ---------- | ------------- |
-| space     | `O(n)`     | `O()`         |
-| prepend   | `O(1)`     | `O()`         |
-| append    | `O(1)`     | `O()`         |
-| lookup    | `O(n)`     | `O()`         |
-| insert    | `O(n)`     | `O()`         |
-| delete    | `O(n)`     | `O()`         |
+| Operation         | Worst case | Doubly-Linked |
+| ----------------- | ---------- | ------------- |
+| space             | `O(n)`     | `O()`         |
+| append (push)     | `O(1)`     | `O()`         |
+| pop               | `O(1)`     | `O()`         |
+| prepend (unshift) | `O(1)`     | `O()`         |
+| popFront (shift)  | `O(1)`     | `O()`         |
+| lookup            | `O(n)`     | `O()`         |
+| insert            | `O(n)`     | `O()`         |
+| delete            | `O(n)`     | `O()`         |
 
 * **Linked lists**: organizes items sequentially, with each item storing a
   pointer to the next one.
