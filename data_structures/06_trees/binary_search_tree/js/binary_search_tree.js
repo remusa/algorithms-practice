@@ -1,8 +1,8 @@
-// import { Queue } from '../../../04_queues/js/queue_implementation'
-// import { Stack } from '../../../03_stacks/js/stack_linked_list_implementation'
+import { Queue } from '../../../04_queues/js/queue_implementation'
+import { Stack } from '../../../03_stacks/js/stack_linked_list_implementation'
 
-const queue = require('../../../04_queues/js/queue_implementation')
-const stack = require('../../../03_stacks/js/stack_linked_list_implementation')
+// const Queue = require('../../../04_queues/js/queue_implementation')
+// const Stack = require('../../../03_stacks/js/stack_linked_list_implementation')
 
 class BinaryTreeNode {
     constructor(value) {
@@ -24,24 +24,50 @@ class BinarySearchTree {
         }
 
         let currentNode = this.root
+        let found = false
 
         // Traverse the tree
-        while (currentNode) {
-            // Check if we found the node
-            if (currentNode.value === value) {
-                return currentNode
-            }
+        while (currentNode && !found) {
             // Go to the left
             if (value < currentNode.value) {
                 currentNode = currentNode.left
             }
             // Go to the right
-            else {
+            else if (value > currentNode.value) {
                 currentNode = currentNode.right
+            }
+            // We found the node
+            else {
+                found = true
             }
         }
 
-        return null
+        if (!found) {
+            return null
+        }
+        return currentNode
+    }
+
+    // O(log(n))
+    contains(value) {
+        if (!this.root) {
+            return false
+        }
+
+        let current = this.root
+
+        while (current) {
+            if (value === current.value) {
+                return true
+            }
+            if (value < current.value) {
+                current = current.left
+            } else if (value > current.value) {
+                current = current.right
+            }
+        }
+
+        return false
     }
 
     // O(log(n))
@@ -52,34 +78,33 @@ class BinarySearchTree {
         // 2. If tree is empty, new node is the root
         if (!this.root) {
             this.root = newNode
+            return this
         }
         // 3. Otherwise, traverse the tree and find where it belongs
-        else {
-            // this.insertNode(this.root, newNode)
+        // this.insertNode(this.root, newNode)
 
-            let currentNode = this.root
+        let currentNode = this.root
 
-            while (currentNode) {
-                // Go to the left
-                if (value < currentNode.value) {
-                    // Insert left
-                    if (!currentNode.left) {
-                        currentNode.left = newNode
-                        return this
-                    }
-                    // Else go to the left
-                    currentNode = currentNode.left
+        while (currentNode) {
+            // Go to the left
+            if (value < currentNode.value) {
+                // Insert left
+                if (!currentNode.left) {
+                    currentNode.left = newNode
+                    return this
                 }
-                // Go to the right
-                else {
-                    // Insert right
-                    if (!currentNode.right) {
-                        currentNode.right = newNode
-                        return this
-                    }
-                    // Else go to the right
-                    currentNode = currentNode.right
+                // Else go to the left
+                currentNode = currentNode.left
+            }
+            // Go to the right
+            else {
+                // Insert right
+                if (!currentNode.right) {
+                    currentNode.right = newNode
+                    return this
                 }
+                // Else go to the right
+                currentNode = currentNode.right
             }
         }
 
@@ -208,7 +233,7 @@ class BinarySearchTree {
     // Iterative approach - O(h)
     breadthFirstSearch(value) {
         // Put the starting node on a queue and mark it as visited
-        const myQueue = new queue.Queue()
+        const myQueue = new Queue.Queue()
         myQueue.enqueue(this.root)
 
         // While the queue isn't empty
@@ -240,7 +265,7 @@ class BinarySearchTree {
 
     depthFirstSearch(value) {
         // Put the starting node on a stack and mark it as visited
-        const myStack = new stack.Stack()
+        const myStack = new Stack.Stack()
         myStack.push(this.root)
 
         // While the stack isn't empty
@@ -267,35 +292,65 @@ class BinarySearchTree {
         return null
     }
 
-    bfsTraversalIterative() {
-        const list = []
+    bfsIterative() {
+        const data = []
         // Put the starting node on a queue and marked it as visited
-        const myQueue = []
-        myQueue.push(this.root)
+        const queue = []
+        queue.push(this.root)
 
         // While the queue isn't empty
-        while (myQueue.length > 0) {
+        while (queue.length > 0) {
             // Dequeue first node of the queue
-            const currentNode = myQueue.shift()
-            list.push(currentNode.value)
+            const currentNode = queue.shift()
+            data.push(currentNode.value)
 
             // Put unvisited children in the queue
-
             // Traverse left branch
             if (currentNode.left) {
-                myQueue.push(currentNode.left)
+                queue.push(currentNode.left)
             }
 
             // Traverse right branch
             if (currentNode.right) {
-                myQueue.push(currentNode.right)
+                queue.push(currentNode.right)
             }
         }
 
+        return data
+    }
+
+    bfsRecursive() {
+        const queue = []
+        const list = []
+
+        function traverse(queueR, listR) {
+            if (!queueR.length) {
+                return listR
+            }
+
+            // Dequeue first node of the queue
+            const currentNode = queueR.shift()
+            listR.push(currentNode.value)
+
+            // Put unvisited children in the queue
+            // Traverse left branch
+            if (currentNode.left) {
+                queueR.push(currentNode.left)
+            }
+
+            // Traverse right branch
+            if (currentNode.right) {
+                queueR.push(currentNode.right)
+            }
+
+            traverse(queueR, listR)
+        }
+
+        traverse(queue, list)
         return list
     }
 
-    bfsTraversalRecursive(queueR, list) {
+    bfsRecursive2(queueR, list) {
         if (!queueR.length) {
             return list
         }
@@ -305,7 +360,6 @@ class BinarySearchTree {
         list.push(currentNode.value)
 
         // Put unvisited children in the queue
-
         // Traverse left branch
         if (currentNode.left) {
             queueR.push(currentNode.left)
@@ -316,50 +370,62 @@ class BinarySearchTree {
             queueR.push(currentNode.right)
         }
 
-        return this.bfsTraversalRecursive(queueR, list)
+        return this.bfsRecursive2(queueR, list)
     }
 
     // inorder = left -> root -> right
-    inOrderTraversal(node, list) {
+    dfsInOrder() {
+        this.inOrder(this.root, [])
+    }
+
+    inOrder(node, list) {
         // Left
         if (node.left) {
-            this.inOrderTraversal(node.left, list)
+            this.inOrder(node.left, list)
         }
         // Root
         list.push(node.value)
         // Right
         if (node.right) {
-            this.inOrderTraversal(node.right, list)
+            this.inOrder(node.right, list)
         }
 
         return list
     }
 
     // preorder = root -> left -> right
-    preOrderTraversal(node, list) {
+    dfsPreOrder() {
+        return this.preOrder(this.root, [])
+    }
+
+    preOrder(node, list) {
         // Root
         list.push(node.value)
         // Left
         if (node.left) {
-            this.preOrderTraversal(node.left, list)
+            this.preOrder(node.left, list)
         }
         // Right
         if (node.right) {
-            this.preOrderTraversal(node.right, list)
+            this.preOrder(node.right, list)
         }
 
         return list
     }
 
     // postorder = right -> left -> root
-    postOrderTraversal(node, list) {
+    dfsPostOrder() {
+        return this.postOrder(this.root, [])
+    }
+
+    postOrder(node, list) {
         // Left
         if (node.left) {
-            this.postOrderTraversal(node.left, list)
+            this.postOrder(node.left, list)
         }
         // Right
         if (node.right) {
-            this.postOrderTraversal(node.right, list)
+            this.postOrder(node.right, list)
         }
         // Root
         list.push(node.value)
@@ -405,7 +471,6 @@ console.log(`BFS: ${bstTree.breadthFirstSearch(1)}`)
 //     return parent
 // }
 
-// export { BinarySearchTree }
 module.exports = {
     BinarySearchTree,
 }
