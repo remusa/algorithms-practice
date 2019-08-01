@@ -1,32 +1,32 @@
 class Stack {
     constructor() {
-        this.array = []
+        this.data = []
     }
 
     // O(1)
     peek() {
-        const length = this.array.length
-        return this.array[length - 1]
+        const length = this.data.length
+        return this.data[length - 1]
     }
 
     // O(1)
     push(value) {
-        this.array.push(value)
+        this.data.push(value)
         return this
     }
 
     // O(1)
     pop() {
-        return this.array.pop()
+        return this.data.pop()
     }
 
     printStack() {
-        return this.array
+        return this.data
     }
 
     getValues() {
         const arr = []
-        this.array.map(value => arr.push(value))
+        this.data.map(value => arr.push(value))
         return arr
     }
 }

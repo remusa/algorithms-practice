@@ -1,4 +1,4 @@
-const LinkedList = require('../linked_list_singly_implementation')
+const LinkedList = require('../../02_linked_lists/js/singly_linked_list_implementation')
 
 class Queue {
     constructor() {

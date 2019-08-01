@@ -53,7 +53,7 @@ class Queue {
         const dequeuedNode = this.first
 
         // 3. If there's only 1 element in the queue
-        if (this.first === this.enqueue) {
+        if (this.first === this.last) {
             this.first = null
             this.last = null
         }
