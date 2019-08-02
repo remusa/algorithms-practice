@@ -8,16 +8,23 @@
     There is one consecutive number missing. In this case, if the lower bound is 1 and the upper bound is 9, it's 8.
 */
 
-// O
+// O(n)
 function missingInUnsorted(arr, lowerBound, upperBound) {
-    return arr
+    const map = {}
+
+    for (let i = 0; i < arr.length; i++) {
+        map[arr[i]] = arr[i]
+    }
+
+    for (let i = lowerBound; i <= upperBound; i++) {
+        const inMap = i.toString() in map
+        if (!inMap) {
+            return i
+        }
+    }
 }
 
-const arr = [2, 5, 1, 4, 9, 6, 3, 7]
-const lowerBound = 1
-const upperBound = 9
-
-missingInUnsorted(arr, lowerBound, upperBound) // 8
+missingInUnsorted([2, 5, 1, 4, 9, 6, 3, 7], 1, 9) // 8
 
 module.exports = {
     missingInUnsorted,

@@ -1,7 +1,7 @@
 import { uniques } from '../day_20_uniqueness_of_arrays'
 
 describe('uniqueness of arrays tests', () => {
-    it('.toEqual(an array with the unique elements of the arrays', () => {
+    it('should return an array with the unique elements', () => {
         expect(uniques([3, 5, 6, 9, 9, 4, 3, 12])).toEqual([3, 5, 6, 9, 4, 12])
         expect(uniques([13, 5, 3, 5, 8, 13, 14, 5, 9])).toEqual([13, 5, 3, 8, 14, 9])
         expect(uniques([8, 8, 15, 6, 19, 7, 12, 6, 6, 3, 13, 9, 15, 14, 1, 13, 4, 11, 16])).toEqual(
