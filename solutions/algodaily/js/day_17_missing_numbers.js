@@ -26,7 +26,6 @@ function missingNumbers(arr) {
         }
     }
 
-    console.log('missing', missing)
     return missing
 }
 

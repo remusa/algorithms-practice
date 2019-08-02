@@ -1,6 +1,7 @@
-const linkedList = require('../04_linked_lists/js/singly_linked_list_implementation')
-const Node = linkedList.Node
-const SinglyLinkedList = linkedList.SinglyLinkedList
+const linkedList = require('../../02_linked_lists/js/singly_linked_list')
+
+const { Node } = linkedList
+const { SinglyLinkedList } = linkedList
 
 class Stack {
     constructor() {
