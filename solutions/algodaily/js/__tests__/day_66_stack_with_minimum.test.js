@@ -4,6 +4,9 @@ describe('stack with minimum implementation tests', () => {
     it('should perform the operations on a stack with a minimum', () => {
         const minStack = new MinStack()
 
+        expect(minStack.peek()).toEqual(undefined)
+        expect(minStack.min()).toEqual(undefined)
+
         expect(minStack.push(-2)).toEqual()
         expect(minStack.push(0)).toEqual()
         expect(minStack.push(-3)).toEqual()
