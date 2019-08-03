@@ -134,3 +134,5 @@ const graph = [
   Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs)
 * [Finding The Shortest Path, With A Little Help From
   Dijkstra](https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e)
+* [Algorithms: Graph Search, DFS and BFS -
+  YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)

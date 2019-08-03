@@ -35,6 +35,19 @@
 
 ## Pseudocode
 
+```
+Initialize an empty stack for storage of nodes, S.
+For each vertex u, define u.visited to be false.
+Push the root (first node to be visited) onto S.
+While S is not empty:
+    Pop the first element in S, u.
+    If u.visited = false, then:
+        U.visited = true
+        for each unvisited neighbor w of u:
+            Push w into S.
+End process when all nodes have been visited.
+```
+
 * Recursive:
 
 ```
@@ -71,3 +84,9 @@
 * [algorithm - What is the time and space complexity of a breadth first and
   depth first tree traversal? - Stack
   Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
+* [Depth-First Search (DFS) | Brilliant Math & Science
+  Wiki](https://brilliant.org/wiki/depth-first-search-dfs/)
+* [Algorithms: Graph Search, DFS and BFS -
+  YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
+* [Depth First Search Tutorials & Notes | Algorithms |
+  HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)

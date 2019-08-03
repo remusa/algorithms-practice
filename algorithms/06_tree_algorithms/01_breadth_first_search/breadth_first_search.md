@@ -98,3 +98,9 @@ end BFS
 * [algorithm - What is the time and space complexity of a breadth first and
   depth first tree traversal? - Stack
   Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
+* [Breadth-First Search (BFS) | Brilliant Math & Science
+  Wiki](https://brilliant.org/wiki/breadth-first-search-bfs/)
+* [Algorithms: Graph Search, DFS and BFS -
+  YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
+* [Breadth First Search Tutorials & Notes | Algorithms |
+  HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)
