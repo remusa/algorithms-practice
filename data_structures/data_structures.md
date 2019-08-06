@@ -46,3 +46,5 @@
 ## Resources
 
 * [Data Structures for Coding Interviews: Computer Science in Plain English | Interview Cake](https://www.interviewcake.com/article/python/data-structures-coding-interview)
+* [Data Structures and Algorithms - Beau teaches JavaScript -
+  YouTube](https://www.youtube.com/playlist?list=PLWKjhJtqVAbkso-IbgiiP48n-O-JQA9PJ)
