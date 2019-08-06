@@ -70,9 +70,13 @@ log 100 = 2
 
 ## Tree Traversals
 
-* *Inorder*: `left` -> `root` -> `right`. Useful for **searching** in a tree.
-* *Preorder*: `root` -> `left` -> `right`. Useful for making a **copy** of a tree.
-* *Postorder*: `right` -> `left` -> `root`. Useful for **deleting** a tree.
+* *Inorder*: `left` -> `root` -> `right`.
+  * Useful for **searching** in a tree.
+  * Useful when **sorting** values.
+* *Preorder*: `root` -> `left` -> `right`.
+  * Useful for making a **copy** of a tree (or **exporting** it).
+* *Postorder*: `right` -> `left` -> `root`.
+  * Useful for **deleting** a tree.
 
 * Note: trees are typically traversed *inorder*.
 
