@@ -7,22 +7,21 @@
 */
 
 function detectSubstring(str, subStr) {
-    if (str.length === 0) {
+    if (str.length === 0 || subStr.length > str.length) {
         return -1
     }
 
+    const { length } = str
     const subsLength = subStr.length
-    // const map = {}
+    const limit = length - subsLength
 
-    // O(n)
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i <= limit; i++) {
         const char = str[i]
         const firstCharSubs = subStr[0]
 
         if (char === firstCharSubs) {
             let subs = ''
             let j = i
-            // O(m)
             while (j < subsLength + i) {
                 subs += str.charAt(j)
                 j++
@@ -30,18 +29,37 @@ function detectSubstring(str, subStr) {
             if (subs === subStr) {
                 return i
             }
-            // map[subs] = i
         }
     }
 
-    // if (subStr in map) {
-    //     return map[subStr]
-    // }
+    return -1
+}
 
-    // console.log('map', map)
+// O(n)
+function detectSubstringImproved(str, subStr) {
+    let i = 0
+    let j = 0
+
+    for (i = 0; i < str.length; i++) {
+        // if match, compare next character of subStr with next of string
+        if (str[i] === subStr[j]) {
+            j++
+            if (j === subStr.length) {
+                // return the index where substring starts
+                return i - (subStr.length - 1)
+            }
+        }
+        // no match found, so reset i and j
+        else {
+            i -= j
+            j = 0
+        }
+    }
+
     return -1
 }
 
 module.exports = {
     detectSubstring,
+    detectSubstringImproved,
 }
