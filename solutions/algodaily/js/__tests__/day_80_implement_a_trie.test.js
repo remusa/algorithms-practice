@@ -6,9 +6,9 @@ describe('trie implementation tests', () => {
 
         trie.insert('cherry')
         trie.insert('cheetah')
-        expect(trie.search2('cherry')).toBe(true)
-        expect(trie.search2('sherry')).toBe(false)
-        expect(trie.search2('cheetah')).toBe(true)
+        expect(trie.search('cherry')).toBe(true)
+        expect(trie.search('sherry')).toBe(false)
+        expect(trie.search('cheetah')).toBe(true)
         expect(trie.startsWith('che')).toBe(true)
         expect(trie.startsWith('s')).toBe(false)
     })

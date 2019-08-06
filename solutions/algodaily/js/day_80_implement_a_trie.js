@@ -45,23 +45,7 @@ class Trie {
         }
     }
 
-    insert(word) {
-        let node = this.root
-
-        for (let i = 0; i < word.length; i++) {
-            const currentChar = word.charAt(i)
-
-            if (!node.keys.has(currentChar)) {
-                node.keys.set(currentChar, new Node())
-            }
-
-            node = node.keys.get(currentChar)
-        }
-
-        node.setEnd()
-    }
-
-    search(input) {
+    find(input) {
         let node = this.root
         let word = input
 
@@ -87,8 +71,24 @@ class Trie {
     remove(word) {}
 
     /*
-        Search for a key in a trie
+        SECOND IMPLEMENTATION
     */
+
+    insert(word) {
+        let node = this.root
+
+        for (let i = 0; i < word.length; i++) {
+            const currentChar = word.charAt(i)
+
+            if (!node.keys.has(currentChar)) {
+                node.keys.set(currentChar, new Node())
+            }
+
+            node = node.keys.get(currentChar)
+        }
+
+        node.setEnd()
+    }
 
     // Search a prefix or whole key in trie and
     // returns the node where search ends
@@ -109,7 +109,7 @@ class Trie {
     }
 
     // Returns if the word is in the trie
-    search2(word) {
+    search(word) {
         const node = this.searchPrefix(word)
         // Check that the node exists and it is the end of the word
         return node !== null && node.isEnd()
@@ -152,9 +152,10 @@ class Trie {
 }
 
 const trie = new Trie()
+
 trie.insert('cherry')
 console.log(trie)
-console.log(trie.search2('cherry'))
+console.log('WORD EXISTS?: ', trie.search('cherry'))
 
 module.exports = {
     Trie,
