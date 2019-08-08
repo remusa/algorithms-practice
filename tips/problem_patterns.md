@@ -171,9 +171,7 @@ countUniqueValues([1,2,2,5,7,7,99])
   finds the longest sequence of unique characters.
 
 ```javascript
-
-
-longestSequence(str) {
+longestSequee(str) {
 
 }
 ```
