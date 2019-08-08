@@ -28,13 +28,6 @@ function isASubsequence(sub, str) {
     return false
 }
 
-console.log(isASubsequence('hen', 'chicken')) // true
-console.log(isASubsequence('c', 'co')) // true
-console.log(isASubsequence('liblu', 'egi')) // false
-console.log(isASubsequence('ej', 'sej')) // true
-console.log(isASubsequence('zumkidin', 'hu')) // false
-console.log(isASubsequence('eviazauli', 'de')) // false
-
 module.exports = {
     isASubsequence,
 }
