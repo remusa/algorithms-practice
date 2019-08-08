@@ -7,9 +7,33 @@
 */
 
 function isASubsequence(sub, str) {
-    // fill this in
-    return true
+    if (!sub.length || !str.length || sub.length > str.length) {
+        return false
+    }
+
+    let i = 0
+    let pointer = 0
+
+    // Move right pointer (sub.length) to the right
+    while (i <= str.length) {
+        if (str[i] === sub[pointer]) {
+            pointer++
+            if (pointer === sub.length) {
+                return true
+            }
+        }
+        i++
+    }
+
+    return false
 }
+
+console.log(isASubsequence('hen', 'chicken')) // true
+console.log(isASubsequence('c', 'co')) // true
+console.log(isASubsequence('liblu', 'egi')) // false
+console.log(isASubsequence('ej', 'sej')) // true
+console.log(isASubsequence('zumkidin', 'hu')) // false
+console.log(isASubsequence('eviazauli', 'de')) // false
 
 module.exports = {
     isASubsequence,
