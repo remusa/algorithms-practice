@@ -12,59 +12,51 @@
 
 // Naive solution O(n^2)
 function twoSumNaive(arr, goal) {
-    const results = []
-
     if (!arr || arr.length <= 1) {
-        return results
+        return []
     }
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = 1; j < arr.length; j++) {
             if (arr[i] + arr[j] === goal) {
-                results.push(i)
-                results.push(j)
-                console.log('results', results)
-                return results
+                return [i, j]
             }
         }
     }
 
-    return undefined
+    return []
 }
 
 // O(n)
 function twoSum(arr, goal) {
-    const results = []
-
-    if (arr.length <= 1) {
-        return results
+    if (!arr || arr.length <= 1) {
+        return []
     }
 
-    let left = 0
-    let right = arr.length - 1
+    const map = {}
 
-    while (left < right) {
-        if (arr[left] + arr[right] === goal) {
-            results.push(left)
-            results.push(right)
-            console.log('results', results)
-            return results
-        }
+    for (let i = 0; i < arr.length; i++) {
+        map[arr[i]] = i
+    }
 
-        if (arr[left] < goal) {
-            left++
-        } else if (arr[right] < goal) {
-            right--
+    for (let i = 0; i < arr.length; i++) {
+        const complement = goal - arr[i]
+        if (complement in map) {
+            return [i, map[complement]]
         }
     }
 
-    console.log('undefined', undefined)
-    return undefined
+    return []
 }
 
-twoSumNaive([1, 3, 6, 7, 9], 10) // [0, 4]
-twoSumNaive([1, 9, 13, 20, 47], 10) // [0, 1]
-twoSumNaive([3, 2, 4, 1, 9], 12) // [0, 4]
+// O(n) - Improved readability by using map
+function twoSumMap(arr, goal) {
+
+}
+
+twoSum([1, 3, 6, 7, 9], 10) // [0, 4]
+twoSum([1, 9, 13, 20, 47], 10) // [0, 1]
+twoSum([3, 2, 4, 1, 9], 12) // [0, 4]
 
 module.exports = {
     twoSumNaive,
