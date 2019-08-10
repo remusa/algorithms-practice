@@ -51,14 +51,40 @@ function twoSum(arr, goal) {
 
 // O(n) - Improved readability by using map
 function twoSumMap(arr, goal) {
+    if (!arr || arr.length <= 1) {
+        return []
+    }
 
+    const map = new Map()
+
+    let i = 0
+    let j = arr.length
+
+    while (i < j) {
+        map.set(arr[i], i)
+        map.set(arr[j], j)
+
+        const difference = goal - arr[i]
+        const difference2 = goal - arr[j]
+
+        if (map.has(difference)) {
+            return [map.get(difference), i]
+        }
+        if (map.has(difference2)) {
+            return [map.get(difference2), j]
+        }
+
+        i++
+        j--
+    }
+
+    return []
 }
 
-twoSum([1, 3, 6, 7, 9], 10) // [0, 4]
-twoSum([1, 9, 13, 20, 47], 10) // [0, 1]
-twoSum([3, 2, 4, 1, 9], 12) // [0, 4]
+twoSumMap([1, 3, 6, 7, 9], 10)
 
 module.exports = {
     twoSumNaive,
     twoSum,
+    twoSumMap,
 }

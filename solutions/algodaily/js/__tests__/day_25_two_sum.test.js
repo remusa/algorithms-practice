@@ -1,4 +1,4 @@
-import { twoSumNaive, twoSum } from '../day_25_two_sum'
+import { twoSumNaive, twoSum, twoSumMap } from '../day_25_two_sum'
 
 describe('two sum tests', () => {
     it('twoSumNaive', () => {
@@ -15,5 +15,13 @@ describe('two sum tests', () => {
         expect(twoSum([1, 9, 13, 20, 47], 10)).toEqual([0, 1])
         expect(twoSum([3, 2, 4, 1, 9], 12)).toEqual([0, 4])
         expect(twoSum([3, 2, 4, 1, 9], 20)).toEqual([])
+    })
+
+    it('twoSumMap', () => {
+        expect(twoSumMap([], 10)).toEqual([])
+        expect(twoSumMap([1, 3, 6, 7, 9], 10)).toEqual([0, 4])
+        expect(twoSumMap([1, 9, 13, 20, 47], 10)).toEqual([0, 1])
+        expect(twoSumMap([3, 2, 4, 1, 9], 12)).toEqual([0, 4])
+        expect(twoSumMap([3, 2, 4, 1, 9], 20)).toEqual([])
     })
 })
