@@ -49,7 +49,7 @@ function twoSum(arr, goal) {
     return []
 }
 
-// O(n) - Improved readability by using map
+// O(n) - Using two pointers and built-in class Map
 function twoSumMap(arr, goal) {
     if (!arr || arr.length <= 1) {
         return []
