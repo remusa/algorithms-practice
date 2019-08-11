@@ -31,8 +31,6 @@ function sortedTwoSum(nums, goal) {
     return []
 }
 
-console.log(sortedTwoSum([1, 3, 7, 8, 11], 10))
-
 module.exports = {
     sortedTwoSum,
 }
