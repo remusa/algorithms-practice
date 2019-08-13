@@ -45,8 +45,6 @@ function leastMissingPositive(nums) {
             return i
         }
     }
-
-    console.log('set', set)
 }
 
 module.exports = {

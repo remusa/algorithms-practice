@@ -25,7 +25,7 @@
         "searching-algorithms",
         "tree"
     ],
-    "author": "",
+    "author": "remusa",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.5.5",
