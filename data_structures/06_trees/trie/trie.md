@@ -158,3 +158,4 @@ startsWith(prefix) {
   YouTube](https://www.youtube.com/watch?v=7XmS8McW_1U)
 * [The Trie data structure - Ben's
   Blog](https://blog.benoitvallon.com/data-structures-in-javascript/the-trie-data-structure/)
+* [Trie - Wikiwand](https://www.wikiwand.com/en/Trie)
