@@ -34,7 +34,6 @@ function productExceptSelfNaive(nums) {
 }
 
 function productExceptSelf(nums) {
-    console.log('nums', nums)
     if (!nums || nums.length <= 1) {
         return []
     }
@@ -47,7 +46,6 @@ function productExceptSelf(nums) {
         results.push(product)
         product *= nums[i]
     }
-    console.log('results 1', results)
 
     product = 1
     for (let j = size - 1; j >= 0; j--) {
@@ -55,12 +53,8 @@ function productExceptSelf(nums) {
         product *= nums[j]
     }
 
-    console.log('results 2', results)
     return results
 }
-
-productExceptSelf([1, 2, 4, 16])
-// productExceptSelf([7, 8, 5, 18, 16, 11, 20])
 
 module.exports = {
     productExceptSelfNaive,
