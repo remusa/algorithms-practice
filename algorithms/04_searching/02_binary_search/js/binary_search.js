@@ -19,7 +19,7 @@ function binarySearch(array, value) {
 
         // 5. Else if value is smaller than the middle then the element is in
         //    the left side, so we move the starting index
-        else if (array[mid] < value) {
+        if (array[mid] < value) {
             // 5. Move to the right half of the array
             start = mid + 1
         }
