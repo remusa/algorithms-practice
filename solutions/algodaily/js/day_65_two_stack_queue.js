@@ -15,38 +15,37 @@ class TwoStackQueue {
     }
 
     enqueue(value) {
+        // 1. Push the value to the input stack
         this.input.push(value)
-        // console.log('this.input', this.input)
+        return this.input
     }
 
     dequeue() {
+        // 1. Check that there's at least one element
+        if (this.output.length === 0 && this.input.length === 0) {
+            return undefined
+        }
+
+        // 2. Reverse the stack
+        // If output is empty
         if (this.output.length === 0) {
-            while (this.input.length !== 0) {
+            // And input has elements
+            while (this.input.length) {
+                // Reverse the stack by popping elements in input and
+                // pushing them to output
                 this.output.push(this.input.pop())
             }
         }
-        const popped = this.output.pop()
-        // console.log('popped', popped)
-        // console.log('this.output', this.output)
-        return popped
+
+        // 3. Pop the first element in the stack (last one in the output
+        // because the stack has been reversed)
+        // console.log('popped', this.output[this.output.length - 1])
+        return this.output.pop()
     }
 }
 
 TwoStackQueue.prototype.push = TwoStackQueue.prototype.enqueue
 TwoStackQueue.prototype.pop = TwoStackQueue.prototype.dequeue
-
-const tsq = new TwoStackQueue()
-tsq.push(1)
-tsq.push(2)
-tsq.pop() // 1
-tsq.pop() // 2
-tsq.push(5)
-tsq.push(6)
-tsq.push(7)
-tsq.pop() // 5
-tsq.pop() // 6
-tsq.push(8)
-tsq.pop() // 7
 
 module.exports = {
     TwoStackQueue,
