@@ -6,9 +6,11 @@ describe('trie implementation tests', () => {
 
         trie.insert('cherry')
         trie.insert('cheetah')
+
         expect(trie.search('cherry')).toBe(true)
         expect(trie.search('sherry')).toBe(false)
         expect(trie.search('cheetah')).toBe(true)
+
         expect(trie.startsWith('che')).toBe(true)
         expect(trie.startsWith('s')).toBe(false)
     })
