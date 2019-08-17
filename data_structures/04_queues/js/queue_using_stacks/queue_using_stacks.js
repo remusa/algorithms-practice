@@ -9,6 +9,7 @@ class QueueStacks {
         if (this.last.length > 0) {
             return this.last[0]
         }
+
         return this.first[this.first.length - 1]
     }
 
