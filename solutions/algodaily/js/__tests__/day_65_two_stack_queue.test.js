@@ -8,5 +8,16 @@ describe('two stack queue tests', () => {
 
         expect(tsq.pop()).toBe(1)
         expect(tsq.pop()).toBe(2)
+
+        expect(tsq.push(5)).toEqual([1, 2])
+        expect(tsq.push(6)).toEqual([1, 2])
+        expect(tsq.push(7)).toEqual([1, 2])
+
+        expect(tsq.pop()).toBe(1)
+        expect(tsq.pop()).toBe(2)
+
+        expect(tsq.push(7)).toEqual([1, 2])
+
+        expect(tsq.pop()).toBe(2)
     })
 })

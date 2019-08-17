@@ -16,7 +16,7 @@ class TwoStackQueue {
 
     enqueue(value) {
         this.input.push(value)
-        return this.input
+        // console.log('this.input', this.input)
     }
 
     dequeue() {
@@ -25,13 +25,28 @@ class TwoStackQueue {
                 this.output.push(this.input.pop())
             }
         }
-
-        return this.output.pop()
+        const popped = this.output.pop()
+        // console.log('popped', popped)
+        // console.log('this.output', this.output)
+        return popped
     }
 }
 
 TwoStackQueue.prototype.push = TwoStackQueue.prototype.enqueue
 TwoStackQueue.prototype.pop = TwoStackQueue.prototype.dequeue
+
+const tsq = new TwoStackQueue()
+tsq.push(1)
+tsq.push(2)
+tsq.pop() // 1
+tsq.pop() // 2
+tsq.push(5)
+tsq.push(6)
+tsq.push(7)
+tsq.pop() // 5
+tsq.pop() // 6
+tsq.push(8)
+tsq.pop() // 7
 
 module.exports = {
     TwoStackQueue,

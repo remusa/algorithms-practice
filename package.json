@@ -4,7 +4,7 @@
     "description": "",
     "main": "jest.config.js",
     "scripts": {
-        "test": "jest --watch",
+        "test": "jest --silent --watch",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix"
     },
