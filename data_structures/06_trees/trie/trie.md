@@ -7,7 +7,7 @@
 | insert    | `O(log(m))` |
 | delete    | `O(log(m))` |
 
-`n`: length of the word.
+`m`: length of the word.
 
 * **Trie**: a *trie*, *radix tree* or *prefix tree* is a tree-like data
   structure.
@@ -24,7 +24,7 @@
   * *Efficient Prefix Queries*: good for problems involving strings. Tries
     allows us to store and find if a text contains a word or use an autocomplete
     feature.
-  * *Fast operations*: insertion and deletion are very fast (`O(log(m))`).
+  * *Fast operations*: insertion and deletion are very fast (`O(log(n))`).
   * *Space Efficient (sometimes)*: prefixes are stored in only 1 location, so duplicates
     aren't stored (may reduce overall storage cost).
 * **Weaknesses**:
@@ -37,7 +37,7 @@
 * Although hash table has `O(1)` time complexity for looking for a key, it is not efficient in the following operations:
   * Finding all keys with a common prefix.
   * Enumerating a dataset of strings in lexicographical order.
-* When a hash table increases in size, hash collisions and the search time complexity could deteriorate to `O(n)`, where `n` is the number of keys inserted. Trie could use less space compared to Hash Table when storing many keys with the same prefix. In this case using trie has only `O(m)` time complexity, where `m` is the key length. Searching for a key in a balanced tree costs `O(mlog(n))` time complexity.
+* When a hash table increases in size, hash collisions and the search time complexity could deteriorate to `O(n)`, where `n` is the number of keys inserted. Trie could use less space compared to Hash Table when storing many keys with the same prefix. In this case using trie has only `O(m)` time complexity, where `m` is the key length. Searching for a key in a balanced tree costs `O(m * log(n))` time complexity.
 
 ## Tries vs. Sets
 
@@ -159,3 +159,4 @@ startsWith(prefix) {
 * [The Trie data structure - Ben's
   Blog](https://blog.benoitvallon.com/data-structures-in-javascript/the-trie-data-structure/)
 * [Trie - Wikiwand](https://www.wikiwand.com/en/Trie)
+* [The Trie data structure - Ben's Blog](https://blog.benoitvallon.com/data-structures-in-javascript/the-trie-data-structure/)

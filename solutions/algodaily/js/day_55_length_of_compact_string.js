@@ -19,7 +19,6 @@
 // O(n) space
 function compactLength(str) {
     const map = new Map()
-    let compacted = ''
 
     for (let i = 0; i < str.length; i++) {
         const char = str[i]
@@ -31,55 +30,49 @@ function compactLength(str) {
         }
     }
 
-    for (const key of map) {
-        const k = key[0]
-        const v = key[1]
+    let compacted = ''
+    for (const entry of map) {
+        const key = entry[0]
+        const value = entry[1]
 
-        compacted += `${k}`
+        compacted += `${key}`
 
-        if (v > 1) {
-            compacted += `${v}`
+        if (value > 1) {
+            compacted += `${value}`
         }
     }
 
     return compacted.length
 }
 
-// O(1)
-function compactLengthOptimized(str) {
-    const map = new Map()
-    let compacted = ''
+// O(1) in space by replacing
+function compactLengthO1(str) {
+    let answerIdx = 0
 
     for (let i = 0; i < str.length; i++) {
-        const char = str[i]
+        let count = 1
 
-        if (!map.has(char)) {
-            map.set(char, 1)
-        } else {
-            map.set(char, map.get(char) + 1)
+        while (str[i] === str[i + 1]) {
+            count++
+            i++
+        }
+
+        str[answerIdx++] = str[i]
+
+        if (count > 1) {
+            count
+                .toString()
+                .split('')
+                .forEach(function(char) {
+                    str[answerIdx++] = char
+                })
         }
     }
 
-    for (const key of map) {
-        const k = key[0]
-        const v = key[1]
-
-        compacted += `${k}`
-
-        if (v > 1) {
-            compacted += `${v}`
-        }
-    }
-
-    return compacted.length
+    return answerIdx
 }
-
-compactLengthOptimized('s')
-compactLengthOptimized('abb')
-compactLengthOptimized('aabbbbbbbbbbbbb')
-compactLengthOptimized('sstttrrrr')
 
 module.exports = {
     compactLength,
-    compactLengthOptimized,
+    compactLengthO1
 }
