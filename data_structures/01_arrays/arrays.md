@@ -85,3 +85,4 @@ strings.splice(2, 0, 'alien') // [ 'x', 'a', 'alien', 'b', 'c', 'd' ]
 
 * [Array Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/array?)
 * [Dynamic Array Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/dynamic-array)
+* [Arrays vs Linked Lists - Computerphile - YouTube](https://www.youtube.com/watch?v=DyG9S9nAlUM)

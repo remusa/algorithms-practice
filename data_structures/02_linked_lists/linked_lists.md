@@ -234,3 +234,4 @@ end Remove
 ## Resources
 
 * [Linked List Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/linked-list?)
+* [Arrays vs Linked Lists - Computerphile - YouTube](https://www.youtube.com/watch?v=DyG9S9nAlUM)
