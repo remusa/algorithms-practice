@@ -56,7 +56,8 @@
         "rules": {
             "jest/no-large-snapshots": 0,
             "no-lonely-if": 0,
-            "max-classes-per-file": 0
+            "max-classes-per-file": 0,
+            "prefer-destructuring": 0
         }
     },
     "babel": {
