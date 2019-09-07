@@ -235,3 +235,4 @@ end Remove
 
 * [Linked List Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/linked-list?)
 * [Arrays vs Linked Lists - Computerphile - YouTube](https://www.youtube.com/watch?v=DyG9S9nAlUM)
+* [Linked List Data Structure | JavaScript - TraversyMedia](https://www.youtube.com/watch?v=ZBdE8DElQQU)
