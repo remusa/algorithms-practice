@@ -163,7 +163,7 @@ countUniqueValues([1,2,2,5,7,7,99])
 
 ## Sliding Window
 
-- This pattern involves creating a *window* which can either be an array or
+- This pattern involves creating a *window*, which can either be an array or
   number, and moving it from one position to another depending on certain conditions.
 - Depending on a certain condition, the window either increases or closes (and a new window is created).
 - Very useful for keeping track of a subset of data in an array/string etc.
@@ -171,7 +171,7 @@ countUniqueValues([1,2,2,5,7,7,99])
   finds the longest sequence of unique characters.
 
 ```javascript
-longestSequee(str) {
+longestSequence(str) {
 
 }
 ```
@@ -190,14 +190,14 @@ function maxSubarraySum(arr, num) {
     if ( num > arr.length){
         return null;
     }
-    var max = -Infinity;
+    let max = -Infinity;
     for (let i = 0; i < arr.length - num + 1; i ++){
         temp = 0;
         for (let j = 0; j < num; j++){
-        temp += arr[i + j];
+            temp += arr[i + j];
         }
         if (temp > max) {
-        max = temp;
+            max = temp;
         }
     }
     return max;

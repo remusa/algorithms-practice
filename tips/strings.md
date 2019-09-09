@@ -75,3 +75,32 @@ def is_one_away(s1, s2):
     else if s1.length > s2.length:
         return is_one_away_diff_lengths(s2, s1)
 ```
+
+## Length of Longest Substring
+
+* Can be solved in `O(n)` by using a *sliding window* approach.
+* The *sliding window* will represent the current substring of non-repeating characters.
+* The *sliding window* will be dynamic (grow or shrink in size as we iterate through the string).
+* The current index and value in the for loop will *always be the end* of the sliding window. As the end of the window increases, we conditionally increase the start of the window.
+
+* Steps:
+  1. Initialize the window at index 0
+  2. Initialize end of window and current iteration of loop at 0
+  3. Keep track of the current character and the index it was last seen at in a hash table
+  4. Increment the length of the max substring if the current substring is made of unique characters.
+  5. If we find a repeated character, move the end of the window to the current index, and move the start of the window one index above the last time the repeated character was found (the value of its key in the hash table).
+  6. Update the value of the repeated character key to the current index.
+
+```
+// O(n)
+loop through the input string:
+    if current_character in hash_map && index >= start:
+        set start to index for character found in hash_map + 1
+
+    set key-value pair on hash_map to the current character index
+
+    if length of current_window is greater than max:
+        set max to length of current_window
+
+    return max
+```
