@@ -23,6 +23,8 @@
                 Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 */
 
+// Time complexity: O(n) -> visit each character only once
+// Space complexity: O(min(m, n)) -> number of keys in map is bounded by the size of the string n and the size of the charset/alphabet m
 function lengthOfLongestSubstring(str) {
     const windowCharsMap = {}
     let windowStart = 0
