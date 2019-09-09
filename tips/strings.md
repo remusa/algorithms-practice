@@ -104,3 +104,11 @@ loop through the input string:
 
     return max
 ```
+
+## Length of Longest Palindrome
+
+* Use the *expand around the center* approach.
+* Make the center be both the character we are iterating on AND the space in between each character.
+
+* Steps:
+    1.
