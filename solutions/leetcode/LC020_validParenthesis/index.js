@@ -38,18 +38,30 @@ Input: "{[]}"
 Output: true
 */
 
+// Time complexity: O(n) -> go through the input string only once
+// Space complexity: O(n) -> worst case the stack is the same length as the input string
 function isValid(str) {
     const stack = []
+    const pairsMap = {
+        '(': ')',
+        '{': '}',
+        '[': ']',
+    }
 
     for (let i = 0; i < str.length; i++) {
-        const element = str[i]
+        const char = str[i]
+
+        // If the char is a key the map (opening char), add it to the stack
+        if (pairsMap[char]) {
+            stack.push(char)
+        }
+        // Else it's a closing char, so we check its corresponding opening char was at the top of the stack
+        else if (pairsMap[stack.pop()] !== char) {
+            return false
+        }
     }
 
-    if (stack.length > 0) {
-        return false
-    }
-
-    return true
+    return stack.length === 0
 }
 
 module.exports = isValid
