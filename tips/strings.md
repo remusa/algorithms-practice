@@ -109,3 +109,14 @@ loop through the input string:
 
 * Use the *expand around the center* approach.
 * Make the center be both the character we are iterating on AND the space in between each character.
+
+## Valid Palindrome
+
+* Naive solution is reversing the string, but it would be `O(n)`.
+* A palindrome is a word where each half mirrors each other.
+
+* Steps:
+  1. Sanitize input by removing non-alphanumeric characters and lowercasing it.
+  2. Create a left and right pointers at the start and end of the string.
+  3. While the left pointer is less than the right one, check if characters are equal. If they aren't, return false.
+  4. Return true.
