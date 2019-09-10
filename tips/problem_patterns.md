@@ -222,7 +222,7 @@ function maxSubarraySum(arr, num){
 
 ## Expand Around the Center
 
-- 
+-
 
 ## Divide and Conquer
 
@@ -272,7 +272,7 @@ function search(array, val) {
 
 ## Dynamic Programming
 
--
+- Solve smaller problems and use those solutions to solve a bigger problem.
 
 ## Greedy Algorithms
 
