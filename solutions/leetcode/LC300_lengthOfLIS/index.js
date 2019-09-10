@@ -19,8 +19,8 @@ Note:
 Follow up: Could you improve it to O(n log n) time complexity?
 */
 
-// Time complexity: O(n^2) ->
-// Space complexity: O(n) ->
+// Time complexity: O(n^2) -> do n work, for all n elements
+// Space complexity: O(n) -> store the answer up to n sub-problems
 function lengthOfLIS(nums) {
     if (nums.length === 0) return 0
 
