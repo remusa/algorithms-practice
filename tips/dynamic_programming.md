@@ -9,3 +9,10 @@
 * Otherwise, keep `j step`'s DP value to `false`.
 * Move `j` one index and start again, checking if the `i step` can reach `j`.
 * Return the last value in DP array, to say if possible to reach last step.
+
+## Unique Paths
+
+* Start at the `top-left` square.
+* Create a matrix where the first row and the first column are set to `1` and the rest are `empty` (because the first row and the first column are both one path only).
+* Since there are `2` unique paths to reach the `2x2` square, because it's the same as adding the values of the `top` and `left` squares together.
+* Keep doing that for the rest of the squares until we reach the `bottom-right` square.
