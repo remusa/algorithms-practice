@@ -18,6 +18,8 @@ Input: "race a car"
 Output: false
 */
 
+// Time complexity: O(n) ->
+// Space complexity: O(n) ->
 function isPalindrome(s) {}
 
 module.exports = isPalindrome

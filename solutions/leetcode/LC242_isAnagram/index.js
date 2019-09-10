@@ -22,6 +22,8 @@ Follow up:
 What if the inputs contain unicode characters? How would you adapt your solution to such case?
 */
 
+// Time complexity: O(n) ->
+// Space complexity: O(n) ->
 function isAnagram(s, t) {}
 
 module.exports = isAnagram
