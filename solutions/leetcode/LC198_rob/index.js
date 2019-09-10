@@ -22,8 +22,23 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
              Total amount you can rob = 2 + 9 + 1 = 12.
 */
 
-// Time complexity: O(n*m) ->
-// Space complexity: O(n*m) ->
-function rob(nums) {}
+// Time complexity: O(n) -> loop through the input array once
+// Space complexity: O(n) -> can be optimized to 0(1) using two variables
+function rob(nums) {
+    if (nums.length === 0) return 0
+    if (nums.length === 1) return nums[0]
+    if (nums.length === 2) return Math.max(nums[0], nums[1])
+
+    const maxLootAtNth = [nums[0], Math.max(nums[0], nums[1])]
+
+    for (let i = 2; i < nums.length; i++) {
+        const currentAndTwoBefore = nums[i] + maxLootAtNth[i - 2]
+        const previous = maxLootAtNth[i - 1]
+
+        maxLootAtNth.push(Math.max(currentAndTwoBefore, previous))
+    }
+
+    return maxLootAtNth.pop()
+}
 
 module.exports = rob

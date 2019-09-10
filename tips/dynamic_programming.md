@@ -21,3 +21,11 @@
 
 * First three `ways` matches the `steps`.
 * From `4` onwards, `ways` is a fibonnaci sequence, a sum of the two previous values of `ways`.
+
+## House Robber
+
+* If there's only one house, rob that house.
+* If there's `2` houses, rob whichever is bigger.
+* Max loot at third house is whichever is larger:
+  * The loot at the third house + the max loot from the two houses before.
+  * The max loot from the previous house.
