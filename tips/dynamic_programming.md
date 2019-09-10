@@ -29,3 +29,18 @@
 * Max loot at third house is whichever is larger:
   * The loot at the third house + the max loot from the two houses before.
   * The max loot from the previous house.
+
+## Longest Increasing Subsequence
+
+* Create a second array and fill it with `1`s (represents the LIS at that number).
+* Loop to the second element, `j`, and have an `i` variable that starts at the first element.
+* If `j` isnt' bigger than `i`, value remains the same.
+* Otherwise, update the value at `j` to the max value of:
+  * current `j` index,
+  * sum of current `j` index and the `i` index if the value in `j` is greater than the value in `i`.
+* Increment `j` and put `i` back in the beginning.
+* Return the largest value in the auxiliary array.
+
+## Coin Change
+
+* 

@@ -20,8 +20,8 @@ Note:
 You may assume that you have an infinite number of each kind of coin.
 */
 
-// Time complexity: O(n*m) ->
-// Space complexity: O(n*m) ->
+// Time complexity: O(n) ->
+// Space complexity: O(n) ->
 function coinChange(coins, amount) {}
 
 module.exports = coinChange

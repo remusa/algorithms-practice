@@ -19,8 +19,28 @@ Note:
 Follow up: Could you improve it to O(n log n) time complexity?
 */
 
-// Time complexity: O(n*m) ->
-// Space complexity: O(n*m) ->
-function lengthOfLIS(nums) {}
+// Time complexity: O(n^2) ->
+// Space complexity: O(n) ->
+function lengthOfLIS(nums) {
+    if (nums.length === 0) return 0
+
+    const lis = new Array(nums.length).fill(1)
+    let maxSoFar = 1
+
+    for (let j = 0; j < nums.length; j++) {
+        for (let i = 0; i < j; i++) {
+            if (nums[j] > nums[i]) {
+                const currSubsequence = lis[i] + 1
+                const prevSubsequence = lis[j]
+
+                lis[j] = Math.max(currSubsequence, prevSubsequence)
+            }
+        }
+
+        maxSoFar = Math.max(maxSoFar, lis[j])
+    }
+
+    return maxSoFar
+}
 
 module.exports = lengthOfLIS
