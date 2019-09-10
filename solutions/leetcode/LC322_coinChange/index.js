@@ -20,8 +20,27 @@ Note:
 You may assume that you have an infinite number of each kind of coin.
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(n) ->
-function coinChange(coins, amount) {}
+// Time complexity: O(a*c) -> where a is the amount, and c is the number of coins
+// Space complexity: O(a) -> auxiliary array of length a
+function coinChange(coins, amount) {
+    const minCoins = new Array(amount + 1).fill(Infinity)
+    minCoins[0] = 0
+
+    for (let i = 1; i < minCoins.length; i++) {
+        for (let j = 0; j < coins.length; j++) {
+            const coinValue = coins[j]
+
+            if (coinValue <= i) {
+                const coin = minCoins[i - coinValue] + 1
+                const prevCoin = minCoins[i]
+
+                minCoins[i] = Math.min(coin, prevCoin)
+            }
+        }
+    }
+
+    const answer = minCoins[minCoins.length - 1]
+    return answer === Infinity ? -1 : answer
+}
 
 module.exports = coinChange

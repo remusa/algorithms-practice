@@ -43,4 +43,7 @@
 
 ## Coin Change
 
-* 
+* Create an array for `min coins` at each amount up to the amount.
+* Set initial values to `Infinity`, except for index `0`.
+* Start a loop that runs from index `0` through the end.
+* Calculate the max value of the current value in `min coins` and the sum of the current `amount` plus the previous one.
