@@ -22,6 +22,8 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
              Total amount you can rob = 2 + 9 + 1 = 12.
 */
 
+// Time complexity: O(n*m) ->
+// Space complexity: O(n*m) ->
 function rob(nums) {}
 
 module.exports = rob

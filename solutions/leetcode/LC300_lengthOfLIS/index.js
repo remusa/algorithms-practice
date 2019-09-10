@@ -19,6 +19,8 @@ Note:
 Follow up: Could you improve it to O(n log n) time complexity?
 */
 
+// Time complexity: O(n*m) ->
+// Space complexity: O(n*m) ->
 function lengthOfLIS(nums) {}
 
 module.exports = lengthOfLIS
