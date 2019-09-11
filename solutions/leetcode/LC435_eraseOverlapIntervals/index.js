@@ -33,8 +33,37 @@ Note:
     Intervals like [1,2] and [2,3] have borders "touching" but they don't overlap each other.
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(n) ->
-function eraseOverlapIntervals(intervals) {}
+// Time complexity: O(n*log(n)) -> use of a sorting algorithm
+// Space complexity: O(1) -> sort the input array in place
+function eraseOverlapIntervals(intervals) {
+    if (!intervals.length) return 0
+
+    // Count the number of removals
+    let count = 0
+
+    // Sort by starting interval times
+    intervals.sort((a, b) => a[0] - b[0])
+
+    // Previous interval end time
+    let end = intervals[0][1]
+
+    for (let i = 1; i < intervals.length; i++) {
+        const interval = intervals[i]
+        const intervalStart = interval[0]
+        const intervalEnd = interval[1]
+
+        // Check if there's an intersection (remove an interval)
+        if (intervalStart < end) {
+            count++
+            end = Math.min(intervalEnd, end)
+        }
+        // no removals made
+        else {
+            end = intervalEnd
+        }
+    }
+
+    return count
+}
 
 module.exports = eraseOverlapIntervals
