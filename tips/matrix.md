@@ -128,4 +128,7 @@ def rotate(given_array, n):
 
 ## Word Search
 
-*
+* Once a cell is used it can't be reused.
+* Visit every cell and find the first character of the word.
+* Once the first character is found, run **Depth-First Search** to traverse adjacent cells for the next character.
+* Mark visited cells as *visited*.
