@@ -109,7 +109,22 @@ def rotate(given_array, n):
 
 ## Set Matrix Zeroes
 
-*
+### Brute force solution
+
+* Create another matrix and use that to create the desired output.
+
+### O(1) space complexity
+
+* If the first row or column need to be set to `0`s, do that last.
+* Loop over the first row and check if there are `0`s.
+* If there are, store that info in a variable `firstRowHasZero` and set it to `true`.
+* Loop over the first column and check if there are `0`s.
+* If there are, store that info in a variable `firstColumnHasZero` and set it to `true`.
+* Go over the rest of the matrix and check for `0`s.
+* If there are, modify the first row and column.
+* Make `0`s cells **not** in first row and first column based on previous flags.
+* Make `0`s all cells in first row based on `firstRowHasZero` flag.
+* Make `0`s all cells in first column based on `firstColumnHasZero` flag.
 
 ## Word Search
 
