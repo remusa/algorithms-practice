@@ -1,4 +1,4 @@
-# Trees
+# Trees and Graphs
 
 ## Is This a Binary Search Tree?
 
