@@ -1,3 +1,23 @@
-const reverseList = head => {};
+/*
+206. Reverse Linked List
+Easy
+https://leetcode.com/problems/reverse-linked-list/
 
-module.exports = reverseList;
+Reverse a singly linked list.
+
+Example:
+
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+
+Follow up:
+
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+*/
+
+// Time complexity: O(n*log(n)) ->
+// Space complexity: O(1) ->
+function reverseList(head) {}
+
+module.exports = reverseList
