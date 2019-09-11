@@ -32,3 +32,19 @@ def nth_from_last(head, n):
 * Move `fast` `n` nodes ahead of `slow`.
 * Move both pointers up one node until the `fast` node reaches the end of the linked-list.
 * Have `slow` point to his the `fast` node.
+
+## Merge Two Sorted Lists
+
+* Create a `dummyHead` node and have a current variable that points to that `dummyHead` at first.
+* Check which of the values of the LLs is smaller, and have the `current` node point to the smaller value.
+* Move `current` up to that node, and move the pointer of the bigger list one node.
+* Keep going until we reach the end of one of the LLs.
+* Point `current` to the rest of the remaining LL.
+
+## Linked List Cycle
+
+*
+
+## Reverse Linked List
+
+* 

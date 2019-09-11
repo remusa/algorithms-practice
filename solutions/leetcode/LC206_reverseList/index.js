@@ -16,7 +16,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 */
 
-// Time complexity: O(n*log(n)) ->
+// Time complexity: O(n) ->
 // Space complexity: O(1) ->
 function reverseList(head) {}
 

@@ -34,7 +34,7 @@ Follow up:
 Can you solve it using O(1) (i.e. constant) memory?
 */
 
-// Time complexity: O(n*log(n)) ->
+// Time complexity: O(n) ->
 // Space complexity: O(1) ->
 function hasCycle(head) {}
 
