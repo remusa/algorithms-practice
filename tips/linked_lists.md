@@ -26,4 +26,9 @@ def nth_from_last(head, n):
     return left
 ```
 
-## Nth Element of a Linked List
+## Remove Nth Node From End of Linked List
+
+* Create a `slow` and `fast` variables and initialize them to the first node of the linked-list.
+* Move `fast` `n` nodes ahead of `slow`.
+* Move both pointers up one node until the `fast` node reaches the end of the linked-list.
+* Have `slow` point to his the `fast` node.
