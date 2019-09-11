@@ -16,8 +16,10 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
-function reverseList(head) {}
+// Time complexity: O(n) -> size of LL
+// Space complexity: O(1) -> always use 2 nodes, regardless of LL size
+function reverseList(head) {
+
+}
 
 module.exports = reverseList

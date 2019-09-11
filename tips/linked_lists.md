@@ -43,8 +43,11 @@ def nth_from_last(head, n):
 
 ## Linked List Cycle
 
-*
+* Create a `slow` and `fast` variables and initialize them to the first node (`head`) of the linked-list.
+* Iterate through the linked-list, move `slow` up one node and `fast` two nodes.
+* If linked-list is circular (has a cycle), `slow` and `fast` will eventually equal each other.
+* Otherwise, `fast` will just traverse to second to last or last node of the linked-list.
 
 ## Reverse Linked List
 
-* 
+*
