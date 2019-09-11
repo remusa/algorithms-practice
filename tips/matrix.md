@@ -99,3 +99,15 @@ def rotate(given_array, n):
 
     return given_array
 ```
+
+## Spiral Matrix
+
+* 
+
+## Set Matrix Zeroes
+
+*
+
+## Word Search
+
+*
