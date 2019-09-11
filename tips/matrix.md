@@ -102,7 +102,10 @@ def rotate(given_array, n):
 
 ## Spiral Matrix
 
-* 
+* Walk in a clockwise direction (right, down, left, up).
+* Go `right` and insert the values into a temporary array.
+* Push the temporary array into another array and change direction.
+* Once we have gone through the matrix, return the rotated matrix.
 
 ## Set Matrix Zeroes
 
