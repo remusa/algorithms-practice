@@ -16,10 +16,25 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 */
 
-// Time complexity: O(n) -> size of LL
-// Space complexity: O(1) -> always use 2 nodes, regardless of LL size
+// Time complexity: O(n) -> traverse LL once
+// Space complexity: O(1) -> always use 2 pointers (prev and curr) regardless of size
 function reverseList(head) {
+    let previous = null
+    let current = head
 
+    while (current) {
+        const temp = current.next
+
+        // Change direction
+        current.next = previous
+
+        // Move previous and current up by 1 node
+        previous = current
+        current = temp
+    }
+
+    // Previous is now the new head of the linked-list
+    return previous
 }
 
 module.exports = reverseList

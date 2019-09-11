@@ -50,4 +50,9 @@ def nth_from_last(head, n):
 
 ## Reverse Linked List
 
-*
+* Change the pointers to point to the other direction.
+* Change the head to point to `null`.
+* Use two pointers, `previous` initialized to `null` and `current` initialized to the head (first node) .
+* Make `current` node `next` to point to `previous`.
+* Move `previous` and `current` up one node.
+* Repeat until `current` reaches the end of the list (it reaches `null`).
