@@ -4,6 +4,8 @@
 // canAttendMeetings([[0, 30], [5, 10], [15, 20]]) --> false
 // canAttendMeetings([[7, 10], [2, 4]]) --> true
 
-const canAttendMeetings = intervals => {};
+// Time complexity: O(n) ->
+// Space complexity: O(n) ->
+function canAttendMeetings(intervals) {}
 
-module.exports = canAttendMeetings;
+module.exports = canAttendMeetings
