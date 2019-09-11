@@ -11,8 +11,8 @@ canAttendMeetings([[0, 30], [5, 10], [15, 20]]) --> false
 canAttendMeetings([[7, 10], [2, 4]]) --> true
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(n) ->
+// Time complexity: O(n*log(n)) -> use of a sorting algorithm
+// Space complexity: O(n) -> loop once through the array
 function canAttendMeetings(intervals) {
     const starts = []
     const ends = []
