@@ -1,11 +1,22 @@
-// Given an array of integers, return an array of indices of the two numbers
-// that add up to the target.
-// You may assume that each input would have exactly one solution, and
-// you may not use the same element twice.
-// --- Examples
-// twoSum([2,7,11,15], 9) --> [0,1]
-// twoSum([3,2,4], 9) --> [1,2]
+/*
+1. Two Sum
+Easy
+https://leetcode.com/problems/two-sum/
 
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+*/
+
+// Time complexity: O(n) ->
+// Space complexity: O(1) ->
 function twoSum(arr, target) {}
 
-module.exports = twoSum;
+module.exports = twoSum
