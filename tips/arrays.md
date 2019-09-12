@@ -91,7 +91,8 @@ def is_rotation(A, B):
 
 ## Best Time to Buy and Sell Stock
 
-* 
+* `O(n^2)`: nested loops.
+* For every value, find the smallest value before it and substract from it.
 
 ## Maximum Product Subarray
 
