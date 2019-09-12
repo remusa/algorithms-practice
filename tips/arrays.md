@@ -99,6 +99,11 @@ def is_rotation(A, B):
 
 ## Maximum Subarray
 
+* Similar to *house robber* problem.
+* Maximum value is either:
+  * the value of the current index or
+  * the previous sum.
+
 ## Best Time to Buy and Sell Stock
 
 * `O(n^2)`: nested loops.
@@ -106,9 +111,15 @@ def is_rotation(A, B):
 
 ## Maximum Product Subarray
 
+*
+
 ## Find Minimum in Rotated Sorted Array
 
+*
+
 ## Contains Duplicate
+
+*
 
 ## Product of Array Except Self
 
@@ -117,3 +128,5 @@ def is_rotation(A, B):
 * Multiply `output` from the `right`.
 
 ## Search in Rotated Sorted Array
+
+*
