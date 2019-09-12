@@ -102,4 +102,8 @@ def is_rotation(A, B):
 
 ## Product of Array Except Self
 
+* Create an `output` array and fill it with `1`s.
+* Multiply `output` from the `left`.
+* Multiply `output` from the `right`.
+
 ## Search in Rotated Sorted Array
