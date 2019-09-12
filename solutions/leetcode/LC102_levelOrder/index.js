@@ -39,7 +39,7 @@ function levelOrder(root) {
         // Push current value
         res[depth].push(node.val)
 
-        // Recursevely call helper function on children
+        // Recursively call helper function on children
         helper(node.left, depth + 1)
         helper(node.right, depth + 1)
     }

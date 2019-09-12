@@ -59,7 +59,7 @@ function isSameTree(p, q) {
             return
         }
 
-        // Recursively check children
+        // Recursively call helper function on children
         checkSameNode(p.left, q.left)
         checkSameNode(p.right, q.right)
     }

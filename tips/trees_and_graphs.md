@@ -93,8 +93,11 @@ def lca(root, j, k):
 ## Binary Tree Level Order Traversal
 
 * `BFS` with changes.
+* Call `helper` function on both children.
 
 ## Maximum Depth of Binary Tree
+
+* 
 
 ## Number of Islands
 
