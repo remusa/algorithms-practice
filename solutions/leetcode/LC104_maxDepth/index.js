@@ -22,8 +22,8 @@ Given binary tree [3,9,20,null,null,15,7],
 return its depth = 3.
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> unless recursive calls count as n
 function maxDepth(root) {}
 
 module.exports = maxDepth

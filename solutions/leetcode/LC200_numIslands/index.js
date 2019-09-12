@@ -26,8 +26,8 @@ Input:
 Output: 3
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> unless recursive calls count as n
 function numIslands(grid) {}
 
 module.exports = numIslands

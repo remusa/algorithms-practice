@@ -29,8 +29,8 @@ This problem was inspired by this original tweet by Max Howell:
     Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> unless recursive calls count as n
 function invertTree(root) {}
 
 module.exports = invertTree

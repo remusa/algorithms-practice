@@ -31,8 +31,8 @@ Note:
     p and q are different and both values will exist in the BST.
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> unless recursive calls count as n
 function lowestCommonAncestor(root, p, q) {}
 
 module.exports = lowestCommonAncestor

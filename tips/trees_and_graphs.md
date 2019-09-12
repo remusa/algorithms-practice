@@ -88,9 +88,11 @@ def lca(root, j, k):
 
 ## Same Tree
 
-* 
+* Recursively check both children for different values.
 
 ## Binary Tree Level Order Traversal
+
+* `BFS` with changes.
 
 ## Maximum Depth of Binary Tree
 
