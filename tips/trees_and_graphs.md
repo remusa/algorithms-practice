@@ -112,4 +112,8 @@ def lca(root, j, k):
 
 ## Lowest Common Ancestor of a Binary Search Tree
 
-*
+* Problem occurs in a *binary-search tree*, where all nodes in the left subtree are smaller or equal than the root and all nodes in the right subtree are greater.
+* Start at the `root` node.
+* Check if `root` value is lesser than both input values (`p` and `q`). If it is move `right`.
+* Otherwise, move `left`.
+* If `root` value is neither, we are at `lowest common ancestor`.
