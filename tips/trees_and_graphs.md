@@ -107,7 +107,8 @@ def lca(root, j, k):
 
 ## Invert Binary Tree
 
-*
+* Switch each node's children (`left` <-> `right`).
+* Children of children are kept the same.
 
 ## Lowest Common Ancestor of a Binary Search Tree
 

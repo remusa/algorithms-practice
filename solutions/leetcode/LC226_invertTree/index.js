@@ -31,6 +31,23 @@ This problem was inspired by this original tweet by Max Howell:
 
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> unless recursive calls count as n
-function invertTree(root) {}
+function invertTree(root) {
+    function invert(node) {
+        if (!node) return
+
+        // Swap children
+        const oldLeft = node.left
+        node.left = node.right
+        node.right = oldLeft
+
+        // Recursively call helper function on children
+        invert(node.left)
+        invert(node.right)
+    }
+
+    invert(root)
+
+    return root
+}
 
 module.exports = invertTree
