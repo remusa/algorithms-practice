@@ -155,4 +155,4 @@ def is_rotation(A, B):
 * `O(log(n))`: use *binary search* on two sorted arrays rather than one.
 * Find the `inflection` index.
 * Use `inflection` index to perform the two separate binary searches.
-* Return the `highest` of the values of the twoindices returned from the 2 binary searches.
+* Return the `highest` of the values of the two indices returned from the 2 binary searches.
