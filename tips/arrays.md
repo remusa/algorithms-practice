@@ -84,3 +84,19 @@ def is_rotation(A, B):
 * Calculate the area of that container.
 * Shrink the base of the container and recalculate the area again, moving whichever pointer is smaller.
 * Keep recalculating `maxArea` and shifting walls until the walls meet.
+
+## 3Sum
+
+## Maximum Subarray
+
+## Best Time to Buy and Sell Stock
+
+## Maximum Product Subarray
+
+## Find Minimum in Rotated Sorted Array
+
+## Contains Duplicate
+
+## Product of Array Except Self
+
+## Search in Rotated Sorted Array

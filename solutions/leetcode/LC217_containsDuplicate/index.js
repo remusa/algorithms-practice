@@ -23,8 +23,22 @@ Input: [1,1,1,3,3,4,3,2,4,2]
 Output: true
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
-function containsDuplicate(nums) {}
+// Time complexity: O(n) -> traverse array once, lookups in hashtable take O(1)
+// Space complexity: O(n) -> number of unique values, at most n
+function containsDuplicate(nums) {
+    const map = {}
+
+    for (let i = 0; i < nums.length; i++) {
+        const num = nums[i]
+
+        if (map[num]) {
+            return true
+        } else {
+            map[num] = true
+        }
+    }
+
+    return false
+}
 
 module.exports = containsDuplicate
