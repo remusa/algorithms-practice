@@ -33,9 +33,9 @@ function containsDuplicate(nums) {
 
         if (map[num]) {
             return true
-        } else {
-            map[num] = true
         }
+
+        map[num] = true
     }
 
     return false

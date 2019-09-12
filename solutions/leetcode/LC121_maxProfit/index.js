@@ -25,6 +25,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 // Time complexity: O(n) ->
 // Space complexity: O(1) ->
-function maxProfit(prices) {}
+function maxProfit(prices) {
+    
+}
 
 module.exports = maxProfit
