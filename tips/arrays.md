@@ -116,11 +116,31 @@ def is_rotation(A, B):
 
 ## Find Minimum in Rotated Sorted Array
 
-*
+* Assume array is sorted.
+* `O(n)`: use *linear search* and check every item in the array.
+* `O(log(n))`: use *binary search*.
+* Check if the array is rotated, in *un-rotated* sorted array, first value is always the smallest.
+* If array is *rotated*, the first value is greater than the last value.
+* In *un-rotated* sorted array, all numbers to the `left` are smaller and all numbers to the `right` are larger.
+* If number to `left` is larger, we are at the `minimum`.
+* Otherwise, if number to the `right` is smaller, the number to the right is the minimum.
+* Run *binary search*.
+* Calculate `mid` value, using `left` and `right` pointers, checking if `mid` is at *inflection point*.
+* If number to `left` of `mid` is larger, we are at the minimum.
+  * If `mid` is greater than `left`, move `left` up to `mid`.
+* Otherwise, if number to the `right` of `mid` is smaller, the number to the `right` is minimum.
+  * If `mid` is smaller than `left`, move `right` down to `mid`.
+
+* If input array is length `1`, return that number.
+* Set initial values for `left` and `right` to first and last number of input array.
+* If `left` value is less than `right` value, input array is *not rotated*, return `left` value.
+* Run *binary search*.
+  * If `mid` is at *inflection point*, return the `min`.
+  * Else, change `left` or `right` and rerun *binary search*.
 
 ## Contains Duplicate
 
-*
+* Use a *hash map*.
 
 ## Product of Array Except Self
 
