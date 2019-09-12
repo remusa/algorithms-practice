@@ -18,8 +18,23 @@ Output: 0
 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 */
 
-// Time complexity: O(n) -> traverse array once, lookups in hashtable take O(1)
-// Space complexity: O(n) -> number of key-value pairs, at most n
-function maxProduct(nums) {}
+// Time complexity: O(n) -> traverse array once
+// Space complexity: O(n) -> created 2 arrays of same size as input array
+function maxProduct(nums) {
+    const maxTilIndex = [nums[0]]
+    const minTilIndex = [nums[0]]
+    let max = nums[0]
 
-module.exports = maxProduct;
+    for (let i = 1; i < nums.length; i++) {
+        const num = nums[i]
+
+        maxTilIndex[i] = Math.max(num, num * maxTilIndex[i - 1], num * minTilIndex[i - 1])
+        minTilIndex[i] = Math.min(num, num * maxTilIndex[i - 1], num * minTilIndex[i - 1])
+
+        max = Math.max(max, maxTilIndex[i])
+    }
+
+    return max
+}
+
+module.exports = maxProduct

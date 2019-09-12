@@ -22,8 +22,8 @@ Input: [4,5,6,7,0,1,2]
 Output: 0
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
+// Time complexity: O(n) -> traverse array once
+// Space complexity: O(n) ->
 function findMin(nums) {}
 
 module.exports = findMin

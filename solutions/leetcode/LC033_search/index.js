@@ -24,8 +24,8 @@ Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
+// Time complexity: O(n) -> traverse array once
+// Space complexity: O(n) ->
 function search(nums, target) {}
 
 module.exports = search

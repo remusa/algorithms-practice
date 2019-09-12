@@ -111,7 +111,8 @@ def is_rotation(A, B):
 
 ## Maximum Product Subarray
 
-*
+* Create two auxiliary arrays, a `maxUntilIndex` that calculates the biggest product, and a `minUntilIndex` that calculates the smallest product up until that index.
+* Return the largest value in `maxUntilIndex`.
 
 ## Find Minimum in Rotated Sorted Array
 
