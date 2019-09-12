@@ -97,10 +97,18 @@ def lca(root, j, k):
 
 ## Maximum Depth of Binary Tree
 
-* 
+*
 
 ## Number of Islands
 
+* Everything around the matrix is considered water, so `1`s in corners may count as islands.
+* Iterate over every cell in the matrix.
+* If cell is a `1` (which represents land), iterate over that cell and `sink` surrounding land (`1`s) by converting it to `0`s. Increase `count` by 1.
+
 ## Invert Binary Tree
 
+*
+
 ## Lowest Common Ancestor of a Binary Search Tree
+
+*

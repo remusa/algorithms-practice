@@ -26,12 +26,44 @@ Input:
 Output: 3
 */
 
-// Time complexity: O(n) -> traverse every node in the tree
-// Space complexity: O(1) -> unless recursive calls count as n
+// Time complexity: O(n) -> number of cells in matrix
+// Time complexity: O(n*m) -> n and m are width and height of the matrix
+// Space complexity: O(1) -> matrix is modified in place
 function numIslands(grid) {
+    let count = 0
 
+    for (let row = 0; row < grid.length; row++) {
+        for (let col = 0; col < grid[0].length; col++) {
+            const cell = grid[row][col]
 
-    // Recursively call helper function on children
+            // If cell is island
+            if (cell === '1') {
+              count++
+              // Sink island and check for other connecting land
+              dfs(grid, row, col)
+            }
+        }
+    }
+
+    function dfs(grid, row, col) {
+        if (row < 0 || row >= grid.length ||
+            col < 0 || col >= grid[0].length ||
+            grid[row][col] === '0') {
+                return
+            }
+
+        // We're in a valid cell and cell isn't water
+        // Sink current cell
+        grid[row][col] = '0'
+
+        // Check cells above, below, left and right for land
+        dfs(grid, row - 1, col)
+        dfs(grid, row + 1, col)
+        dfs(grid, row, col - 1)
+        dfs(grid, row, col + 1)
+    }
+
+    return count
 }
 
 module.exports = numIslands
