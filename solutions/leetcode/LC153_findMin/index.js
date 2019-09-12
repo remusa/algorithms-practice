@@ -25,7 +25,7 @@ Output: 0
 // Time complexity: O(log(n)) -> performed binary search
 // Space complexity: O(1)
 function findMin(nums) {
-    let left = nums[0]
+    let left = 0
     let right = nums.length - 1
 
     if (nums.length === 1) {
@@ -37,7 +37,7 @@ function findMin(nums) {
         return nums[left]
     }
 
-    while (left < right) {
+    while (left <= right) {
         const mid = Math.floor((left + right) / 2)
 
         const leftVal = nums[left]
@@ -46,12 +46,11 @@ function findMin(nums) {
         const rightOfMid = nums[mid + 1]
 
         // Check inflection point (mid)
-        if (midVal > rightOfMid) {
-            return rightOfMid
-        }
-
         if (midVal < leftOfMid) {
             return midVal
+        }
+        if (midVal > rightOfMid) {
+            return rightOfMid
         }
 
         if (midVal > leftVal) {
