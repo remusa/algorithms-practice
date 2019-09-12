@@ -87,6 +87,16 @@ def is_rotation(A, B):
 
 ## 3Sum
 
+* `O(n^3)`: brute force solution triple nested for loops.
+* Sort array.
+* Iterate throught the array.
+* Create a `left` pointer that starts one index ahead and a `right` pointer that starts at the end.
+* Once we reach `0`, `left` and `right` have to add up to `0`.
+* While sum of `left` and `right` is less than the `target`, move `left` up.
+* Otherwise, move `right` down.
+* If values are the same, move `i` to avoid repeating the value.
+* Once `left` and `right` are equal to each other, move `i` up one time and push items into a `results` array.
+
 ## Maximum Subarray
 
 ## Best Time to Buy and Sell Stock

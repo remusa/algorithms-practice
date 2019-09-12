@@ -20,8 +20,40 @@ A solution set is:
 ]
 */
 
-// Time complexity: O(n) ->
+// Time complexity: O(n^2) -> iterate over all the numbers two times
 // Space complexity: O(1) ->
-function threeSum(nums) {}
+function threeSum(nums) {
+    // O(log(n))
+    nums.sort((a, b) => a - b)
+    const res = []
+
+    for (let i = 0; i < nums.length; i++) {
+        const target = 0 - nums[i]
+        let left = i + 1
+        let right = nums.length - 1
+
+        // Check to avoid pushing duplicate triplets
+        if (i > 0 && nums[i] === nums[i - 1]) {
+            continue
+        }
+
+        while (left < right) {
+            if (nums[left] + nums[right] === target) {
+                res.push([nums[i], nums[left], nums[right]])
+                left++
+
+                while (nums[left] === nums[left - 1]) {
+                    left++
+                }
+            } else if (nums[left] + nums[right] < target) {
+                left++
+            } else {
+                right--
+            }
+        }
+    }
+
+    return res
+}
 
 module.exports = threeSum
