@@ -19,8 +19,38 @@ Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
-function maxArea(height) {}
+// Time complexity: O(n) -> traverse array once
+// Space complexity: O(1) -> use 2 pointers
+function maxArea(height) {
+    let maxArea = 0
+    let left = 0
+    let right = height.length - 1
+
+    while (left < right) {
+        // Smallest wall height stops the water from spilling
+        const smallestWall = Math.min(height[left], height[right])
+
+        // Width of the base
+        const base = right - left
+
+        // Area = height * width
+        const currentArea = smallestWall * base
+
+        // Calculate maxArea
+        maxArea = Math.max(currentArea, maxArea)
+
+        // Shift walls
+        const leftWall = height[left]
+        const rightWall = height[right]
+
+        if (leftWall < rightWall) {
+            left++
+        } else {
+            right--
+        }
+    }
+
+    return maxArea
+}
 
 module.exports = maxArea

@@ -76,3 +76,11 @@ def is_rotation(A, B):
 
     return true
 ```
+
+## Container With Most Water
+
+* `O(n^2)`: for each height, check all heights ahead of it, calculate the `area` then calculate `maxArea`.
+* Create a `left` pointer at the start of the array and a `right` pointer at the end.
+* Calculate the area of that container.
+* Shrink the base of the container and recalculate the area again, moving whichever pointer is smaller.
+* Keep recalculating `maxArea` and shifting walls until the walls meet.
