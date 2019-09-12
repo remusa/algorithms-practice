@@ -15,8 +15,25 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 */
 
-// Time complexity: O(n) ->
-// Space complexity: O(1) ->
-function twoSum(arr, target) {}
+// Time complexity: O(n) -> traverse array once, lookups in hashtable take O(1)
+// Space complexity: O(n) -> number of key-value pairs, at most n
+function twoSum(arr, target) {
+    const visited = {}
+    const res = []
+
+    for (let i = 0; i < arr.length; i++) {
+        const num = arr[i]
+        const complement = target - num
+
+        if (visited[complement] !== undefined) {
+            res.push(i)
+            res.push(visited[complement])
+        }
+
+        visited[num] = i
+    }
+
+    return res
+}
 
 module.exports = twoSum

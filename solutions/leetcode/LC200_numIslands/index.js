@@ -38,9 +38,9 @@ function numIslands(grid) {
 
             // If cell is island
             if (cell === '1') {
-              count++
-              // Sink island and check for other connecting land
-              dfs(grid, row, col)
+                count++
+                // Sink island and check for other connecting land
+                dfs(grid, row, col)
             }
         }
     }
