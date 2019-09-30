@@ -11,12 +11,14 @@
 
 * **Trie**: a *trie*, *radix tree* or *prefix tree* is a tree-like data
   structure.
+  * Called *trie* because they make data re*trie*val easy.
+  * Optimized for *prefix searching*.
 * *Stores*: a dynamic set or an associative array where the keys
   are usually *strings*.
 * *Ordered*: all the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string.
 * Values tend only to be associated with leaves, and with some inner nodes that correspond to keys of interest.
 * *Empty root node*: top node or root typically equals an empty string.
-* Each node stores a character or a word.
+* Each node stores a character or a word (spaces are treated as characters too).
 
 ## Strenghts and Weaknesses
 
