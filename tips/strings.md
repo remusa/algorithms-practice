@@ -120,3 +120,8 @@ loop through the input string:
   2. Create a left and right pointers at the start and end of the string.
   3. While the left pointer is less than the right one, check if characters are equal. If they aren't, return false.
   4. Return true.
+
+
+## Resources
+
+* [Here is a 10-line template that can solve most 'substring' problems - LeetCode Discuss](https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems)

@@ -1,9 +1,15 @@
 # Closures
 
-* **Closure**:
+* **Definition**: a *closure* is a function inside another (parent) function, that *remembers* the context (and state, variables, methods, etc.) of its parent. A closure has access to its outer context (the parents), but not the other way around. A closure has access to *3 contexts*: local, the parent's and the global.
+* **Usage**:
+  * Extends behaviour of the parent function.
+  * Hides implementation details.
+  * Preserves values created in the parent function.
+
+* **Other definitions**:
   * A *closure* is the combination of a function and the lexical environment within which that function was declared.
     * Closures are useful in hiding the implementation of functionality while still revealing the interface.
-  * A *closure* is simply a function inside another function. It is used when you want to extend behavior such as pass variables, methods, or arrays from an outer function to inner function. We can also access the context defined in outer function from inner function, but not the other way around (remember the scope principles we talked about above).
+  * A *closure* is simply a function inside another function. It is used when you want to extend behavior such as pass variables, methods, or arrays from an outer function to inner function. We can also access the context defined in outer function from inner function, but not the other way around.
     * Why is this relevant?
       * Extends behavior
       * Useful when working with events
