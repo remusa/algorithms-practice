@@ -162,3 +162,10 @@ startsWith(prefix) {
   Blog](https://blog.benoitvallon.com/data-structures-in-javascript/the-trie-data-structure/)
 * [Trie - Wikiwand](https://www.wikiwand.com/en/Trie)
 * [The Trie data structure - Ben's Blog](https://blog.benoitvallon.com/data-structures-in-javascript/the-trie-data-structure/)
+
+### Implementations
+
+* [Concise JavaScript solution - LeetCode Discuss](https://leetcode.com/problems/implement-trie-prefix-tree/discuss/58870/Concise-JavaScript-solution)
+* [JavaScript Solution: Proper Trie implementation - LeetCode Discuss](https://leetcode.com/problems/implement-trie-prefix-tree/discuss/174320/JavaScript-Solution%3A-Proper-Trie-implementation)
+* [Javascript ES6 solution - LeetCode Discuss](https://leetcode.com/problems/implement-trie-prefix-tree/discuss/198952/Javascript-ES6-solution)
+* [Clean JavaScript solution - LeetCode Discuss](https://leetcode.com/problems/implement-trie-prefix-tree/discuss/399178/Clean-JavaScript-solution)

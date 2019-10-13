@@ -2,8 +2,8 @@ class Node {
     constructor(value) {
         this.value = value
         this.children = new Map()
-        this.prefixes = 0
         this.isCompleteWord = false
+        this.prefixes = 0
     }
 }
 
