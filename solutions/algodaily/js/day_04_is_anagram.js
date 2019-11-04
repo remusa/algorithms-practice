@@ -4,7 +4,7 @@
     We are given two strings like "cinema" and "iceman" as inputs. Can you write a method isAnagram(str1, str2) that will return true or false depending on whether the strings are anagrams of each other?
 */
 
-// O()
+// O(n)
 function isAnagram(str1, str2) {
     const set = new Set()
     str1.split('').map(char => set.add(char.toLowerCase()))
