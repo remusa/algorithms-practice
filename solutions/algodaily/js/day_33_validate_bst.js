@@ -18,7 +18,9 @@ class Node {
 }
 
 // inorder: left -> root -> right
-function inOrder(node, output) {
+function inOrder(node) {
+    const output = []
+
     function traverse(node) {
         // Left
         if (node.left) {
@@ -37,16 +39,18 @@ function inOrder(node, output) {
     return output
 }
 
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> O(n) if recursive calls count
 function isValidBST(node) {
     if (!node) {
         return true
     }
 
-    const output = inOrder(node, [])
+    const stack = inOrder(node)
 
-    while (output.length) {
-        const poppedNode = output.pop()
-        const lastNode = output[output.length - 1]
+    while (stack.length) {
+        const poppedNode = stack.pop()
+        const lastNode = stack[stack.length - 1]
 
         if (poppedNode < lastNode) {
             return false
@@ -54,6 +58,28 @@ function isValidBST(node) {
     }
 
     return true
+}
+
+function isValidBST2(rootNode) {
+    let valid = true
+
+    function helper(node, min, max) {
+        if (!node) return
+
+        // If node isn't valid return
+        if ((min !== null && node.val <= min) || (max !== null && node.val >= max)) {
+            valid = false
+            return
+        }
+
+        // Node is valid
+        helper(node.left, min, node.val)
+        helper(node.right, node.val, max)
+    }
+
+    helper(rootNode, null, null)
+
+    return valid
 }
 
 const tree = new Node(5)
@@ -65,4 +91,5 @@ console.log(isValidBST(tree))
 module.exports = {
     Node,
     isValidBST,
+    isValidBST2,
 }
