@@ -1,6 +1,8 @@
 # Bind, call and apply
 
-* Ways of **explicitly binding** the `this` keyword to a context.
+* Ways of *explicitly binding* the `this` keyword to a context.
+* **TLDR**: Use `.bind()` when you want that function to later be called with a certain context, useful in events. Use `.call()` or `.apply()` when you want to invoke the function immediately, with modification of the context.
+  * A *context* is an object that replaces `this` keyword inside the function.
 
 * `call` is a property on every function and the first argument you pass to it will be the *context* (or the focal object) in which the function is invoked. In other words, the first argument you pass to call will be what the `this` keyword inside that function is referencing.
 
