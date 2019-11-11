@@ -2,11 +2,63 @@
 
 ## Execution context
 
-* **Execution context**:
+* **Execution context**: just like functions/modules/packages allow you to manage the complexity of writing code, *execution contexts* allow the JavaScript engine to manage the complexity of interpreting and running code.
+* Each *execution context* has two separate phases:
+  * **Creation**: JavaScript does the following:
+    1. Create a `global` object.
+    2. Create an object called `this`.
+    3. Set up memory space for variables and functions.
+    4. Assign variable declarations a default value of `undefined` while placing any function declarations in memory.
+  * **Execution**: the JavaScript engine starts running the code line by line and executing it.
+
+* **Global Execution Context**: the *execution context* that gets created when the JavaScript engine runs the code.
+  * Initially it consists of two things:
+    * the `global` object.
+    * a variable called `this`: `this` references the `global` object which will be `window` if you’re running JavaScript in the browser or `global` if you’re running it in a Node environment.
+* **Function Execution Context**: called whenever a function is *invoked*.
+  * Doesn't create a `global` object.
+  * Everything else that happens during the *Creation* phase is the same.
+      0. ~~Create a `global` object.~~
+      1. Create an `arguments` object.
+      2. Create an object called `this`.
+      3. Set up memory space for variables and functions.
+      4. Assign variable declarations a default value of `undefined` while placing any function declarations in memory.
+  * Any argument passed in will be added as a local variable in that function’s *execution context*.
+  * Variables declared inside of a function live inside that function’s *execution context*.
+
+* **Execution Stack or Call Stack**: anytime a function is invoked, a new *execution context* is created and added to the *execution stack*. Whenever a function is finished running through both the *Creation* and *Execution* phase, it gets popped off the *execution stack*.
+  * JavaScript is *single threaded* (only one task can be executed at a time).
 
 ## Hoisting
 
-* **Hoisting**:
+* **Hoisting**: the process of assigning variable declarations a default value of `undefined` during the *creation* phase.
+* **Note**: nothing is actually "hoisted" or moved around.
+
+## Scopes
+
+* **Scope**: the current *execution context* or where variables are accesible.
+* **Scope chain**: if the variable doesn’t exist in the current *execution context*, it’ll look to to nearest parent *execution context* for that variable. This lookup chain will continue all the way until the engine reaches the *Global Execution Context*. In that case, if the *Global Execution Context* doesn’t have the variable, it’ll throw a `Reference Error`.
+
+## Variables
+
+### Global variables
+
+* In the browser, anytime you create a variable in the *Global Execution Context* (outside of any function), that variable will be added as a property on the `window` object.
+* In both the browser and in Node, if you create a variable without a declaration (ie without `var`, `let`, or `const`), that variable will also be added as a property on the `global` object.
+
+```javascript
+// In the browser
+var name = 'Tyler'
+
+function foo () {
+    bar = 'Created in foo without declaration'
+}
+
+foo()
+
+console.log(window.name) // Tyler
+console.log(window.bar) // Created in foo without declaration
+```
 
 ## Closures
 
