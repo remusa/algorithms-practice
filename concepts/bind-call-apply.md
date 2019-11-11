@@ -8,14 +8,14 @@
 
 ```javascript
 function greet (l1, l2, l3) {
-  alert(
-    `Hello, my name is ${this.name} and I know ${l1}, ${l2}, and ${l3}`
-  )
+    alert(
+        `Hello, my name is ${this.name} and I know ${l1}, ${l2}, and ${l3}`
+    )
 }
 
 const user = {
-  name: 'Tyler',
-  age: 27,
+    name: 'Tyler',
+    age: 27,
 }
 
 const languages = ['JavaScript', 'Ruby', 'Python']
@@ -40,14 +40,14 @@ greet.apply(user, languages)
 
 ```javascript
 function greet (l1, l2, l3) {
-  alert(
-    `Hello, my name is ${this.name} and I know ${l1}, ${l2}, and ${l3}`
-  )
+    alert(
+        `Hello, my name is ${this.name} and I know ${l1}, ${l2}, and ${l3}`
+    )
 }
 
 const user = {
-  name: 'Tyler',
-  age: 27,
+    name: 'Tyler',
+    age: 27,
 }
 
 const languages = ['JavaScript', 'Ruby', 'Python']

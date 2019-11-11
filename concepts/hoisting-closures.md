@@ -1,4 +1,14 @@
-# Closures
+# Hoisting, closures
+
+## Execution context
+
+* **Execution context**:
+
+## Hoisting
+
+* **Hoisting**:
+
+## Closures
 
 * **Definition**: a *closure* is a function inside another (parent) function, that *remembers* the context (and state, variables, methods, etc.) of its parent. A closure has access to its outer context (the parent's), but not the other way around. A closure has access to *3 contexts*: local, the parent's and the global.
 * **Usage**:
@@ -65,6 +75,7 @@ console.log('3', memoized(6))
 
 ## Resources
 
+* [The Ultimate Guide to Hoisting, Scopes, and Closures in JavaScript](https://tylermcginnis.com/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/)
 * [front-end-interview-handbook/javascript-questions.md at master · yangshun/front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md#what-is-a-closure-and-howwhy-would-you-use-one)
 * [Learn Origin of Closure – Deep JavaScript Foundations, v3](https://frontendmasters.com/courses/deep-javascript-v3/what-is-closure/)
 * [Master the JavaScript Interview: What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
