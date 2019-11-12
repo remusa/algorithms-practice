@@ -6,12 +6,13 @@
     The largest product of three numbers is 2310. This results from -15 * -7 * 22.
 */
 
+// Using sorting
+// Time complexity: O(nlog(n) -> sorting
 function maxProductOfThree(unsorted) {
     if (!unsorted.length || unsorted.length <= 2) {
         return
     }
 
-    // O(nlog(n)) if using efficient sorting algorithm
     const arr = [...unsorted].sort((a, b) => a - b)
 
     const product1 = arr[arr.length - 3] * arr[arr.length - 2] * arr[arr.length - 1]
@@ -19,6 +20,8 @@ function maxProductOfThree(unsorted) {
 
     return product1 > product2 ? product1 : product2
 }
+
+// Can also be done in O(1) without sorting by keeping track of the 2 smallest value and the three largest values
 
 module.exports = {
     maxProductOfThree,
