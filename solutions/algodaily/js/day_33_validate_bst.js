@@ -47,12 +47,14 @@ function isValidBST(node) {
         return true
     }
 
+    // When traversing in-order, stack should be sorted
     const stack = inOrder(node)
 
     while (stack.length) {
         const poppedNode = stack.pop()
         const lastNode = stack[stack.length - 1]
 
+        // If the popped node is smaller than the current last node in the stack, it means the stack isn't sorted, so it isnt a BST
         if (poppedNode < lastNode) {
             return false
         }
@@ -66,7 +68,9 @@ function isValidBST2(rootNode) {
     let valid = true
 
     function helper(node, min, max) {
-        if (!node) return
+        if (!node) {
+            return
+        }
 
         // If node isn't valid return
         if ((min !== null && node.val <= min) || (max !== null && node.val >= max)) {
