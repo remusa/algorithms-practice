@@ -21,16 +21,16 @@ class Node {
 function inOrder(node) {
     const output = []
 
-    function traverse(node) {
+    function traverse(currNode) {
         // Left
-        if (node.left) {
-            traverse(node.left)
+        if (currNode.left) {
+            traverse(currNode.left)
         }
         // Root
-        output.push(node.value)
+        output.push(currNode.value)
         // Right
-        if (node.right) {
-            traverse(node.right)
+        if (currNode.right) {
+            traverse(currNode.right)
         }
     }
 
