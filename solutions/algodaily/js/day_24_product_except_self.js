@@ -33,24 +33,33 @@ function productExceptSelfNaive(nums) {
     return results
 }
 
+// Time complexity: O(n)
+// Space complexity: O(1) -> we don't use an additional array for computations and the answer array doesn't count
 function productExceptSelf(nums) {
     if (!nums || nums.length <= 1) {
         return []
     }
 
-    const size = nums.length
     const results = []
-    let product = 1
+    const length = nums.length
 
-    for (let i = 0; i < size; i++) {
-        results.push(product)
-        product *= nums[i]
+    let left = 1
+
+    for (let i = 0; i < length; i++) {
+        results[i] = left
+        // left keeps track of the product
+        left *= nums[i]
     }
 
-    product = 1
-    for (let j = size - 1; j >= 0; j--) {
-        results[j] *= product
-        product *= nums[j]
+    // results[i] contains the product of all the elements to the left
+    // results[0] = 1
+    // results[i] = nums[i - 1] * results[i - 1]
+
+    let right = 1
+
+    for (let j = length - 1; j >= 0; j--) {
+        results[j] *= right
+        right *= nums[j]
     }
 
     return results
