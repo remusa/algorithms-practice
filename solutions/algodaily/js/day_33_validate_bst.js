@@ -39,6 +39,7 @@ function inOrder(node) {
     return output
 }
 
+// Traversing tree in order and using a stack for keeping track
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> O(n) if recursive calls count
 function isValidBST(node) {
@@ -60,6 +61,7 @@ function isValidBST(node) {
     return true
 }
 
+// Keeping track of minimum and maximum values
 function isValidBST2(rootNode) {
     let valid = true
 
