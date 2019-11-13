@@ -30,19 +30,28 @@
   * Can be *chained* using multiple `then()`. Each one returns a promise.
 
 * **Async/await**: makes asynchronous code look like synchronous code.
-  * async functions return a promise.
+  * async functions return a `Promise`.
 
 * `bind, call and apply`:
   * Ways of explicitly binding the `this` keyword to a context.
   * Use `.bind()` when you want that function to later be called with a certain context, useful in events. Use `.call()` or `.apply()` when you want to invoke the function immediately, with modification of the context.
     * A context is an object that replaces `this` keyword inside the function.
 
+* **Event delegation**: instead of assigning an event handler to each element that is handled in a similar way, we put a single handler on their common ancestor, so when something triggers an event (like clicking) it *bubbles* up to the parent.
+  * Useful because event listeners are very expensive on the page because every time it re-renders it needs to be re-added to the DOM.
+  * In the handler we get `event.target`, see where the event actually happened and handle it.
+  * Instead of listening for a change on the inputs directly (the children elements), we should look for an HTML element that is going to be on the page when the page initially loads (the parent element).
+* **Event bubbling or event propagation**: place an event listener on a single parent HTML element that lives above a HTML child, and that event listener will get executed whenever an event occurs on any of its child nodes — even if these node children are added to the page after the initial load!.
+
 * **Prototypal Inheritance**: all objects have a `prototype` property. If we try to access a property on an object and JS doesn't find, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`. This is how JavaScript simulates inheritance.
+  * *Get the prototype of an object*: use `Object.getPrototypeOf`.
+  * *Determining if a property lives on the prototype*: use `<object>.hasOwnProperty`.
+  * *Check if an object is an instance of a Class*: use `object instanceof Class`.
 
 * `this`: refers to the current execution context.
   * If the `new` keyword is used when calling the function, this inside the function is a brand new object.
   * If `apply`, `call`, or `bind` are used to call/create a function, `this` inside the function is the object that is passed in as the argument.
-  * If a function is called as a method, such as `obj.method()` , ` this` is the object that the function is a property of.
+  * If a function is called as a method, such as `obj.method()` , `this` is the object that the function is a property of.
   * If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above, this is the global object. In a browser, it is the `window` object. If in strict mode ('use strict'), this will be undefined instead of the global object.
   * If multiple of the above rules apply, the rule that is higher wins and will set the `this` value.
   * If the function is an ES2015 arrow function, it ignores all the rules above and receives the `this` value of its surrounding scope at the time it is created.
@@ -88,6 +97,9 @@ console.log(add10(2)); // 12
 * **Constructor**: defines and initializes objects and their features. Called when a class is initialized via new.
 
 * `super()`: used to call its parent’s constructor and `super.<methodName>` to access its parent’s methods. This means we can use the parents properties and method in the children.
+
+* **Worker**: used to off-load expensive tasks from the main thread to a different thread.
+  * Helps with not blocking the UI, since JavaScript is single-threaded.
 
 ## Loops
 

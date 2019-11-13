@@ -1,4 +1,4 @@
-#Big-O Cheat Sheet
+# Big-O Cheat Sheet
 
 ## Big O
 
@@ -16,7 +16,7 @@
   * Iterating through half a collection is still O(n)
   * Two separate collections: O(a * b)
 
-## What causes time complexity?
+## What causes time complexity
 
 * Operations (+, -, *, /)
 * Comparisons (<, >, ==)
@@ -34,7 +34,7 @@
   * Example: `a` and `b` arrays nested would be `O(a*b)`.
 * Rule 4: Drop non-dominant terms. Keep the fastest growing term (biggest exponent).
 
-## What causes space complexity?
+## What causes space complexity
 
 * Variables
 * Data Structures

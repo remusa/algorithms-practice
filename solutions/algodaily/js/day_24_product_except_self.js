@@ -65,7 +65,4 @@ function productExceptSelf(nums) {
     return results
 }
 
-module.exports = {
-    productExceptSelfNaive,
-    productExceptSelf,
-}
+export { productExceptSelfNaive, productExceptSelf }
