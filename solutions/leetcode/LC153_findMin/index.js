@@ -25,40 +25,40 @@ Output: 0
 // Time complexity: O(log(n)) -> performed binary search
 // Space complexity: O(1)
 function findMin(nums) {
-    let left = 0
-    let right = nums.length - 1
+  let left = 0
+  let right = nums.length - 1
 
-    if (nums.length === 1) {
-        return nums[0]
+  if (nums.length === 1) {
+    return nums[0]
+  }
+
+  // If left < right then array isn't rotated
+  if (nums[left] < nums[right]) {
+    return nums[left]
+  }
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2)
+
+    const leftVal = nums[left]
+    const midVal = nums[mid]
+    const leftOfMid = nums[mid - 1]
+    const rightOfMid = nums[mid + 1]
+
+    // Check inflection point (mid)
+    if (midVal < leftOfMid) {
+      return midVal
+    }
+    if (midVal > rightOfMid) {
+      return rightOfMid
     }
 
-    // If left < right then array isn't rotated
-    if (nums[left] < nums[right]) {
-        return nums[left]
+    if (midVal > leftVal) {
+      left = mid + 1
+    } else {
+      right = mid - 1
     }
-
-    while (left <= right) {
-        const mid = Math.floor((left + right) / 2)
-
-        const leftVal = nums[left]
-        const midVal = nums[mid]
-        const leftOfMid = nums[mid - 1]
-        const rightOfMid = nums[mid + 1]
-
-        // Check inflection point (mid)
-        if (midVal < leftOfMid) {
-            return midVal
-        }
-        if (midVal > rightOfMid) {
-            return rightOfMid
-        }
-
-        if (midVal > leftVal) {
-            left = mid + 1
-        } else {
-            right = mid - 1
-        }
-    }
+  }
 }
 
 module.exports = findMin

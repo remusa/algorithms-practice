@@ -7,27 +7,27 @@
 */
 
 function isASubsequence(sub, str) {
-    if (!sub.length || !str.length || sub.length > str.length) {
-        return false
-    }
-
-    let i = 0
-    let pointer = 0
-
-    // Move right pointer (sub.length) to the right
-    while (i <= str.length) {
-        if (str[i] === sub[pointer]) {
-            pointer++
-            if (pointer === sub.length) {
-                return true
-            }
-        }
-        i++
-    }
-
+  if (!sub.length || !str.length || sub.length > str.length) {
     return false
+  }
+
+  let i = 0
+  let pointer = 0
+
+  // Move right pointer (sub.length) to the right
+  while (i <= str.length) {
+    if (str[i] === sub[pointer]) {
+      pointer++
+      if (pointer === sub.length) {
+        return true
+      }
+    }
+    i++
+  }
+
+  return false
 }
 
 module.exports = {
-    isASubsequence,
+  isASubsequence,
 }

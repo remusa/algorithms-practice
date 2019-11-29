@@ -6,25 +6,25 @@
 
 // O(n)
 function fibonacciIterative(n) {
-    const arr = [0, 1]
+  const arr = [0, 1]
 
-    for (let i = 2; i <= n; i++) {
-        arr.push(arr[i - 2] + arr[i - 1])
-    }
+  for (let i = 2; i <= n; i++) {
+    arr.push(arr[i - 2] + arr[i - 1])
+  }
 
-    return arr[n]
+  return arr[n]
 }
 
 // O(2^n) - exponential
 function fibonacciRecursive(n) {
-    if (n <= 1) {
-        return n
-    }
+  if (n <= 1) {
+    return n
+  }
 
-    return fibonacciRecursive(n - 2) + fibonacciRecursive(n - 1)
+  return fibonacciRecursive(n - 2) + fibonacciRecursive(n - 1)
 }
 
 module.exports = {
-    fibonacciIterative,
-    fibonacciRecursive,
+  fibonacciIterative,
+  fibonacciRecursive,
 }

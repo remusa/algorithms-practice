@@ -6,22 +6,22 @@
 */
 
 function powerOfThree(n) {
-    if (n < 3) {
-        return false
-    }
+  if (n < 3) {
+    return false
+  }
 
-    let i = 1
-    let res // save the
+  let i = 1
+  let res // save the
 
-    // multiply by 3
-    while (i <= n) {
-        res = i
-        i *= 3
-    }
+  // multiply by 3
+  while (i <= n) {
+    res = i
+    i *= 3
+  }
 
-    return res === n
+  return res === n
 }
 
 module.exports = {
-    powerOfThree,
+  powerOfThree,
 }

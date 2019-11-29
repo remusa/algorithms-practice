@@ -13,24 +13,24 @@
 */
 
 function sortedTwoSum(nums, goal) {
-    if (!nums || nums.length <= 1) {
-        return []
-    }
-
-    const map = new Map()
-
-    for (let i = 0; i < nums.length; i++) {
-        map.set(nums[i], i)
-
-        const difference = goal - nums[i]
-        if (map.has(difference)) {
-            return [map.get(difference), i]
-        }
-    }
-
+  if (!nums || nums.length <= 1) {
     return []
+  }
+
+  const map = new Map()
+
+  for (let i = 0; i < nums.length; i++) {
+    map.set(nums[i], i)
+
+    const difference = goal - nums[i]
+    if (map.has(difference)) {
+      return [map.get(difference), i]
+    }
+  }
+
+  return []
 }
 
 module.exports = {
-    sortedTwoSum,
+  sortedTwoSum,
 }

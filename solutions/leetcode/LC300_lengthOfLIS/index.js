@@ -22,25 +22,25 @@ Follow up: Could you improve it to O(n log n) time complexity?
 // Time complexity: O(n^2) -> do n work, for all n elements
 // Space complexity: O(n) -> store the answer up to n sub-problems
 function lengthOfLIS(nums) {
-    if (nums.length === 0) return 0
+  if (nums.length === 0) return 0
 
-    const lis = new Array(nums.length).fill(1)
-    let maxSoFar = 1
+  const lis = new Array(nums.length).fill(1)
+  let maxSoFar = 1
 
-    for (let j = 0; j < nums.length; j++) {
-        for (let i = 0; i < j; i++) {
-            if (nums[j] > nums[i]) {
-                const currSubsequence = lis[i] + 1
-                const prevSubsequence = lis[j]
+  for (let j = 0; j < nums.length; j++) {
+    for (let i = 0; i < j; i++) {
+      if (nums[j] > nums[i]) {
+        const currSubsequence = lis[i] + 1
+        const prevSubsequence = lis[j]
 
-                lis[j] = Math.max(currSubsequence, prevSubsequence)
-            }
-        }
-
-        maxSoFar = Math.max(maxSoFar, lis[j])
+        lis[j] = Math.max(currSubsequence, prevSubsequence)
+      }
     }
 
-    return maxSoFar
+    maxSoFar = Math.max(maxSoFar, lis[j])
+  }
+
+  return maxSoFar
 }
 
 module.exports = lengthOfLIS

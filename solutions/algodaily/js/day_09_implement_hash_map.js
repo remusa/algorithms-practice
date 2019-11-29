@@ -12,47 +12,47 @@
 */
 
 class Hashmap {
-    constructor() {
-        this.data = []
+  constructor() {
+    this.data = []
+  }
+
+  set(key, value) {
+    const address = this.hashStr(key)
+
+    if (!this.data[address]) {
+      this.data[address] = []
     }
 
-    set(key, value) {
-        const address = this.hashStr(key)
+    const bucket = [address, value]
+    this.data[address].push(bucket)
 
-        if (!this.data[address]) {
-            this.data[address] = []
+    return this.data
+  }
+
+  get(key) {
+    const address = this.hashStr(key)
+    const currentBucket = this.data[address]
+
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        console.log(currentBucket[i][0])
+        if (currentBucket[i][0] === address) {
+          return currentBucket[i][1]
         }
-
-        const bucket = [address, value]
-        this.data[address].push(bucket)
-
-        return this.data
+      }
     }
+  }
 
-    get(key) {
-        const address = this.hashStr(key)
-        const currentBucket = this.data[address]
-
-        if (currentBucket) {
-            for (let i = 0; i < currentBucket.length; i++) {
-                console.log(currentBucket[i][0])
-                if (currentBucket[i][0] === address) {
-                    return currentBucket[i][1]
-                }
-            }
-        }
+  hashStr(str) {
+    let finalHash = 0
+    for (let i = 0; i < str.length; i++) {
+      const charCode = str.charCodeAt(i)
+      finalHash += charCode
     }
-
-    hashStr(str) {
-        let finalHash = 0
-        for (let i = 0; i < str.length; i++) {
-            const charCode = str.charCodeAt(i)
-            finalHash += charCode
-        }
-        return finalHash
-    }
+    return finalHash
+  }
 }
 
 module.exports = {
-    Hashmap,
+  Hashmap,
 }

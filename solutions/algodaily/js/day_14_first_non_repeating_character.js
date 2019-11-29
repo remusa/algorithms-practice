@@ -8,31 +8,31 @@
 
 // O(n)
 function firstNonRepeat(str) {
-    if (str.length <= 1) {
-        return str
-    }
+  if (str.length <= 1) {
+    return str
+  }
 
-    const map = {}
-    const arr = str.split('')
+  const map = {}
+  const arr = str.split('')
 
-    for (let i = 0; i < arr.length; i++) {
-        const char = arr[i]
-        if (char in map) {
-            map[char]++
-        } else {
-            map[char] = 1
-        }
+  for (let i = 0; i < arr.length; i++) {
+    const char = arr[i]
+    if (char in map) {
+      map[char]++
+    } else {
+      map[char] = 1
     }
+  }
 
-    for (const key in map) {
-        if (map.hasOwnProperty(key)) {
-            if (map[key] === 1) {
-                return key
-            }
-        }
+  for (const key in map) {
+    if (map.hasOwnProperty(key)) {
+      if (map[key] === 1) {
+        return key
+      }
     }
+  }
 }
 
 module.exports = {
-    firstNonRepeat,
+  firstNonRepeat,
 }

@@ -19,24 +19,24 @@ Could you solve it with constant space complexity? (The output array does not co
 // Time complexity: O(n) -> traverse array thrice (no nested loops)
 // Space complexity: O(1) -> output array doesn't count as extra space for the purpose of space complexity analysis
 function productExceptSelf(nums) {
-    const output = nums.map(n => 1)
-    let product = 1
+  const output = nums.map(n => 1)
+  let product = 1
 
-    // Multiply from the left
-    for (let i = 0; i < nums.length; i++) {
-        output[i] *= product
-        product *= nums[i]
-    }
+  // Multiply from the left
+  for (let i = 0; i < nums.length; i++) {
+    output[i] *= product
+    product *= nums[i]
+  }
 
-    product = 1
+  product = 1
 
-    // Multiply from the right
-    for (let j = nums.length - 1; j >= 0; j--) {
-        output[j] *= product
-        product *= nums[j]
-    }
+  // Multiply from the right
+  for (let j = nums.length - 1; j >= 0; j--) {
+    output[j] *= product
+    product *= nums[j]
+  }
 
-    return output
+  return output
 }
 
 module.exports = productExceptSelf

@@ -17,36 +17,36 @@
 
 // O(n^2)
 function firstRecurringCharacterNaive(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[i] === arr[j]) {
-                return arr[i]
-            }
-        }
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        return arr[i]
+      }
     }
-    return undefined
+  }
+  return undefined
 }
 
 // O(n)
 function firstRecurringCharacter(arr) {
-    const length = arr.length
-    const map = {}
+  const length = arr.length
+  const map = {}
 
-    // add array numbers to the hash table
-    for (let i = 0; i < length; i++) {
-        const key = arr[i]
-        // if key exists return it
-        if (map[key]) {
-            return key
-        }
-        // else add it to the map and keep going
-        map[key] = key
+  // add array numbers to the hash table
+  for (let i = 0; i < length; i++) {
+    const key = arr[i]
+    // if key exists return it
+    if (map[key]) {
+      return key
     }
+    // else add it to the map and keep going
+    map[key] = key
+  }
 
-    return undefined
+  return undefined
 }
 
 module.exports = {
-    firstRecurringCharacterNaive,
-    firstRecurringCharacter,
+  firstRecurringCharacterNaive,
+  firstRecurringCharacter,
 }

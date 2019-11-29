@@ -26,19 +26,19 @@ Output: true
 // Time complexity: O(n) -> traverse array once, lookups in hashtable take O(1)
 // Space complexity: O(n) -> number of unique values, at most n
 function containsDuplicate(nums) {
-    const map = {}
+  const map = {}
 
-    for (let i = 0; i < nums.length; i++) {
-        const num = nums[i]
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i]
 
-        if (map[num]) {
-            return true
-        }
-
-        map[num] = true
+    if (map[num]) {
+      return true
     }
 
-    return false
+    map[num] = true
+  }
+
+  return false
 }
 
 module.exports = containsDuplicate

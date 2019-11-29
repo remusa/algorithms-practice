@@ -1,15 +1,14 @@
 function memoizedAddTo80() {
-    let cache = {}
-    return function(n) {
-        // closure to avoid putting cache in global scope
-        if (n in cache) {
-            return cache[n]
-        } else {
-            console.log(`long operation`)
-            cache[n] = n + 80
-            return cache[n]
-        }
+  const cache = {}
+  return function(n) {
+    // closure to avoid putting cache in global scope
+    if (n in cache) {
+      return cache[n]
     }
+    console.log(`long operation`)
+    cache[n] = n + 80
+    return cache[n]
+  }
 }
 
 const memoized = memoizedAddTo80()

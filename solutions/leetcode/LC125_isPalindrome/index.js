@@ -23,24 +23,24 @@ Output: false
 // Time complexity: O(n) ->
 // Space complexity: O(1) -> pointers take constant space
 function isPalindrome(str) {
-    // A palindrome is a word where each half mirrors each other
+  // A palindrome is a word where each half mirrors each other
 
-    // Sanitize the input by cleaning non-alphanumeric characters and spaces
-    const sanitized = str.toLowerCase().replace(/[\W_]/g, '')
+  // Sanitize the input by cleaning non-alphanumeric characters and spaces
+  const sanitized = str.toLowerCase().replace(/[\W_]/g, '')
 
-    let left = 0
-    let right = sanitized.length - 1
+  let left = 0
+  let right = sanitized.length - 1
 
-    while (left < right) {
-        if (sanitized[left] !== sanitized[right]) {
-            return false
-        }
-
-        left++
-        right--
+  while (left < right) {
+    if (sanitized[left] !== sanitized[right]) {
+      return false
     }
 
-    return true
+    left++
+    right--
+  }
+
+  return true
 }
 
 module.exports = isPalindrome

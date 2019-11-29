@@ -6,50 +6,53 @@
 */
 
 class MinStack {
-    constructor() {
-        this.stack = []
-        this.minStack = []
+  constructor() {
+    this.stack = []
+    this.minStack = []
+  }
+
+  push(val) {
+    this.stack.push(val)
+
+    if (
+      this.minStack.length === 0 ||
+      val <= this.minStack[this.minStack.length - 1]
+    ) {
+      this.minStack.push(val)
+    }
+  }
+
+  pop() {
+    if (this.stack.length === 0) {
+      return undefined
     }
 
-    push(val) {
-        this.stack.push(val)
+    const popped = this.stack.pop()
 
-        if (this.minStack.length === 0 || val <= this.minStack[this.minStack.length - 1]) {
-            this.minStack.push(val)
-        }
+    if (popped === this.minStack[this.minStack.length - 1]) {
+      this.minStack.pop()
     }
 
-    pop() {
-        if (this.stack.length === 0) {
-            return undefined
-        }
+    return popped
+  }
 
-        const popped = this.stack.pop()
-
-        if (popped === this.minStack[this.minStack.length - 1]) {
-            this.minStack.pop()
-        }
-
-        return popped
+  peek() {
+    if (this.stack.length === 0) {
+      return undefined
     }
 
-    peek() {
-        if (this.stack.length === 0) {
-            return undefined
-        }
+    return this.stack[this.stack.length - 1]
+  }
 
-        return this.stack[this.stack.length - 1]
+  min() {
+    if (this.minStack.length === 0) {
+      return undefined
     }
 
-    min() {
-        if (this.minStack.length === 0) {
-            return undefined
-        }
-
-        return this.minStack[this.minStack.length - 1]
-    }
+    return this.minStack[this.minStack.length - 1]
+  }
 }
 
 module.exports = {
-    MinStack,
+  MinStack,
 }

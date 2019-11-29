@@ -11,32 +11,32 @@
 */
 
 class Node {
-    constructor(val = null) {
-        this.val = val
-        this.left = null
-        this.right = null
-    }
+  constructor(val = null) {
+    this.val = val
+    this.left = null
+    this.right = null
+  }
 }
 
 // O(n)
 // InOrder = Left -> Root -> Right
 function inorderTraversal(root) {
-    const traversal = []
+  const traversal = []
 
-    function traverse(node) {
-        if (node.left) {
-            traverse(node.left)
-        }
-
-        traversal.push(node.val)
-
-        if (node.right) {
-            traverse(node.right)
-        }
+  function traverse(node) {
+    if (node.left) {
+      traverse(node.left)
     }
 
-    traverse(root)
-    return traversal
+    traversal.push(node.val)
+
+    if (node.right) {
+      traverse(node.right)
+    }
+  }
+
+  traverse(root)
+  return traversal
 }
 
 // Regular binary trees
@@ -67,6 +67,6 @@ tree5.left.right = new Node(7)
 tree5.right.right = new Node(10)
 
 module.exports = {
-    Node,
-    inorderTraversal,
+  Node,
+  inorderTraversal,
 }

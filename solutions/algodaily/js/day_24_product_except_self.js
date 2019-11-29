@@ -12,57 +12,57 @@
 
 // O(n^2)
 function productExceptSelfNaive(nums) {
-    if (!nums || nums.length <= 1) {
-        return []
+  if (!nums || nums.length <= 1) {
+    return []
+  }
+
+  const results = []
+
+  for (let i = 0; i < nums.length; i++) {
+    let product = 1
+
+    for (let j = 0; j < nums.length; j++) {
+      if (i !== j) {
+        product *= nums[j]
+      }
     }
 
-    const results = []
+    results.push(product)
+  }
 
-    for (let i = 0; i < nums.length; i++) {
-        let product = 1
-
-        for (let j = 0; j < nums.length; j++) {
-            if (i !== j) {
-                product *= nums[j]
-            }
-        }
-
-        results.push(product)
-    }
-
-    return results
+  return results
 }
 
 // Time complexity: O(n)
 // Space complexity: O(1) -> we don't use an additional array for computations and the answer array doesn't count
 function productExceptSelf(nums) {
-    if (!nums || nums.length <= 1) {
-        return []
-    }
+  if (!nums || nums.length <= 1) {
+    return []
+  }
 
-    const results = []
-    const length = nums.length
+  const results = []
+  const length = nums.length
 
-    let left = 1
+  let left = 1
 
-    for (let i = 0; i < length; i++) {
-        results[i] = left
-        // left keeps track of the product
-        left *= nums[i]
-    }
+  for (let i = 0; i < length; i++) {
+    results[i] = left
+    // left keeps track of the product
+    left *= nums[i]
+  }
 
-    // results[i] contains the product of all the elements to the left
-    // results[0] = 1
-    // results[i] = nums[i - 1] * results[i - 1]
+  // results[i] contains the product of all the elements to the left
+  // results[0] = 1
+  // results[i] = nums[i - 1] * results[i - 1]
 
-    let right = 1
+  let right = 1
 
-    for (let j = length - 1; j >= 0; j--) {
-        results[j] *= right
-        right *= nums[j]
-    }
+  for (let j = length - 1; j >= 0; j--) {
+    results[j] *= right
+    right *= nums[j]
+  }
 
-    return results
+  return results
 }
 
 export { productExceptSelfNaive, productExceptSelf }

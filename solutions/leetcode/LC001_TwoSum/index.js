@@ -18,22 +18,22 @@ return [0, 1].
 // Time complexity: O(n) -> traverse array once, lookups in hashtable take O(1)
 // Space complexity: O(n) -> number of key-value pairs, at most n
 function twoSum(arr, target) {
-    const visited = {}
-    const res = []
+  const visited = {}
+  const res = []
 
-    for (let i = 0; i < arr.length; i++) {
-        const num = arr[i]
-        const complement = target - num
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i]
+    const complement = target - num
 
-        if (visited[complement] !== undefined) {
-            res.push(i)
-            res.push(visited[complement])
-        }
-
-        visited[num] = i
+    if (visited[complement] !== undefined) {
+      res.push(i)
+      res.push(visited[complement])
     }
 
-    return res
+    visited[num] = i
+  }
+
+  return res
 }
 
 module.exports = twoSum

@@ -15,28 +15,28 @@
 */
 
 function maxOfMinPairs(nums) {
-    if (!nums || nums.length <= 1) {
-        return 0
-    }
+  if (!nums || nums.length <= 1) {
+    return 0
+  }
 
-    let i = 0
-    let sum = 0
+  let i = 0
+  let sum = 0
 
-    // Sort the array
-    const arr = [...nums].sort((a, b) => a - b)
+  // Sort the array
+  const arr = [...nums].sort((a, b) => a - b)
 
-    // O(n) - Sum every two elements, up until the second to last
-    while (i <= arr.length - 2) {
-        sum += arr[i]
-        i += 2
-    }
+  // O(n) - Sum every two elements, up until the second to last
+  while (i <= arr.length - 2) {
+    sum += arr[i]
+    i += 2
+  }
 
-    return sum
+  return sum
 }
 
 maxOfMinPairs([3, 4, 2, 5]) // 6
 maxOfMinPairs([1, 3, 2, 6, 5, 4]) // 9
 
 module.exports = {
-    maxOfMinPairs,
+  maxOfMinPairs,
 }

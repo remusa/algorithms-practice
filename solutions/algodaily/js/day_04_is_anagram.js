@@ -6,35 +6,35 @@
 
 // O(n)
 function isAnagram(str1, str2) {
-    const set = new Set()
-    str1.split('').map(char => set.add(char.toLowerCase()))
+  const set = new Set()
+  str1.split('').map(char => set.add(char.toLowerCase()))
 
-    for (let i = 0; i < str2.length; i++) {
-        if (!set.has(str2.charAt(i).toLowerCase())) {
-            return false
-        }
+  for (let i = 0; i < str2.length; i++) {
+    if (!set.has(str2.charAt(i).toLowerCase())) {
+      return false
     }
+  }
 
-    return true
+  return true
 }
 
 function isAnagram2(str1, str2) {
-    let a = str1.toLowerCase()
-    let b = str2.toLowerCase()
+  let a = str1.toLowerCase()
+  let b = str2.toLowerCase()
 
-    a = a
-        .split('')
-        .sort()
-        .join('')
-    b = b
-        .split('')
-        .sort()
-        .join('')
+  a = a
+    .split('')
+    .sort()
+    .join('')
+  b = b
+    .split('')
+    .sort()
+    .join('')
 
-    return a === b
+  return a === b
 }
 
 module.exports = {
-    isAnagram,
-    isAnagram2,
+  isAnagram,
+  isAnagram2,
 }

@@ -9,20 +9,21 @@
 // Using sorting
 // Time complexity: O(nlog(n) -> sorting
 function maxProductOfThree(unsorted) {
-    if (!unsorted.length || unsorted.length <= 2) {
-        return
-    }
+  if (!unsorted.length || unsorted.length <= 2) {
+    return
+  }
 
-    const arr = [...unsorted].sort((a, b) => a - b)
+  const arr = [...unsorted].sort((a, b) => a - b)
 
-    const product1 = arr[arr.length - 3] * arr[arr.length - 2] * arr[arr.length - 1]
-    const product2 = arr[0] * arr[1] * arr[arr.length - 1]
+  const product1 =
+    arr[arr.length - 3] * arr[arr.length - 2] * arr[arr.length - 1]
+  const product2 = arr[0] * arr[1] * arr[arr.length - 1]
 
-    return product1 > product2 ? product1 : product2
+  return product1 > product2 ? product1 : product2
 }
 
 // Can also be done in O(1) without sorting by keeping track of the 2 smallest value and the three largest values
 
 module.exports = {
-    maxProductOfThree,
+  maxProductOfThree,
 }

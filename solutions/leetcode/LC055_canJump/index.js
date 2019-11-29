@@ -26,20 +26,20 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 // Time complexity: O(n^2) -> nested for loops
 // Space complexity: O(n) -> second array same size as input array
 function canJump(nums) {
-    const positions = new Array(nums.length).fill(false)
+  const positions = new Array(nums.length).fill(false)
 
-    positions[0] = true
+  positions[0] = true
 
-    for (let j = 1; j < nums.length; j++) {
-        for (let i = 0; i < j; i++) {
-            if (positions[i] && i + nums[i] >= j) {
-                positions[j] = true
-                break
-            }
-        }
+  for (let j = 1; j < nums.length; j++) {
+    for (let i = 0; i < j; i++) {
+      if (positions[i] && i + nums[i] >= j) {
+        positions[j] = true
+        break
+      }
     }
+  }
 
-    return positions[positions.length - 1]
+  return positions[positions.length - 1]
 }
 
 module.exports = canJump

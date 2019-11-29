@@ -10,55 +10,55 @@
 
 // O(n)
 function validateSymbols(str) {
-    const stack = []
-    const arr = [...str]
+  const stack = []
+  const arr = [...str]
 
-    for (let i = 0; i < arr.length; i++) {
-        const received = arr[i]
-        if (received === '(' || received === '{' || received === '[') {
-            stack.push(received)
-        } else {
-            const last = stack.pop()
-            if (
-                (last === '(' && received !== ')') ||
-                (last === '{' && received !== '}') ||
-                (last === '[' && received !== ']')
-            ) {
-                return false
-            }
-        }
+  for (let i = 0; i < arr.length; i++) {
+    const received = arr[i]
+    if (received === '(' || received === '{' || received === '[') {
+      stack.push(received)
+    } else {
+      const last = stack.pop()
+      if (
+        (last === '(' && received !== ')') ||
+        (last === '{' && received !== '}') ||
+        (last === '[' && received !== ']')
+      ) {
+        return false
+      }
     }
+  }
 
-    return true
+  return true
 }
 
 // O(n) -> updated function
 function validateSymbols2(str) {
-    const stack = []
-    const map = {
-        ')': '(',
-        '}': '{',
-        ']': '[',
+  const stack = []
+  const map = {
+    ')': '(',
+    '}': '{',
+    ']': '[',
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    const received = str[i]
+
+    if (received === '(' || received === '{' || received === '[') {
+      stack.push(received)
+    } else {
+      const last = stack.pop()
+
+      if (last !== map[str[i]]) {
+        return false
+      }
     }
+  }
 
-    for (let i = 0; i < str.length; i++) {
-        const received = str[i]
-
-        if (received === '(' || received === '{' || received === '[') {
-            stack.push(received)
-        } else {
-            const last = stack.pop()
-
-            if (last !== map[str[i]]) {
-                return false
-            }
-        }
-    }
-
-    return true
+  return true
 }
 
 module.exports = {
-    validateSymbols,
-    validateSymbols2,
+  validateSymbols,
+  validateSymbols2,
 }

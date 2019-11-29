@@ -26,22 +26,22 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 // Time complexity: O(n) -> traverse array once
 // Space complexity: O(1) -> hold 2 variables
 function maxProfit(prices) {
-    let maxProfit = 0
-    let cheapestPrice = prices[0]
+  let maxProfit = 0
+  let cheapestPrice = prices[0]
 
-    for (let i = 0; i < prices.length; i++) {
-        const price = prices[i]
+  for (let i = 0; i < prices.length; i++) {
+    const price = prices[i]
 
-        if (price < cheapestPrice) {
-            cheapestPrice = price
-        }
-
-        const currentProfit = price - cheapestPrice
-
-        maxProfit = Math.max(currentProfit, maxProfit)
+    if (price < cheapestPrice) {
+      cheapestPrice = price
     }
 
-    return maxProfit
+    const currentProfit = price - cheapestPrice
+
+    maxProfit = Math.max(currentProfit, maxProfit)
+  }
+
+  return maxProfit
 }
 
 module.exports = maxProfit

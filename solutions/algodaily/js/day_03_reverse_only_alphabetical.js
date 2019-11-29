@@ -10,36 +10,36 @@
 // (str.charCodeAt(start) >= 97 && str.charCodeAt(start) <= 122)
 
 function isAlphabetic(char) {
-    return /[a-zA-Z]/.test(char)
+  return /[a-zA-Z]/.test(char)
 }
 
 // O(n)
 function reverseOnlyAlphabetical(str) {
-    const arr = str.split('')
-    let start = 0
-    let end = arr.length - 1
+  const arr = str.split('')
+  let start = 0
+  let end = arr.length - 1
 
-    while (start < end) {
-        if (!isAlphabetic(arr[start])) {
-            start++
-        } else if (!isAlphabetic(arr[end])) {
-            end--
-        } else {
-            const temp = arr[start]
-            arr[start] = arr[end]
-            arr[end] = temp
+  while (start < end) {
+    if (!isAlphabetic(arr[start])) {
+      start++
+    } else if (!isAlphabetic(arr[end])) {
+      end--
+    } else {
+      const temp = arr[start]
+      arr[start] = arr[end]
+      arr[end] = temp
 
-            start++
-            end--
-        }
+      start++
+      end--
     }
+  }
 
-    return arr.join('')
+  return arr.join('')
 }
 
 console.log(reverseOnlyAlphabetical('sea!$hells3'))
 // console.log(reverseOnlyAlphabetical('1kas90jda3'))
 
 module.exports = {
-    reverseOnlyAlphabetical,
+  reverseOnlyAlphabetical,
 }

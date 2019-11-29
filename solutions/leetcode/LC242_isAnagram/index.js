@@ -25,29 +25,29 @@ What if the inputs contain unicode characters? How would you adapt your solution
 // Time complexity: O(n)
 // Space complexity: O(1) -> hash table will have 26 key-value pairs at most
 function isAnagram(s, t) {
-    if (s.length !== t.length) {
-        return false
+  if (s.length !== t.length) {
+    return false
+  }
+
+  const counter = {}
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i]
+
+    counter[char] = counter[char] + 1 || 1
+  }
+
+  for (let i = 0; i < t.length; i++) {
+    const char = t[i]
+
+    if (!counter[char]) {
+      return false
     }
 
-    const counter = {}
+    counter[char]--
+  }
 
-    for (let i = 0; i < s.length; i++) {
-        const char = s[i]
-
-        counter[char] = counter[char] + 1 || 1
-    }
-
-    for (let i = 0; i < t.length; i++) {
-        const char = t[i]
-
-        if (!counter[char]) {
-            return false
-        }
-
-        counter[char]--
-    }
-
-    return true
+  return true
 }
 
 module.exports = isAnagram

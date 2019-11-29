@@ -17,19 +17,19 @@
 */
 
 function reverseString(str) {
-    if (str.length <= 1) {
-        return str
-    }
+  if (str.length <= 1) {
+    return str
+  }
 
-    const length = str.length - 1
+  const length = str.length - 1
 
-    for (let i = length; i >= 0; i--) {
-        reversed.push(str[i])
-    }
+  for (let i = length; i >= 0; i--) {
+    reversed.push(str[i])
+  }
 
-    return reversed.join('')
+  return reversed.join('')
 }
 
 module.exports = {
-    reverseString,
+  reverseString,
 }

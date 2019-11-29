@@ -12,45 +12,45 @@
 */
 
 function swap(arr, first, second) {
-    const temp = arr[first]
-    arr[first] = arr[second]
-    arr[second] = temp
+  const temp = arr[first]
+  arr[first] = arr[second]
+  arr[second] = temp
 }
 
 // Time complexity: O(n) -> iterate twice through the array
 function dutchNatFlag(array) {
-    const arr = [...array]
+  const arr = [...array]
 
-    // Use 3 pointers to divide the array into 4 parts: red, white, unknown and blue
-    // Elements are taken from the unknown part and put into its right place (unknown shrinks while the other 3 parts expand)
-    let low = 0
-    let mid = 0
-    let high = arr.length - 1
+  // Use 3 pointers to divide the array into 4 parts: red, white, unknown and blue
+  // Elements are taken from the unknown part and put into its right place (unknown shrinks while the other 3 parts expand)
+  let low = 0
+  let mid = 0
+  let high = arr.length - 1
 
-    // Iterate through each element in the array
-    while (mid <= high) {
-        const element = arr[mid]
+  // Iterate through each element in the array
+  while (mid <= high) {
+    const element = arr[mid]
 
-        // When element at mid is 0, swap element at mid with element at low and increment mid and low
-        if (element === 0) {
-            swap(arr, low, mid)
-            low++
-            mid++
-        }
-        // If element is 1 is just increment mid by 1
-        else if (element === 1) {
-            mid++
-        }
-        // If element at mid is 2, swap element at reader with element at high and decrease high by 1
-        else if (element === 2) {
-            swap(arr, mid, high)
-            high--
-        }
+    // When element at mid is 0, swap element at mid with element at low and increment mid and low
+    if (element === 0) {
+      swap(arr, low, mid)
+      low++
+      mid++
     }
+    // If element is 1 is just increment mid by 1
+    else if (element === 1) {
+      mid++
+    }
+    // If element at mid is 2, swap element at reader with element at high and decrease high by 1
+    else if (element === 2) {
+      swap(arr, mid, high)
+      high--
+    }
+  }
 
-    return arr
+  return arr
 }
 
 module.exports = {
-    dutchNatFlag,
+  dutchNatFlag,
 }

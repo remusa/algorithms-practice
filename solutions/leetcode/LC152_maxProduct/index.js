@@ -21,20 +21,28 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 // Time complexity: O(n) -> traverse array once
 // Space complexity: O(n) -> created 2 arrays of same size as input array
 function maxProduct(nums) {
-    const maxTilIndex = [nums[0]]
-    const minTilIndex = [nums[0]]
-    let max = nums[0]
+  const maxTilIndex = [nums[0]]
+  const minTilIndex = [nums[0]]
+  let max = nums[0]
 
-    for (let i = 1; i < nums.length; i++) {
-        const num = nums[i]
+  for (let i = 1; i < nums.length; i++) {
+    const num = nums[i]
 
-        maxTilIndex[i] = Math.max(num, num * maxTilIndex[i - 1], num * minTilIndex[i - 1])
-        minTilIndex[i] = Math.min(num, num * maxTilIndex[i - 1], num * minTilIndex[i - 1])
+    maxTilIndex[i] = Math.max(
+      num,
+      num * maxTilIndex[i - 1],
+      num * minTilIndex[i - 1]
+    )
+    minTilIndex[i] = Math.min(
+      num,
+      num * maxTilIndex[i - 1],
+      num * minTilIndex[i - 1]
+    )
 
-        max = Math.max(max, maxTilIndex[i])
-    }
+    max = Math.max(max, maxTilIndex[i])
+  }
 
-    return max
+  return max
 }
 
 module.exports = maxProduct

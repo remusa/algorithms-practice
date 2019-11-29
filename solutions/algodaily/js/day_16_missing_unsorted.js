@@ -10,22 +10,22 @@
 
 // O(n)
 function missingInUnsorted(arr, lowerBound, upperBound) {
-    const map = {}
+  const map = {}
 
-    for (let i = 0; i < arr.length; i++) {
-        map[arr[i]] = arr[i]
-    }
+  for (let i = 0; i < arr.length; i++) {
+    map[arr[i]] = arr[i]
+  }
 
-    for (let i = lowerBound; i <= upperBound; i++) {
-        const inMap = i.toString() in map
-        if (!inMap) {
-            return i
-        }
+  for (let i = lowerBound; i <= upperBound; i++) {
+    const inMap = i.toString() in map
+    if (!inMap) {
+      return i
     }
+  }
 }
 
 missingInUnsorted([2, 5, 1, 4, 9, 6, 3, 7], 1, 9) // 8
 
 module.exports = {
-    missingInUnsorted,
+  missingInUnsorted,
 }

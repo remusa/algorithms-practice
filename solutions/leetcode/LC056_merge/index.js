@@ -23,25 +23,25 @@ NOTE: input types have been changed on April 15, 2019. Please reset to default c
 // Time complexity: O(n*log(n)) -> log(n) because of the sorting algorithm
 // Space complexity: O(1) -> sort the input array in place
 function merge(intervals) {
-    if (!intervals.length) return intervals
+  if (!intervals.length) return intervals
 
-    intervals.sort((a, b) => a[0] - b[0])
+  intervals.sort((a, b) => a[0] - b[0])
 
-    const results = []
-    results.push(intervals[0])
+  const results = []
+  results.push(intervals[0])
 
-    for (let i = 1; i < intervals.length; i++) {
-        const currInterval = intervals[i]
-        const prevInterval = results[results.length - 1]
+  for (let i = 1; i < intervals.length; i++) {
+    const currInterval = intervals[i]
+    const prevInterval = results[results.length - 1]
 
-        if (currInterval[0] <= prevInterval[1]) {
-            prevInterval[1] = Math.max(currInterval[1], prevInterval[1])
-        } else {
-            results.push(currInterval)
-        }
+    if (currInterval[0] <= prevInterval[1]) {
+      prevInterval[1] = Math.max(currInterval[1], prevInterval[1])
+    } else {
+      results.push(currInterval)
     }
+  }
 
-    return results
+  return results
 }
 
 module.exports = merge

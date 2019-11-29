@@ -38,25 +38,28 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> O(n) if recursive calls count
 function isValidBST(root) {
-    let valid = true
+  let valid = true
 
-    function helper(node, min, max) {
-        if (!node) return
+  function helper(node, min, max) {
+    if (!node) return
 
-        // If node isn't valid return
-        if ((min !== null && node.val <= min) || (max !== null && node.val >= max)) {
-            valid = false
-            return
-        }
-
-        // Node is valid
-        helper(node.left, min, node.val)
-        helper(node.right, node.val, max)
+    // If node isn't valid return
+    if (
+      (min !== null && node.val <= min) ||
+      (max !== null && node.val >= max)
+    ) {
+      valid = false
+      return
     }
 
-    helper(root, null, null)
+    // Node is valid
+    helper(node.left, min, node.val)
+    helper(node.right, node.val, max)
+  }
 
-    return valid
+  helper(root, null, null)
+
+  return valid
 }
 
 module.exports = isValidBST

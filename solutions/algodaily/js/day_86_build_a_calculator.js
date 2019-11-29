@@ -8,17 +8,16 @@
 
 // O(n)
 function calculator(str) {
-    const stack = []
-    const arr = [...str]
-    let res = 0
+  const stack = []
+  const arr = [...str]
+  const res = 0
 
-    for (let i = 0; i < arr.length - 1; i++) {
-        if (condition) {
-          
-        }
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (condition) {
     }
+  }
 
-    console.log(`stack: ${stack}`)
+  console.log(`stack: ${stack}`)
 }
 
 let expr = '3 - 1 + 2'
@@ -30,5 +29,5 @@ calculator(expr)
 // -6
 
 module.exports = {
-    calculator,
+  calculator,
 }

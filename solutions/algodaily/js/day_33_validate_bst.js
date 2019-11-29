@@ -10,82 +10,85 @@
 ​ */
 
 class Node {
-    constructor(val) {
-        this.value = val
-        this.left = null
-        this.right = null
-    }
+  constructor(val) {
+    this.value = val
+    this.left = null
+    this.right = null
+  }
 }
 
 // inorder: left -> root -> right
 function inOrder(node) {
-    const output = []
+  const output = []
 
-    function traverse(currNode) {
-        // Left
-        if (currNode.left) {
-            traverse(currNode.left)
-        }
-        // Root
-        output.push(currNode.value)
-        // Right
-        if (currNode.right) {
-            traverse(currNode.right)
-        }
+  function traverse(currNode) {
+    // Left
+    if (currNode.left) {
+      traverse(currNode.left)
     }
+    // Root
+    output.push(currNode.value)
+    // Right
+    if (currNode.right) {
+      traverse(currNode.right)
+    }
+  }
 
-    traverse(node)
+  traverse(node)
 
-    return output
+  return output
 }
 
 // Traversing tree in order and using a stack for keeping track
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> O(n) if recursive calls count
 function isValidBST(node) {
-    if (!node) {
-        return true
-    }
-
-    // When traversing in-order, stack should be sorted
-    const stack = inOrder(node)
-
-    while (stack.length) {
-        const poppedNode = stack.pop()
-        const lastNode = stack[stack.length - 1]
-
-        // If the popped node is smaller than the current last node in the stack, it means the stack isn't sorted, so it isnt a BST
-        if (poppedNode < lastNode) {
-            return false
-        }
-    }
-
+  if (!node) {
     return true
+  }
+
+  // When traversing in-order, stack should be sorted
+  const stack = inOrder(node)
+
+  while (stack.length) {
+    const poppedNode = stack.pop()
+    const lastNode = stack[stack.length - 1]
+
+    // If the popped node is smaller than the current last node in the stack, it means the stack isn't sorted, so it isnt a BST
+    if (poppedNode < lastNode) {
+      return false
+    }
+  }
+
+  return true
 }
 
 // Keeping track of minimum and maximum values
 function isValidBST2(rootNode) {
-    let valid = true
+  let valid = true
 
-    function helper(node, min, max) {
-        if (!node) {
-            return
-        }
-
-        // If node isn't valid return
-        if ((min !== null && node.val <= min) || (max !== null && node.val >= max)) {
-            valid = false
-            return
-        }
-
-        // Node is valid
-        helper(node.left, min, node.val)
-        helper(node.right, node.val, max)
+  function helper(node, min, max) {
+    if (!node) {
+      return
     }
 
-    helper(rootNode, null, null)
+    // If node isn't valid return
+    if (
+      (min !== null && node.val <= min) ||
+      (max !== null && node.val >= max)
+    ) {
+      valid = false
+      return
+    }
 
-    return valid
+    // Node is valid
+    helper(node.left, min, node.val)
+    helper(node.right, node.val, max)
+  }
+
+  helper(rootNode, null, null)
+
+  return valid
 }
 
 const tree = new Node(5)
@@ -95,7 +98,7 @@ tree.right = new Node(9)
 console.log(isValidBST(tree))
 
 module.exports = {
-    Node,
-    isValidBST,
-    isValidBST2,
+  Node,
+  isValidBST,
+  isValidBST2,
 }

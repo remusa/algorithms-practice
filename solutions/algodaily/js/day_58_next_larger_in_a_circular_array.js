@@ -16,35 +16,35 @@
 */
 
 function nextLargerNumber(nums) {
-    const stack = []
-    const result = []
+  const stack = []
+  const result = []
 
-    // 1. Fill the results array with -1
-    for (let j = 0; j < nums.length; j++) {
-        result.push(-1)
+  // 1. Fill the results array with -1
+  for (let j = 0; j < nums.length; j++) {
+    result.push(-1)
+  }
+
+  // 2. Iterate twice through the array
+  for (let i = 0; i < nums.length * 2; i++) {
+    const curr = nums[i % nums.length]
+
+    // 3. While there's elements in the stack
+    while (stack.length && nums[stack[stack.length - 1]] < curr) {
+      // 4. Pop the smallest element from the stack
+      const smallest = stack.pop()
+      // 5. The current number is the smallest
+      result[smallest] = curr
     }
 
-    // 2. Iterate twice through the array
-    for (let i = 0; i < nums.length * 2; i++) {
-        const curr = nums[i % nums.length]
-
-        // 3. While there's elements in the stack
-        while (stack.length && nums[stack[stack.length - 1]] < curr) {
-            // 4. Pop the smallest element from the stack
-            const smallest = stack.pop()
-            // 5. The current number is the smallest
-            result[smallest] = curr
-        }
-
-        if (i < nums.length) {
-            stack.push(i)
-        }
+    if (i < nums.length) {
+      stack.push(i)
     }
+  }
 
-    result[result.length - 1] = -1
+  result[result.length - 1] = -1
 
-    console.log('result', result)
-    return result
+  console.log('result', result)
+  return result
 }
 
 nextLargerNumber([3, 1, 3, 4]) // [4, 3, 4, -1]
@@ -53,5 +53,5 @@ nextLargerNumber([3, 1, 3, 4]) // [4, 3, 4, -1]
 // nextLargerNumber([98, 23, 54, 12, 20, 7, 27]) // [-1, 54, 98, 20, 27, 27, -1]
 
 module.exports = {
-    nextLargerNumber,
+  nextLargerNumber,
 }

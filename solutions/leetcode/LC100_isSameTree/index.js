@@ -41,32 +41,32 @@ Output: false
 // Time complexity: O(p+q) -> where p and q are number of nodes of input tree
 // Space complexity: O(1) -> unless recursive calls count as n
 function isSameTree(p, q) {
-    let sameTree = true
+  let sameTree = true
 
-    function checkSameNode(p, q) {
-        // Both nodes are null
-        if (!p && !q) return
+  function checkSameNode(p, q) {
+    // Both nodes are null
+    if (!p && !q) return
 
-        // If only one node is valid then they aren't the same
-        if (!p || !q) {
-            sameTree = false
-            return
-        }
-
-        // Check values
-        if (p.val !== q.val) {
-            sameTree = false
-            return
-        }
-
-        // Recursively call helper function on children
-        checkSameNode(p.left, q.left)
-        checkSameNode(p.right, q.right)
+    // If only one node is valid then they aren't the same
+    if (!p || !q) {
+      sameTree = false
+      return
     }
 
-    checkSameNode(p, q)
+    // Check values
+    if (p.val !== q.val) {
+      sameTree = false
+      return
+    }
 
-    return sameTree
+    // Recursively call helper function on children
+    checkSameNode(p.left, q.left)
+    checkSameNode(p.right, q.right)
+  }
+
+  checkSameNode(p, q)
+
+  return sameTree
 }
 
 module.exports = isSameTree

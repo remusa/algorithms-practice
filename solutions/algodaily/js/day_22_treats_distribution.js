@@ -19,24 +19,24 @@
 */
 
 function treatsDistribution(snacks) {
-    if (snacks.length <= 2) {
-        return snacks.length
-    }
+  if (snacks.length <= 2) {
+    return snacks.length
+  }
 
-    const set = new Set()
+  const set = new Set()
 
-    for (const item of snacks) {
-        set.add(item)
-    }
+  for (const item of snacks) {
+    set.add(item)
+  }
 
-    const totalOptions = snacks.length / 2
-    const uniqueElements = set.size
+  const totalOptions = snacks.length / 2
+  const uniqueElements = set.size
 
-    // Since treats have to be distributed equally, sister can get at most half the different types of snacks
-    const min = Math.min(totalOptions, uniqueElements)
-    return min
+  // Since treats have to be distributed equally, sister can get at most half the different types of snacks
+  const min = Math.min(totalOptions, uniqueElements)
+  return min
 }
 
 module.exports = {
-    treatsDistribution,
+  treatsDistribution,
 }

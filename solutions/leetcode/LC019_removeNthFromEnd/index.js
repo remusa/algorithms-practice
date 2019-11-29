@@ -23,28 +23,28 @@ Could you do this in one pass?
 // Time complexity: O(n) -> traverse the linked-list once
 // Space complexity: O(1) -> always use two nodes (size of LL doesn't matter)
 function removeNthFromEnd(head, n) {
-    // Exception cases
-    const dummyHead = { next: head }
+  // Exception cases
+  const dummyHead = { next: head }
 
-    let slow = dummyHead
-    let fast = dummyHead
+  let slow = dummyHead
+  let fast = dummyHead
 
-    // Move fast n nodes ahead of slow
-    for (let i = 1; i <= n; i++) {
-        fast = fast.next
-    }
+  // Move fast n nodes ahead of slow
+  for (let i = 1; i <= n; i++) {
+    fast = fast.next
+  }
 
-    // Move slow and fast up one node at a time until fast is last node
-    while (fast.next) {
-        slow = slow.next
-        fast = fast.next
-    }
+  // Move slow and fast up one node at a time until fast is last node
+  while (fast.next) {
+    slow = slow.next
+    fast = fast.next
+  }
 
-    // Remove nth node from the end by making slow point to fast
-    slow.next = slow.next.next
+  // Remove nth node from the end by making slow point to fast
+  slow.next = slow.next.next
 
-    // Return the head of the linked-list with that node removed
-    return dummyHead.next
+  // Return the head of the linked-list with that node removed
+  return dummyHead.next
 }
 
 module.exports = removeNthFromEnd

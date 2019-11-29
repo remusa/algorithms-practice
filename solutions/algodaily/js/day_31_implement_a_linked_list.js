@@ -30,59 +30,59 @@
 */
 
 class LinkedListNode {
-    constructor(val, next = null) {
-        this.val = val
-        this.next = next
-    }
+  constructor(val, next = null) {
+    this.val = val
+    this.next = next
+  }
 }
 
 class LinkedList {
-    constructor() {
-        this.head = null
-        this.tail = null
+  constructor() {
+    this.head = null
+    this.tail = null
+  }
+
+  prepend(value) {
+    const newNode = new LinkedListNode(value)
+    const oldHead = this.head
+
+    this.head = newNode
+    newNode.next = oldHead
+
+    if (!this.tail) {
+      this.tail = newNode
+    }
+  }
+
+  append(value) {
+    const newNode = new LinkedListNode(value)
+    const oldTail = this.tail
+
+    if (!this.head) {
+      this.head = newNode
+      this.tail = newNode
+      return
     }
 
-    prepend(value) {
-        const newNode = new LinkedListNode(value)
-        const oldHead = this.head
+    oldTail.next = newNode
+    this.tail = newNode
+  }
 
-        this.head = newNode
-        newNode.next = oldHead
+  toString() {
+    // helper method
+    const toPrint = []
+    let currNode = this.head
 
-        if (!this.tail) {
-            this.tail = newNode
-        }
+    while (currNode) {
+      toPrint.push(currNode.val)
+      currNode = currNode.next
     }
 
-    append(value) {
-        const newNode = new LinkedListNode(value)
-        const oldTail = this.tail
-
-        if (!this.head) {
-            this.head = newNode
-            this.tail = newNode
-            return
-        }
-
-        oldTail.next = newNode
-        this.tail = newNode
-    }
-
-    toString() {
-        // helper method
-        const toPrint = []
-        let currNode = this.head
-
-        while (currNode) {
-            toPrint.push(currNode.val)
-            currNode = currNode.next
-        }
-
-        return toPrint.join(' -> ')
-    }
+    return toPrint.join(' -> ')
+  }
 }
 
 module.exports = {
-    LinkedList,
-    LinkedListNode,
+  LinkedList,
+  LinkedListNode,
 }

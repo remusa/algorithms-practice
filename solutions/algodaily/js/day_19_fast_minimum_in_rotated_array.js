@@ -12,26 +12,26 @@
 
 // O(log(n)) - Binary search
 function getMinimum(arr) {
-    let start = 0
-    let end = arr.length - 1
+  let start = 0
+  let end = arr.length - 1
 
-    while (start < end) {
-        if (arr[start] < arr[end]) {
-            return arr[start]
-        }
-
-        const mid = Math.floor((start + end) / 2)
-
-        if (arr[start] <= arr[mid]) {
-            start = mid + 1
-        } else {
-            end = mid
-        }
+  while (start < end) {
+    if (arr[start] < arr[end]) {
+      return arr[start]
     }
 
-    return arr[start]
+    const mid = Math.floor((start + end) / 2)
+
+    if (arr[start] <= arr[mid]) {
+      start = mid + 1
+    } else {
+      end = mid
+    }
+  }
+
+  return arr[start]
 }
 
 module.exports = {
-    getMinimum,
+  getMinimum,
 }

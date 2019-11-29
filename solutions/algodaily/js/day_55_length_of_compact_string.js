@@ -18,61 +18,61 @@
 
 // O(n) space
 function compactLength(str) {
-    const map = new Map()
+  const map = new Map()
 
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i]
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i]
 
-        if (!map.has(char)) {
-            map.set(char, 1)
-        } else {
-            map.set(char, map.get(char) + 1)
-        }
+    if (!map.has(char)) {
+      map.set(char, 1)
+    } else {
+      map.set(char, map.get(char) + 1)
     }
+  }
 
-    let compacted = ''
-    for (const entry of map) {
-        const key = entry[0]
-        const value = entry[1]
+  let compacted = ''
+  for (const entry of map) {
+    const key = entry[0]
+    const value = entry[1]
 
-        compacted += `${key}`
+    compacted += `${key}`
 
-        if (value > 1) {
-            compacted += `${value}`
-        }
+    if (value > 1) {
+      compacted += `${value}`
     }
+  }
 
-    return compacted.length
+  return compacted.length
 }
 
 // O(1) in space by replacing
 function compactLengthO1(str) {
-    let answerIdx = 0
+  let answerIdx = 0
 
-    for (let i = 0; i < str.length; i++) {
-        let count = 1
+  for (let i = 0; i < str.length; i++) {
+    let count = 1
 
-        while (str[i] === str[i + 1]) {
-            count++
-            i++
-        }
-
-        str[answerIdx++] = str[i]
-
-        if (count > 1) {
-            count
-                .toString()
-                .split('')
-                .forEach(function(char) {
-                    str[answerIdx++] = char
-                })
-        }
+    while (str[i] === str[i + 1]) {
+      count++
+      i++
     }
 
-    return answerIdx
+    str[answerIdx++] = str[i]
+
+    if (count > 1) {
+      count
+        .toString()
+        .split('')
+        .forEach(function(char) {
+          str[answerIdx++] = char
+        })
+    }
+  }
+
+  return answerIdx
 }
 
 module.exports = {
-    compactLength,
-    compactLengthO1
+  compactLength,
+  compactLengthO1,
 }

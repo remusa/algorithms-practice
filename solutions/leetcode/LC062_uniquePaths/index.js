@@ -28,32 +28,32 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 // Time complexity: O(n*m) -> n and m are the dimensions of the matrix
 // Space complexity: O(n*m) -> matrix size depends on input matrix
 function uniquePaths(m, n) {
-    const matrix = []
+  const matrix = []
 
-    for (let row = 0; row < n; row++) {
-        matrix.push([])
+  for (let row = 0; row < n; row++) {
+    matrix.push([])
+  }
+
+  // fill out first row
+  for (let row = 0; row < n; row++) {
+    matrix[row][0] = 1
+  }
+
+  // fill out first column
+  for (let col = 0; col < m; col++) {
+    matrix[0][col] = 1
+  }
+
+  for (let row = 1; row < n; row++) {
+    for (let col = 1; col < m; col++) {
+      const left = matrix[row][col - 1]
+      const top = matrix[row - 1][col]
+
+      matrix[row][col] = left + top
     }
+  }
 
-    // fill out first row
-    for (let row = 0; row < n; row++) {
-        matrix[row][0] = 1
-    }
-
-    // fill out first column
-    for (let col = 0; col < m; col++) {
-        matrix[0][col] = 1
-    }
-
-    for (let row = 1; row < n; row++) {
-        for (let col = 1; col < m; col++) {
-            const left = matrix[row][col - 1]
-            const top = matrix[row - 1][col]
-
-            matrix[row][col] = left + top
-        }
-    }
-
-    return matrix[matrix.length - 1][m - 1]
+  return matrix[matrix.length - 1][m - 1]
 }
 
 module.exports = uniquePaths

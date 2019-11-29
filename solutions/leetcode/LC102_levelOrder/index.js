@@ -26,27 +26,27 @@ return its level order traversal as:
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> unless recursive calls count as n
 function levelOrder(root) {
-    const res = []
+  const res = []
 
-    function helper(node, depth) {
-        if (!node) return
+  function helper(node, depth) {
+    if (!node) return
 
-        // If array doesn't have subarray
-        if (!res[depth]) {
-            res[depth] = []
-        }
-
-        // Push current value
-        res[depth].push(node.val)
-
-        // Recursively call helper function on children
-        helper(node.left, depth + 1)
-        helper(node.right, depth + 1)
+    // If array doesn't have subarray
+    if (!res[depth]) {
+      res[depth] = []
     }
 
-    helper(root, 0)
+    // Push current value
+    res[depth].push(node.val)
 
-    return res
+    // Recursively call helper function on children
+    helper(node.left, depth + 1)
+    helper(node.right, depth + 1)
+  }
+
+  helper(root, 0)
+
+  return res
 }
 
 module.exports = levelOrder

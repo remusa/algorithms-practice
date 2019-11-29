@@ -19,33 +19,33 @@ If you have figured out the O(n) solution, try coding another solution using the
 // Time complexity: O(n) -> traverse array once
 // Space complexity: O(n) -> create another array
 function maxSubArray(nums) {
-    let max = nums[0]
-    const dp = []
-    dp.push(max)
+  let max = nums[0]
+  const dp = []
+  dp.push(max)
 
-    for (let i = 1; i < nums.length; i++) {
-        const num = nums[i]
+  for (let i = 1; i < nums.length; i++) {
+    const num = nums[i]
 
-        dp[i] = Math.max(num, num + dp[i - 1])
-        max = Math.max(max, dp[i])
-    }
+    dp[i] = Math.max(num, num + dp[i - 1])
+    max = Math.max(max, dp[i])
+  }
 
-    return max
+  return max
 }
 
 // Time complexity: O(n) -> traverse array once
 // Space complexity: O(1) -> modify array in place
 function maxSubArray2(nums) {
-    let max = nums[0]
+  let max = nums[0]
 
-    for (let i = 1; i < nums.length; i++) {
-        const num = nums[i]
+  for (let i = 1; i < nums.length; i++) {
+    const num = nums[i]
 
-        nums[i] = Math.max(num, num + nums[i - 1])
-        max = Math.max(max, nums[i])
-    }
+    nums[i] = Math.max(num, num + nums[i - 1])
+    max = Math.max(max, nums[i])
+  }
 
-    return max
+  return max
 }
 
 module.exports = maxSubArray

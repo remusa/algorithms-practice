@@ -15,66 +15,66 @@
 */
 
 class QueueStack {
-    constructor() {
-        this.queue = []
+  constructor() {
+    this.queue = []
+  }
+
+  peek() {
+    if (!this.queue) {
+      return null
     }
 
-    peek() {
-        if (!this.queue) {
-            return null
-        }
+    const firstValue = this.queue[0]
+    console.log('queue', this.queue)
+    console.log('peek', firstValue)
+    return firstValue
+  }
 
-        const firstValue = this.queue[0]
-        console.log('queue', this.queue)
-        console.log('peek', firstValue)
-        return firstValue
+  // Version A: efficient push
+  push(value) {
+    this.queue.push(value)
+  }
+
+  // Version A: inefficient pop
+  pop() {
+    if (!this.queue.length) {
+      return null
     }
 
-    // Version A: efficient push
-    push(value) {
-        this.queue.push(value)
+    let i = this.queue.length
+    while (i > 0) {
+      const dequeue = this.queue.shift()
+      this.queue.push(dequeue)
+      i--
     }
 
-    // Version A: inefficient pop
-    pop() {
-        if (!this.queue.length) {
-            return null
-        }
+    const popped = this.queue.shift()
+    console.log('popped', popped)
+    return popped
+  }
 
-        let i = this.queue.length
-        while (i > 0) {
-            const dequeue = this.queue.shift()
-            this.queue.push(dequeue)
-            i--
-        }
+  // Version b: inefficient push
+  pushB(value) {
+    this.queue.push(value)
 
-        const popped = this.queue.shift()
-        console.log('popped', popped)
-        return popped
+    let i = this.queue.length
+    while (i > 0) {
+      const dequeue = this.queue.shift()
+      this.queue.push(dequeue)
+      i--
+    }
+  }
+
+  // Version b: efficient pop
+  popB() {
+    if (!this.queue.length) {
+      return null
     }
 
-    // Version b: inefficient push
-    pushB(value) {
-        this.queue.push(value)
-
-        let i = this.queue.length
-        while (i > 0) {
-            const dequeue = this.queue.shift()
-            this.queue.push(dequeue)
-            i--
-        }
-    }
-
-    // Version b: efficient pop
-    popB() {
-        if (!this.queue.length) {
-            return null
-        }
-
-        const popped = this.queue.shift()
-        console.log('popped', popped)
-        return popped
-    }
+    const popped = this.queue.shift()
+    console.log('popped', popped)
+    return popped
+  }
 }
 
 const myQueue = new QueueStack()
@@ -95,5 +95,5 @@ myQueue.popB()
 myQueue.peek()
 
 module.exports = {
-    QueueStack,
+  QueueStack,
 }

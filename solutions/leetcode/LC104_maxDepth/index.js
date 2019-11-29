@@ -25,23 +25,23 @@ return its depth = 3.
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> unless recursive calls count as n
 function maxDepth(root) {
-    let maxDepth = 0
+  let maxDepth = 0
 
-    function dive(node, currentDepth) {
-        if (!node) {
-            // If node is null then currentDepth is invalid but depth above was valid
-            maxDepth = Math.max(currentDepth - 1, maxDepth)
-            return
-        }
-
-        // Recursively call helper function on children
-        dive(node.left, currentDepth + 1)
-        dive(node.right, currentDepth + 1)
+  function dive(node, currentDepth) {
+    if (!node) {
+      // If node is null then currentDepth is invalid but depth above was valid
+      maxDepth = Math.max(currentDepth - 1, maxDepth)
+      return
     }
 
-    dive(root, 1)
+    // Recursively call helper function on children
+    dive(node.left, currentDepth + 1)
+    dive(node.right, currentDepth + 1)
+  }
 
-    return maxDepth
+  dive(root, 1)
+
+  return maxDepth
 }
 
 module.exports = maxDepth

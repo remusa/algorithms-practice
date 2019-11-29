@@ -19,34 +19,34 @@
 */
 
 function leastMissingPositive(nums) {
-    if (!nums || nums.length <= 1) {
-        return 1
+  if (!nums || nums.length <= 1) {
+    return 1
+  }
+
+  const arr = [...nums] // .sort((a, b) => a - b)
+
+  const set = new Set()
+  let max = 1
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i]
+
+    if (element > 0) {
+      set.add(element)
     }
 
-    const arr = [...nums] // .sort((a, b) => a - b)
-
-    const set = new Set()
-    let max = 1
-
-    for (let i = 0; i < arr.length; i++) {
-        const element = arr[i]
-
-        if (element > 0) {
-            set.add(element)
-        }
-
-        if (element > max) {
-            max = element
-        }
+    if (element > max) {
+      max = element
     }
+  }
 
-    for (let i = 1; i < max; i++) {
-        if (!set.has(i)) {
-            return i
-        }
+  for (let i = 1; i < max; i++) {
+    if (!set.has(i)) {
+      return i
     }
+  }
 }
 
 module.exports = {
-    leastMissingPositive,
+  leastMissingPositive,
 }

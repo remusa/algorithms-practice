@@ -14,31 +14,31 @@ canAttendMeetings([[7, 10], [2, 4]]) --> true
 // Time complexity: O(n*log(n)) -> use of a sorting algorithm
 // Space complexity: O(n) -> loop once through the array
 function canAttendMeetings(intervals) {
-    const starts = []
-    const ends = []
+  const starts = []
+  const ends = []
 
-    // Fill start and end arrays
-    for (let i = 0; i < intervals.length; i++) {
-        const subArr = intervals[i]
-        starts.push(subArr[0])
-        ends.push(subArr[1])
+  // Fill start and end arrays
+  for (let i = 0; i < intervals.length; i++) {
+    const subArr = intervals[i]
+    starts.push(subArr[0])
+    ends.push(subArr[1])
+  }
+
+  // Sort arrays
+  starts.sort((a, b) => a - b)
+  ends.sort((a, b) => a - b)
+
+  // Check next start with current end
+  for (let i = 0; i < starts.length; i++) {
+    const nextStart = starts[i + 1]
+    const currEnd = ends[i]
+
+    if (nextStart < currEnd) {
+      return false
     }
+  }
 
-    // Sort arrays
-    starts.sort((a, b) => a - b)
-    ends.sort((a, b) => a - b)
-
-    // Check next start with current end
-    for (let i = 0; i < starts.length; i++) {
-        const nextStart = starts[i + 1]
-        const currEnd = ends[i]
-
-        if (nextStart < currEnd) {
-            return false
-        }
-    }
-
-    return true
+  return true
 }
 
 module.exports = canAttendMeetings

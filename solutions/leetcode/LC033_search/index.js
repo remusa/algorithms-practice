@@ -25,69 +25,69 @@ Output: -1
 */
 
 function findMinIndex(rotatedSortedArr) {
-    let left = 0
-    let right = rotatedSortedArr.length - 1
+  let left = 0
+  let right = rotatedSortedArr.length - 1
 
-    if (rotatedSortedArr.length === 1) {
-        return 0
+  if (rotatedSortedArr.length === 1) {
+    return 0
+  }
+
+  // If left < right then array isn't rotated. Return the first index since it's sorted
+  if (rotatedSortedArr[left] < rotatedSortedArr[right]) {
+    return 0
+  }
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2)
+
+    const leftVal = rotatedSortedArr[left]
+    const midVal = rotatedSortedArr[mid]
+    const leftOfMid = rotatedSortedArr[mid - 1]
+    const rightOfMid = rotatedSortedArr[mid + 1]
+
+    // Check inflection point (mid)
+    if (midVal < leftOfMid) {
+      return mid
+    }
+    if (midVal > rightOfMid) {
+      return mid + 1
     }
 
-    // If left < right then array isn't rotated. Return the first index since it's sorted
-    if (rotatedSortedArr[left] < rotatedSortedArr[right]) {
-        return 0
+    if (midVal < leftVal) {
+      right = mid - 1
+    } else {
+      left = mid + 1
     }
-
-    while (left <= right) {
-        const mid = Math.floor((left + right) / 2)
-
-        const leftVal = rotatedSortedArr[left]
-        const midVal = rotatedSortedArr[mid]
-        const leftOfMid = rotatedSortedArr[mid - 1]
-        const rightOfMid = rotatedSortedArr[mid + 1]
-
-        // Check inflection point (mid)
-        if (midVal < leftOfMid) {
-            return mid
-        }
-        if (midVal > rightOfMid) {
-            return mid + 1
-        }
-
-        if (midVal < leftVal) {
-            right = mid - 1
-        } else {
-            left = mid + 1
-        }
-    }
+  }
 }
 
 function binarySearch(arr, target, left, right) {
-    while (left <= right) {
-        const mid = Math.floor((left + right) / 2)
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2)
 
-        if (arr[mid] === target) {
-            return mid
-        }
-
-        if (arr[mid] < target) {
-            left = mid + 1
-        } else {
-            right = mid - 1
-        }
+    if (arr[mid] === target) {
+      return mid
     }
 
-    return -1
+    if (arr[mid] < target) {
+      left = mid + 1
+    } else {
+      right = mid - 1
+    }
+  }
+
+  return -1
 }
 
 // Time complexity: O(log(n)) -> performed multiple binary searches
 // Space complexity: O(1)
 function search(nums, target) {
-    const midIndex = findMinIndex(nums)
+  const midIndex = findMinIndex(nums)
 
-    const left = binarySearch(nums, target, 0, midIndex)
-    const right = binarySearch(nums, target, midIndex, nums.length - 1)
+  const left = binarySearch(nums, target, 0, midIndex)
+  const right = binarySearch(nums, target, midIndex, nums.length - 1)
 
-    return Math.max(left, right)
+  return Math.max(left, right)
 }
 
 module.exports = search

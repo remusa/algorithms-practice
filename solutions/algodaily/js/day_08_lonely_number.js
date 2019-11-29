@@ -3,53 +3,53 @@
 */
 
 function lonelyNumber(numbers) {
-    if (numbers.length === 0) {
-        return null
+  if (numbers.length === 0) {
+    return null
+  }
+
+  if (numbers.length === 1) {
+    return numbers[0]
+  }
+
+  const map = {}
+
+  // O(n)
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] in map) {
+      map[numbers[i]]++
+    } else {
+      map[numbers[i]] = 1
     }
+  }
 
-    if (numbers.length === 1) {
-        return numbers[0]
-    }
-
-    const map = {}
-
-    // O(n)
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] in map) {
-            map[numbers[i]]++
-        } else {
-            map[numbers[i]] = 1
-        }
-    }
-
-    const lonely = Object.entries(map).filter(key => key[1] === 1)[0][0]
-    return parseInt(lonely)
+  const lonely = Object.entries(map).filter(key => key[1] === 1)[0][0]
+  return parseInt(lonely)
 }
 
 function lonelyNumber2(numbers) {
-    if (numbers.length === 0) {
-        return null
+  if (numbers.length === 0) {
+    return null
+  }
+
+  if (numbers.length === 1) {
+    return numbers[0]
+  }
+
+  const map = {}
+
+  // O(n)
+  for (const num of numbers) {
+    if (map.hasOwnProperty(num)) {
+      delete map[num]
+    } else {
+      map[num] = true
     }
+  }
 
-    if (numbers.length === 1) {
-        return numbers[0]
-    }
-
-    const map = {}
-
-    // O(n)
-    for (const num of numbers) {
-        if (map.hasOwnProperty(num)) {
-            delete map[num]
-        } else {
-            map[num] = true
-        }
-    }
-
-    return parseInt(Object.keys(map)[0])
+  return parseInt(Object.keys(map)[0])
 }
 
 module.exports = {
-    lonelyNumber,
-    lonelyNumber2,
+  lonelyNumber,
+  lonelyNumber2,
 }

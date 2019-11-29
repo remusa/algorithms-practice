@@ -12,63 +12,71 @@
 let calculations = 0
 
 function fibonacci(n) {
-    calculations++
+  calculations++
 
-    if (n <= 1) {
-        return n
-    }
+  if (n <= 1) {
+    return n
+  }
 
-    return fibonacci(n - 2) + fibonacci(n - 1)
+  return fibonacci(n - 2) + fibonacci(n - 1)
 }
 
-console.log(`Original fibonacci: ${fibonacci(30)} | ${calculations} calculations`)
+console.log(
+  `Original fibonacci: ${fibonacci(30)} | ${calculations} calculations`
+)
 
 // Memoized (top-down approach)
 let calculationsMemo = 0
 
 function memoize() {
-    let cache = {}
+  const cache = {}
 
-    return function memo(n) {
-        calculationsMemo++
+  return function memo(n) {
+    calculationsMemo++
 
-        if (n in cache) {
-            return cache[n]
-        } else {
-            if (n < 2) {
-                return n
-            } else {
-                cache[n] = memo(n - 2) + memo(n - 1)
-                return cache[n]
-            }
-        }
+    if (n in cache) {
+      return cache[n]
     }
+    if (n < 2) {
+      return n
+    }
+    cache[n] = memo(n - 2) + memo(n - 1)
+    return cache[n]
+  }
 }
 
 const fibonacciMemoized = memoize()
-console.log(`Memoized fibonacci: ${fibonacciMemoized(30)} | ${calculationsMemo} calculations`)
+console.log(
+  `Memoized fibonacci: ${fibonacciMemoized(
+    30
+  )} | ${calculationsMemo} calculations`
+)
 
 // Bottom-up approach (avoids using recursion)
 let calculationsBottomUp = 0
 
 function fibonacciBottomUp(n) {
-    let answer = [0, 1]
+  const answer = [0, 1]
 
-    if (n < 2) {
-        return answer[n]
-    }
+  if (n < 2) {
+    return answer[n]
+  }
 
-    for (let i = 2; i <= n; i++) {
-        calculationsBottomUp++
-        answer.push(answer[i - 2] + answer[i - 1])
-    }
+  for (let i = 2; i <= n; i++) {
+    calculationsBottomUp++
+    answer.push(answer[i - 2] + answer[i - 1])
+  }
 
-    return answer.pop()
+  return answer.pop()
 }
 
-console.log(`Bottom-up fibonacci: ${fibonacciBottomUp(30)} | ${calculationsBottomUp} calculations`)
+console.log(
+  `Bottom-up fibonacci: ${fibonacciBottomUp(
+    30
+  )} | ${calculationsBottomUp} calculations`
+)
 
 module.exports = {
-    fibonacciMemoized,
-    fibonacciBottomUp,
+  fibonacciMemoized,
+  fibonacciBottomUp,
 }

@@ -6,17 +6,17 @@
 
 // O(1)
 function uniques(array) {
-    const uniquesArr = []
+  const uniquesArr = []
 
-    for (let i = 0; i < array.length; i++) {
-        if (uniquesArr.indexOf(array[i]) === -1) {
-            uniquesArr.push(array[i])
-        }
+  for (let i = 0; i < array.length; i++) {
+    if (uniquesArr.indexOf(array[i]) === -1) {
+      uniquesArr.push(array[i])
     }
+  }
 
-    return uniquesArr
+  return uniquesArr
 }
 
 module.exports = {
-    uniques,
+  uniques,
 }

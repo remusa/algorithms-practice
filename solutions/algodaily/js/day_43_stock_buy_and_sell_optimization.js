@@ -19,29 +19,29 @@
 */
 
 function stockOptimizer(prices) {
-    let max = 0
-    let profit = 0
-    let i = prices.length - 1
+  let max = 0
+  let profit = 0
+  let i = prices.length - 1
 
-    while (i >= 0) {
-        const stock = prices[i]
+  while (i >= 0) {
+    const stock = prices[i]
 
-        if (stock > max) {
-            max = stock
-        }
-
-        const currentProfit = max - stock
-
-        if (currentProfit > profit) {
-            profit = currentProfit
-        }
-
-        i--
+    if (stock > max) {
+      max = stock
     }
 
-    return profit
+    const currentProfit = max - stock
+
+    if (currentProfit > profit) {
+      profit = currentProfit
+    }
+
+    i--
+  }
+
+  return profit
 }
 
 module.exports = {
-    stockOptimizer,
+  stockOptimizer,
 }

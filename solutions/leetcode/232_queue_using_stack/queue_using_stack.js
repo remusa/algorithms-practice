@@ -52,7 +52,7 @@ MyQueue.prototype.peek = function() {}
  * @return {boolean}
  */
 MyQueue.prototype.empty = function() {
-    return MyQueue.prototype.length === 0
+  return MyQueue.prototype.length === 0
 }
 
 /**

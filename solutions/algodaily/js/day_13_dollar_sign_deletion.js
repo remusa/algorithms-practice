@@ -40,23 +40,23 @@
 // }
 
 function getFinalStr(str) {
-    const stack = []
+  const stack = []
 
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === '$') {
-            stack.pop()
-        } else {
-            stack.push(str[i])
-        }
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '$') {
+      stack.pop()
+    } else {
+      stack.push(str[i])
     }
+  }
 
-    return stack.join('')
+  return stack.join('')
 }
 
 function isDollarDeleteEqual(arr) {
-    const finalArr = arr.map(str => getFinalStr(str))
+  const finalArr = arr.map(str => getFinalStr(str))
 
-    return finalArr.every(str => str === finalArr[0])
+  return finalArr.every(str => str === finalArr[0])
 }
 
 isDollarDeleteEqual(['f$st', 'st'])
@@ -65,5 +65,5 @@ isDollarDeleteEqual(['ab$$', 'c$d$'])
 isDollarDeleteEqual(['b$$p', '$b$p'])
 
 module.exports = {
-    isDollarDeleteEqual,
+  isDollarDeleteEqual,
 }

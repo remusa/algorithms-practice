@@ -13,29 +13,29 @@
 */
 
 function subarraySum(nums, n) {
-    if (!nums || nums.length <= 1) {
-        return false
+  if (!nums || nums.length <= 1) {
+    return false
+  }
+
+  const map = new Map()
+
+  // O(n)
+  for (let i = 0; i < nums.length - 1; i++) {
+    map.set(nums[i], nums[i + 1])
+  }
+
+  // O(n)
+  let exists = false
+
+  map.forEach((key, value) => {
+    if (key + value === n) {
+      exists = true
     }
+  })
 
-    const map = new Map()
-
-    // O(n)
-    for (let i = 0; i < nums.length - 1; i++) {
-        map.set(nums[i], nums[i + 1])
-    }
-
-    // O(n)
-    let exists = false
-
-    map.forEach((key, value) => {
-        if (key + value === n) {
-            exists = true
-        }
-    })
-
-    return exists
+  return exists
 }
 
 module.exports = {
-    subarraySum,
+  subarraySum,
 }

@@ -16,23 +16,23 @@
 
 // O(n)
 function fizzBuzz(n) {
-    let answer = ''
+  let answer = ''
 
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            answer += 'fizzbuzz'
-        } else if (i % 3 === 0) {
-            answer += 'fizz'
-        } else if (i % 5 === 0) {
-            answer += 'buzz'
-        } else {
-            answer += i.toString()
-        }
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      answer += 'fizzbuzz'
+    } else if (i % 3 === 0) {
+      answer += 'fizz'
+    } else if (i % 5 === 0) {
+      answer += 'buzz'
+    } else {
+      answer += i.toString()
     }
+  }
 
-    return answer
+  return answer
 }
 
 module.exports = {
-    fizzBuzz,
+  fizzBuzz,
 }

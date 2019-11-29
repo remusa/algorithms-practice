@@ -1,5 +1,5 @@
 export function countingSort(array) {
-    const arr = [...array]
+  const arr = [...array]
 
-    return arr
+  return arr
 }
