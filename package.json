@@ -45,14 +45,5 @@
     "prettier": "1.16.4",
     "pretty-quick": "^2.0.1"
   },
-  "//babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-modules-commonjs",
-      "@babel/plugin-transform-destructuring"
-    ]
-  },
   "browserslist": "> 0.25%, not dead"
 }
