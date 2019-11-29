@@ -11,7 +11,7 @@
 */
 
 // Time complexity: O(n^2)
-function shortestPalindrome(s) {
+export function shortestPalindrome(s) {
   // Use a ointer to keep track
   let left = 0
   let right = s.length - 1
@@ -45,5 +45,3 @@ function shortestPalindrome(s) {
   // leave the end
   return reversedEnd + existingPalindrome + palindromeEnd
 }
-
-export { shortestPalindrome }
