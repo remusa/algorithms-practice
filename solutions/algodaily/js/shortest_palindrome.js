@@ -12,16 +12,17 @@
 
 // Time complexity: O(n^2)
 export function shortestPalindrome(s) {
-  // Use a ointer to keep track
+  // Use two pointers to keep track
   let left = 0
   let right = s.length - 1
 
   while (right >= 0) {
-    // Move right pointer to the left until there's a match, then left moves to get palindrome midpoint
+    // Move left pointer to the right until there's a match
     if (s[left] === s[right]) {
       left++
     }
 
+    // Move right pointer to get palindrome midpoint
     right--
   }
 
