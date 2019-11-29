@@ -1,73 +1,58 @@
 {
-    "name": "leetcode",
-    "version": "1.0.0",
-    "description": "",
-    "main": "jest.config.js",
-    "scripts": {
-        "test": "jest --silent --watch",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "keywords": [
-        "algorithm",
-        "algorithms",
-        "cs",
-        "computer-science",
-        "data-structures",
-        "graph",
-        "interview",
-        "interview-preparation",
-        "javascript",
-        "javascript-algorithms",
-        "python",
-        "python-algorithms",
-        "sorting-algorithms",
-        "searching-algorithms",
-        "tree"
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jest.config.js",
+  "scripts": {
+    "test": "jest --watch",
+    "prettify": "pretty-quick",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "algorithm",
+    "algorithms",
+    "cs",
+    "computer-science",
+    "data-structures",
+    "graph",
+    "interview",
+    "interview-preparation",
+    "javascript",
+    "javascript-algorithms",
+    "python",
+    "python-algorithms",
+    "sorting-algorithms",
+    "searching-algorithms",
+    "tree"
+  ],
+  "author": "remusa",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "babel-eslint": "9.0.0",
+    "eslint": "5.14.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "5.0.3",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "1.3.0",
+    "jest": "^24.9.0",
+    "prettier": "1.16.4",
+    "pretty-quick": "^2.0.1"
+  },
+  "//babel": {
+    "presets": [
+      "@babel/preset-env"
     ],
-    "author": "remusa",
-    "license": "ISC",
-    "devDependencies": {
-        "@babel/core": "^7.5.5",
-        "@babel/plugin-transform-destructuring": "^7.5.0",
-        "@babel/plugin-transform-modules-commonjs": "^7.5.0",
-        "@babel/preset-env": "^7.5.5",
-        "babel-core": "^7.0.0-bridge.0",
-        "babel-eslint": "^10.0.2",
-        "babel-jest": "^24.8.0",
-        "babel-loader": "^8.0.6",
-        "eslint": "^6.1.0",
-        "eslint-config-airbnb": "^18.0.0",
-        "eslint-config-prettier": "^6.5.0",
-        "eslint-config-wesbos": "0.0.19",
-        "eslint-plugin-html": "^6.0.0",
-        "eslint-plugin-import": "^2.18.2",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-prettier": "^3.1.0",
-        "eslint-plugin-react": "^7.14.3",
-        "eslint-plugin-react-hooks": "^1.7.0",
-        "jest": "^24.8.0",
-        "prettier": "^1.18.2"
-    },
-    "eslintConfig": {
-        "extends": [
-            "wesbos"
-        ],
-        "rules": {
-            "jest/no-large-snapshots": 0,
-            "no-lonely-if": 0,
-            "max-classes-per-file": 0,
-            "prefer-destructuring": 0
-        }
-    },
-    "babel": {
-        "presets": [
-            "@babel/preset-env"
-        ],
-        "plugins": [
-            "@babel/plugin-transform-modules-commonjs",
-            "@babel/plugin-transform-destructuring"
-        ]
-    },
-    "browserslist": "> 0.25%, not dead"
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs",
+      "@babel/plugin-transform-destructuring"
+    ]
+  },
+  "browserslist": "> 0.25%, not dead"
 }
