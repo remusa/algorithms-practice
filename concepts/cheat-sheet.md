@@ -12,7 +12,7 @@
   * Object
 
 * **Undeclared, undefined and null**:
-  * *Undeclared*: variable doesn't exist (no identifier).
+  * *undeclared*: variable doesn't exist (no identifier).
   * *undefined*: declared but not assigned a value.
   * *null*: value is `null` (explicitly stated).
 
@@ -30,7 +30,7 @@
   * Can be *chained* using multiple `then()`. Each one returns a promise.
 
 * **Async/await**: makes asynchronous code look like synchronous code.
-  * async functions return a `Promise`.
+  * `async` functions return a `Promise`.
 
 * `bind, call and apply`:
   * Ways of explicitly binding the `this` keyword to a context.
