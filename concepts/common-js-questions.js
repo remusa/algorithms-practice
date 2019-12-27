@@ -126,6 +126,30 @@ fn1() // Ignored
 fn1() // Fired
 fn1() // Ignored
 
+function throttle(fn, time) {
+  let shouldWait = false
+
+  return function(...args) {
+    if (!shouldWait) {
+      fn.apply(this, args)
+      shouldWait = true
+
+      setTimeout(function() {
+        shouldWait = false
+      }, time)
+    }
+  }
+}
+
+fn2 = throttle(() => console.log('throttle'), 500)
+fn2() // Fired
+fn2() // Ignored
+fn2() // Ignored
+fn2() // Ignored
+// 500 ms later
+fn2() // Fired
+fn2() // Ignored
+
 // Trees
 // We have two identical DOM trees, A and B. For DOM tree A, we have the location of an element. Create a function to find that same element in tree B.
 function backwardsPath(element, root) {
