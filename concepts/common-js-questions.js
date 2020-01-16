@@ -99,6 +99,7 @@ Timing:
 
 // Debounce: a way of preventing time-consuming tasks from firing often (autocomplete only searching after 500ms)
 // It limits the rate at which a function gets invoked.
+// A debounced function is called after N amount of time passes since its last call. It reacts to a seemingly resolved state and implies a delay between the event and the handler function call.
 function debounce(fn, time) {
   let timeoutId
 
@@ -126,6 +127,7 @@ fn1() // Ignored
 fn1() // Fired
 fn1() // Ignored
 
+// Throttle: A throttled function is called once per N amount of time. Any additional function calls within the specified time interval are ignored.
 function throttle(fn, time) {
   let shouldWait = false
 
