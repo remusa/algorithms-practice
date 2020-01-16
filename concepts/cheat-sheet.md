@@ -23,7 +23,7 @@
     * Delaying execution of a function until a particular time.
   * *Callback hell*: many nested callbacks.
 
-* **Promise**: An object that may produce a single value some time in the future. Represents the completion or failure of the operation. Specifically made for handling async operations.
+* **Promise**: object that may produce a single value some time in the future. Represents the completion or failure of the operation. Specifically made for handling async operations.
   * *States*: pending, fulfilled, or rejected.
   * *Arguments*: a *callback function*:
     * This function is going to be passed two arguments, *resolve* and *reject*.
@@ -34,7 +34,8 @@
 
 * `bind, call and apply`:
   * Ways of explicitly binding the `this` keyword to a context.
-  * Use `.bind()` when you want that function to later be called with a certain context, useful in events. Use `.call()` or `.apply()` when you want to invoke the function immediately, with modification of the context.
+  * Use `.bind()` when you want that function to later be called with a certain context, useful in events.
+  * Use `.call()` or `.apply()` when you want to invoke the function immediately, with modification of the context.
     * A context is an object that replaces `this` keyword inside the function.
 
 * **Event delegation**: instead of assigning an event handler to each element that is handled in a similar way, we put a single handler on their common ancestor, so when something triggers an event (like clicking) it *bubbles* up to the parent.
@@ -44,20 +45,20 @@
 * **Event bubbling or event propagation**: place an event listener on a single parent HTML element that lives above a HTML child, and that event listener will get executed whenever an event occurs on any of its child nodes — even if these node children are added to the page after the initial load!.
 
 * **Prototypal Inheritance**: all objects have a `prototype` property. If we try to access a property on an object and JS doesn't find, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`. This is how JavaScript simulates inheritance.
-  * *Get the prototype of an object*: use `Object.getPrototypeOf`.
+  * *Get the prototype of an object*: use `Object.getPrototypeOf(<object>`.
   * *Determining if a property lives on the prototype*: use `<object>.hasOwnProperty`.
-  * *Check if an object is an instance of a Class*: use `object instanceof Class`.
+  * *Check if an object is an instance of a Class*: use `<object> instanceof <Class>`.
 
 * `this`: refers to the current execution context.
   * If the `new` keyword is used when calling the function, this inside the function is a brand new object.
   * If `apply`, `call`, or `bind` are used to call/create a function, `this` inside the function is the object that is passed in as the argument.
   * If a function is called as a method, such as `obj.method()` , `this` is the object that the function is a property of.
-  * If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above, this is the global object. In a browser, it is the `window` object. If in strict mode ('use strict'), this will be undefined instead of the global object.
+  * If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions present above, this is the global object. In a browser, it is the `window` object. If in strict mode (`'use strict'`), this will be `undefined` instead of the `global` object.
   * If multiple of the above rules apply, the rule that is higher wins and will set the `this` value.
   * If the function is an ES2015 arrow function, it ignores all the rules above and receives the `this` value of its surrounding scope at the time it is created.
 
 * **Closure**: a function inside another (parent) function, that remembers the context (and state, variables, methods, etc.) of its parent.
-  * Hss access to its outer context (the parent's), but not the other way around.
+  * Has access to its outer context (the parent's), but not the other way around.
   * Has access to *3 scopes*: local, the parent's and the global.
   * *Usage*:
     * Extends behaviour of the parent function.
@@ -78,9 +79,9 @@ console.log(add5(2));  // 7
 console.log(add10(2)); // 12
 ```
 
-**Hoisting**: variable and function declarations are moved to the top of the code. The variable and function declarations are put into memory during the compile phase. Declarations are initialized as undefined when they're defined.
+**Hoisting**: variable and function declarations are moved to the top of the code. The variable and function declarations are put into memory during the `compile phase`. Declarations are initialized as `undefined` when they're defined.
 
-**Declaration**: create new identifier (with undefined) in memory.
+**Declaration**: create new identifier (with `undefined`) in memory.
 **Initialization**: assign a value.
 
 * **Scope**: defines where variables/functions are accesible.
@@ -104,9 +105,9 @@ console.log(add10(2)); // 12
 ## Loops
 
 * **for loops**: 3 statements -> initialize some kind of counter, condition, increment/decrement
-  * while loops
-* **for...of**: used for iterables (arrays, NOT objects unless converted with keys(), values(), entries()) specially when length isn't known. Doesn't need to create index variables.
-* **for...in**: used for objects (enumerable properties).
+  * `while` loops-
+* **for...of**: used for `iterables` (`arrays`, NOT objects unless converted with `keys()`, `values()`, `entries()`) specially when length isn't known. Doesn't need to create index variables.
+* **for...in**: used for objects (`enumerable` properties).
 * **Array.forEach**: pass a function and execute it on each item. Pass (value, index, object).
   * `Array.every, .some, .map, .filter, .reduce`
 
