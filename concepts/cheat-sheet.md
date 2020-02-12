@@ -124,3 +124,7 @@ console.log(add10(2)); // 12
   * `componentWillUpdate()`: called whenever a component is receiving new props.
   * `componentDidUpdate()`: called immediately after a component re-renders.
   * `componentWillUnmount()`: remove EventListeners and timers/intervals.
+
+## Resources
+
+* [Understanding Async Await | CSS-Tricks](https://css-tricks.com/understanding-async-await/)

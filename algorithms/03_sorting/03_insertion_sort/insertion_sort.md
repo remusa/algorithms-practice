@@ -15,6 +15,19 @@
 * Inefficient on large lists.
 * Generally, *insertion sort* performs better than *selection sort*.
 
+## Pseudocode
+
+```
+Call the first element of the array sorted
+Repeat until all elements are sorted:
+    Insert next unsorted item into sorted part shifting the required number of items
+```
+
+```
+For i from 1 to n–1
+    Insert next unsorted item into sorted part shifting i items
+```
+
 ## Algorithm
 
 ```

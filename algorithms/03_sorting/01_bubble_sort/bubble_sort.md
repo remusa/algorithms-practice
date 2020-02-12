@@ -17,6 +17,25 @@
 * Elements are sorted by the end, moving the largest element to the last
   unsorted index.
 
+## Pseudocode
+
+```
+Set swap counter to a non-zero value
+Repeat until the swap counter is equal to 0:
+    Reset swap counter to 0
+    Look at each adjacent pair:
+        If two adjacent elements are not in order:
+            Swap them
+            Add one to the swap counter
+```
+
+```
+Repeat until no swaps
+    For i from 0 to n–2
+        If i'th and i+1'th elements out of order
+            Swap them
+```
+
 ## Algorithm
 
 ```

@@ -16,6 +16,23 @@
   2. *Conquer*: the subproblems by solving them recursively. If they are small enough, solve the subproblems as base cases.
   3. *Combine*: the solutions to the subproblems into the solution for the original problem.
 
+## Pseudocode
+
+```
+If only one element
+  Return
+Else
+    Sort left half of elements
+    Sort right half of elements
+    Merge sorted halves
+```
+
+```
+Sort the left half of the array (assuming n > 1)
+Sort right half of the array (assuming n > 1)
+Merge the two halves together
+```
+
 ## Algorithm
 
 ```

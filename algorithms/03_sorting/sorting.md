@@ -94,3 +94,4 @@ Bubble sort, selection sort
   @ericdrowell](https://www.bigocheatsheet.com/)
 * [Sorting Algorithms Animations |
   Toptal](https://www.toptal.com/developers/sorting-algorithms)
+* [Notes on algorithms - DEV Community 👩‍💻👨‍💻](https://dev.to/hexangel616/notes-on-algorithms-36pi)

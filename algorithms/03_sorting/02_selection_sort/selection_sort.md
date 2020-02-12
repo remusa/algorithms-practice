@@ -12,6 +12,20 @@
 * Inefficient on large lists.
 * Generally, *insertion sort* performs better.
 
+## Pseudocode
+
+```
+Repeat until there is no unsorted elements remaining:
+    Search unsorted part of data to find the smallest value
+    Swap the found value with the first element of the unsorted part
+```
+
+```
+For i from 0 to n–1
+    Find smallest item between i'th item and last item
+    Swap smallest item with i'th item
+```
+
 ## Algorithm
 
 ```
