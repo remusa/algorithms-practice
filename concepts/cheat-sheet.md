@@ -108,8 +108,17 @@ console.log(add10(2)); // 12
   * `while` loops-
 * **for...of**: used for `iterables` (`arrays`, NOT objects unless converted with `keys()`, `values()`, `entries()`) specially when length isn't known. Doesn't need to create index variables.
 * **for...in**: used for objects (`enumerable` properties).
-* **Array.forEach**: pass a function and execute it on each item. Pass (value, index, object).
+* **Array.forEach**: pass a functon and execute it on each item. Pass (value, index, object).
   * `Array.every, .some, .map, .filter, .reduce`
+
+* **Note**: differences between `map` and `forEach`:
+  * `map` receives a function as a parameter and applies it on each element, returning a new array with the results of applying the function.
+  * `forEach` receives a function as a parameter and executes it once for each array element.
+  * `map` can be chained, `forEach` can't.
+  * Neither directly *mutates* the array, although the callback function may do so.
+  * `map` returns a new Array, `forEach` returns `undefined`.
+  * Use `map` if the data will be changed or used.
+  * Use `forEach` if you don't need the returned array.
 
 `slice`: returns a new array, *doesn't mutate* the original.
 `splice`: *modifies* original array.
@@ -128,3 +137,4 @@ console.log(add10(2)); // 12
 ## Resources
 
 * [Understanding Async Await | CSS-Tricks](https://css-tricks.com/understanding-async-await/)
+* [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
