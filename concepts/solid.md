@@ -65,6 +65,8 @@ The 5 most important software design principles are:
 * Depend in abstractions.
 * Abstractions should not depend on lower level details.
 * Support abstraction.
+* Example: use an interface `PaymentProcessor` as a middleware (an abstraction) between a store and the Stripe API. From the store we will call the payment processor interface, and the interface will call the Stripe API. This way we can create multiple payment processor interfaces for Stripe, Paypal, etc. using the same API (functions) and the store doesn't have to change.
+* We don't want the high-level code (the store) to depend on the low level code (Stripe and Paypal APIs), so by using an abstraction, the store can use the same functions to call different processors. To the store both APIs look the same because both are called the same way.
 
 ## Resources
 
@@ -78,5 +80,6 @@ The 5 most important software design principles are:
 * [Liskov Substitution Principle Explained - Web Dev Simplified](https://www.youtube.com/watch?v=dJQMqNOC4Pc)
 * [Liskov Substitution Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=Jecou7B3nhc&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=9)
 * [Interface Segregation Principle Explained - Web Dev Simplified](https://www.youtube.com/watch?v=JVWZR23B_iE)
+* [Dependency Inversion Principle Explained - SOLID Design Principles - YouTube](https://www.youtube.com/watch?v=9oHY5TllWaU)
 * [The Interface Segregation Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=E9AU2JkVtoE&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=10)
 * [The Dependency Inversion Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=RS6XHQp_5F8&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=11)
