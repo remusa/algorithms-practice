@@ -83,3 +83,4 @@ The 5 most important software design principles are:
 * [Dependency Inversion Principle Explained - SOLID Design Principles - YouTube](https://www.youtube.com/watch?v=9oHY5TllWaU)
 * [The Interface Segregation Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=E9AU2JkVtoE&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=10)
 * [The Dependency Inversion Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=RS6XHQp_5F8&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=11)
+* [dwmkerr/hacker-laws: 💻📖 Laws, Theories, Principles and Patterns that developers will find useful. #hackerlaws](https://github.com/dwmkerr/hacker-laws)
