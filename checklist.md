@@ -63,12 +63,19 @@
 * !![Longest Repeating Character Replacement - LeetCode](https://leetcode.com/problems/longest-repeating-character-replacement/)
 * !![Minimum Window Substring - LeetCode](https://leetcode.com/problems/minimum-window-substring/description/)
 * !![Minimum Size Subarray Sum - LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/)
+* !![Reverse String - LeetCode](https://leetcode.com/problems/reverse-string/)
+* !![Reverse Words in a String - LeetCode](https://leetcode.com/problems/reverse-words-in-a-string/)
 * [Encode and Decode Strings - LeetCode](https://leetcode.com/problems/encode-and-decode-strings/)
+* Return maximum occurring character in the input string
+* !![Remove Duplicate Letters - LeetCode](https://leetcode.com/problems/remove-duplicate-letters/)
 
 #### Additional
 
 * [Group Anagrams - LeetCode](https://leetcode.com/problems/group-anagrams/)
 * [Palindromic Substrings - LeetCode](https://leetcode.com/problems/palindromic-substrings/)
+* [Maximum Number of Occurrences of a Substring - LeetCode](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/)
+* [Permutation in String - LeetCode](https://leetcode.com/problems/permutation-in-string/)
+* Check if strings are rotations of each other or not
 
 ### Arrays
 
@@ -83,12 +90,11 @@
 * !![Maximum Product Subarray - LeetCode](https://leetcode.com/problems/maximum-product-subarray/)
 * !![Find Minimum in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 * !![Search in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-* !![Sort Colors - LeetCode](https://leetcode.com/problems/sort-colors/)
+* !![Sort Colors (Dutch National Flag Problem) - LeetCode](https://leetcode.com/problems/sort-colors/)
 
 #### Additional
 
 * Find the second minimum element of an array
-* First non-repeating integers in an array
 * [Merge Sorted Array - LeetCode](https://leetcode.com/problems/merge-sorted-array/)
 * Rearrange positive and negative values in an array
 * !![3Sum - LeetCode](https://leetcode.com/problems/3sum/)
@@ -98,7 +104,9 @@
 #### Essential
 
 * !![Intersection of Two Arrays - LeetCode](https://leetcode.com/problems/intersection-of-two-arrays/)
-* !![First Unique Character in a String - LeetCode](https://leetcode.com/problems/first-unique-character-in-a-string/)
+
+* Strings:
+  * !![First Unique Character in a String - LeetCode](https://leetcode.com/problems/first-unique-character-in-a-string/)¿
 
 #### Additional
 
@@ -133,17 +141,24 @@
 
 ### Stacks
 
+#### Essential
+
 * !!Evaluate postfix expression using a stack
 * Sort values in a stack
 * !![Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/)
+* [Implement Queue using Stacks - LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 * Linked list:
   * Reverse Linked List
 
+#### Additional
+
+* [Implement two stacks in an array - GeeksforGeeks](https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/)
+
 ### Queues
 
-* Implement stack using a queue
-* Reverse first k elements of a queue
+* [Implement Stack using Queues - LeetCode](https://leetcode.com/problems/implement-stack-using-queues/)
+* [Reversing the first K elements of a Queue - GeeksforGeeks](https://www.geeksforgeeks.org/reversing-first-k-elements-queue/)
 * Generate binary numbers from 1 to n using a queue
 
 ### Trees
@@ -164,6 +179,7 @@
 
 * Find nodes at “k” distance from the root
 * [Minimum Depth of Binary Tree - LeetCode](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
+* [Maximum Width of Binary Tree - LeetCode](https://leetcode.com/problems/maximum-width-of-binary-tree/)
 * [Invert Binary Tree - LeetCode](https://leetcode.com/problems/invert-binary-tree/)
 * [Binary Tree Maximum Path Sum - LeetCode](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 * [Subtree of Another Tree - LeetCode](https://leetcode.com/problems/subtree-of-another-tree/)
@@ -316,7 +332,7 @@
 * [String to Integer (atoi) - LeetCode](https://leetcode.com/problems/string-to-integer-atoi/)
 * [ZigZag Conversion - LeetCode](https://leetcode.com/problems/zigzag-conversion/)
 
-### Binary
+### Binary & Bit Manipulation
 
 #### Essential
 
@@ -328,6 +344,11 @@
 * [Counting Bits - LeetCode](https://leetcode.com/problems/counting-bits/)
 * [Missing Number - LeetCode](https://leetcode.com/problems/missing-number/)
 * [Reverse Bits - LeetCode](https://leetcode.com/problems/reverse-bits/)
+* Check if a number is power of two.(http://www.geeksforgeeks.org/write-one-line-c-function-to-find-whether-a-no-is-power-of-two/)
+* Little and Big Endian Mystery
+* Position of rightmost set bit
+* Find whether a given number is a power of 4 or not
+* Add two numbers without using arithmetic operators
 
 ## Implementations
 
@@ -406,3 +427,4 @@
 * [Master list of Free Resources : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/e4v755/master_list_of_free_resources/)
 * [fterh/leetcode-curation-topical: Tech interview prep list](https://github.com/fterh/leetcode-curation-topical)
 * [How to Break Into the Tech Industry—a Guide to Job Hunting and Tech Interviews - haseeb qureshi](https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/)
+* [Basic DS and algo question collection : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/dqkr7o/basic_ds_and_algo_question_collection/)
