@@ -104,16 +104,15 @@
 #### Essential
 
 * !![Intersection of Two Arrays - LeetCode](https://leetcode.com/problems/intersection-of-two-arrays/)
+* !![Subsets - LeetCode](https://leetcode.com/problems/subsets/)
 
 * Strings:
-  * !![First Unique Character in a String - LeetCode](https://leetcode.com/problems/first-unique-character-in-a-string/)¿
+  * !![First Unique Character in a String - LeetCode](https://leetcode.com/problems/first-unique-character-in-a-string/)
 
 #### Additional
 
-* Find symmetric pairs in an array
-* Trace complete path of a journey
-* Find if an array is a subset of another array
-* Check if given arrays are disjoint
+* [Given an array of pairs, find all symmetric pairs in it - GeeksforGeeks](https://www.geeksforgeeks.org/given-an-array-of-pairs-find-all-symmetric-pairs-in-it/)
+* [Partition Array into Disjoint Intervals - LeetCode](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)
 * [Group Anagrams - LeetCode](https://leetcode.com/problems/group-anagrams/)
 * [Unique Email Addresses - LeetCode](https://leetcode.com/problems/unique-email-addresses/)
 * [Subarray Sum Equals K - LeetCode](https://leetcode.com/problems/subarray-sum-equals-k/)
@@ -143,23 +142,24 @@
 
 #### Essential
 
-* !!Evaluate postfix expression using a stack
-* Sort values in a stack
+* !![Basic Calculator - LeetCode](https://leetcode.com/problems/basic-calculator/)
+* !![Sort a stack using a temporary stack - GeeksforGeeks](https://www.geeksforgeeks.org/sort-stack-using-temporary-stack/)
 * !![Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/)
-* [Implement Queue using Stacks - LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)
+* !![Implement Queue using Stacks - LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 * Linked list:
   * Reverse Linked List
 
 #### Additional
 
+* [Sort List - LeetCode](https://leetcode.com/problems/sort-list/)
 * [Implement two stacks in an array - GeeksforGeeks](https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/)
 
 ### Queues
 
 * [Implement Stack using Queues - LeetCode](https://leetcode.com/problems/implement-stack-using-queues/)
 * [Reversing the first K elements of a Queue - GeeksforGeeks](https://www.geeksforgeeks.org/reversing-first-k-elements-queue/)
-* Generate binary numbers from 1 to n using a queue
+* [Generate Binary Numbers Between 1 to N using Queue - Techie Delight](https://www.techiedelight.com/generate-binary-numbers-1-n/)
 
 ### Trees
 
@@ -177,14 +177,15 @@
 
 #### Additional
 
-* Find nodes at “k” distance from the root
+* [Binary Tree Paths - LeetCode](https://leetcode.com/problems/binary-tree-paths/)
+* [Print nodes at k distance from root - GeeksforGeeks](https://www.geeksforgeeks.org/print-nodes-at-k-distance-from-root/)
 * [Minimum Depth of Binary Tree - LeetCode](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 * [Maximum Width of Binary Tree - LeetCode](https://leetcode.com/problems/maximum-width-of-binary-tree/)
 * [Invert Binary Tree - LeetCode](https://leetcode.com/problems/invert-binary-tree/)
 * [Binary Tree Maximum Path Sum - LeetCode](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 * [Subtree of Another Tree - LeetCode](https://leetcode.com/problems/subtree-of-another-tree/)
 * [Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value)
-* Find kth maximum value in a binary search tree
+* [K'th Largest Element in BST when modification to BST is not allowed - GeeksforGeeks](https://www.geeksforgeeks.org/kth-largest-element-in-bst-when-modification-to-bst-is-not-allowed/)
 * [Kth Smallest Element in a BST - LeetCode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 * [Path Sum - LeetCode](https://leetcode.com/problems/path-sum/)
 * [Binary Tree Zigzag Level Order Traversal - LeetCode](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
@@ -201,9 +202,9 @@
 
 * Implement Breadth First Search
 * Implement Depth First Search
-* Check if a graph is a tree or not
-* Count number of edges in a graph
-* Find the shortest path between two vertices
+* [Check if a given graph is tree or not - GeeksforGeeks](https://www.geeksforgeeks.org/check-given-graph-tree/)
+* [Count number of edges in an undirected graph - GeeksforGeeks](https://www.geeksforgeeks.org/count-number-edges-undirected-graph/)
+* [Find if there is a path between two vertices in a directed graph - GeeksforGeeks](https://www.geeksforgeeks.org/find-if-there-is-a-path-between-two-vertices-in-a-given-graph/)
 * [Clone Graph - LeetCode](https://leetcode.com/problems/clone-graph/)
 * [Course Schedule II - LeetCode](https://leetcode.com/problems/course-schedule-ii/)
 * [Pacific Atlantic Water Flow - LeetCode](https://leetcode.com/problems/pacific-atlantic-water-flow/)
@@ -281,12 +282,14 @@
 
 ### Recursion
 
-* [Subsets - LeetCode](https://leetcode.com/problems/subsets/)
 * [Subsets II - LeetCode](https://leetcode.com/problems/subsets-ii/)
 * [Strobogrammatic Number II - LeetCode](https://leetcode.com/problems/strobogrammatic-number-ii/)
 * [Pow(x, n) - LeetCode](https://leetcode.com/problems/powx-n/)
 * [K-th Symbol in Grammar - LeetCode](https://leetcode.com/problems/k-th-symbol-in-grammar/)
 * [Split BST - LeetCode](https://leetcode.com/problems/split-bst/)
+
+* Array:
+  * Subsets
 
 ### Dynamic Programming
 
@@ -344,7 +347,7 @@
 * [Counting Bits - LeetCode](https://leetcode.com/problems/counting-bits/)
 * [Missing Number - LeetCode](https://leetcode.com/problems/missing-number/)
 * [Reverse Bits - LeetCode](https://leetcode.com/problems/reverse-bits/)
-* Check if a number is power of two.(http://www.geeksforgeeks.org/write-one-line-c-function-to-find-whether-a-no-is-power-of-two/)
+* [Check if a number is power of two.](http://www.geeksforgeeks.org/write-one-line-c-function-to-find-whether-a-no-is-power-of-two/)
 * Little and Big Endian Mystery
 * Position of rightmost set bit
 * Find whether a given number is a power of 4 or not
