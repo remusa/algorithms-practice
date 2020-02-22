@@ -15,6 +15,9 @@
 * [The ultimate guide to preparing for the coding interview](https://medium.com/free-code-camp/the-ultimate-guide-to-preparing-for-the-coding-interview-183251ee36c9)
 * [ ] [Master list of Free Resources : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/e4v755/master_list_of_free_resources/)
 * [Career Switcher’s Guide to Your Dream Tech Job](https://www.freecodecamp.org/news/career-switchers-guide-to-your-dream-tech-job/)
+* [My journey and tips: 2.9 GPA at a no-name liberal arts college with 1 mediocre internship —> 4 FTE offers including FB : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/6278bi/my_journey_and_tips_29_gpa_at_a_noname_liberal/)
+* [2 YEAR UPDATE: My journey & tips: 2.9 GPA at a small liberal arts college w 1 mediocre internship –> 4 FTE offers incl FB : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/b3w1gg/2_year_update_my_journey_tips_29_gpa_at_a_small/)
+* [ ] [Another data point on industry hire in the bay : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/cdp9yz/another_data_point_on_industry_hire_in_the_bay/)
 
 ## Interview Patterns
 
@@ -26,10 +29,6 @@
 * [ ] [Here is a 10-line template that can solve most 'substring' problems - LeetCode Discuss](https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems)
 
 ## Computer Science Topics
-
-### Time Complexity
-
-* [ ] [8 time complexities that every programmer should know | Adrian Mejia Blog](https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/)
 
 ### Data Structures and Algorithms
 
@@ -49,14 +48,18 @@
 * [Deep Dive Through A Graph: DFS Traversal - basecs - Medium](https://medium.com/basecs/deep-dive-through-a-graph-dfs-traversal-8177df5d0f13)
 * [Going Broad In A Graph: BFS Traversal - basecs - Medium](https://medium.com/basecs/going-broad-in-a-graph-bfs-traversal-959bd1a09255)
 
-### Binary
+### Time Complexity
 
-* [ ] [Bits, Bytes, Building With Binary](https://medium.com/basecs/bits-bytes-building-with-binary-13cb4289aafa)
+* [8 time complexities that every programmer should know | Adrian Mejia Blog](https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/)
 
 ### Dynamic Programming
 
 * [ ] [What Is Dynamic Programming and How To Use It - CSDojo](https://www.youtube.com/watch?v=vYquumk4nWw)
 * [ ] [Demystifying Dynamic Programming](https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296)
+
+### Binary
+
+* [ ] [Bits, Bytes, Building With Binary](https://medium.com/basecs/bits-bytes-building-with-binary-13cb4289aafa)
 
 #### More resources on DA/A
 
@@ -106,6 +109,9 @@
 * [ ] [System Design Introduction For Interview. - YouTube](https://www.youtube.com/watch?v=UzLMhqg3_Wc&list=PLrmLmBdmIlps7GJJWW9I7N0P0rB0C3eY2)
 * [ ] [HiredInTech's Training Camp for Coding Interviews](https://www.hiredintech.com/system-design)
 * [ ] [High Scalability - All Time Favorites](http://highscalability.com/all-time-favorites/)
+* [Designing Data-Intensive Applications [Book]](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
+* [ ] [Distributed systems for fun and profit](http://book.mixu.net/distsys/single-page.html)
+* [ ] [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview)
 
 #### Clean Code
 
