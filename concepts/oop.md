@@ -6,10 +6,10 @@
 * *Methods*: behavior.
 
 4 core concepts:
-    1. Encapsulation
-    2. Abstraction
-    3. Polymorphism
-    4. Inheritance
+  1. Encapsulation
+  2. Abstraction
+  3. Polymorphism
+  4. Inheritance
 
 ## Encapsulation
 
@@ -35,3 +35,4 @@
 ## Resources
 
 * [Zero to One in Object Oriented Concepts](https://www.freecodecamp.org/news/object-oriented-concepts/)
+* [Goodbye, Object Oriented Programming - Charles Scalfani - Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
