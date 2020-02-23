@@ -94,6 +94,7 @@
 
 #### Additional
 
+* [Move Zeroes - LeetCode](https://leetcode.com/problems/move-zeroes/)
 * Find the second minimum element of an array
 * [Merge Sorted Array - LeetCode](https://leetcode.com/problems/merge-sorted-array/)
 * Rearrange positive and negative values in an array
@@ -132,6 +133,7 @@
 
 #### Additional
 
+* [Rotate Array - LeetCode](https://leetcode.com/problems/rotate-array/)
 * [Linked List Cycle II - LeetCode](https://leetcode.com/problems/linked-list-cycle-ii/)
 * [Reorder List - LeetCode](https://leetcode.com/problems/reorder-list/)
 * !![Remove Duplicates from Sorted List - LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
@@ -299,11 +301,11 @@
 * [Longest Increasing Subsequence - LeetCode](https://leetcode.com/problems/longest-increasing-subsequence/)
 * [Word Break - LeetCode](https://leetcode.com/problems/word-break/)
 * !![House Robber - LeetCode](https://leetcode.com/problems/house-robber/)
+* [Climbing Stairs - LeetCode](https://leetcode.com/problems/climbing-stairs/)
 
 #### Additional
 
 * [0-1 Knapsack Problem | DP-10 - GeeksforGeeks](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
-* [Climbing Stairs - LeetCode](https://leetcode.com/problems/climbing-stairs/)
 * [Combination Sum IV - LeetCode](https://leetcode.com/problems/combination-sum-iv/)
 * [House Robber II - LeetCode](https://leetcode.com/problems/house-robber-ii/)
 * [Decode Ways - LeetCode](https://leetcode.com/problems/decode-ways/)
@@ -329,7 +331,6 @@
 ### Other
 
 * !![LRU Cache - LeetCode](https://leetcode.com/problems/lru-cache/)
-* [Move Zeroes - LeetCode](https://leetcode.com/problems/move-zeroes/)
 * [Is Subsequence - LeetCode](https://leetcode.com/problems/is-subsequence/)
 * [Next Permutation - LeetCode](https://leetcode.com/problems/next-permutation/)
 * [String to Integer (atoi) - LeetCode](https://leetcode.com/problems/string-to-integer-atoi/)
@@ -416,10 +417,10 @@
 
 #### Question List
 
-* [ ] [LeetFree - Leaked Interview questions from Google Facebook Amazon Microsoft LinkedIn](https://leetfree.com/)
+* [ ] [AlgoDaily Software](https://algodaily.com/curriculum)
+* [ ] [LeetFree](https://leetfree.com/)
 * [ ] [Coderust: Hacking the Coding Interview](https://www.educative.io/courses/coderust-hacking-the-coding-interview)
-* [ ] [85 Questions | AlgoExpert](https://www.algoexpert.io/questions)
-* [ ] [AlgoDaily - Software interview prep made easy. Coding Interview Questions.](https://algodaily.com/challenges)
+* [ ] [AlgoExpert](https://www.algoexpert.io/questions)
 * [ ] [LeetCode - Easy Collection](https://leetcode.com/explore/featured/card/top-interview-questions-easy/)
 * [ ] [LeetCode - Medium Collection](https://leetcode.com/explore/interview/card/top-interview-questions-medium/)
 * [ ] [The Interview Study Guide For Software Engineers - DEV Community 👩‍💻👨‍💻](https://dev.to/seattledataguy/the-interview-study-guide-for-software-engineers-764)
