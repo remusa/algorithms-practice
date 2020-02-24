@@ -47,7 +47,8 @@
 
 * **Polymorphism**: same function implementation but using *different arguments*.
 * It's the ability of taking more than one form (*overloading*).
-* Functions can take different arguments inside parenthesis. Polymorphism is having multiple functions with the same name but different arguments passed that get different results. Example: `sum(3,4)` is different than `sum(10,23,56)`.
+* Functions can take different arguments inside parenthesis. Polymorphism is having multiple functions with the same name but different arguments passed that get different results.
+  * Example: `sum(3,4)` is different than `sum(10,23,56)`.
 * **Dynamic binding**: when a program determines which function to call according to the program execution.
 * **Late binding**: when the compiler determines which function to call.
 
