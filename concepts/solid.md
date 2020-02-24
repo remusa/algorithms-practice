@@ -10,16 +10,18 @@
 ## Single Responsibility Principle
 
 - **TL;DR**: guides you in creating classes that are responsible for one, and only one actor.
-- **Definition**: "A class should have one, and only one, reason to change."
-- **Definition 2**: "A class should be responsible for one, and only one actor."
+- **Definitions**:
+  - "A class should have one, and only one, reason to change."
+  - "A class should be responsible for one, and only one actor."
 - **Separates concerns**.
-- All classes, functions, modules, etc. should have a *single responsability- (it should only ever have 1 reason to change).
+- All classes, functions, modules, etc. should have a *single responsability* (it should only ever have one reason to change).
+  - This means that a single, small change to a feature of a program should require a change in one component only.
 - "Gather together the things that change for the same reason (*cohesion*). Separate those things that change for different reasons (*decoupling*)."
-- Software serves the need of *actors- (people).
+- Software serves the need of *actors* (people).
 - Examples:
   - A logger function inside a class. We could extract the logger function to it's own module and then we can import it and use it in the class.
   - Accessing a database, creating a report and sending an email from inside a class.
-- Metaphor: "Imagine you took your car to a mechanic in order to fix a broken electric window. He calls you the next day saying it’s all fixed. When you pick up your car, you find the window works fine; but the car won’t start. It’s not likely you will return to that mechanic because he’s clearly an idiot."
+- **Metaphor**: "Imagine you took your car to a mechanic in order to fix a broken electric window. He calls you the next day saying it’s all fixed. When you pick up your car, you find the window works fine; but the car won’t start. It’s not likely you will return to that mechanic because he’s clearly an idiot."
 
 ### Example 1
 
@@ -82,20 +84,24 @@ end
 - **Definition**: software entities (classes, modules, functions, etc.) should be *open for extension*, but *closed for modification*.
   - "A module will be said to be open if it is still available for extension. For example, it should be possible to add fields to the data structures it contains, or new elements to the set of functions it performs."
   - "A module will be said to be closed if it's available for use by other modules. This assumes that the module has been given a well-defined, stable description (the interface in the sense of information hiding)".
-- "You should be able to *extend- a classes behaviour, *without modifying- it."
+- "You should be able to *extend* a classes behaviour, *without modifying* it."
 - We want modules that embody the two definitions:
   - We want modules to be open to extension. If requirements change and we get requests for new features, we'd like to accommodate them in our code. We want the ability to extend the behavior of our application so that we can adapt to our customer's needs.
   - We want modules to be closed for modifications, as every change has the potential to have negative side effects. If we create the right abstractions, we can depend mostly on well-defined and stable behaviors.
 - If we make changes *outside- the function, etc. we shouldn't have to make changes *inside*.
 - A well written class should not have to be updated in multiple spots.
-- Instead of *changing- code, *create- new code that will work with the old code.
+- Instead of *changing- code, *create* new code that will work with the old code.
 - Things should work automatically without having to make changes.
 - Commonly violated if there's a `switch` statement or multiple `if` statements.
-- We should *extract- each statement into its own class, etc.
+- We should *extract* each statement into its own class, etc.
+
+### Examples
+
 - Example:
   - An IDE like IntelliJ or Visual Studio. We can add extend the functionality via plugins, without having to modify the IDEs themselves (all dependencies inside the plugin, point at the system; and that nothing in the system points out towards the plugins. The system doesn’t know about the plugins. The plugins know about the system).
+  - Imagine a module which is able to turn a Markdown document into HTML. If the module could be extended to handle a newly proposed Markdown feature, without modifying the module internals, then it would be open for extension. If the module could not be modified by a consumer so that now existing Markdown features are handled, then it would be closed for modification.
 
-### Example
+### Example 2
 
 - Imagine we have a `Report` class with some basic behavior and the ability to store its contents in a database using the `save` method.
 
@@ -165,7 +171,8 @@ end
 ## Liskov Substitution Principle
 
 - **TL;DR**: keeps semantic consistency in complex inheritance hierarchies, making your classes easier to understand and use.
-- **Definition**: if `S` is a subtype of `T`, then objects of type `T` may be replaced with objects of type `S` (i.e. an object of type `T` may be substituted with any object of a subtype `S`) without altering any of the desirable properties of the program.
+- **Definition**: "if `S` is a subtype of `T`, then objects of type `T` may be replaced with objects of type `S` (i.e. an object of type `T` may be substituted with any object of a subtype `S`) without altering any of the desirable properties of the program."
+  - "It should be possible to replace a type with a subtype, without breaking the system".
 - "A piece of code that depends on an object of type `P` should be able to operate properly with objects of type `C`, where `C` is a subtype of `P`."
   - What this means is that we should design our abstractions and classes in a way that facilitates interoperability across the complete hierarchy. If a subclass overrides the behavior in an unexpected way that breaks compatibility with the rest of the code, we are violating the principle.
 - "Derived classes must be substitutable for their base classes."
@@ -173,10 +180,11 @@ end
 - Children should be like their parents for what they inherit.
 - This principle is complicated because in some cases a subclass *could inherit from more than 1 class* (problem with inheritance).
 
-### Example 1
+### Examples
 
 - Example a: If we have a class (i.e. `Animal`), then in every single place we use it we should be able to *replace* it with any of its subclasses (i.e. `Dog`).
 - Example b: a `Square` will always be a `Rectangle`, but a `Rectangle` won't always be a `Square`, so a `Square` class can *extend* the `Rectangle` class and override `width` and `height`. Instead of doing this we could extract similar logic (like calculating an `area`) into a class `Shape` and have both `Square` and `Rectangle` inherit from it.
+- Example c: magine we have a method which reads an XML document from a structure which represents a file. If the method uses a base type 'file', then anything which derives from 'file' should be able to be used in the function. If 'file' supports seeking in reverse, and the XML parser uses that function, but the derived type 'network file' fails when reverse seeking is attempted, then the 'network file' would be violating the principle.
 
 ### Example 2
 
@@ -254,6 +262,7 @@ end
 
 - **TL;DR**: protects objects from depending on the behavior they don't really need.
 - "Clients should not be forced to depend on functionality (methods) that they do not use."
+- "Classes that implement interfaces should not be forced to implement methods they do not use."
 - **Summary**: ISP is a tool that guides you in the creation of well-defined interfaces and abstractions.
 - Only the behaviour a class can use is implemented (an object should not depend on behavior it doesn't need.).
 - You should not force clients to depend on behavior they don't need.
@@ -262,13 +271,18 @@ end
   - Protects objects from depending on things they don't need.
   - It lets you identify the right abstractions and build bundles of cohesive behaviour.
 - Robert Martin said: "Depending on something that carries baggage that you don't need can cause you troubles that you didn't expect".
-- **Notes on defining interfaces**:
+- **Defining interfaces**:
   - We define an *interface* with its properties and methods, and every single class that implements that interface needs to define all of the methods of the interface.
   - Segretate *interfaces* to make them *smaller*.
   - If an interface is too big, we need to break it down into smaller interfaces.
   - It's better to have *many small interfaces* over a single large/complex one.
 
-### Example 1
+### Example
+
+- Imagine we have a method which reads an XML document from a structure which represents a file. It only needs to read bytes, move forwards or move backwards in the file. If this method needs to be updated because an unrelated feature of the file structure changes (such as an update to the permissions model used to represent file security), then the principle has been invalidated. It would be better for the file to implement a 'seekable-stream' interface, and for the XML reader to use that.
+- Separating a `Stream` interface into `ReadableStream` and `WritableStream` interfaces.
+
+### Example 2
 
 - Suppose that we have a big class with lots of functionality. We will call it `BigClass`. Now, there are 3 other object types (`ClientOne`, `ClientTwo` and `ClientThree`) that use functionality from `BigClass`.
 
@@ -285,7 +299,7 @@ end
 
 - **TL;DR**: controls the direction of dependencies in your code, ensuring that it always flows in the direction of more abstract entities.
 - "High level modules should not depend upon low level implementations. Both should depend upon abstractions."
-- Abstractions should not depend on lower level details.
+- Abstractions should not depend on lower level details, details should depend on abstractions.
 - Depend in abstractions, not concrete entities.
 - **Benefits**:
   - Abstractions are much more stable entities than concrete classes, by depending on them, we are honoring the principle of *depend on things that change less often than you do*. Now, we don't need to worry about the volatile nature of a concrete class, we just care about the interface.
@@ -294,8 +308,9 @@ end
 
 ### Example 1
 
-- We can use an interface `PaymentProcessor` as a middleware (an abstraction) between a store and the Stripe API. From the store we will call the payment processor interface, and the interface will call the Stripe API. This way we can create multiple payment processor interfaces for Stripe, Paypal, etc. using the same API (functions) and the store doesn't have to change.
-- We don't want the high-level code (the store) to depend on the low level code (Stripe and Paypal APIs), so by using an abstraction, the store can use the same functions to call different processors. To the store both APIs look the same because both are called the same way.
+- Example a: We can use an interface `PaymentProcessor` as a middleware (an abstraction) between a store and the Stripe API. From the store we will call the payment processor interface, and the interface will call the Stripe API. This way we can create multiple payment processor interfaces for Stripe, Paypal, etc. using the same API (functions) and the store doesn't have to change.
+  - We don't want the high-level code (the store) to depend on the low level code (Stripe and Paypal APIs), so by using an abstraction, the store can use the same functions to call different processors. To the store both APIs look the same because both are called the same way.
+- Example b: imagine we have a program which read metadata from a website. We would assume that the main component would have to know about a component to download the webpage content, then a component which can read the metadata. If we were to take dependency inversion into account, the main component would depend only on an abstract component which can fetch byte data, and then an abstract component which would be able to read metadata from a byte stream. The main component would not know about TCP/IP, HTTP, HTML, etc.
 
 ### Example 2
 
@@ -452,6 +467,7 @@ public Robot(String model, String serial){
 
 ## Resources
 
+- [dwmkerr/hacker-laws: 💻📖 Laws, Theories, Principles and Patterns that developers will find useful. #hackerlaws](https://github.com/dwmkerr/hacker-laws#solid)
 - [Single Responsibility Principle Explained - Web Dev Simplified](https://www.youtube.com/watch?v=UQqY3_6Epbg)
 - [The Single Responsibility Principle - Clean Coder Blog](https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html)
 - [The Single Responsibility Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=DAD2oMWDWNc)
@@ -464,7 +480,6 @@ public Robot(String model, String serial){
 - [Dependency Inversion Principle Explained - SOLID Design Principles - YouTube](https://www.youtube.com/watch?v=9oHY5TllWaU)
 - [The Interface Segregation Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=E9AU2JkVtoE&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=10)
 - [The Dependency Inversion Principle | SOLID Principles | Code Like a Pro with Dylan Israel](https://www.youtube.com/watch?v=RS6XHQp_5F8&list=PLHdCowjFIBmJIlQAnIp8ZTTUmgwoN5L1N&index=11)
-- [dwmkerr/hacker-laws: 💻📖 Laws, Theories, Principles and Patterns that developers will find useful. #hackerlaws](https://github.com/dwmkerr/hacker-laws)
 - [SOLID Principles - YouTube](https://www.youtube.com/playlist?list=PL4CE9F710017EA77A)
 - [S.O.L.I.D design principles for everyone : learnprogramming](https://old.reddit.com/r/learnprogramming/comments/cr3m01/solid_design_principles_for_everyone/)
 - [The Single Responsibility Principle](https://www.brainstobytes.com/the-single-responsibility-principle/)
