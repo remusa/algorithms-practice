@@ -32,22 +32,22 @@
 
 ## Systems Design
 
-*  Scoping/User Cases/Constraints
-*  Component Design
-*  OOP Design
-*  Database Schema Design
-*  Vertical Scaling
-*  Horizontal Scaling
-*  Caching
-*  Load Balancing
-*  Database Replication
-*  Database Partitioning
-*  Map-Reduce
-*  Microservices
-*  Concurrency
-*  Networking
-*  Abstraction
-*  Estimation
+* Scoping/User Cases/Constraints
+* Component Design
+* OOP Design
+* Database Schema Design
+* Vertical Scaling
+* Horizontal Scaling
+* Caching
+* Load Balancing
+* Database Replication
+* Database Partitioning
+* Map-Reduce
+* Microservices
+* Concurrency
+* Networking
+* Abstraction
+* Estimation
 
 ## Questions
 
