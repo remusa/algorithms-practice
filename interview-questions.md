@@ -5,7 +5,7 @@
 * [ ] [30 seconds of interviews](https://30secondsofinterviews.org/)
 * [ ] [30 seconds of code](https://www.30secondsofcode.org/)
 
-#### Concepts
+### Concepts
 
 * [ ] [leonardomso/33-js-concepts: 📜 33 concepts every JavaScript developer should know.](https://github.com/leonardomso/33-js-concepts)
 * [dwmkerr/hacker-laws: 💻📖 Laws, Theories, Principles and Patterns that developers will find useful. #hackerlaws](https://github.com/dwmkerr/hacker-laws)

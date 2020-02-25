@@ -50,6 +50,16 @@
 * Children subclasses can have their own properties and methods.
 * Example: a child could inherit characteristics and similar behaviour from their parents/grandparents.
 
+### Composition vs. Inheritance
+
+* **Inheritance**: describes exactly *what* objects are and *how* they're related to each other.
+  * The parent class should have the functionality that subclasses share to avoid reimplementing logic.
+  * A problem happens when we want to create a subclass that needs the logic of more than 1 parent subclasses (multiple inheritance). We would've to create another class that implements both parents behaviour.
+* **Composition**: describes what an object *can* do.
+  * Create a function, make it do whatever you want and have a new type of object created.
+  * More flexible than *inheritance*.
+* **Note**: avoid inheritance, makes less sense in the context of module-based languages because it tightly couples parts of the system together for no reason other than "code reuse".
+
 ## Polymorphism
 
 * **Polymorphism**: same function implementation but using *different arguments*.
