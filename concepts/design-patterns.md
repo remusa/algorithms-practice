@@ -1,5 +1,14 @@
 # Design Patterns
 
+* [Design Patterns](#design-patterns)
+  * [Module & Module Revealing Patterns](#module--module-revealing-patterns)
+  * [Singleton Pattern](#singleton-pattern)
+  * [Factory Pattern](#factory-pattern)
+  * [Observer Pattern](#observer-pattern)
+  * [Mediator Pattern](#mediator-pattern)
+  * [State Pattern](#state-pattern)
+  * [Resources](#resources)
+
 * **Design patterns**: re-usable solution that can be applied to ocurring problems in software design (like programming templates).
 
 ## Module & Module Revealing Patterns
@@ -69,7 +78,7 @@ ItemCtrl.add({id: 2, name: 'Mark'});
 console.log(ItemCtrl.get(2));
 ```
 
-## Singleton
+## Singleton Pattern
 
 * Manifestation of the Module Revealing Pattern.
 * Create only 1 instance of an object.
@@ -181,9 +190,9 @@ class EventObserver {
     unsubscribe(fn) {
         // Filter out from the list whatever matches the callback function. If there is no match, the callback gets to stay on the list. The filter returns a new list and reassigns the list of observers.
         this.observers = this.observers.filter(function(item){
-        if(item !== fn) {
-            return item;
-        }
+          if(item !== fn) {
+              return item;
+          }
         });
         console.log(`You are now unsubscribed from ${fn.name}`);
     }
@@ -228,7 +237,7 @@ const getCurSeconds = function() {
 }
 ```
 
-## Mediator
+## Mediator Pattern
 
 * Has a central *mediator* and then it has *colleagues* that separate off from it.
 * The *mediator* communicates with its *colleagues*.
@@ -288,7 +297,7 @@ sara.send('Hello Brad, you are the best dev ever!', brad);
 jeff.send('Hello Everyone!!!!');
 ```
 
-## State
+## State Pattern
 
 * Allows the application to have a certain *state* and modify it.
 
@@ -381,3 +390,11 @@ contact.addEventListener('click', (e) => {
 ```
 
 ## Resources
+
+* [Software design pattern - Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern#Classification_and_list)
+* [Composition over inheritance - Wikipedia](https://en.wikipedia.org/wiki/Composition_over_inheritance)
+* [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns)
+* [Design Patterns - Observer Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm)
+* [Design Patterns - State Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/state_pattern.htm)
+* [Design Patterns - Decorator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm)
+* [Design Patterns - Mediator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/mediator_pattern.htm)

@@ -1,5 +1,24 @@
 # S.O.L.I.D. Design Principles
 
+* [S.O.L.I.D. Design Principles](#solid-design-principles)
+  * [Single Responsibility Principle](#single-responsibility-principle)
+    * [Example 1](#example-1)
+    * [Example 2](#example-2)
+  * [Open/Closed Principle](#openclosed-principle)
+    * [Examples](#examples)
+    * [Example 2](#example-2-1)
+  * [Liskov Substitution Principle](#liskov-substitution-principle)
+    * [Examples](#examples-1)
+    * [Example 2](#example-2-2)
+    * [Composition vs. Inheritance](#composition-vs-inheritance)
+  * [Interface Segregation Principle](#interface-segregation-principle)
+    * [Example](#example)
+    * [Example 2](#example-2-3)
+  * [Dependency Inversion Principle](#dependency-inversion-principle)
+    * [Example 1](#example-1-1)
+    * [Example 2](#example-2-4)
+  * [Resources](#resources)
+
 - The 5 most important software design principles are:
   1. **S for the Single Responsibility Principle(SRP)**: classes should be responsible for one, and only one actor.
   2. **O for the Open/Closed Principle(OCP)**: code should be easy to extend by ensuring that it stays open for extension but closed for modification (this might be the most important of all 5).
@@ -250,7 +269,7 @@ end
 
 ### Composition vs. Inheritance
 
-- **Inheritance**: describes exactly *what- objects are and *how- they're related to each other.
+- **Inheritance**: describes exactly *what* objects are and *how* they're related to each other.
   - The parent class should have the functionality that subclasses share to avoid reimplementing logic.
   - A problem happens when we want to create a subclass that needs the logic of more than 1 parent subclasses (multiple inheritance). We would've to create another class that implements both parents behaviour.
 - **Composition**: describes what an object *can- do.

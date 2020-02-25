@@ -1,5 +1,12 @@
 # Object-Oriented Programming
 
+* [Object-Oriented Programming](#object-oriented-programming)
+  * [Encapsulation](#encapsulation)
+  * [Abstraction](#abstraction)
+  * [Inheritance](#inheritance)
+  * [Polymorphism](#polymorphism)
+  * [Resources](#resources)
+
 * **Class**: blueprint/prototype that defines properties and methods common to all objects of a certain kind.
   * *Properties/attributes*: characteristics of an object.
   * *Methods*: behaviour of an object.
@@ -56,3 +63,4 @@
 
 * [Zero to One in Object Oriented Concepts](https://www.freecodecamp.org/news/object-oriented-concepts/)
 * [Goodbye, Object Oriented Programming - Charles Scalfani - Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
+* [Composition over inheritance - Wikipedia](https://en.wikipedia.org/wiki/Composition_over_inheritance)
