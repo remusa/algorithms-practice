@@ -1,8 +1,17 @@
 # Cheat sheet
 
+* [Cheat sheet](#cheat-sheet)
+  * [JavaScript](#javascript)
+  * [Loops](#loops)
+  * [Generators](#generators)
+    * [Generator Iterator](#generator-iterator)
+    * [for..of](#forof)
+  * [React](#react)
+  * [Resources](#resources)
+
 ## JavaScript
 
-* **Data types**: SBN NUS O
+* **Data types**: SBN NUS O B
   * String
   * Number
   * Boolean
@@ -10,6 +19,10 @@
   * undefined
   * Symbol
   * Object
+  * BigInt
+
+* **Primitives**: data that is not an object and has no methods. There are 7 primitive data types: `string`, `number`, `bigint`, `boolean`, `null`, `undefined`, and `symbol`.
+  * `Symbol`: every symbol value is **unique**, used in private properties to avoid name clashes.
 
 * **Undeclared, undefined and null**:
   * *undeclared*: variable doesn't exist (no identifier).
