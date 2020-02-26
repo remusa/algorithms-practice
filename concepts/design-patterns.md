@@ -239,6 +239,7 @@ const getCurSeconds = function() {
 
 ## Mediator Pattern
 
+* A mediator class handles the communication between different classes, *decoupling* the relationship.
 * Has a central *mediator* and then it has *colleagues* that separate off from it.
 * The *mediator* communicates with its *colleagues*.
 * Example: a chat room.
@@ -295,6 +296,49 @@ chatroom.register(sara);
 brad.send('Hello Jeff', jeff);
 sara.send('Hello Brad, you are the best dev ever!', brad);
 jeff.send('Hello Everyone!!!!');
+```
+
+```java
+// Mediator class
+import java.util.Date;
+
+public class ChatRoom {
+   public static void showMessage(User user, String message){
+      System.out.println(new Date().toString() + " [" + user.getName() + "] : " + message);
+   }
+}
+
+// User class
+public class User {
+   private String name;
+
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+   public User(String name){
+      this.name  = name;
+   }
+
+   public void sendMessage(String message){
+      ChatRoom.showMessage(this,message);
+   }
+}
+
+// User class
+public class MediatorPatternDemo {
+   public static void main(String[] args) {
+      User robert = new User("Robert");
+      User john = new User("John");
+
+      robert.sendMessage("Hi! John!");
+      john.sendMessage("Hello! Robert!");
+   }
+}
 ```
 
 ## State Pattern
