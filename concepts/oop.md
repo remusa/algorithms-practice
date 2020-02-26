@@ -4,6 +4,8 @@
   * [Encapsulation](#encapsulation)
   * [Abstraction](#abstraction)
   * [Inheritance](#inheritance)
+    * [Composition vs. Inheritance](#composition-vs-inheritance)
+    * [Class-based vs prototype-based](#class-based-vs-prototype-based)
   * [Polymorphism](#polymorphism)
   * [Resources](#resources)
 
@@ -58,7 +60,15 @@
 * **Composition**: describes what an object *can* do.
   * Create a function, make it do whatever you want and have a new type of object created.
   * More flexible than *inheritance*.
+* Involves creating multiple interfaces representing the desired behaviours. Classes then implement those interfaces as needed, implementing behaviour without having to inherit it.
+* Separating behaviours is more natural than trying to find common behaviours than creating hierarchies.
+* Changing requirements is more flexible than restructuring classes that use hierearchy.
 * **Note**: avoid inheritance, makes less sense in the context of module-based languages because it tightly couples parts of the system together for no reason other than "code reuse".
+
+### Class-based vs prototype-based
+
+* **Class-based**: `classes` are a blueprint of an entity. `Objects` are created (*instantiated*) based on the classes.
+* **Prototype-based**: `classes` don't exist, all objects have a `prototype` property. Inheritance is simulating when trying to access a property. If it isn't found, JS will look at the `prototype` property. If it still isn't found, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`.
 
 ## Polymorphism
 
@@ -74,3 +84,4 @@
 * [Zero to One in Object Oriented Concepts](https://www.freecodecamp.org/news/object-oriented-concepts/)
 * [Goodbye, Object Oriented Programming - Charles Scalfani - Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
 * [Composition over inheritance - Wikipedia](https://en.wikipedia.org/wiki/Composition_over_inheritance)
+* [Object-oriented programming - Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming)

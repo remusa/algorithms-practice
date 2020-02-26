@@ -404,6 +404,7 @@
 
 ### Resources
 
+* [jwasham/coding-interview-university: A complete computer science study plan to become a software engineer.](https://github.com/jwasham/coding-interview-university)
 * [ ] [The 30-minute guide to rocking your next coding interview](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/)
 * [ ] [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/)
 * [ ] [Study guide: - WorkFlowy](https://workflowy.com/s/wGqavcPQFm)
@@ -413,7 +414,7 @@
 * [Top 10 Algorithms for the Coding Interview (Part 2) - YouTube](https://www.youtube.com/watch?v=zHczhZn-z30)
 * [Learn DS & Algorithms | Programiz](https://www.programiz.com/dsa)
 * [My Guide To Preparing for the Google Technical Interview](https://www.linkedin.com/pulse/my-guide-preparing-google-technical-interview-anthony-mays/)
-[TSiege/Tech-Interview-Cheat-Sheet: Studying for a tech interview sucks. Here's an open source cheat sheet to help](https://github.com/TSiege/Tech-Interview-Cheat-Sheet)
+* [TSiege/Tech-Interview-Cheat-Sheet: Studying for a tech interview sucks. Here's an open source cheat sheet to help](https://github.com/TSiege/Tech-Interview-Cheat-Sheet)
 
 #### Question List
 
