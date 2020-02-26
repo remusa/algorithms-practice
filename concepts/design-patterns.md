@@ -7,6 +7,7 @@
   * [Observer Pattern](#observer-pattern)
   * [Mediator Pattern](#mediator-pattern)
   * [State Pattern](#state-pattern)
+  * [Decorator Pattern](#decorator-pattern)
   * [Resources](#resources)
 
 * **Design patterns**: re-usable solution that can be applied to ocurring problems in software design (like programming templates).
@@ -174,7 +175,11 @@ members.forEach(function(member) {
 
 ## Observer Pattern
 
-* Subscribe and unsubscribe to events.
+* *Subscribe* and *unsubscribe* to *events*.
+* Allows *subjects* to subscribe and be notified about the events of a *subject* (`1-to-many` relationship).
+* Uses *callbacks* and *listeners*.
+* Observables are independent of each other.
+* Example:
 
 ```javascript
 class EventObserver {
@@ -344,6 +349,9 @@ public class MediatorPatternDemo {
 ## State Pattern
 
 * Allows the application to have a certain *state* and modify it.
+* A `class` changes its behaviour based on its state.
+* Objects represent various states and we have a `context` object whose behaviour changes based on the objects state.
+* Examples: React component state.
 
 ```javascript
 const PageState = function() {
@@ -433,6 +441,93 @@ contact.addEventListener('click', (e) => {
 });
 ```
 
+## Decorator Pattern
+
+* Allows the user to *extend* functionality to an existing object without altering it.
+* Creates a `decorator` class that *wraps* the original class and provides additional functionality.
+* Examples: TypeScript decorators, MobX `@observable`.
+
+```java
+// Shape.java
+public interface Shape {
+   void draw();
+}
+
+// Create concrete classes implementing the same interface.
+
+// Rectangle.java
+public class Rectangle implements Shape {
+   @Override
+   public void draw() {
+      System.out.println("Shape: Rectangle");
+   }
+}
+
+// Circle.java
+public class Circle implements Shape {
+   @Override
+   public void draw() {
+      System.out.println("Shape: Circle");
+   }
+}
+
+// Create abstract decorator class implementing the Shape interface.
+
+// ShapeDecorator.java
+public abstract class ShapeDecorator implements Shape {
+   protected Shape decoratedShape;
+
+   public ShapeDecorator(Shape decoratedShape){
+      this.decoratedShape = decoratedShape;
+   }
+
+   public void draw(){
+      decoratedShape.draw();
+   }
+}
+
+// Create concrete decorator class extending the ShapeDecorator class.
+
+// RedShapeDecorator.java
+public class RedShapeDecorator extends ShapeDecorator {
+   public RedShapeDecorator(Shape decoratedShape) {
+      super(decoratedShape);
+   }
+
+   @Override
+   public void draw() {
+      decoratedShape.draw();
+      setRedBorder(decoratedShape);
+   }
+
+   private void setRedBorder(Shape decoratedShape){
+      System.out.println("Border Color: Red");
+   }
+}
+
+// Use the RedShapeDecorator to decorate Shape objects.
+
+// DecoratorPatternDemo.java
+
+public class DecoratorPatternDemo {
+   public static void main(String[] args) {
+      Shape circle = new Circle();
+
+      Shape redCircle = new RedShapeDecorator(new Circle());
+
+      Shape redRectangle = new RedShapeDecorator(new Rectangle());
+      System.out.println("Circle with normal border");
+      circle.draw();
+
+      System.out.println("\nCircle of red border");
+      redCircle.draw();
+
+      System.out.println("\nRectangle of red border");
+      redRectangle.draw();
+   }
+}
+```
+
 ## Resources
 
 * [Software design pattern - Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern#Classification_and_list)
@@ -442,3 +537,4 @@ contact.addEventListener('click', (e) => {
 * [Design Patterns - State Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/state_pattern.htm)
 * [Design Patterns - Decorator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm)
 * [Design Patterns - Mediator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/mediator_pattern.htm)
+* [React Hooks and the “Observer” Pattern - JavaScript in Plain English - Medium](https://medium.com/javascript-in-plain-english/react-hooks-and-the-observer-pattern-1e4274f0e5f5)
