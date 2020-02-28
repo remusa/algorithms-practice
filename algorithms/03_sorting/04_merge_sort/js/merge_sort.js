@@ -44,9 +44,8 @@ export function mergeSort(array) {
     return array
   }
 
-  const mid = Math.floor(array.length / 2)
-
   // Divide the original array into two halves
+  const mid = Math.floor(array.length / 2)
   const leftArray = array.slice(0, mid)
   const rightArray = array.slice(mid)
 

@@ -102,7 +102,7 @@ end
 * **Definition**: software entities (classes, modules, functions, etc.) should be *open for extension*, but *closed for modification*.
   * "A module will be said to be open if it is still available for extension. For example, it should be possible to add fields to the data structures it contains, or new elements to the set of functions it performs."
   * "A module will be said to be closed if it's available for use by other modules. This assumes that the module has been given a well-defined, stable description (the interface in the sense of information hiding)".
-* "You should be able to *extend* a classes behaviour, *without modifying* it."
+* "You should be able to *extend* a classes behavior, *without modifying* it."
 * We want modules that embody the two definitions:
   * We want modules to be open to extension. If requirements change and we get requests for new features, we'd like to accommodate them in our code. We want the ability to extend the behavior of our application so that we can adapt to our customer's needs.
   * We want modules to be closed for modifications, as every change has the potential to have negative side effects. If we create the right abstractions, we can depend mostly on well-defined and stable behaviors.
@@ -194,7 +194,7 @@ end
 * "A piece of code that depends on an object of type `P` should be able to operate properly with objects of type `C`, where `C` is a subtype of `P`."
   * What this means is that we should design our abstractions and classes in a way that facilitates interoperability across the complete hierarchy. If a subclass overrides the behavior in an unexpected way that breaks compatibility with the rest of the code, we are violating the principle.
 * "Derived classes must be substitutable for their base classes."
-* This means that *subtypes* should retain the behaviour of the *main type*.
+* This means that *subtypes* should retain the behavior of the *main type*.
 * Children should be like their parents for what they inherit.
 * This principle is complicated because in some cases a subclass *could inherit from more than 1 class* (problem with inheritance).
 
@@ -273,12 +273,12 @@ end
 * "Clients should not be forced to depend on functionality (methods) that they do not use."
 * "Classes that implement interfaces should not be forced to implement methods they do not use."
 * **Summary**: ISP is a tool that guides you in the creation of well-defined interfaces and abstractions.
-* Only the behaviour a class can use is implemented (an object should not depend on behavior it doesn't need.).
+* Only the behavior a class can use is implemented (an object should not depend on behavior it doesn't need.).
 * You should not force clients to depend on behavior they don't need.
 * The ISP tries to protect the clients by ensuring that they don't know about all the behavior in the class. Packages of related behavior used by a single client should be split into smaller and more cohesive interfaces.
 * **Benefits**:
   * Protects objects from depending on things they don't need.
-  * It lets you identify the right abstractions and build bundles of cohesive behaviour.
+  * It lets you identify the right abstractions and build bundles of cohesive behavior.
 * Robert Martin said: "Depending on something that carries baggage that you don't need can cause you troubles that you didn't expect".
 * **Defining interfaces**:
   * We define an *interface* with its properties and methods, and every single class that implements that interface needs to define all of the methods of the interface.
@@ -453,7 +453,6 @@ public class InverterWire implements MessageSender{
 
 //    Other methods and important things
 }
-
 
 // In Main
 InverterWire wire = new InverterWire();

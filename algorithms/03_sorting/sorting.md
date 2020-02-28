@@ -19,10 +19,8 @@ spanish.sort((a, b) => {
 
 ## Stability in sorting algorithms
 
-* **Stability**: a sorting algorithm is stable if two objects with equal keys
-  appear in the same order in the sorted output as they appear in the input
-  array.
-* A *stable* sort preserves the original order of the input set, whereas the *unstable* algorithm does not distinguish between two or more items.
+* **Stability**: a sorting algorithm is stable if two objects with equal keys appear in the same order in the sorted output as they appear in the input array.
+* A *stable* sort compares the value of the elements and preserves the original order of the input set, whereas the *unstable* algorithm does not distinguish between two or more items.
 * *Stable algorithms*:
   * Bubble Sort.
   * Insertion Sort.
@@ -34,23 +32,19 @@ spanish.sort((a, b) => {
   * Selection Sort.
   * Shell Sort.
   * Quick Sort.
-* Stability matters *if, and only if*, the problem to solve requires
-  retention of that relative order. If we don't need stability, we can use a
-  fast, memory-sipping algorithm like *quicksort* or *heapsort*.
+* Stability matters *if, and only if*, the problem to solve requires retention of that relative order. If we don't need stability, we can use a fast, memory-sipping algorithm like *quicksort* or *heapsort*.
 
 ## Picking a sorting algorithm
 
-* Note: it's *matematically impossible* to beat `O(n log(n))`, because it means
-  we have to sort by comparison.
+* Note: it's *matematically impossible* to beat `O(n log(n))`, because it means we have to sort by comparison.
 
 * **Bubble sort**: teaching purposes (almost never).
 * **Selection sort**: teaching purposes (almost never).
 * **Insertion sort**: if the *input is small* or items are *already or almost sorted*.
 * **Merge sort**: *very fast* (average and worst cases are both `O(nlog(n))`).
-  Space complexity can be a problem in large data sets.
-* **Quick sort**: if *memory space* is a problem (very large data sets). Better
-  than *merge sort* if pivot is picked properly. Worst case is really slow
-  `O(n^2)`.
+  * Space complexity can be a problem in large data sets.
+* **Quick sort**: if *memory space* is a problem (very large data sets). Better than *merge sort* if pivot is picked properly.
+  * Worst case is really slow `O(n^2)`.
 * **Heap sort**: better space complexity than *quick sort*, but slower on average.
 
 * **Radix sort**: *non-comparison sort* algorithm.
@@ -86,12 +80,11 @@ Bubble sort, selection sort
 
 ## Resources
 
+* [Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!) @ericdrowell](https://www.bigocheatsheet.com/)
 * [Sorting (article) | Selection sort | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 * [What is stability in sorting algorithms and why is it important? - Stack Overflow](https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important)
-* [Sorting Algorithms | Brilliant Math & Science
-  Wiki](https://brilliant.org/wiki/sorting-algorithms/)
-* [Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!)
-  @ericdrowell](https://www.bigocheatsheet.com/)
-* [Sorting Algorithms Animations |
-  Toptal](https://www.toptal.com/developers/sorting-algorithms)
+* [Sorting Algorithms | Brilliant Math & Science Wiki](https://brilliant.org/wiki/sorting-algorithms/)
+* [Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!) @ericdrowell](https://www.bigocheatsheet.com/)
+* [Sorting Algorithms Animations | Toptal](https://www.toptal.com/developers/sorting-algorithms)
 * [Notes on algorithms - DEV Community 👩‍💻👨‍💻](https://dev.to/hexangel616/notes-on-algorithms-36pi)
+* [Stability in sorting algorithms - GeeksforGeeks](https://www.geeksforgeeks.org/stability-in-sorting-algorithms/)

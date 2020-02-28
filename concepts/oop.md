@@ -11,7 +11,7 @@
 
 * **Class**: blueprint/prototype that defines properties and methods common to all objects of a certain kind.
   * *Properties/attributes*: characteristics of an object.
-  * *Methods*: behaviour of an object.
+  * *Methods*: behavior of an object.
 * **Object**: basic entity.
 
 * Example: a class `Tree` can have the following properties:
@@ -29,7 +29,7 @@
 
 ## Encapsulation
 
-* **Encapsulation**: all the data members (variables, attributes/properties) &ad behaviours(methods) are gathered together and closed.
+* **Encapsulation**: all the data members (variables, attributes/properties) and behaviors(methods) are gathered together and closed.
   * Exposes only the necessary things and hides the important things from the outside world.
   * A *class* is an example.
 * Only exposes the necessary attributes and methods and restricts access of the rest to the outside world (*abstraction*).
@@ -50,25 +50,28 @@
 
 * **Inheritance**: a class (*derived class*) can inherit properties and methods from its parent class (*base class*).
 * Children subclasses can have their own properties and methods.
-* Example: a child could inherit characteristics and similar behaviour from their parents/grandparents.
+* Example: a child could inherit characteristics and similar behavior from their parents/grandparents.
 
 ### Composition vs. Inheritance
 
 * **Inheritance**: describes exactly *what* objects are and *how* they're related to each other.
   * The parent class should have the functionality that subclasses share to avoid reimplementing logic.
-  * A problem happens when we want to create a subclass that needs the logic of more than 1 parent subclasses (multiple inheritance). We would've to create another class that implements both parents behaviour.
+  * A problem happens when we want to create a subclass that needs the logic of more than 1 parent subclasses (multiple inheritance). We would've to create another class that implements both parents behavior.
 * **Composition**: describes what an object *can* do.
   * Create a function, make it do whatever you want and have a new type of object created.
   * More flexible than *inheritance*.
-* Involves creating multiple interfaces representing the desired behaviours. Classes then implement those interfaces as needed, implementing behaviour without having to inherit it.
-* Separating behaviours is more natural than trying to find common behaviours than creating hierarchies.
+* Involves creating multiple interfaces representing the desired behaviors. Classes then implement those interfaces as needed, implementing behavior without having to inherit it.
+* Separating behaviors is more natural than trying to find common behaviors than creating hierarchies.
 * Changing requirements is more flexible than restructuring classes that use hierearchy.
 * **Note**: avoid inheritance, makes less sense in the context of module-based languages because it tightly couples parts of the system together for no reason other than "code reuse".
 
 ### Class-based vs prototype-based
 
-* **Class-based**: `classes` are a blueprint of an entity. `Objects` are created (*instantiated*) based on the classes.
+* **Class-based**: `classes` are a blueprint of an entity, a description of the object to be created. `Objects` are created (*instantiated*) based on the classes.
 * **Prototype-based**: `classes` don't exist, all objects have a `prototype` property. Inheritance is simulating when trying to access a property. If it isn't found, JS will look at the `prototype` property. If it still isn't found, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`.
+* *Differences*:
+  * *Class-based* first needs to define a subclass by creating a new class from a parent class and extending it. Then we need to instantiate it. Finally we can use the object.
+  * *Prototype-based inheritance* skips the process of defining a class, instead it just clones an existing object at time of creation (instantiation).
 
 ## Polymorphism
 
@@ -85,3 +88,6 @@
 * [Goodbye, Object Oriented Programming - Charles Scalfani - Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
 * [Composition over inheritance - Wikipedia](https://en.wikipedia.org/wiki/Composition_over_inheritance)
 * [Object-oriented programming - Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming)
+* [Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
+* [Common Misconceptions About Inheritance in JavaScript](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a)
+* [How prototype-based OOP is different from class-based?](http://developer-interview.com/p/oop-ood/how-prototype-based-oop-is-different-from-class-based-13)

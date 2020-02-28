@@ -2,21 +2,20 @@
 
 | Operation | Worst case  |
 | --------- | ----------- |
-| space     | ``          |
+| space     | `O(n)`      |
 | access    | `O(log(n))` |
 | search    | `O(log(n))` |
 | insert    | `O(log(n))` |
 | delete    | `O(log(n))` |
 
 * **Graphs**: organizes items in an interconnected network.
-* *Nodes or vertex*: each item int he graph.
+* *Nodes or vertex*: each item in the graph.
 * *Edges*: connection between the nodes.
 
 ## Strengths and Weaknesses
 
 * **Strengths**:
-  * *Representing links*: graphs are ideal for working with *interconnected
-    things*. Example:
+  * *Representing links*: graphs are ideal for working with *interconnected things*. Example:
     * Cities and highways.
     * Routers and ethernet cables.
     * Social network users.
@@ -58,8 +57,7 @@ const graph = [[0, 1], [1, 2], [1, 3], [2, 3]]
 
 ## Adjacency list
 
-* **Adjacency list**: a list that represents the node and the value at that
-  index is a list of the node's neighbors.
+* **Adjacency list**: a list that represents the node and the value at that index is a list of the node's neighbors.
 
 ```javascript
 const graph = [
@@ -130,9 +128,6 @@ const graph = [
 
 * [Graph Data Structure: Directed, Acyclic, etc | Interview Cake](https://www.interviewcake.com/concept/javascript/graph)
 * [Describing graphs (article) | Algorithms | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs)
-* [Representing graphs (article) | Algorithms | Khan
-  Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs)
-* [Finding The Shortest Path, With A Little Help From
-  Dijkstra](https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e)
-* [Algorithms: Graph Search, DFS and BFS -
-  YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
+* [Representing graphs (article) | Algorithms | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs)
+* [Finding The Shortest Path, With A Little Help From Dijkstra](https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e)
+* [Algorithms: Graph Search, DFS and BFS - YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)

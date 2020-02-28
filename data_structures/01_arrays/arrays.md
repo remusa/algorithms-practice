@@ -36,9 +36,9 @@ const strings = ['a', 'b', 'c', 'd']
 
 * **Strengths**:
   * *Fast lookups*: constant time `O(1)` to retrieve items.
-  * *Fast appends/deletions*: constant time `O(1)` to add/remove to then *end*.
+  * *Fast appends/deletions*: constant time `O(1)` to add/remove to the *end*.
 * **Weaknesses**:
-  * *Slow appends/deletions*: linear time `O(n)` to add/remove items to the *beginning/middle*.
+  * *Slow appends/deletions*: linear time `O(n)` to add/remove items to the *beginning or middle*.
   * *Costly insertions/deletions*: linear time `O(n)` to add/remove items to the *end* if they array needs to expand.
     * Size of the array is usually *doubled*.
     * Each element is copied into the new array.
@@ -46,8 +46,7 @@ const strings = ['a', 'b', 'c', 'd']
 ## Static vs. Dynamic Arrays
 
 * **Static arrays**: specify the size of the array at time of creation.
-* **Dynamic arrays**: expands as needed, copies and rebuilds the array at a new
-  location if/when more memory is needed.
+* **Dynamic arrays**: expands as needed, copies and rebuilds the array at a new location if/when more memory is needed.
   * Append can be `O(n)` if array needs to be rebuilt.
 
 ## Array Operations

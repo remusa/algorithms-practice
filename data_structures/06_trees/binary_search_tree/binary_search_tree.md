@@ -8,10 +8,8 @@
 | insert    | `O(log(n))` |
 | delete    | `O(log(n))` |
 
-* **Binary trees**: tree where every node has two or fewer children (`n < 2`. Children
-  are called `left` and `right`.
-* *Binary trees are very efficient*: by choosing one path we completely
-  eliminate the other one (only 1 possibility needs to be chosen).
+* **Binary trees**: tree where every node has two or fewer children (`n < 2`. Children are called `left` and `right`.
+* *Binary trees are very efficient*: by choosing one path we completely eliminate the other one (only 1 possibility needs to be chosen).
 
 ## Perfect Trees
 
@@ -20,14 +18,11 @@
 ## Properties of Perfect Trees
 
 1. **The number of total nodes on each level doubles as we move down the tree**.
-2. **The number of nodes on the last level is equal to the sum of the number of
-   nodes on all other levels (plus 1)**: about *half* of the nodes are on the
-   last level.
+2. **The number of nodes on the last level is equal to the sum of the number of nodes on all other levels (plus 1)**: about *half* of the nodes are on the last level.
 
 ### Height of a Tree
 
-* **Height**: number of levels of the tree. If levels are `zero-indexed`, the
-  number of nodes on the `xth` level is `2^x`.
+* **Height**: number of levels of the tree. If levels are `zero-indexed`, the number of nodes on the `xth` level is `2^x`.
   * `n`: number of nodes.
   * `h`: height of the trees.
 
@@ -63,9 +58,7 @@ log 100 = 2
   * *Ordered*: elements are sorted in hierarchichal order.
   * *Flexible size*: .
 * **Weaknesses**:
-  * *Unbalanced trees are slow*: if every parent has only one child, it can turn out into a
-    *linked list*, then we have to traverse the entire tree for every operation
-    `O(n)`.
+  * *Unbalanced trees are slow*: if every parent has only one child, it can turn out into a *linked list*, then we have to traverse the entire tree for every operation `O(n)`.
   * *No `O(1)` operations*: we have to traverse the tree for any operations, which is `O(log(n))`.
 
 ## Tree Traversals

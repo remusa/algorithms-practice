@@ -9,14 +9,11 @@
 
 * Key-value pairs.
 * Hash tables are **unordered**.
-* *Hash function*: a function that generates a value of fixed length for each
-  input.
+* *Hash function*: a function that generates a value of fixed length for each input.
   * Converts a key into an array index (an integer) if using an array implementation.
-  * Hash functions are *idempotent* (always outputs the same as long as the
-    input is the same).
+  * Hash functions are *idempotent* (always outputs the same as long as the input is the same).
   * Maps the resulting value of the hash function to a memory address.
-  * Example: grabbing the number value of each character in a string and adding
-    them up.
+  * Example: grabbing the number value of each character in a string and adding them up.
 
 ```javascript
 let user = {
@@ -35,16 +32,13 @@ user.scream()               // O(1)
 
 ## Hash Collisions
 
-* **Hash collisions**: when the hash table stores more than 1 value in the same
-  address by storing a *linked list* inside of the address.
+* **Hash collisions**: when the hash table stores more than 1 value in the same address by storing a *linked list* inside of the address.
 
 ## Strengths and Weaknesses
 
 * Operations normally cost `O(1)`, but in the worst-case scenario they can take `O(n)`:
   * When you have to walk through all of the values for a single lookup.
-  * If you have to *resize the array* because the number of key-value pairs in the
-  hash map exceeds the number of indices in the underlying array. We could expand
-  the array, allocating a bigger one and rehashing all of the existing keys to
+  * If you have to *resize the array* because the number of key-value pairs in the hash map exceeds the number of indices in the underlying array. We could expand the array, allocating a bigger one and rehashing all of the existing keys to
   the new one (`O(n)`).
 * **Strengths**:
   * *Fast lookups*: constant time `O(1)` to retrieve items *on average*.
@@ -52,12 +46,9 @@ user.scream()               // O(1)
 * **Weaknesses**:
   * *Fast lookups*: linear time `O(n)` to retrieve items *worst case*.
   * *Unordered*: keys aren't stored in order.
-  * *Single-directional lookups*: to look up the value for a given
-    key is `O(1)` time, looking up the *key* for a given value requires looping
-    through the whole dataset in `O(n)` time.
+  * *Single-directional lookups*: to look up the value for a given key is `O(1)` time, looking up the *key* for a given value requires looping through the whole dataset in `O(n)` time.
   * *Not cache-friendly*: many hash table implementations use linked lists, which don't put data next to each other in memory.
-  * *Cost of hashing function*: the cost of the hashing function can be greater
-    can be high.
+  * *Cost of hashing function*: the cost of the hashing function can be greater can be high.
 
 ## Sets
 

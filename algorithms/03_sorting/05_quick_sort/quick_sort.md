@@ -33,7 +33,7 @@
 
 ## Algorithm
 
-```
+```pseudocode
 _# choose pivot_
 swap a[1,rand(1,n)]
 

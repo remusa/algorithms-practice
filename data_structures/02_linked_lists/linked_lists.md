@@ -11,8 +11,7 @@
 | insert            | `O(n)`     | `O()`         |
 | delete            | `O(n)`     | `O()`         |
 
-* **Linked lists**: organizes items sequentially, with each item storing a
-  pointer to the next one.
+* **Linked lists**: organizes items sequentially, with each item storing a pointer to the next one.
 * **Node**: item in a linked list.
   * 2 parts:
     * A *key*: the value.
@@ -28,11 +27,8 @@
   * *Flexible size*: there's no need to specify how many elements you're going to store ahead of time. You can keep adding elements as long as there's enough space on the machine.
   * *Ordered*: items can be ordered when they're being inserted.
 * **Weaknesses**:
-  * *Costly lookups*: to access or edit an item in a linked list, you have to take
-    `O(i)` time to walk from the head of the list to the `i`th item.
-  * *Not cache-friendly*: array items are always located next to each other, but
-    nodes in linked lists can be scattered, so iterating through the items in an
-    array is slower even though they're both theoretically `O(n)` time.
+  * *Costly lookups*: to access or edit an item in a linked list, you have to take `O(i)` time to walk from the head of the list to the `i`th item.
+  * *Not cache-friendly*: array items are always located next to each other, but nodes in linked lists can be scattered, so iterating through the items in an array is slower even though they're both theoretically `O(n)` time.
 
 ## Pointer
 

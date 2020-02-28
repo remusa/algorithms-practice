@@ -1,8 +1,7 @@
 # Dynamic Programming
 
 * **Dynamic programming**: optimization technique using *caching*.
-  * Breaking down a problem into a collection of subproblems, solving each
-    subproblem once and saving the solution in case it occurs again.
+  * Breaking down a problem into a collection of subproblems, solving each subproblem once and saving the solution in case it occurs again.
 
 * Combines:
     1. **Divide and conquer**: using recursion.
@@ -10,8 +9,7 @@
 
 ## Dynamic Programming Cheat Sheet
 
-1. Can be divided into a subproblem (tree like structure where problems are
-   divided into smaller problems).
+1. Can be divided into a subproblem (tree like structure where problems are divided into smaller problems).
 2. Recursive solution.
 3. Repetitive subproblems (not all tree-like structures have repetitive subproblems).
 4. Memoize subproblems.
@@ -32,7 +30,7 @@ addTo80(5) // 85    same value calculated again
 addTo80(5) // 85    same value calculated once again
 ```
 
-* Previous function can be optimizated using a cache.
+* Previous function can be optimized using a cache.
 
 ```javascript
 function addTo80(n) {
@@ -74,18 +72,14 @@ console.log('2', memoizedAddTo80(5))
 
 * **Memoization**:
   * Remember a solution to a solved problem to avoid calculating it again.
-  * Ensures that a function doesn't run for the same inputs more than once by
-    keeping a record of the results for the given inputs (usually in an object).
-  * Form of caching that involves caching the return value of a
-  function based on its parameters.
-  * If the parameter doesn't change, it gets *memoized* (added to the cache) and
-    returned.
+  * Ensures that a function doesn't run for the same inputs more than once by keeping a record of the results for the given inputs (usually in an object).
+  * Form of caching that involves caching the return value of function based on its parameters.
+  * If the parameter doesn't change, it gets *memoized* (added to the cache) and returned.
   * Following function calls with the **same parameter** search first in the cache before calculating the return value.
 
 * The *cache* shouldn't live in the global scope, but instead inside of the function.
   * In JavaScript we can use **closures**.
-  * We can return another function passing the parameter and have the logic
-    inside the returned function.
+  * We can return another function passing the parameter and have the logic inside the returned function.
   * We can remove the parameter from the memoized function.
 
 ```javascript
@@ -119,10 +113,8 @@ console.log('3', memoized(6))
 
 ### Bottom-up approach
 
-* **Dynamic programming** problem solving strategy that *avoids recursion*
-  (saving memory by not building a *stack* of function calls).
-* A **bottom-up** algorithm *starts from the beginning*, while a **recursive
-  (top-down)** algorithm typically *starts from the end*.
+* **Dynamic programming** problem solving strategy that *avoids recursion* (saving memory by not building a *stack* of function calls).
+* A **bottom-up** algorithm *starts from the beginning*, while a **recursive (top-down)** algorithm typically *starts from the end*.
 
 ```javascript
 // Top-down approach (recursive) -> space complexity O(n)
@@ -138,7 +130,6 @@ function product1ToN(n) {
 // Bottom-up approach -> time complexity -> O(1) || space complexity -> O(n)
 function product1ToN2(n) {
     // We assume n >= 1
-
     let result = 1
 
     for (let i = 1; i <= n; i++) {

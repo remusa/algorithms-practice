@@ -4,13 +4,10 @@
 | ---------- | ------------- | ------------- | ------------- | ------ | ------ |
 | complexity | `O(n log(n))` | `O(n log(n))` | `O(n log(n))` | `O(n)` | `yes`  |
 
-* **Merge sort**: *divide-and-conquer* algorithm that sorts two smaller
-  subarrays before merging them together.
+* **Merge sort**: *divide-and-conquer* algorithm that sorts two smaller subarrays before merging them together.
 * *Comparison-based algorithm*.
-* *Stable algorithm*: it means that if we have equivalent elements (like 6 and
-  6), these elements will keep the original order in the array.
-* Solves the subproblems *recursively* (each subproblem is smaller than the
-  original problem).
+* *Stable algorithm*: it means that if we have equivalent elements (like 6 and 6), these elements will keep the original order in the array.
+* Solves the subproblems *recursively* (each subproblem is smaller than the original problem).
 * Steps:
   1. *Divide*: the problem into a number of subproblems that are smaller instances of the same problem.
   2. *Conquer*: the subproblems by solving them recursively. If they are small enough, solve the subproblems as base cases.
@@ -18,7 +15,7 @@
 
 ## Pseudocode
 
-```
+```pseudocode
 If only one element
   Return
 Else
@@ -27,7 +24,7 @@ Else
     Merge sorted halves
 ```
 
-```
+```pseudocode
 Sort the left half of the array (assuming n > 1)
 Sort right half of the array (assuming n > 1)
 Merge the two halves together
@@ -35,7 +32,7 @@ Merge the two halves together
 
 ## Algorithm
 
-```
+```pseudocode
 # split in half
 m = n / 2
 

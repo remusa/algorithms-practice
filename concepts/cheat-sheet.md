@@ -6,7 +6,9 @@
   * [Generators](#generators)
     * [Generator Iterator](#generator-iterator)
     * [for..of](#forof)
-  * [React](#react)
+  * [Testing](#testing)
+  * [Version control](#version-control)
+  * [SQL](#sql)
   * [Resources](#resources)
 
 ## JavaScript
@@ -28,6 +30,15 @@
   * *undeclared*: variable doesn't exist (no identifier).
   * *undefined*: declared but not assigned a value.
   * *null*: value is `null` (explicitly stated).
+
+* **Falsey values**:
+* `false`.
+* `0`.
+* `0n`.
+* `"", '', `` (empty string)`.
+* `null`.
+* `undefined`.
+* `NaN`.
 
 * **Callback**: a function passed into another function as an argument.
   * The function you’re passing the callback function to is called a *higher order function*.
@@ -74,7 +85,7 @@
   * Has access to its outer context (the parent's), but not the other way around.
   * Has access to *3 scopes*: local, the parent's and the global.
   * *Usage*:
-    * Extends behaviour of the parent function.
+    * Extends behavior of the parent function.
     * Hides implementation details.
     * Preserves values created in the parent function.
 
@@ -92,10 +103,12 @@ console.log(add5(2));  // 7
 console.log(add10(2)); // 12
 ```
 
-**Hoisting**: variable and function declarations are moved to the top of the code. The variable and function declarations are put into memory during the `compile phase`. Declarations are initialized as `undefined` when they're defined.
+* **Hoisting**: variable and function declarations are moved to the top of the code.
+  * The variable and function declarations are put into memory during the `compile phase`.
+  * Declarations are initialized as `undefined`.
 
-**Declaration**: create new identifier (with `undefined`) in memory.
-**Initialization**: assign a value.
+* **Declaration**: create new identifier (with `undefined`) in memory.
+* **Initialization**: assign a value.
 
 * **Scope**: defines where variables/functions are accesible.
   * *global*: available anywhere.
@@ -232,18 +245,111 @@ for (var v of foo()) {
 console.log( v ); // still `5`, not `6` :(
 ```
 
-## React
+## Testing
 
-* **Lifecycle methods**:
-  * `componentWillMount()`: called before `render()` when a component is being mounted to the DOM.
-  * `componentDidMount()` API calls (ajax requests), attach EventListener, timers/listeners.
-  * `componentWillReceiveProps()`: called whenever a component is receiving new props.
-  * `shouldComponentUpdate()`: new state or props.
-  * `componentWillUpdate()`: called whenever a component is receiving new props.
-  * `componentDidUpdate()`: called immediately after a component re-renders.
-  * `componentWillUnmount()`: remove EventListeners and timers/intervals.
+* **Stubs**: fake objects that return a specific, *hard-coded result*.
+  * Stubs *don't fail* the test.
+  * Stub is making sure a method returns the correct value.
+* **Mocks**: smarter stub, tests pass through it and are **verified**.
+  * *A mock is a stub*.
+  * Mocks *can fail* the test.
+  * A stub with an `assertion` that the method gets called.
+  * Makes sure certain methods are called.
+  * Mock is actually *stepping into the method* and making sure everything inside is correct before returning the correct value.
+* *Note*: both are used to simplify testing behavior.
+* **Test-driven development**:
+  * Use tests as contracts that have to pass when adding functionality.
+  * `requirements -> write test -> write enough code -> refactor`.
+
+## Version control
+
+* **Version control**: manages changes to information (documents, files, etc.). Uses a graph structure.
+* **Distributed version control**: the repository and its full history is mirrored on every developer's computer.
+* **Centralized version control**: code is centralized on a server.
+* **Git**: distributed version control system that tracks changes in a codebase. Uses `hashes` to differentiate versions.
+* **Branch**: portion of the codebase under development, separated from the main codebase.
+
+## SQL
+
+* **SQL**: stands for `Structured Query Language`. Language used to retrieve and manage data in a relational database.
+* **Data Definition Language (DDL)**: defines data structures and database schemas. *Creates* and *eliminates* database objects (tables, indexes, users).
+  * `CREATE`.
+  * `ALTER`.
+  * `DROP`.
+  * `TRUNCATE`.
+* **Data Manipulation Language (DML)**: used for *inserting*, *deleting* and *updating* data in a database.
+  * `SELECT`.
+  * `INSERT`.
+  * `UPDATE`.
+  * `DELETE`.
+* **Data Control Language (DCL)**: deals with *authorization*.
+  * `GRANT`.
+  * `REVOKE`.
+
+* Types:
+
+|          |           |        |
+|----------|-----------|--------|
+| smallint | character | bigint |
+| int      | boolean   | uuid   |
+| bigint   | date      | enum   |
+| decimal  | json      | array  |
+| numeric  | real      |        |
+
+* Keys:
+  * *Primary key*: unique value that identifies a record in a table.
+  * *Foreign key*: value used to access a record from another table.
+  * *Unique key*: unique identifier of a record in a table.
+
+* `JOINS`: combines records from two or more tables by using common values.
+  * `INNER JOIN`: intersection of both tables. Returns rows when there is a match in both tables.
+  * `LEFT OUTER JOIN`: returns all rows from the left table, if there are no matches in the right table they're returned as `null`.
+    * To get only rows from the left table but not the right table use the `WHERE` clause.
+  * `RIGHT OUTER JOIN`: returns all rows from the right table, if there are no matches in the left table they're returned as `null`.
+    * To get only rows from the right table but not the left table use the `WHERE` clause.
+  * `FULL OUTER JOIN`: returns rows when there is a match in one of the tables. Combines rows of both left and right joins.
+  * `CROSS JOIN`: returns every row of the first table with every row of the second table. Can result in large  tables.
+
+```sql
+--INNER JOIN
+SELECT table1.column1, table2.column2...
+FROM table1
+INNER JOIN table2
+ON table1.common_field = table2.common_field;
+
+--LEFT OUTER JOIN
+SELECT table1.column1, table2.column2...
+FROM table1
+LEFT OUTER JOIN table2
+ON table1.common_field = table2.common_field;
+
+--RIGHT OUTER JOIN
+SELECT table1.column1, table2.column2...
+FROM table1
+RIGHT OUTER JOIN table2
+ON table1.common_field = table2.common_field;
+
+--FULL OUTER JOIN
+SELECT table1.column1, table2.column2...
+FROM table1
+FULL OUTER JOIN table2
+ON table1.common_field = table2.common_field;
+
+--CROSS JOIN
+SELECT table1.column1, table2.column2...
+FROM table1
+CROSS JOIN table2;
+```
 
 ## Resources
 
 * [Understanding Async Await | CSS-Tricks](https://css-tricks.com/understanding-async-await/)
 * [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
+* [testing - What's the difference between a mock & stub? - Stack Overflow](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub)
+* [Version control - Wikipedia](https://en.wikipedia.org/wiki/Version_control)
+* [Distributed version control - Wikipedia](https://en.wikipedia.org/wiki/Distributed_version_control)
+* [Git - Wikipedia](https://en.wikipedia.org/wiki/Git)
+* [Data definition language - Wikipedia](https://en.wikipedia.org/wiki/Data_definition_language)
+* [Data manipulation language - Wikipedia](https://en.wikipedia.org/wiki/Data_manipulation_language)
+* [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+* [PostgreSQL Joins: A Visual Explanation of PostgreSQL Joins](https://www.postgresqltutorial.com/postgresql-joins/)

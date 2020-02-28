@@ -64,7 +64,7 @@ console.log(window.bar) // Created in foo without declaration
 
 * **Definition**: a *closure* is a function inside another (parent) function, that *remembers* the context (and state, variables, methods, etc.) of its parent. A closure has access to its outer context (the parent's), but not the other way around. A closure has access to *3 contexts*: local, the parent's and the global.
 * **Usage**:
-  * Extends behaviour of the parent function.
+  * Extends behavior of the parent function.
   * Hides implementation details.
   * Preserves values created in the parent function.
 

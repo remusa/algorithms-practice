@@ -1,6 +1,7 @@
 # Design Patterns
 
 * [Design Patterns](#design-patterns)
+  * [Types of design patterns](#types-of-design-patterns)
   * [Module & Module Revealing Patterns](#module--module-revealing-patterns)
   * [Singleton Pattern](#singleton-pattern)
   * [Factory Pattern](#factory-pattern)
@@ -11,6 +12,24 @@
   * [Resources](#resources)
 
 * **Design patterns**: re-usable solution that can be applied to ocurring problems in software design (like programming templates).
+
+## Types of design patterns
+
+* **Creational patterns** are ones that create objects from a class. This gives the program more flexibility in deciding which objects need to be created for a given case.
+  * Factory.
+  * Singleton.
+  * Dependency Injection.
+  * Builder.
+* **Structural patterns** identify relationships between entities and are concerned with how classes and objects are composed to form larger structures from individual parts. They use inheritance to compose interfaces and define ways to compose objects to obtain new functionality.
+  * Adapter.
+  * Decorator.
+  * Module.
+* **Behavioral patterns** describe how objects communicate with each other.
+  * Iterator.
+  * Mediator.
+  * Null object.
+  * Observer.
+  * State.
 
 ## Module & Module Revealing Patterns
 
@@ -82,7 +101,7 @@ console.log(ItemCtrl.get(2));
 ## Singleton Pattern
 
 * Manifestation of the Module Revealing Pattern.
-* Create only 1 instance of an object.
+* Create only one instance of a class.
 * **Singleton object**: an *immediate anonymous function* that can only return one instance of an object at a time.
   * Has private/public variables and methods.
   * Example: only one user object created at a time.
@@ -116,6 +135,7 @@ console.log(instanceA === instanceB); // it will be the same instance
 ## Factory Pattern
 
 * Used to create many objects.
+* Allows a class to defer instatiation to subclasses.
 * A way of creating an *interface* for creating objects, allowing subclasses to define which classes to instantiate.
 * Use for different objects with common characteristics.
 * Example: in a website we can have multiple members types, but all still be members with common characteristics.
@@ -349,8 +369,8 @@ public class MediatorPatternDemo {
 ## State Pattern
 
 * Allows the application to have a certain *state* and modify it.
-* A `class` changes its behaviour based on its state.
-* Objects represent various states and we have a `context` object whose behaviour changes based on the objects state.
+* A `class` changes its behavior based on its state.
+* Objects represent various states and we have a `context` object whose behavior changes based on the objects state.
 * Examples: React component state.
 
 ```javascript
@@ -443,7 +463,7 @@ contact.addEventListener('click', (e) => {
 
 ## Decorator Pattern
 
-* Allows the user to *extend* functionality to an existing object without altering it.
+* Allows the user to *extend* functionality to an existing object without altering it or having to create new subclasses.
 * Creates a `decorator` class that *wraps* the original class and provides additional functionality.
 * Examples: TypeScript decorators, MobX `@observable`.
 
@@ -533,6 +553,10 @@ public class DecoratorPatternDemo {
 * [Software design pattern - Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern#Classification_and_list)
 * [Composition over inheritance - Wikipedia](https://en.wikipedia.org/wiki/Composition_over_inheritance)
 * [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns)
+* [Creational pattern - Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern)
+* [Structural pattern - Wikipedia](https://en.wikipedia.org/wiki/Structural_pattern)
+* [Behavioral pattern - Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern)
+* [Three Types of Design Patterns (Behavioral, Creational, Structural)](https://www.gofpatterns.com/design-patterns/module2/three-types-design-patterns.php)
 * [Design Patterns - Observer Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm)
 * [Design Patterns - State Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/state_pattern.htm)
 * [Design Patterns - Decorator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm)

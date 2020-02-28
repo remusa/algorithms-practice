@@ -9,22 +9,19 @@
 
 * Measures the perfomance of code as the number of inputs increases.
 * Expresses the runtime in terms of *how quickly it grows relative to the input, as the input gets arbitrarily large*.
-* Calculates the number of operations a computer has to perform (how many steps
-  it takes to complete something).
+* Calculates the number of operations a computer has to perform (how many steps it takes to complete something).
 
-* Note: **Beware of premature optimization**. Sometimes optimizing time or space negatively impacts readability or coding time. For a young startup it might be more important to write code that's easy to ship quickly or easy to understand later, even if this means it's less time and space efficient than it could be.
+* **Beware of premature optimization**. Sometimes optimizing time or space negatively impacts readability or coding time. For a young startup it might be more important to write code that's easy to ship quickly or easy to understand later, even if this means it's less time and space efficient than it could be.
 
 ## Big-O 4 Rules
 
 * Rule 0. Generally:
   * Same indentation (assignments, declarations, calculations) **add**.
   * Nested indentation (nested loops) **multiply**.
-
-* Rule 1. Worst Case. Big-O only cares about the worst case.
-* Rule 2. Remove Constants: `O(3 + 4N) = O(N)`. We can ignore variable
-  declarations, assignments and small calculations.
-* Rule 3. Different Terms for Different Inputs.
-* Rule 4. Drop Non Dominants. Only keep the biggest (**dominant**) term and eliminate the rest.
+* **Rule 1. Worst Case**: Big-O only cares about the worst case.
+* **Rule 2. Remove Constants**: `O(3 + 4N) = O(N)`. We can ignore variable declarations, assignments and small calculations.
+* **Rule 3. Different Terms for Different Inputs**.
+* **Rule 4. Drop Non Dominants**: Only keep the biggest (**dominant**) term and eliminate the rest.
 
 ```javascript
 // n, m (boxes and boxes2 are different inputs)
@@ -190,7 +187,6 @@ void nFacRuntimeFunc(int n) {
   * Data structures: create an array.
   * Function calls.
   * Allocations.
-
 
 ```javascript
 function boooo(array) {
