@@ -7,6 +7,7 @@ class Trie {
 
   constructor(string) {
     this.value = string[0] || ''
+    
     if (string.length > 1) {
       this.children.push(new Trie(string.substr(1)))
     } else {
