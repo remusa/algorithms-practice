@@ -40,6 +40,8 @@
 * `undefined`.
 * `NaN`.
 
+* **Immutability**: immutable data cannot change its structure or the data in it. `Objects` and `arrays`, on the other hand, allow mutation, meaning the data structure can be changed.
+
 * **Callback**: a function passed into another function as an argument.
   * The function you’re passing the callback function to is called a *higher order function*.
   * *Uses*:
@@ -353,3 +355,4 @@ CROSS JOIN table2;
 * [Data manipulation language - Wikipedia](https://en.wikipedia.org/wiki/Data_manipulation_language)
 * [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [PostgreSQL Joins: A Visual Explanation of PostgreSQL Joins](https://www.postgresqltutorial.com/postgresql-joins/)
+* [Understanding Immutability in JavaScript | CSS-Tricks](https://css-tricks.com/understanding-immutability-in-javascript/)

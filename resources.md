@@ -123,12 +123,12 @@
 ### Interview Preparation
 
 * [x] [FrontendMasters - Interviewing for Front-End Engineers](https://frontendmasters.com/courses/interviewing-frontend/)
-* [ ] [Gayle L McDowell - Cracking The Coding Interview - YouTube](https://www.youtube.com/watch?v=rEJzOhC5ZtQ)
-* [ ] [Cracking the Facebook Coding Interview The Approach - YouTube](https://www.youtube.com/watch?v=wCl9kvQGHPI)
-* [ ] [Cracking the Facebook Coding Interview Problem Walk Through - YouTube](https://www.youtube.com/watch?v=4UWDyJq8jZg)
-* [ ] [Cracking the Coding Interview - Fullstack Academy Speaker Series - YouTube](https://www.youtube.com/watch?v=Eg5-tdAwclo)
-* [ ] [Cracking the Code Interview - YouTube](https://www.youtube.com/watch?v=4NIb9l3imAo)
 * [ ] [MASTER your coding interview - YouTube](https://www.youtube.com/watch?v=iAHQopLuZ4Q)
+* [X] [Gayle L McDowell - Cracking The Coding Interview - YouTube](https://www.youtube.com/watch?v=rEJzOhC5ZtQ)
+* [X] [Cracking the Facebook Coding Interview The Approach - YouTube](https://www.youtube.com/watch?v=wCl9kvQGHPI)
+* [ ] [Cracking the Facebook Coding Interview Problem Walk Through - YouTube](https://www.youtube.com/watch?v=4UWDyJq8jZg)
+* [X] [Cracking the Coding Interview - Fullstack Academy Speaker Series - YouTube](https://www.youtube.com/watch?v=Eg5-tdAwclo)
+* [X] [Cracking the Code Interview - YouTube](https://www.youtube.com/watch?v=4NIb9l3imAo)
 * [ ] [CS50 and Quora Present: Preparation and Practice for Technical Interviews 2017 - YouTube](https://www.youtube.com/watch?v=eJjg2MkYPaY)
 * [ ] [CS50 and Quora Present: Prep and Practice for Tech Interviews 2018 (pre-release) - YouTube](https://www.youtube.com/watch?v=bBT-2Nvp7Tk)
 

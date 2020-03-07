@@ -175,6 +175,7 @@
 * !![Validate Binary Search Tree - LeetCode](https://leetcode.com/problems/validate-binary-search-tree/)
 * !![Merge Two Binary Trees - LeetCode](https://leetcode.com/problems/merge-two-binary-trees/)
 * !![Convert Sorted Array to Binary Search Tree - LeetCode](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+* [X] [Balanced Binary Tree - LeetCode](https://leetcode.com/problems/balanced-binary-tree/)
 * [Serialize and Deserialize Binary Tree - LeetCode](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 #### Additional

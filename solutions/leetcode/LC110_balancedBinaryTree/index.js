@@ -1,11 +1,13 @@
 /*
   110. Balanced Binary Tree
   https://leetcode.com/problems/balanced-binary-tree/
+  https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/
+  https://docs.google.com/document/d/1-bwNBbL5USfLz3lEjCfLCuDu5dHBo3Dws7RZnXyAwsI/edit
 
   Given a binary tree, determine if it is height-balanced.
 
   For this problem, a height-balanced binary tree is defined as:
-      a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+    - a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
 
   Example 1: Given the following tree [3,9,20,null,null,15,7]:
 
@@ -30,38 +32,60 @@
   Return false.
 */
 
-function isBalanced(root) {
-  if (root == null) return true // base case: we've hit end of a branch while still balanced
-
-  function getTreeHeight(root, height = 0, maxHeight = 0) {
-    // recursive tree measuring function
-    if (height > maxHeight) {
-      maxHeight = height
-    }
-    if (!root || (!root.left && !root.right)) {
-      // check to make sure there is a root and at least one branch
-      return maxHeight
-    }
-
-    const leftSubtree = root ? getTreeHeight(root.left, height + 1, maxHeight) : maxHeight
-    const rightSubtree = root ? getTreeHeight(root.right, height + 1, maxHeight) : maxHeight
-
-    // return the height of the longest branch, which is determined by recursively traversing the tree using getTreeHeight()
-    return Math.max(leftSubtree, rightSubtree)
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+function getHeight(root) {
+  // base case when binary tree is empty
+  if (root === null) {
+    return 0
   }
 
-  const leftHeight = root.left ? getTreeHeight(root.left) + 1 : 0 // make sure there's a left branch, height is zero if not
-  const rightHeight = root.right ? getTreeHeight(root.right) + 1 : 0
+  const leftSubtreeHeight = getHeight(root.left)
+  const rightSubtreeHeight = getHeight(root.right)
+
+  // return the height of the longest branch, which is determined by recursively traversing the tree using getHeight()
+  return 1 + Math.max(leftSubtreeHeight, rightSubtreeHeight)
+}
+
+function isBalanced(root) {
+  // base case: we've hit end of a branch while still balanced
+  if (root === null) {
+    return true
+  }
+
+  // make sure there's a left branch, height is zero if there isn't
+  const leftHeight = getHeight(root.left)
+  const rightHeight = getHeight(root.right)
 
   // check if the current root node is a balanced tree
-  if (Math.abs(leftHeight - rightHeight) > 1) {
+  const difference = Math.abs(leftHeight - rightHeight)
+
+  // allowed values for (leftHeight - rightHeight) are 1, -1, 0
+  if (difference > 1) {
     return false
   }
 
   // if it is, let's repeat the process on both the left and right branches
-  if (!isBalanced(root.left)) {
+  const isLeftBalanced = isBalanced(root.left)
+
+  if (!isLeftBalanced) {
     return false
   }
 
-  return isBalanced(root.right)
+  const isRightBalanced = isBalanced(root.right)
+
+  if (!isRightBalanced) {
+    return false
+  }
+
+  return true
 }

@@ -1,13 +1,13 @@
 /*
-    https://algodaily.com/challenges/validate-a-bst
+  https://algodaily.com/challenges/validate-a-bst
 
-    Given a binary search tree like the one below, can you write a function that will return true if it is valid?
+  Given a binary search tree like the one below, can you write a function that will return true if it is valid?
 
-    Recall that a BST is valid only given the following conditions:
-        The left child subtree of a node contains only nodes with values less than the parent node's.
-        The right child subtree of a node contains only nodes with values greater than the parent node's.
-        Both the left and right subtrees must also be BSTs.
-​ */
+  Recall that a BST is valid only given the following conditions:
+    - The left child subtree of a node contains only nodes with values less than the parent node's.
+    - The right child subtree of a node contains only nodes with values greater than the parent node's.
+    - Both the left and right subtrees must also be BSTs.
+*/
 
 class Node {
   constructor(val) {
@@ -73,10 +73,7 @@ function isValidBST2(rootNode) {
     }
 
     // If node isn't valid return
-    if (
-      (min !== null && node.val <= min) ||
-      (max !== null && node.val >= max)
-    ) {
+    if ((min && node.val <= min) || (max && node.val >= max)) {
       valid = false
       return
     }
