@@ -21,5 +21,5 @@
 * [AVL Tree Insertion - YouTube](https://www.youtube.com/watch?v=rbg7Qf8GkQ4)
 * [AVL Tree Visualzation](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
 * [The Little AVL Tree That Could - basecs - Medium](https://medium.com/basecs/the-little-avl-tree-that-could-86a3cae410c7)
-* [algorithm - Red black tree over avl tree - Stack
-  Overflow](https://stackoverflow.com/questions/13852870/red-black-tree-over-avl-tree)
+* [algorithm - Red black tree over avl tree - StackOverflow](https://stackoverflow.com/questions/13852870/red-black-tree-over-avl-tree)
+* [javascript-algorithms/AvlTree.js at master · zero-to-mastery/javascript-algorithms](https://github.com/zero-to-mastery/javascript-algorithms/blob/master/src/data-structures/tree/avl-tree/AvlTree.js)
