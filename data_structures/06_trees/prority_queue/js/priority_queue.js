@@ -7,24 +7,24 @@ class Node {
 
 class PriorityQueue {
   constructor() {
-    this.values = []
+    this.items = []
   }
 
-  enqueue(val, priority) {
-    const newNode = new Node(val, priority)
+  enqueue(item, priority = 0) {
+    const newNode = new Node(item, priority)
 
-    this.values.push(newNode)
+    this.items.push(newNode)
     this.bubbleUp()
 
     return this
   }
 
   dequeue() {
-    const min = this.values[0]
-    const end = this.values.pop()
+    const min = this.items[0]
+    const end = this.items.pop()
 
     if (!this.isEmpty()) {
-      this.values[0] = end
+      this.items[0] = end
       this.sinkDown()
     }
 
@@ -32,19 +32,19 @@ class PriorityQueue {
   }
 
   bubbleUp() {
-    let i = this.values.length - 1
-    const node = this.values[i]
+    let i = this.items.length - 1
+    const node = this.items[i]
 
     while (i > 0) {
       const parentIndex = Math.floor((i - 1) / 2)
-      const parent = this.values[parentIndex]
+      const parent = this.items[parentIndex]
 
       if (node.priority >= parent.priority) {
         break
       }
 
-      this.values[parentIndex] = node
-      this.values[i] = parent
+      this.items[parentIndex] = node
+      this.items[i] = parent
 
       i = parentIndex
     }
@@ -52,8 +52,8 @@ class PriorityQueue {
 
   sinkDown() {
     let i = 0
-    const { length } = this.values
-    const node = this.values[0]
+    const { length } = this.items
+    const node = this.items[0]
 
     while (true) {
       const leftChildIndex = 2 * i + 1
@@ -63,7 +63,7 @@ class PriorityQueue {
       let swap = null
 
       if (leftChildIndex < length) {
-        leftChild = this.values[leftChildIndex]
+        leftChild = this.items[leftChildIndex]
 
         if (leftChild.priority < node.priority) {
           swap = leftChildIndex
@@ -71,7 +71,7 @@ class PriorityQueue {
       }
 
       if (rightChildIndex < length) {
-        rightChild = this.values[rightChildIndex]
+        rightChild = this.items[rightChildIndex]
 
         if (
           (swap === null && rightChild.priority < node.priority) ||
@@ -85,14 +85,14 @@ class PriorityQueue {
         break
       }
 
-      this.values[i] = this.values[swap]
-      this.values[swap] = node
+      this.items[i] = this.items[swap]
+      this.items[swap] = node
       i = swap
     }
   }
 
   isEmpty() {
-    return this.values.length === 0
+    return this.items.length === 0
   }
 }
 
