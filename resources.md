@@ -3,20 +3,35 @@
 ## Master Resources
 
 * [ ] [jwasham/coding-interview-university: A complete computer science study plan to become a software engineer.](https://github.com/jwasham/coding-interview-university)
+
 * [ ] [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/)
+
 * [ ] [The 30-minute guide to rocking your next coding interview](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/)
+
 * [five-essential-phone-screen-questions - steveyegge2](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
+
 * [ ] [The Interview Study Guide For Software Engineers - DEV Community 👩‍💻👨‍💻](https://dev.to/seattledataguy/the-interview-study-guide-for-software-engineers-764)
+
 * [MTrajK/coding-problems: Solutions for various coding/algorithmic problems and many useful resources for learning algorithms and data structures](https://github.com/MTrajK/coding-problems)
+
 * [My Guide To Preparing for the Google Technical Interview](https://www.linkedin.com/pulse/my-guide-preparing-google-technical-interview-anthony-mays/)
+
 * [TSiege/Tech-Interview-Cheat-Sheet: Studying for a tech interview sucks. Here's an open source cheat sheet to help](https://github.com/TSiege/Tech-Interview-Cheat-Sheet)
+
 * [andreis/interview: Everything you need to prepare for your technical interview](https://github.com/andreis/interview)
+
 * [I spent 3 months applying to jobs after a coding bootcamp. Here’s what I learned.](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/)
+
 * [The ultimate guide to preparing for the coding interview](https://medium.com/free-code-camp/the-ultimate-guide-to-preparing-for-the-coding-interview-183251ee36c9)
+
 * [ ] [Master list of Free Resources : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/e4v755/master_list_of_free_resources/)
+
 * [Career Switcher’s Guide to Your Dream Tech Job](https://www.freecodecamp.org/news/career-switchers-guide-to-your-dream-tech-job/)
+
 * [My journey and tips: 2.9 GPA at a no-name liberal arts college with 1 mediocre internship —> 4 FTE offers including FB : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/6278bi/my_journey_and_tips_29_gpa_at_a_noname_liberal/)
+
 * [2 YEAR UPDATE: My journey & tips: 2.9 GPA at a small liberal arts college w 1 mediocre internship –> 4 FTE offers incl FB : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/b3w1gg/2_year_update_my_journey_tips_29_gpa_at_a_small/)
+
 * [ ] [Another data point on industry hire in the bay : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/cdp9yz/another_data_point_on_industry_hire_in_the_bay/)
 
 ## Interview Patterns
@@ -32,7 +47,7 @@
 
 ### Data Structures and Algorithms
 
-* [ ] [Data Structures and Algorithms (DSA): The Intuitive Guide | Interview Cake](https://www.interviewcake.com/data-structures-and-algorithms-guide)
+* [x] [Data Structures and Algorithms (DSA): The Intuitive Guide | Interview Cake](https://www.interviewcake.com/data-structures-and-algorithms-guide)
 * [ ] [Coderust: Hacking the Coding Interview](https://www.educative.io/courses/coderust-hacking-the-coding-interview)
 * [ ] [Code Monk - Be a better programmer](https://www.hackerearth.com/practice/codemonk/)
 * [ ] [JavaScript Computer Science Course | Rithm School](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals)
@@ -101,22 +116,34 @@
 #### Systems Design
 
 * [ ] [donnemartin/system-design-primer: Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.](https://github.com/donnemartin/system-design-primer)
+
 * [ ] [System Design Cheatsheet](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
+
 * [ ] [shashank88/system_design: Preparation links and resources for system design questions](https://github.com/shashank88/system_design)
+
 * [ ] [checkcheckzz/system-design-interview: System design interview for IT companies](https://github.com/checkcheckzz/system-design-interview)
+
 * [ ] [Systems Design Interview Concepts (for software engineers / full-stack web) - TechLead](https://www.youtube.com/watch?v=REB_eGHK_P4)
+
 * [ ] [A friendly introduction to System Design - YouTube](https://www.youtube.com/watch?v=quLrc3PbuIw&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
+
 * [ ] [System Design Introduction For Interview. - YouTube](https://www.youtube.com/watch?v=UzLMhqg3_Wc&list=PLrmLmBdmIlps7GJJWW9I7N0P0rB0C3eY2)
+
 * [ ] [HiredInTech's Training Camp for Coding Interviews](https://www.hiredintech.com/system-design)
+
 * [ ] [High Scalability - All Time Favorites](http://highscalability.com/all-time-favorites/)
+
 * [Designing Data-Intensive Applications [Book]](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
+
 * [ ] [Distributed systems for fun and profit](http://book.mixu.net/distsys/single-page.html)
+
 * [ ] [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview)
 
 #### Clean Code
 
-* [ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
-* [Summary of 'Clean code' by Robert C. Martin](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
+* [ ] [ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+
+* [ ] [Summary of 'Clean code' by Robert C. Martin](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
 
 ## Interviews
 
@@ -124,13 +151,13 @@
 
 * [x] [FrontendMasters - Interviewing for Front-End Engineers](https://frontendmasters.com/courses/interviewing-frontend/)
 * [ ] [MASTER your coding interview - YouTube](https://www.youtube.com/watch?v=iAHQopLuZ4Q)
-* [X] [Gayle L McDowell - Cracking The Coding Interview - YouTube](https://www.youtube.com/watch?v=rEJzOhC5ZtQ)
-* [X] [Cracking the Facebook Coding Interview The Approach - YouTube](https://www.youtube.com/watch?v=wCl9kvQGHPI)
-* [ ] [Cracking the Facebook Coding Interview Problem Walk Through - YouTube](https://www.youtube.com/watch?v=4UWDyJq8jZg)
-* [X] [Cracking the Coding Interview - Fullstack Academy Speaker Series - YouTube](https://www.youtube.com/watch?v=Eg5-tdAwclo)
-* [X] [Cracking the Code Interview - YouTube](https://www.youtube.com/watch?v=4NIb9l3imAo)
+* [x] [Gayle L McDowell - Cracking The Coding Interview - YouTube](https://www.youtube.com/watch?v=rEJzOhC5ZtQ)
+* [x] [Cracking the Facebook Coding Interview The Approach - YouTube](https://www.youtube.com/watch?v=wCl9kvQGHPI)
+* [x] [Cracking the Facebook Coding Interview Problem Walk Through - YouTube](https://www.youtube.com/watch?v=4UWDyJq8jZg)
+* [x] [Cracking the Coding Interview - Fullstack Academy Speaker Series - YouTube](https://www.youtube.com/watch?v=Eg5-tdAwclo)
+* [x] [Cracking the Code Interview - YouTube](https://www.youtube.com/watch?v=4NIb9l3imAo)
 * [ ] [CS50 and Quora Present: Preparation and Practice for Technical Interviews 2017 - YouTube](https://www.youtube.com/watch?v=eJjg2MkYPaY)
-* [ ] [CS50 and Quora Present: Prep and Practice for Tech Interviews 2018 (pre-release) - YouTube](https://www.youtube.com/watch?v=bBT-2Nvp7Tk)
+* [ ] [CS50 and Quora Present: Prep and Practice for Tech Interviews - YouTube](https://www.youtube.com/watch?v=49pTVXaqJKU)
 
 ### Interview Tips
 
@@ -154,3 +181,5 @@
 * [How to solve coding interview problems ("Let's leetcode") - TechLead](https://www.youtube.com/watch?v=dIrS31CCITM)
 * [How to solve coding interview questions 2 ("Let's leetcode") - TechLead](https://www.youtube.com/watch?v=prUE1gPsJ-g)
 * [5 Steps to Pass Data Science Interviews - YouTube](https://www.youtube.com/watch?v=OHhoLhYW2cg)
+
+

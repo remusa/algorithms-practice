@@ -55,19 +55,21 @@
 
 #### Essential
 
-* !![Longest Substring Without Repeating Characters - LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-* !![Valid Anagram - LeetCode](https://leetcode.com/problems/valid-anagram/)
-* !![Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/)
-* !![Valid Palindrome - LeetCode](https://leetcode.com/problems/valid-palindrome/)
-* !![Longest Palindromic Substring - LeetCode](https://leetcode.com/problems/longest-palindromic-substring/)
-* !![Longest Repeating Character Replacement - LeetCode](https://leetcode.com/problems/longest-repeating-character-replacement/)
-* !![Minimum Window Substring - LeetCode](https://leetcode.com/problems/minimum-window-substring/description/)
-* !![Minimum Size Subarray Sum - LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/)
-* !![Reverse String - LeetCode](https://leetcode.com/problems/reverse-string/)
-* !![Reverse Words in a String - LeetCode](https://leetcode.com/problems/reverse-words-in-a-string/)
+* [ ] [Longest Substring Without Repeating Characters - LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+* [ ] [Valid Anagram - LeetCode](https://leetcode.com/problems/valid-anagram/)
+* [ ] [Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/)
+* [ ] [Valid Palindrome - LeetCode](https://leetcode.com/problems/valid-palindrome/)
+* [ ] [Longest Palindromic Substring - LeetCode](https://leetcode.com/problems/longest-palindromic-substring/)
+* [ ] [Longest Repeating Character Replacement - LeetCode](https://leetcode.com/problems/longest-repeating-character-replacement/)
+* [ ] [Minimum Window Substring - LeetCode](https://leetcode.com/problems/minimum-window-substring/description/)
+* [ ] [Minimum Size Subarray Sum - LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/)
+* [ ] [Reverse String - LeetCode](https://leetcode.com/problems/reverse-string/)
+* [ ] [Reverse Words in a String - LeetCode](https://leetcode.com/problems/reverse-words-in-a-string/)
+
 * [Encode and Decode Strings - LeetCode](https://leetcode.com/problems/encode-and-decode-strings/)
 * Return maximum occurring character in the input string
-* !![Remove Duplicate Letters - LeetCode](https://leetcode.com/problems/remove-duplicate-letters/)
+
+* [ ] [Remove Duplicate Letters - LeetCode](https://leetcode.com/problems/remove-duplicate-letters/)
 
 #### Additional
 
@@ -81,16 +83,18 @@
 
 #### Essential
 
-* !![Two Sum - LeetCode](https://leetcode.com/problems/two-sum/)
-* !![Best Time to Buy and Sell Stock - LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-* !![Container With Most Water - LeetCode](https://leetcode.com/problems/container-with-most-water/)
-* !![Contains Duplicate - LeetCode](https://leetcode.com/problems/contains-duplicate/)
+* [ ] [Two Sum - LeetCode](https://leetcode.com/problems/two-sum/)
+* [ ] [Best Time to Buy and Sell Stock - LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+* [ ] [Container With Most Water - LeetCode](https://leetcode.com/problems/container-with-most-water/)
+* [ ] [Contains Duplicate - LeetCode](https://leetcode.com/problems/contains-duplicate/)
+
 * [Product of Array Except Self - LeetCode](https://leetcode.com/problems/product-of-array-except-self/)
-* !![Maximum Subarray - LeetCode](https://leetcode.com/problems/maximum-subarray/)
-* !![Maximum Product Subarray - LeetCode](https://leetcode.com/problems/maximum-product-subarray/)
-* !![Find Minimum in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-* !![Search in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-* !![Sort Colors (Dutch National Flag Problem) - LeetCode](https://leetcode.com/problems/sort-colors/)
+
+* [ ] [Maximum Subarray - LeetCode](https://leetcode.com/problems/maximum-subarray/)
+* [ ] [Maximum Product Subarray - LeetCode](https://leetcode.com/problems/maximum-product-subarray/)
+* [ ] [Find Minimum in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+* [ ] [Search in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+* [ ] [Sort Colors (Dutch National Flag Problem) - LeetCode](https://leetcode.com/problems/sort-colors/)
 
 #### Additional
 
@@ -98,37 +102,46 @@
 * Find the second minimum element of an array
 * [Merge Sorted Array - LeetCode](https://leetcode.com/problems/merge-sorted-array/)
 * Rearrange positive and negative values in an array
-* !![3Sum - LeetCode](https://leetcode.com/problems/3sum/)
+
+* [ ] [3Sum - LeetCode](https://leetcode.com/problems/3sum/)
 
 ### Hash Tables
 
 #### Essential
 
-* !![Intersection of Two Arrays - LeetCode](https://leetcode.com/problems/intersection-of-two-arrays/)
-* !![Subsets - LeetCode](https://leetcode.com/problems/subsets/)
+* [ ] [Intersection of Two Arrays - LeetCode](https://leetcode.com/problems/intersection-of-two-arrays/)
+
+* [ ] [Subsets - LeetCode](https://leetcode.com/problems/subsets/)
 
 * Strings:
-  * !![First Unique Character in a String - LeetCode](https://leetcode.com/problems/first-unique-character-in-a-string/)
+  
+  * [ ] [First Unique Character in a String - LeetCode](https://leetcode.com/problems/first-unique-character-in-a-string/)
 
 #### Additional
 
 * [Given an array of pairs, find all symmetric pairs in it - GeeksforGeeks](https://www.geeksforgeeks.org/given-an-array-of-pairs-find-all-symmetric-pairs-in-it/)
+
 * [Partition Array into Disjoint Intervals - LeetCode](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)
+
 * [Group Anagrams - LeetCode](https://leetcode.com/problems/group-anagrams/)
+
 * [Unique Email Addresses - LeetCode](https://leetcode.com/problems/unique-email-addresses/)
+
 * [Subarray Sum Equals K - LeetCode](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 * Arrays:
+  
   * Two Sum
 
 ### Linked Lists
 
 #### Essential
 
-* !![Linked List Cycle - LeetCode](https://leetcode.com/problems/linked-list-cycle/)
-* !![Merge Two Sorted Lists - LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/)
-* !![Reverse Linked List - LeetCode](https://leetcode.com/problems/reverse-linked-list/)
-* !![Remove Nth Node From End of List - LeetCode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+* [ ] [Linked List Cycle - LeetCode](https://leetcode.com/problems/linked-list-cycle/)
+* [ ] [Merge Two Sorted Lists - LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/)
+* [ ] [Reverse Linked List - LeetCode](https://leetcode.com/problems/reverse-linked-list/)
+* [ ] [Remove Nth Node From End of List - LeetCode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+
 * [Merge k Sorted Lists - LeetCode](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 #### Additional
@@ -136,7 +149,9 @@
 * [Rotate Array - LeetCode](https://leetcode.com/problems/rotate-array/)
 * [Linked List Cycle II - LeetCode](https://leetcode.com/problems/linked-list-cycle-ii/)
 * [Reorder List - LeetCode](https://leetcode.com/problems/reorder-list/)
-* !![Remove Duplicates from Sorted List - LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+
+* [ ] [Remove Duplicates from Sorted List - LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+
 * [Remove Duplicates from Sorted List II - LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 * [Add Two Numbers - LeetCode](https://leetcode.com/problems/add-two-numbers/)
 
@@ -144,12 +159,16 @@
 
 #### Essential
 
-* !![Basic Calculator - LeetCode](https://leetcode.com/problems/basic-calculator/)
-* !![Sort a stack using a temporary stack - GeeksforGeeks](https://www.geeksforgeeks.org/sort-stack-using-temporary-stack/)
-* !![Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/)
-* !![Implement Queue using Stacks - LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)
+* [ ] [Basic Calculator - LeetCode](https://leetcode.com/problems/basic-calculator/)
+
+* [ ] [Sort a stack using a temporary stack - GeeksforGeeks](https://www.geeksforgeeks.org/sort-stack-using-temporary-stack/)
+
+* [ ] [Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/)
+
+* [ ] [Implement Queue using Stacks - LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 * Linked list:
+  
   * Reverse Linked List
 
 #### Additional
@@ -167,15 +186,16 @@
 
 #### Essential
 
-* !![Maximum Depth of Binary Tree - LeetCode](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
-* !![Same Tree - LeetCode](https://leetcode.com/problems/same-tree/)
-* !![Binary Tree Level Order Traversal - LeetCode](https://leetcode.com/problems/binary-tree-level-order-traversal/)
-* !![Construct Binary Tree from Preorder and Inorder Traversal - LeetCode](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-* !![Lowest Common Ancestor of a Binary Search Tree - LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
-* !![Validate Binary Search Tree - LeetCode](https://leetcode.com/problems/validate-binary-search-tree/)
-* !![Merge Two Binary Trees - LeetCode](https://leetcode.com/problems/merge-two-binary-trees/)
-* !![Convert Sorted Array to Binary Search Tree - LeetCode](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
-* [X] [Balanced Binary Tree - LeetCode](https://leetcode.com/problems/balanced-binary-tree/)
+* [ ] [Maximum Depth of Binary Tree - LeetCode](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+* [ ] [Same Tree - LeetCode](https://leetcode.com/problems/same-tree/)
+* [ ] [Binary Tree Level Order Traversal - LeetCode](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+* [ ] [Construct Binary Tree from Preorder and Inorder Traversal - LeetCode](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+* [ ] [Lowest Common Ancestor of a Binary Search Tree - LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+* [ ] [Validate Binary Search Tree - LeetCode](https://leetcode.com/problems/validate-binary-search-tree/)
+* [ ] [Merge Two Binary Trees - LeetCode](https://leetcode.com/problems/merge-two-binary-trees/)
+* [ ] [Convert Sorted Array to Binary Search Tree - LeetCode](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+* [x] [Balanced Binary Tree - LeetCode](https://leetcode.com/problems/balanced-binary-tree/)
+
 * [Serialize and Deserialize Binary Tree - LeetCode](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 #### Additional
@@ -198,7 +218,9 @@
 #### Essential
 
 * [Course Schedule - LeetCode](https://leetcode.com/problems/course-schedule/)
-* !![Number of Islands - LeetCode](https://leetcode.com/problems/number-of-islands/)
+
+* [ ] [Number of Islands - LeetCode](https://leetcode.com/problems/number-of-islands/)
+
 * [Alien Dictionary - LeetCode](https://leetcode.com/problems/alien-dictionary/)
 
 #### Additional
@@ -243,10 +265,13 @@
 #### Additional
 
 * [Top K Frequent Elements - LeetCode](https://leetcode.com/problems/top-k-frequent-elements/)
+
 * [Kth Largest Element in a Stream - LeetCode](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+
 * [Find K Pairs with Smallest Sums - LeetCode](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
 
 * Linked lists:
+  
   * Merge k Sorted Lists
 
 ### Interval
@@ -254,7 +279,9 @@
 #### Essential
 
 * [Insert Interval - LeetCode](https://leetcode.com/problems/insert-interval/)
-* !![Merge Intervals - LeetCode](https://leetcode.com/problems/merge-intervals/)
+
+* [ ] [Merge Intervals - LeetCode](https://leetcode.com/problems/merge-intervals/)
+
 * [Meeting Rooms - LeetCode](https://leetcode.com/problems/meeting-rooms/)
 
 #### Additional
@@ -266,7 +293,7 @@
 
 #### Essential
 
-* !![Word Search - LeetCode](https://leetcode.com/problems/word-search/)
+* [ ] [Word Search - LeetCode](https://leetcode.com/problems/word-search/)
 
 #### Additional
 
@@ -277,21 +304,28 @@
 ## Binary Search
 
 * [Search Insert Position - LeetCode](https://leetcode.com/problems/search-insert-position/)
+
 * [Capacity To Ship Packages Within D Days - LeetCode](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 
 * Arrays:
+  
   * Find Minimum in Rotated Sorted Array
   * Search in Rotated Sorted Array
 
 ### Recursion
 
 * [Subsets II - LeetCode](https://leetcode.com/problems/subsets-ii/)
+
 * [Strobogrammatic Number II - LeetCode](https://leetcode.com/problems/strobogrammatic-number-ii/)
+
 * [Pow(x, n) - LeetCode](https://leetcode.com/problems/powx-n/)
+
 * [K-th Symbol in Grammar - LeetCode](https://leetcode.com/problems/k-th-symbol-in-grammar/)
+
 * [Split BST - LeetCode](https://leetcode.com/problems/split-bst/)
 
 * Array:
+  
   * Subsets
 
 ### Dynamic Programming
@@ -301,37 +335,52 @@
 * [Coin Change - LeetCode](https://leetcode.com/problems/coin-change/)
 * [Longest Increasing Subsequence - LeetCode](https://leetcode.com/problems/longest-increasing-subsequence/)
 * [Word Break - LeetCode](https://leetcode.com/problems/word-break/)
-* !![House Robber - LeetCode](https://leetcode.com/problems/house-robber/)
+
+* [ ] [House Robber - LeetCode](https://leetcode.com/problems/house-robber/)
+
 * [Climbing Stairs - LeetCode](https://leetcode.com/problems/climbing-stairs/)
 
 #### Additional
 
 * [0-1 Knapsack Problem | DP-10 - GeeksforGeeks](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
+
 * [Combination Sum IV - LeetCode](https://leetcode.com/problems/combination-sum-iv/)
+
 * [House Robber II - LeetCode](https://leetcode.com/problems/house-robber-ii/)
+
 * [Decode Ways - LeetCode](https://leetcode.com/problems/decode-ways/)
-* !![Unique Paths - LeetCode](https://leetcode.com/problems/unique-paths/)
+
+* [ ] [Unique Paths - LeetCode](https://leetcode.com/problems/unique-paths/)
+
 * [Unique Paths II - LeetCode](https://leetcode.com/problems/unique-paths-ii/)
+
 * [Jump Game - LeetCode](https://leetcode.com/problems/jump-game/)
+
 * [Paint Fence](https://leetcode.com/problems/paint-fence/)
+
 * [Best Time to Buy and Sell Stock II - LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 
 * Arrays:
+  
   * Maximum Subarray
   * Best Time to Buy and Sell Stock
 
 ### Greedy Algorithms + Backtracking
 
 * [Permutations - LeetCode](https://leetcode.com/problems/permutations/)
+
 * [Combination Sum - LeetCode](https://leetcode.com/problems/combination-sum/)
+
 * [Generate Parentheses - LeetCode](https://leetcode.com/problems/generate-parentheses/)
 
 * Recursion:
+  
   * Subsets
 
 ### Other
 
-* !![LRU Cache - LeetCode](https://leetcode.com/problems/lru-cache/)
+* [ ] [LRU Cache - LeetCode](https://leetcode.com/problems/lru-cache/)
+
 * [Is Subsequence - LeetCode](https://leetcode.com/problems/is-subsequence/)
 * [Next Permutation - LeetCode](https://leetcode.com/problems/next-permutation/)
 * [String to Integer (atoi) - LeetCode](https://leetcode.com/problems/string-to-integer-atoi/)
@@ -406,11 +455,15 @@
 ### Resources
 
 * [jwasham/coding-interview-university: A complete computer science study plan to become a software engineer.](https://github.com/jwasham/coding-interview-university)
+
 * [ ] [The 30-minute guide to rocking your next coding interview](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/)
 * [ ] [Tech Interview Handbook](https://yangshun.github.io/tech-interview-handbook/)
 * [ ] [Study guide: - WorkFlowy](https://workflowy.com/s/wGqavcPQFm)
+
 * [The top data structures you should know for your next coding interview](https://www.freecodecamp.org/news/the-top-data-structures-you-should-know-for-your-next-coding-interview-36af0831f5e3/)
+
 * [x] [AlgoDaily - Prep Effectively Using Cracking the Coding Interview and Other Programming Interview Resources](https://algodaily.com/lessons/how-to-prepare-for-a-technical-interview)
+
 * [Top 10 Algorithms for the Coding Interview (for software engineers) - YouTube](https://www.youtube.com/watch?v=r1MXwyiGi_U)
 * [Top 10 Algorithms for the Coding Interview (Part 2) - YouTube](https://www.youtube.com/watch?v=zHczhZn-z30)
 * [Learn DS & Algorithms | Programiz](https://www.programiz.com/dsa)
@@ -429,6 +482,7 @@
 * [ ] [The Interview Study Guide For Software EngineersThe Interview Study Guide For Software Engineers - Coriers](https://www.coriers.com/the-interview-study-guide-for-software-engineers/)
 * [ ] [liuchuo/LeetCode-Top100: LeetCode Top100 Liked Questions - 努力成为萌萌的程序媛～](https://github.com/liuchuo/LeetCode-Top100)
 * [ ] [Programming Interview Questions - Arden Dertat](http://www.ardendertat.com/2012/01/09/programming-interview-questions/)
+
 * [60 LeetCode problems to solve for coding interview - Kohei Arai - Medium](https://medium.com/@koheiarai94/60-leetcode-questions-to-prepare-for-coding-interview-8abbb6af589e)
 * [Master list of Free Resources : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/e4v755/master_list_of_free_resources/)
 * [fterh/leetcode-curation-topical: Tech interview prep list](https://github.com/fterh/leetcode-curation-topical)
