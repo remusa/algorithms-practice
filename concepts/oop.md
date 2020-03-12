@@ -54,6 +54,7 @@
 
 ### Composition vs. Inheritance
 
+* *Inheritance* describes an **is a** relationship. *Composition* describes an **has a** relationship.
 * **Inheritance**: describes exactly *what* objects are and *how* they're related to each other.
   * The parent class should have the functionality that subclasses share to avoid reimplementing logic.
   * A problem happens when we want to create a subclass that needs the logic of more than 1 parent subclasses (multiple inheritance). We would've to create another class that implements both parents behavior.
@@ -91,3 +92,4 @@
 * [Master the JavaScript Interview: What’s the Difference Between Class & Prototypal Inheritance?](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
 * [Common Misconceptions About Inheritance in JavaScript](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a)
 * [How prototype-based OOP is different from class-based?](http://developer-interview.com/p/oop-ood/how-prototype-based-oop-is-different-from-class-based-13)
+* [Inheritance and Composition: A Python OOP Guide – Real Python](https://realpython.com/inheritance-composition-python/)
