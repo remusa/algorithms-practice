@@ -17,18 +17,19 @@ def binary_search(L, item):
     3
     """
 
-    start = 0
-    end = len(L) - 1
+    low = 0
+    high = len(L) - 1
 
-    while start <= end:
-        mid = (start + end) // 2
+    while low <= high:
+        mid = (low + high) // 2
+        guess = L[mid]
 
-        if L[mid] == item:
+        if guess == item:
             return mid
-        elif L[mid] < item:
-            start = mid + 1
+        elif guess < item:
+            low = mid + 1
         else:
-            end = mid - 1
+            high = mid - 1
 
     return -1
     # if start == len(L) or L[start] != item:
