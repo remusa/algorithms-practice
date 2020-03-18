@@ -116,6 +116,7 @@ end
 ### Examples
 
 * Example:
+  * Using npm and trying to modify an installed module directly in the node_modules directory.
   * An IDE like IntelliJ or Visual Studio. We can add extend the functionality via plugins, without having to modify the IDEs themselves (all dependencies inside the plugin, point at the system; and that nothing in the system points out towards the plugins. The system doesn’t know about the plugins. The plugins know about the system).
   * Imagine a module which is able to turn a Markdown document into HTML. If the module could be extended to handle a newly proposed Markdown feature, without modifying the module internals, then it would be open for extension. If the module could not be modified by a consumer so that now existing Markdown features are handled, then it would be closed for modification.
 
