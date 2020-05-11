@@ -1,6 +1,7 @@
 # Cheat sheet
 
 * [Cheat sheet](#cheat-sheet)
+  * [HTML](#html)
   * [JavaScript](#javascript)
   * [Loops](#loops)
   * [Generators](#generators)
@@ -10,6 +11,19 @@
   * [Version control](#version-control)
   * [SQL](#sql)
   * [Resources](#resources)
+
+## HTML
+
+* **Semantic markup**: when a tag usage is aligned with the meaning of the tag.
+  * Example: the semantic meaning of an `h1` tag is that it is used to identify the most important header of a specific web page or section.
+* **Two practices that enable semantic markup**:
+  1. *HTML elements are used according to their intended purpose*: Use HTML tags correctly so that the markup is both human-readable and machine-readable.
+  2. *Separation of content and presentation*: don't select HTML elements based on visual presentation. Instead, select HTML elements based on their semantic meaning, and then use CSS to define the visual presentation of the content.
+* **Use tags correctly**:
+  * *Document structure*: `header`, `footer`, `main`, `nav`, `aside`, `article`.
+  * *Textual meaning*: `h1-h6`, `p`, `strong`, `code, `mark`, `cite`, `blockquote`, `time`.
+  * *Media type*: `audio`, `video`, `picture`.
+  * *Correlation tags*: `ul`, `figure`, `address`.
 
 ## JavaScript
 
@@ -345,6 +359,8 @@ CROSS JOIN table2;
 
 ## Resources
 
+* [What Is Semantic HTML and Why You Should Use It](https://www.lifewire.com/why-use-semantic-html-3468271)
+* [What On Earth Is Semantic Markup? (And Why Should You Learn To Write It) »](https://html.com/semantic-markup/#What_is_Semantic_Markup)
 * [Understanding Async Await | CSS-Tricks](https://css-tricks.com/understanding-async-await/)
 * [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
 * [testing - What's the difference between a mock & stub? - Stack Overflow](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub)
