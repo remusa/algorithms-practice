@@ -8,6 +8,7 @@
 ### Concepts
 
 * [ ] [leonardomso/33-js-concepts: 📜 33 concepts every JavaScript developer should know.](https://github.com/leonardomso/33-js-concepts)
+
 * [dwmkerr/hacker-laws: 💻📖 Laws, Theories, Principles and Patterns that developers will find useful. #hackerlaws](https://github.com/dwmkerr/hacker-laws)
 
 ### Frontend
@@ -37,4 +38,6 @@
 * [ ] [sudheerj/reactjs-interview-questions: List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!](https://github.com/sudheerj/reactjs-interview-questions)
 * [ ] [reactjs-interview-questions/README-en.md at master · semlinker/reactjs-interview-questions](https://github.com/semlinker/reactjs-interview-questions/blob/master/README-en.md)
 * [ ] [React Interview Questions and Answers | React Interview Questions | ReactJS Tutorial | Simplilearn - YouTube](https://www.youtube.com/watch?v=-dS9pvGqlX8)
-
+- [ ] [React job interview - Questions - YouTube](https://www.youtube.com/watch?v=nRI0dn6GTj8)
+- [ ] [React job interview - code test - YouTube](https://www.youtube.com/watch?v=vtUdacXj4Ws)
+- [ ] [Senior React interview questions - YouTube](https://www.youtube.com/watch?v=tiOkArbHnqY)
