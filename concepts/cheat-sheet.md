@@ -37,6 +37,8 @@
   * Object
   * BigInt
 
+* **typeof**: returns the type of the passed value. `type of 42 -> number`
+
 * **Primitives**: data that is not an object and has no methods. There are 7 primitive data types: `string`, `number`, `bigint`, `boolean`, `null`, `undefined`, and `symbol`.
   * `Symbol`: every symbol value is **unique**, used in private properties to avoid name clashes.
 
@@ -44,6 +46,17 @@
   * *undeclared*: variable doesn't exist (no identifier).
   * *undefined*: declared but not assigned a value.
   * *null*: value is `null` (explicitly stated).
+
+* **Type coercion**: convert one type into another.
+  * *Implicit coercion*:
+    * String concatenation: number to string. Example: `"" + number`.
+    * Operator automatically convert values. Example: `if (value1 < value2) {}`
+  * *Explicit coercion*:
+    * Use `!!`. Example: `if (!!students.length) {}`
+
+* **Equality**: both operator do the same if the types are the same.
+  * *Double equals*: allows coercion, different types (loose).
+  * *Triple equals*: disallows coercion, same types (strict).
 
 * **Falsey values**:
 * `false`.
@@ -54,7 +67,42 @@
 * `undefined`.
 * `NaN`.
 
+* **NaN**: invalid numeric operation.
+  * `Number.isNaN(something)`.
+
+* **new**: creates new objects (instantiate) from a class.
+  * Use new:
+    * Object()
+    * Array()
+    * Function()
+    * Date()
+    * RegExp()
+    * Error()
+  * Don't use new: changes the type.
+    * String()
+    * Number()
+    * Boolean()
+
 * **Immutability**: immutable data cannot change its structure or the data in it. `Objects` and `arrays`, on the other hand, allow mutation, meaning the data structure can be changed.
+
+* **Function expressions**: functions themselves are values, so they can be assigned to variables or passed as arguments to other functions, or returned from functions.
+  * A function is a *first class citizen* in JavaScript.
+  * Example: variables that equal to functions, arrow functions, closures.
+
+* **IFFEs**: stands for *Immediately-invoked function expression*.
+  * It's a function that's called immediately after being defined.
+  * A block of scope is created inside the IFFE.
+
+```javascript
+let teacher = "Kyle"
+
+(function anotherTeacher() {
+  let teacher = "Suzy"
+  console.log(teacher)  // Suzy
+})()
+
+console.log(teacher) // Kyle
+```
 
 * **Callback**: a function passed into another function as an argument.
   * The function you’re passing the callback function to is called a *higher order function*.
@@ -84,12 +132,12 @@
   * Instead of listening for a change on the inputs directly (the children elements), we should look for an HTML element that is going to be on the page when the page initially loads (the parent element).
 * **Event bubbling or event propagation**: place an event listener on a single parent HTML element that lives above a HTML child, and that event listener will get executed whenever an event occurs on any of its child nodes — even if these node children are added to the page after the initial load!.
 
-* **Prototypal Inheritance**: all objects have a `prototype` property. If we try to access a property on an object and JS doesn't find, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`. This is how JavaScript simulates inheritance.
+* **Prototypal inheritance**: all objects have a `prototype` property. If we try to access a property on an object and JS doesn't find, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`. This is how JavaScript simulates inheritance.
   * *Get the prototype of an object*: use `Object.getPrototypeOf(<object>`.
   * *Determining if a property lives on the prototype*: use `<object>.hasOwnProperty`.
   * *Check if an object is an instance of a Class*: use `<object> instanceof <Class>`.
 
-* `this`: refers to the current execution context.
+* `this`: refers to the current execution context, determined by how the function was called.
   * If the `new` keyword is used when calling the function, this inside the function is a brand new object.
   * If `apply`, `call`, or `bind` are used to call/create a function, `this` inside the function is the object that is passed in as the argument.
   * If a function is called as a method, such as `obj.method()` , `this` is the object that the function is a property of.
@@ -97,26 +145,26 @@
   * If multiple of the above rules apply, the rule that is higher wins and will set the `this` value.
   * If the function is an ES2015 arrow function, it ignores all the rules above and receives the `this` value of its surrounding scope at the time it is created.
 
-* **Closure**: a function inside another (parent) function, that remembers the context (and state, variables, methods, etc.) of its parent.
+* **Closure**: a function inside another (parent) function, that remembers the context (and state, variables, methods, etc.) of its parent (when a function "remembers" the variables outside of it, even if it's passed elsewhere, like a callback).
   * Has access to its outer context (the parent's), but not the other way around.
   * Has access to *3 scopes*: local, the parent's and the global.
-  * *Usage*:
+  * *Uses*:
     * Extends behavior of the parent function.
     * Hides implementation details.
     * Preserves values created in the parent function.
 
 ```javascript
 function makeAdder(x) {
-    return function(y) {
-        return x + y;
-    };
+  return function(y) {
+    return x + y
+  }
 }
 
-var add5 = makeAdder(5);
-var add10 = makeAdder(10);
+var add5 = makeAdder(5)
+var add10 = makeAdder(10)
 
-console.log(add5(2));  // 7
-console.log(add10(2)); // 12
+console.log(add5(2))  // 7
+console.log(add10(2)) // 12
 ```
 
 * **Hoisting**: variable and function declarations are moved to the top of the code.
@@ -126,15 +174,15 @@ console.log(add10(2)); // 12
 * **Declaration**: create new identifier (with `undefined`) in memory.
 * **Initialization**: assign a value.
 
-* **Scope**: defines where variables/functions are accesible.
+* **Scope**: defines where variables/functions are accesible (where to look for things).
   * *global*: available anywhere.
   * *function*: available inside the function.
   * *block*: avaiable inside the block (curly braces).
 
 * **Variables**:
   * *variables created without var*: global scope.
-  * *var*: function scoped. If you try to use a variable declared with var before the actual declaration, you’ll just get undefined.
-  * *let*: block scoped.
+  * *var*: function scoped. If you try to use a variable declared with `var` before the actual declaration, you’ll just get `undefined`.
+  * *let*: block scoped. Protects the outer scope (encapsulation).
   * *const*: block scoped, IMMUTABLE.
 
 * **Constructor**: defines and initializes objects and their features. Called when a class is initialized via new.
