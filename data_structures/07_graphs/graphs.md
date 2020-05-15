@@ -9,16 +9,17 @@
 | delete    | `O(log(n))` |
 
 * **Graphs**: organizes items in an interconnected network.
-* *Nodes or vertex*: each item in the graph.
-* *Edges*: connection between the nodes.
+  * *Nodes or vertex*: each item in the graph.
+  * *Edges*: connection between the nodes.
 
 ## Strengths and Weaknesses
 
 * **Strengths**:
-  * *Representing links*: graphs are ideal for working with *interconnected things*. Example:
+  * *Representing links*: graphs are ideal for working with *interconnected things*. Examples:
     * Cities and highways.
     * Routers and ethernet cables.
     * Social network users.
+    * Recommendation systems.
 * **Weaknesses**:
   * *Slow*: most graph algorithms are `O(nlog(n))` or slower.
 
@@ -31,8 +32,7 @@
 
 ### Cyclic or Acyclic
 
-* **Cyclic**: a *cycle* is a serie of unbroken series of nodes with no repeating
-  nodes or edges that connects back to itsef.
+* **Cyclic**: a *cycle* is a serie of unbroken series of nodes with no repeating nodes or edges that connects back to itsef.
 * **Ayclic**: a graph without cycles.
 
 ### Weighted or Unweighted
@@ -47,6 +47,27 @@
 
 ## Graph Representations
 
+* `|V|`: number of vertices.
+* `|E|`: number of edges.
+
+| Operation     | Adjacency list  | Adjacency matrix  |
+| ------------- | --------------- | ----------------- |
+| add vertex    | `O(1)`          | `O(V^2)`          |
+| remove vertex | `O(1)`          | `O(1)`            |
+| add edge      | `O(V + E)`      | `O(V^2)`          |
+| remove edge   | `O(E)`          | `O(1)`            |
+| query         | `O(V + E)`      | `O(1)`            |
+| storage       | `O(V + E)`      | `O(V^2)`          |
+
+* **Adjacency list**:
+  * Can take less space (in sparse graphs).
+  * Faster to iterate over all edges.
+  * Can be slower to lookup specific edge.
+* **Adjacency matrix**:
+  * Takes more space (in sparse graphs).
+  * Slower to iterate over all edges.
+  * Faster to lookup specific edge.
+
 ### Edge list
 
 * **Edge list**: a list of all the edges in the graph.
@@ -55,41 +76,40 @@
 const graph = [[0, 1], [1, 2], [1, 3], [2, 3]]
 ```
 
-## Adjacency list
+### Adjacency list
 
 * **Adjacency list**: a list that represents the node and the value at that index is a list of the node's neighbors.
+  * Can be represented with a list(array) or an object.
 
 ```javascript
+// Array
 const graph = [
-    [1],        // node 1
-    [0, 2, 3],  // node 2
-    [1, 3],     // node 3
-    [1, 2],     // node 4
+  [1],        // node 1
+  [0, 2, 3],  // node 2
+  [1, 3],     // node 3
+  [1, 2],     // node 4
 ]
-```
 
-* Can be represented with an object.
-
-```javascript
-  const graph = {
-    0: [1],
-    1: [0, 2, 3],
-    2: [1, 3],
-    3: [1, 2],
+// Object
+const graph = {
+  0: [1],
+  1: [0, 2, 3],
+  2: [1, 3],
+  3: [1, 2],
 }
 ```
 
-## Adjacency matrix
+### Adjacency matrix
 
-* **Adjacency matrix**: a matrix of `1`s and `0`s that indicate whether node `x`
-  connects to node `y` (`0` is no, `1` is yes).
+* **Adjacency matrix**: a matrix of `1`s and `0`s that indicate whether node `x` connects to node `y` (`0` is no, `1` is yes).
+  * `O(n)`:
 
 ```javascript
 const graph = [
-    [0, 1, 0, 0],
-    [1, 0, 1, 1],
-    [0, 1, 0, 1],
-    [0, 1, 1, 0],
+  [0, 1, 0, 0], // 0
+  [1, 0, 1, 1], // 1
+  [0, 1, 0, 1], // 2
+  [0, 1, 1, 0], // 3
 ]
 ```
 
@@ -113,7 +133,7 @@ const graph = [
 * **Topological Sort**: arranges the nodes in a directed, acyclic graph in a special order based on incoming edges.
 * **Minimum Spanning Tree**: finds the cheapest set of edges needed to reach all nodes in a weighted graph.
 
-## Find shortest path algorithms
+## Shortest path algorithms
 
 * Useful when finding shortest path, but unlike *BFS*, they take into account weights.
 

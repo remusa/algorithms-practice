@@ -1,16 +1,17 @@
 class Graph {
   constructor() {
-    this.adjacencyList = {} // cheaper than using an array/matrix
+    // using an object is cheaper than using an array/matrix
+    this.adjacencyList = {}
     this.numberOfNodes = 0
   }
 
   addVertex(vertex) {
     if (!this.adjacencyList[vertex]) {
       this.adjacencyList[vertex] = []
+      this.numberOfNodes++
     }
 
-    this.adjacencyList[vertex] = []
-    this.numberOfNodes++
+    return this
   }
 
   removeVertex(vertex) {
@@ -20,21 +21,25 @@ class Graph {
     }
 
     delete this.adjacencyList[vertex]
+    this.numberOfNodes--
+    return this
   }
 
   addEdge(vertex1, vertex2) {
-    // undirected graph
+    // undirected graph, for directed graphs we would only insert in v1->v2
     this.adjacencyList[vertex1].push(vertex2)
     this.adjacencyList[vertex2].push(vertex1)
+    return this
   }
 
   removeEdge(vertex1, vertex2) {
     this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(
-      v => v !== vertex2
+      v => v !== vertex2,
     )
     this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(
-      v => v !== vertex1
+      v => v !== vertex1,
     )
+    return this
   }
 
   showConnections() {
@@ -85,12 +90,19 @@ g.addVertex('Tokyo')
 g.addVertex('Aspen')
 g.addVertex('Los Angeles')
 g.addVertex('Hong Kong')
+
 g.addEdge('Dallas', 'Tokyo')
 g.addEdge('Dallas', 'Aspen')
 g.addEdge('Hong Kong', 'Tokyo')
 g.addEdge('Hong Kong', 'Dallas')
 g.addEdge('Los Angeles', 'Hong Kong')
 g.addEdge('Los Angeles', 'Aspen')
+
+g.removeEdge('Dallas', 'Aspen')
+g.removeEdge('Dallas', 'Tokyo')
+
+g.removeVertex('Dallas')
+g.removeVertex('Tokyo')
 
 console.log(g.showConnections())
 
