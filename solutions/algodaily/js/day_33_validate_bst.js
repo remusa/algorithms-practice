@@ -78,7 +78,7 @@ export function isValidBST2(root) {
       return
     }
 
-    // Node is valid
+    // Current node is valid, go left and right
     validate(node.left, min, node.val)
     validate(node.right, node.val, max)
   }
