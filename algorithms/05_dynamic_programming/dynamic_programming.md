@@ -2,6 +2,13 @@
 
 * **Dynamic programming**: optimization technique using *caching*.
   * Breaking down a problem into a collection of subproblems, solving each subproblem once and saving the solution in case it occurs again.
+* **Dynamic Programming vs. Divide-and-Conquer**:
+  * *Divide-and-Conquer*:
+    * Does more work on the sub-problems and hence has more time consumption.
+    * In divide and conquer the sub-problems are independent of each other.
+  * *Dynamic programming*:
+    * Solves the sub-problems only once and then stores it in the table.
+    * In dynamic programming the sub-problems are not independent.
 
 * Combines:
     1. **Divide and conquer**: using recursion.
@@ -143,3 +150,4 @@ function product1ToN2(n) {
 ## Resources
 
 * [Memoization and Dynamic Programming | Interview Cake](https://www.interviewcake.com/concept/python/memoization?)
+* [algorithm - Difference between Divide and Conquer Algo and Dynamic Programming - Stack Overflow](https://stackoverflow.com/questions/13538459/difference-between-divide-and-conquer-algo-and-dynamic-programming)
