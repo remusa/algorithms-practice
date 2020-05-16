@@ -40,4 +40,14 @@ describe('graph tests', () => {
     // 5-->4 6
     // 6-->5
   })
+
+  it('should perform the operations in the adjacency list graph 2', () => {
+
+
+  })
+
+  it('should perform the operations in the adjacency list graph 3', () => {
+
+
+  })
 })

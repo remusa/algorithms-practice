@@ -18,7 +18,7 @@
 ## Properties of Perfect Trees
 
 1. **The number of total nodes on each level doubles as we move down the tree**.
-2. **The number of nodes on the last level is equal to the sum of the number of nodes on all other levels (plus 1)**: about *half* of the nodes are on the last level.
+2. **The number of nodes on the last level is equal to the sum of the number of nodes on all other levels (+ 1)**: about *half* of the nodes are on the last level.
 
 ### Height of a Tree
 

@@ -127,7 +127,72 @@ const graph = [
 * Can this undirected graph be colored with two colors? Run BFS, assigning colors as nodes are visited. Abort if we ever try to assign a node a color different from the one it was assigned earlier.
 * Does this undirected graph have a cycle? Run BFS, keeping track of the number of times we're visiting each node. If we ever visit a node twice, then we have a cycle.
 
-## Advanced algorithms
+## Graph Traversals
+
+### Breadth-first Traversal
+
+* Uses a *queue*.
+* Start at one vertex and visit all of its neighbors.
+* Once all neighbors have been visited, visit each of their neighbors.
+
+```
+bfs(vertex)
+  result_list = []
+  queue = []
+  queue.queue(root)
+
+  while queue != empty:
+    vertex = queue.dequeue()
+
+    if vertex != discovered:
+      visit vertex (add to result_list)
+      label vertex as discovered
+
+      for each neighbor of vertex's neighbors:
+        queue.queue(neighbor)
+end bfs
+```
+
+### Depth-first Traversal
+
+* Uses a *stack*.
+* Start at one vertex and follow one neighbor before visiting its siblings.
+* Once there's no more siblings, backtrack to an unvisited vertex.
+* **NOTE**: recursive and iterative results will be differents because the iterative version will start working with the last vertex of the stack in the adjacency list.
+
+```
+dfs_recursive(vertex)
+  stack = []
+
+  if vertex = ø:
+    return
+
+  add vertex to stack
+  mark vertex as visited
+
+  for each neighbor in vertex's neighbors:
+    if neighbor != visited:
+      dfs_recursive(neighbor)
+end dfs_recursive
+
+dfs_iterative(root)
+  result_list = []
+  stack = []
+  stack.push(root)
+
+  while stack != empty:
+    vertex = stack.pop()
+
+    if vertex != discovered:
+      visit vertex (add to result_list)
+      label vertex as discovered
+
+      for each neighbor of vertex's neighbors:
+        stack.push(neighbor)
+end dfs_iterative
+```
+
+## Advanced Algorithms
 
 * **Dijkstra's Algorithm**: finds the shortest path from one node to all other nodes in a weighted graph.
 * **Topological Sort**: arranges the nodes in a directed, acyclic graph in a special order based on incoming edges.
