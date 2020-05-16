@@ -1,8 +1,12 @@
-import { Node, isValidBST } from '../day_33_validate_bst'
+import { Node, isValidBST, isValidBST2 } from '../day_33_validate_bst'
 
 describe('valid binary search tree tests', function() {
   it('should check if binary search tree is valid', () => {
     // Regular binary trees
+    const tree = new Node(5)
+    tree.left = new Node(3)
+    tree.right = new Node(9)
+
     const tree1 = new Node(4)
     tree1.left = new Node(1)
     tree1.right = new Node(3)

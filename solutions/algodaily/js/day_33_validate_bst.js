@@ -9,7 +9,7 @@
     - Both the left and right subtrees must also be BSTs.
 */
 
-class Node {
+export class Node {
   constructor(val) {
     this.value = val
     this.left = null
@@ -42,7 +42,7 @@ function inOrder(node) {
 // Traversing tree in order and using a stack for keeping track
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> O(n) if recursive calls count
-function isValidBST(node) {
+export function isValidBST(node) {
   if (!node) {
     return true
   }
@@ -64,10 +64,10 @@ function isValidBST(node) {
 }
 
 // Keeping track of minimum and maximum values
-function isValidBST2(rootNode) {
+export function isValidBST2(root) {
   let valid = true
 
-  function helper(node, min, max) {
+  function validate(node, min = null, max = null) {
     if (!node) {
       return
     }
@@ -79,23 +79,11 @@ function isValidBST2(rootNode) {
     }
 
     // Node is valid
-    helper(node.left, min, node.val)
-    helper(node.right, node.val, max)
+    validate(node.left, min, node.val)
+    validate(node.right, node.val, max)
   }
 
-  helper(rootNode, null, null)
+  validate(root)
 
   return valid
-}
-
-const tree = new Node(5)
-tree.left = new Node(3)
-tree.right = new Node(9)
-
-console.log(isValidBST(tree))
-
-module.exports = {
-  Node,
-  isValidBST,
-  isValidBST2,
 }
