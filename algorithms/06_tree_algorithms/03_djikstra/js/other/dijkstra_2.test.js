@@ -1,4 +1,4 @@
-import { WeightedGraph } from './djikstra'
+import { WeightedGraph } from './dijkstra_2'
 
 describe('djikstra in weighted graph  tests', function() {
   it('should perform the operations on a weighted graph', () => {

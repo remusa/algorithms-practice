@@ -198,7 +198,7 @@ end dfs_iterative
 * **Topological Sort**: arranges the nodes in a directed, acyclic graph in a special order based on incoming edges.
 * **Minimum Spanning Tree**: finds the cheapest set of edges needed to reach all nodes in a weighted graph.
 
-## Shortest path algorithms
+## Shortest Path Algorithms
 
 * Useful when finding shortest path, but unlike *BFS*, they take into account weights.
 
