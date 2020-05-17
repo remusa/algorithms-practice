@@ -21,17 +21,26 @@ function mostDigits(nums) {
 }
 
 function radixSort(nums) {
-  let maxDigitCount = mostDigits(nums)
+  // Get the maximum number of digits (3413 => 4)
+  const maxDigitCount = mostDigits(nums)
 
+  // Loop once for each digit (3413 => 4)
   for (let k = 0; k < maxDigitCount; k++) {
-    let digitBuckets = Array.from({ length: 10 }, () => [])
+    // Create the 10 buckets
+    const digitBuckets = Array.from({ length: 10 }, () => [])
 
+    // Loop through every number in the array
     for (let i = 0; i < nums.length; i++) {
-      let digit = getDigit(nums[i], k)
-      
-      digitBuckets[digit].push(nums[i])
+      const number = nums[i]
+
+      // Figure out at position k what number we get with the current number
+      const digit = getDigit(number, k)
+
+      // Take the number that comes back and put it in its corresponding bucket
+      digitBuckets[digit].push(number)
     }
 
+    // Recollect the buckets into one array
     nums = [].concat(...digitBuckets)
   }
 
