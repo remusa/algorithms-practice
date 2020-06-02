@@ -30,14 +30,14 @@
 
 ### React
 
+* [ ] [sudheerj/reactjs-interview-questions: List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!](https://github.com/sudheerj/reactjs-interview-questions)
 * [ ] [React Interview Questions](https://tylermcginnis.com/react-interview-questions/)
 * [ ] [Top 50 React Interview Questions and Answers For 2020 | Edureka](https://www.edureka.co/blog/interview-questions/react-interview-questions/)
 * [ ] [21 Essential React.js Interview Questions and Answers](https://www.toptal.com/react/interview-questions)
 * [ ] [ReactJS Interview Questions for Senior Developers - ITNEXT](https://itnext.io/reactjs-interview-questions-for-senior-developers-64618f6a0aca)
 * [ ] [Pau1fitz/react-interview: React Interview Questions 📙 📚 📖 🔎 ✒️](https://github.com/Pau1fitz/react-interview)
-* [ ] [sudheerj/reactjs-interview-questions: List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!](https://github.com/sudheerj/reactjs-interview-questions)
 * [ ] [reactjs-interview-questions/README-en.md at master · semlinker/reactjs-interview-questions](https://github.com/semlinker/reactjs-interview-questions/blob/master/README-en.md)
+* [ ] [React job interview - Questions -  Fredrik Christenson](https://www.youtube.com/watch?v=nRI0dn6GTj8)
+* [ ] [React job interview - code test -  Fredrik Christenson](https://www.youtube.com/watch?v=vtUdacXj4Ws)
+* [ ] [Senior React interview questions -  Fredrik Christenson](https://www.youtube.com/watch?v=tiOkArbHnqY)
 * [ ] [React Interview Questions and Answers | React Interview Questions | ReactJS Tutorial | Simplilearn - YouTube](https://www.youtube.com/watch?v=-dS9pvGqlX8)
-- [ ] [React job interview - Questions - YouTube](https://www.youtube.com/watch?v=nRI0dn6GTj8)
-- [ ] [React job interview - code test - YouTube](https://www.youtube.com/watch?v=vtUdacXj4Ws)
-- [ ] [Senior React interview questions - YouTube](https://www.youtube.com/watch?v=tiOkArbHnqY)
