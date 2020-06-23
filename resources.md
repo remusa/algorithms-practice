@@ -181,5 +181,3 @@
 * [How to solve coding interview problems ("Let's leetcode") - TechLead](https://www.youtube.com/watch?v=dIrS31CCITM)
 * [How to solve coding interview questions 2 ("Let's leetcode") - TechLead](https://www.youtube.com/watch?v=prUE1gPsJ-g)
 * [5 Steps to Pass Data Science Interviews - YouTube](https://www.youtube.com/watch?v=OHhoLhYW2cg)
-
-

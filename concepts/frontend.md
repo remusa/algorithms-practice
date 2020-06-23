@@ -12,6 +12,6 @@
 
 ## Resources
 
-* [display | CSS-Tricks](https://css-tricks.com/almanac/properties/d/display/)Inline
+* [display | CSS-Tricks](https://css-tricks.com/almanac/properties/d/display/)
 
 The default value for elements. Think of elements like `<span>`, `<em>`, or `<b>` and how wrapping text in those elements within a string of text doesn't break the flow of the text.

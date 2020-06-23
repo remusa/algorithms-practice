@@ -3,11 +3,11 @@
 * **Lifecycle methods**: [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
   * `componentWillMount()`: called before `render()` when a component is being mounted to the DOM.
   * `componentDidMount()` API calls (ajax requests), attach EventListener, timers/listeners.
-  * `componentWillReceiveProps()`: called whenever a component is receiving new props.
-  * `shouldComponentUpdate()`: new state or props.
+  * `componentWillUnmount()`: remove EventListeners and timers/intervals.
   * `componentWillUpdate()`: called whenever a component is receiving new props.
   * `componentDidUpdate()`: called immediately after a component re-renders.
-  * `componentWillUnmount()`: remove EventListeners and timers/intervals.
+  * `componentWillReceiveProps()`: called whenever a component is receiving new props.
+  * `shouldComponentUpdate()`: new state or props.
 
 * **Component**: React elements. A part of reusable code.
 
@@ -32,9 +32,25 @@
 * **Composition vs. inheritance**: components should be specialized.
   * A more *specific* component renders a more *generic* one by passing `props`.
 
+* **PropTypes**:
+  * *Problems*: can become legacy documentation if not maintained.
+  * *Tips*: use `shapeOf` instead of `object`.
+
+* **PureComponent**: improves performance by *memoizing* (only updates the component if props change).
+  * Handles the `shouldComponentUpdate` method automatically by shallow comparing shallow props and states.
+  * Similar to `React.memo()` for functional components.
+
+* **Types of Components**:
+  * A *stateless functional component* is a function that accepts props and returns `JSX`.
+  * A *stateless component* is a class that extends `React.Component`, but does not use internal state.
+  * A *stateful component* is a component that maintains its own internal state.
+
 ## Resources
 
 * [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 * [javascript - Can anyone explain the difference between Reacts one-way data binding and Angular's two-way data binding - Stack Overflow](https://stackoverflow.com/questions/34519889/can-anyone-explain-the-difference-between-reacts-one-way-data-binding-and-angula)
 * [Understanding unidirectional data flow in React - Liz Denhup - Medium](https://medium.com/@lizdenhup/understanding-unidirectional-data-flow-in-react-3e3524c09d8e)
 * [How React Reconciliation Works | CSS-Tricks](https://css-tricks.com/how-react-reconciliation-works/)
+* [React job interview - Questions - YouTube](https://www.youtube.com/watch?v=nRI0dn6GTj8)
+* [When to use Component or PureComponent - codeburst](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
+* [React Top-Level API – React](https://reactjs.org/docs/react-api.html#reactpurecomponent)

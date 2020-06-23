@@ -5,7 +5,7 @@
   * [Abstraction](#abstraction)
   * [Inheritance](#inheritance)
     * [Composition vs. Inheritance](#composition-vs-inheritance)
-    * [Class-based vs prototype-based](#class-based-vs-prototype-based)
+    * [Class-based vs Prototype-based](#class-based-vs-prototype-based)
   * [Polymorphism](#polymorphism)
   * [Resources](#resources)
 
@@ -66,7 +66,7 @@
 * Changing requirements is more flexible than restructuring classes that use hierearchy.
 * **Note**: avoid inheritance, makes less sense in the context of module-based languages because it tightly couples parts of the system together for no reason other than "code reuse".
 
-### Class-based vs prototype-based
+### Class-based vs Prototype-based
 
 * **Class-based**: `classes` are a blueprint of an entity, a description of the object to be created. `Objects` are created (*instantiated*) based on the classes.
 * **Prototype-based**: `classes` don't exist, all objects have a `prototype` property. Inheritance is simulating when trying to access a property. If it isn't found, JS will look at the `prototype` property. If it still isn't found, it will try to look for it in the `prototype`, and the `prototype`'s `prototype`.
