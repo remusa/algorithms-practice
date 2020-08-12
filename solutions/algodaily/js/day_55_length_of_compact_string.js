@@ -63,7 +63,7 @@ function compactLengthO1(str) {
       count
         .toString()
         .split('')
-        .forEach(function (char) {
+        .forEach(function(char) {
           str[answerIdx++] = char
         })
     }

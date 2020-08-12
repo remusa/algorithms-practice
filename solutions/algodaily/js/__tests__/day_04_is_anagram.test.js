@@ -1,6 +1,6 @@
 import { isAnagram, isAnagram2 } from '../day_04_is_anagram'
 
-describe('isAnagram tests', function () {
+describe('isAnagram tests', function() {
   it('should return the correct values', () => {
     expect(isAnagram('Mary', 'Army')).toEqual(true)
     expect(isAnagram('cinema', 'iceman')).toEqual(true)

@@ -31,7 +31,7 @@ function power(x, n) {
   }
 }
 
-const displayPower = function (x, n) {
+const displayPower = function(x, n) {
   console.log(`${x} to the ${n} is ${power(x, n)}`)
 }
 

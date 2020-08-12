@@ -1,6 +1,6 @@
 const ls = require('./linear_search')
 
-describe('linear search tests', function () {
+describe('linear search tests', function() {
   it('should return null for empty lists', () => {
     expect(ls.linearSearch([], '')).toEqual(-1)
   })

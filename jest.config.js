@@ -1,3 +1,7 @@
+const path = require('path')
+
+const here = (...p) => path.join(__dirname, ...p)
+
 module.exports = {
   // The bail config option can be used here to have Jest stop running tests after
   // the first failure.
@@ -14,6 +18,15 @@ module.exports = {
 
   // If the test path matches any of the patterns, it will be skipped.
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
+  globals: {
+    __PATH_PREFIX__: ``,
+  },
+
+  transform: {
+    '^.+\\.jsx?$': 'babel-jest',
+    // '^.+\\.tsx?$': 'ts-jest',
+  },
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
 
   // If the file path matches any of the patterns, coverage information will be skipped.
   coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
@@ -21,8 +34,12 @@ module.exports = {
   // The pattern Jest uses to detect test files.
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
 
+  moduleFileExtensions: ['js', 'ts', 'json', 'node'],
+
   // This option sets the URL for the jsdom environment.
   // It is reflected in properties such as location.href.
   // @see: https://github.com/facebook/jest/issues/6769
   testURL: 'http://localhost/',
+
+  setupFilesAfterEnv: [here('./tests/setup')],
 }

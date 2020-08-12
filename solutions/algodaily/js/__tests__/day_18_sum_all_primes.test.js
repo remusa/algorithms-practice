@@ -1,6 +1,6 @@
 import { sumOfPrimes, getPrimes } from '../day_18_sum_all_primes'
 
-describe('sum all primes tests', function () {
+describe('sum all primes tests', function() {
   // it('should return an array with the prime numbers from 1 up to N', () => {
   //     expect(getPrimes(2)).toEqual([2])
   //     expect(getPrimes(7)).toEqual([])

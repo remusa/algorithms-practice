@@ -1,6 +1,6 @@
 import { fizzBuzz } from '../day_02_fizz_buzz'
 
-describe('fizz buzz tests', function () {
+describe('fizz buzz tests', function() {
   it('should return the correct values', () => {
     expect(fizzBuzz(0)).toEqual('')
     expect(fizzBuzz(1)).toEqual('1')

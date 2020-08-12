@@ -1,6 +1,6 @@
 import { Hashmap } from '../day_09_implement_hash_map'
 
-describe('hash map tests', function () {
+describe('hash map tests', function() {
   it('should perform the operations on a hash map', () => {
     const myHashmap = new Hashmap()
     myHashmap.set('name', 'Jake')

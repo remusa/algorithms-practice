@@ -1,7 +1,7 @@
 import { PriorityQueueMaxHeap } from './priority_queue_max_heap'
 import { PriorityQueueMinHeap } from './priority_queue_min_heap'
 
-describe('max heap priority queue tests', function () {
+describe('max heap priority queue tests', function() {
   it('should perform the correct operations on a max heap priority queue', () => {
     const pq = new PriorityQueueMaxHeap()
 
@@ -24,7 +24,7 @@ describe('max heap priority queue tests', function () {
   })
 })
 
-describe('min heap priority queue tests', function () {
+describe('min heap priority queue tests', function() {
   it('should perform the correct operations on a min heap priority queue', () => {
     const pq = new PriorityQueueMinHeap()
 

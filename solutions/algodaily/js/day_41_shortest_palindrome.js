@@ -36,7 +36,10 @@ export function shortestPalindrome(s) {
   // Rebuild palindrome recursively
 
   // Reverse the end
-  const reversedEnd = palindromeEnd.split('').reverse().join('')
+  const reversedEnd = palindromeEnd
+    .split('')
+    .reverse()
+    .join('')
   // just the existing palindrome
   const existingPalindrome = shortestPalindrome(s.substr(0, left))
 

@@ -1,14 +1,14 @@
 /* A Queue object for queue-like functionality over JavaScript arrays. */
-const Queue = function () {
+const Queue = function() {
   this.items = []
 }
-Queue.prototype.enqueue = function (obj) {
+Queue.prototype.enqueue = function(obj) {
   this.items.push(obj)
 }
-Queue.prototype.dequeue = function () {
+Queue.prototype.dequeue = function() {
   return this.items.shift()
 }
-Queue.prototype.isEmpty = function () {
+Queue.prototype.isEmpty = function() {
   return this.items.length === 0
 }
 
@@ -19,7 +19,7 @@ Queue.prototype.isEmpty = function () {
  * @returns {array} Array of objects describing each vertex, like
  *     [{distance: _, predecessor: _ }]
  */
-const doBFS = function (graph, source) {
+const doBFS = function(graph, source) {
   const bfsInfo = []
 
   for (let i = 0; i < graph.length; i++) {

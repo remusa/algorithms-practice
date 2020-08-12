@@ -1,6 +1,6 @@
 const fn = require('./factorial')
 
-describe('factorial test', function () {
+describe('factorial test', function() {
   it('should return factorial iteratively', () => {
     expect(fn.factorialIterative(5)).toEqual(120)
 

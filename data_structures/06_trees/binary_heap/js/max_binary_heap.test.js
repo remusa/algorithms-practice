@@ -1,6 +1,6 @@
 import { MaxBinaryHeap } from './max_binary_heap'
 
-describe('binary heap tests', function () {
+describe('binary heap tests', function() {
   it('should perform the operations on a binary heap', () => {
     const heap = new MaxBinaryHeap()
 

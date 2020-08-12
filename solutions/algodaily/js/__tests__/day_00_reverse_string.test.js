@@ -4,7 +4,7 @@ import {
   reverseStringRecursive,
 } from '../day_00_reverse_string'
 
-describe('test palindrome (string reversal)', function () {
+describe('test palindrome (string reversal)', function() {
   it('should reverse string iteratively', () => {
     expect(reverseStringIterative('hello')).toEqual('olleh')
     expect(reverseStringIterative('Hello, World!')).toEqual('!dlroW ,olleH')

@@ -70,16 +70,16 @@ function flatten(arr) {
 console.log(flatten([1, 2, [3, 4, [5, 6, 7], 8], 9, 10])) // [1,2,3,4,5,6,7,8,9,10]
 
 // Implement Function.prototype.bind()
-Function.prototype.bind = function (context) {
+Function.prototype.bind = function(context) {
   const fn = this
-  return function () {
+  return function() {
     fn.apply(context) // or call
   }
 }
 
 // Another way
 function bind(fn, context) {
-  return function () {
+  return function() {
     // fn.call(context)
     fn.apply(context, [...arguments]) // handles arguments by spreading them
   }
@@ -103,7 +103,7 @@ Timing:
 function debounce(fn, time) {
   let timeoutId
 
-  return function () {
+  return function() {
     if (timeoutId) {
       clearTimeout(timeoutId)
       // throttle -> just return
@@ -131,12 +131,12 @@ fn1() // Ignored
 function throttle(fn, time) {
   let shouldWait = false
 
-  return function (...args) {
+  return function(...args) {
     if (!shouldWait) {
       fn.apply(this, args)
       shouldWait = true
 
-      setTimeout(function () {
+      setTimeout(function() {
         shouldWait = false
       }, time)
     }
@@ -256,8 +256,8 @@ function getByPath([first, ...rest], obj) {
 */
 
 function promisify(fn) {
-  return function (...args) {
-    return new Promise(function (resolve, reject) {
+  return function(...args) {
+    return new Promise(function(resolve, reject) {
       function cb(result) {
         resolve(result)
       }

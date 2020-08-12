@@ -1,6 +1,6 @@
 function memoizedAddTo80() {
   const cache = {}
-  return function (n) {
+  return function(n) {
     // closure to avoid putting cache in global scope
     if (n in cache) {
       return cache[n]

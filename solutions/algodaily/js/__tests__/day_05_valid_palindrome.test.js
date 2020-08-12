@@ -1,6 +1,6 @@
 import { isPalindrome, isPalindrome2, isPalindrome3 } from '../day_05_valid_palindrome'
 
-describe('isAnagram tests', function () {
+describe('isAnagram tests', function() {
   it('should return the correct values', () => {
     expect(isPalindrome('gold')).toEqual(false)
     expect(isPalindrome('a')).toEqual(true)

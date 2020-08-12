@@ -1,6 +1,6 @@
 import { Node, isValidBST, isValidBST2 } from '../day_33_validate_bst'
 
-describe('valid binary search tree tests', function () {
+describe('valid binary search tree tests', function() {
   it('should check if binary search tree is valid', () => {
     // Regular binary trees
     const tree = new Node(5)
