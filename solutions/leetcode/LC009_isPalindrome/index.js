@@ -8,4 +8,4 @@
 
 function isPalindrome(x) {}
 
-module.exports = isPalindrome;
+module.exports = isPalindrome

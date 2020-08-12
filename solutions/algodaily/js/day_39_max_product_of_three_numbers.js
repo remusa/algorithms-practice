@@ -15,8 +15,7 @@ function maxProductOfThree(unsorted) {
 
   const arr = [...unsorted].sort((a, b) => a - b)
 
-  const product1 =
-    arr[arr.length - 3] * arr[arr.length - 2] * arr[arr.length - 1]
+  const product1 = arr[arr.length - 3] * arr[arr.length - 2] * arr[arr.length - 1]
   const product2 = arr[0] * arr[1] * arr[arr.length - 1]
 
   return product1 > product2 ? product1 : product2

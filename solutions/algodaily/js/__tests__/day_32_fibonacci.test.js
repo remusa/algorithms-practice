@@ -1,6 +1,6 @@
 import { fibonacciBottomUp, fibonacciRecursiveMemo } from '../day_32_fibonacci'
 
-describe('fibonacci sequence tests', function() {
+describe('fibonacci sequence tests', function () {
   it('should return correct fibonacci sequence value using bottom up approach', () => {
     expect(fibonacciBottomUp(0)).toEqual(0)
     expect(fibonacciBottomUp(1)).toEqual(1)
@@ -16,7 +16,7 @@ describe('fibonacci sequence tests', function() {
   })
 })
 
-describe('fibonacci sequence tests', function() {
+describe('fibonacci sequence tests', function () {
   it('should return correct fibonacci sequence value using top-down approach (recursion)', () => {
     expect(fibonacciRecursiveMemo(0)).toEqual(0)
     expect(fibonacciRecursiveMemo(1)).toEqual(1)

@@ -32,15 +32,7 @@ describe('binary search tree tests', () => {
     // expect(bstTree.breadthFirstSearch(1)).toEqual(1)
     // expect(bstTree.breadthFirstSearch(99)).toEqual(null)
     expect(bstTree.bfsTraversalIterative()).toEqual([9, 4, 20, 1, 6, 15, 170])
-    expect(bstTree.bfsTraversalRecursive([bstTree.root], [])).toEqual([
-      9,
-      4,
-      20,
-      1,
-      6,
-      15,
-      170,
-    ])
+    expect(bstTree.bfsTraversalRecursive([bstTree.root], [])).toEqual([9, 4, 20, 1, 6, 15, 170])
 
     // DFS
     // expect(bstTree.dfsTraversalIterative()).toEqual([9, 4, 1, 6, 20, 15, 170])

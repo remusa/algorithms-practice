@@ -4,16 +4,15 @@
 | -------------- | ---------- | ------------ | --------- | ------ | ------ |
 | complexity     | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
 
-* **Insertion sort**: sorts the list starting from the beginning and *inserting*
-  the unsorted elements in the corresponding place of the already sorted list.
-* It works by selecting the first element of the list and
-  looking at the next item. If it's smaller, we swap them. Then we select
-  the next index of the list and compare it with the previously sorted items, and we *insert*
-  it in the correct position.
-* *Stable*: doesn't modify the already sorted elements.
-* Useful when list is *already or almost* sorted.
-* Inefficient on large lists.
-* Generally, *insertion sort* performs better than *selection sort*.
+- **Insertion sort**: sorts the list starting from the beginning and _inserting_ the unsorted
+  elements in the corresponding place of the already sorted list.
+- It works by selecting the first element of the list and looking at the next item. If it's smaller,
+  we swap them. Then we select the next index of the list and compare it with the previously sorted
+  items, and we _insert_ it in the correct position.
+- _Stable_: doesn't modify the already sorted elements.
+- Useful when list is _already or almost_ sorted.
+- Inefficient on large lists.
+- Generally, _insertion sort_ performs better than _selection sort_.
 
 ## Pseudocode
 
@@ -40,9 +39,10 @@ end
 
 ## Insert function
 
-* To insert an element into its correct position, we repeatedly compare it with
-  the elements to its left, going right to left.
-* Each time we find that the key is less than an element to its left, we slide that element one position to the right, since we know that the key will have to go to that element's left.
+- To insert an element into its correct position, we repeatedly compare it with the elements to its
+  left, going right to left.
+- Each time we find that the key is less than an element to its left, we slide that element one
+  position to the right, since we know that the key will have to go to that element's left.
 
 ## Example
 
@@ -63,7 +63,8 @@ The sorted part of the list is initially empty, so we increment `i`, and move on
 sorted ||	unsorted
 ```
 
-For this pass, the item at index `i` is compared with the item at index `i - 1`. Since `7` is greater than `3`, the items are in the correct order and this pass is complete.
+For this pass, the item at index `i` is compared with the item at index `i - 1`. Since `7` is
+greater than `3`, the items are in the correct order and this pass is complete.
 
 ### Pass 3
 
@@ -81,7 +82,8 @@ For this pass, the item at `i`, which is 2, needs to be inserted into the sorted
 sorted 	 || unsorted
 ```
 
-We know that the value 5 will stay in its current location as we only work with the value at index i and the sorted part of the list.
+We know that the value 5 will stay in its current location as we only work with the value at index i
+and the sorted part of the list.
 
 ```
  	 	  ||i
@@ -141,11 +143,8 @@ Our list is now sorted.
 
 ## References
 
-* [Insertion sort - Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
-* [Insertion sort (article) | Algorithms | Khan
-  Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
-* [Insertion sort pseudocode (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort-pseudocode)
-* [Insertion Sort - Sorting Algorithm Animations |
-  Toptal](https://www.toptal.com/developers/sorting-algorithms/insertion-sort)
-* [Insert-sort with Romanian folk dance -
-  YouTube](https://www.youtube.com/watch?v=ROalU379l3U)
+- [Insertion sort - Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
+- [Insertion sort (article) | Algorithms | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
+- [Insertion sort pseudocode (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort-pseudocode)
+- [Insertion Sort - Sorting Algorithm Animations | Toptal](https://www.toptal.com/developers/sorting-algorithms/insertion-sort)
+- [Insert-sort with Romanian folk dance - YouTube](https://www.youtube.com/watch?v=ROalU379l3U)

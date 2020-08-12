@@ -8,21 +8,26 @@
 | insert    | `O(log(n))` |
 | delete    | `O(log(n))` |
 
-* Useful when finding shortest path, but unlike *BFS*, it takes into account *weights*.
+- Useful when finding shortest path, but unlike _BFS_, it takes into account _weights_.
 
-* **Dijkstra**: determines the shortest path (if reachable) from one node in a graph to *every other node* within the same graph.
-  * *Faster than Bellman-Ford*: on average.
+- **Dijkstra**: determines the shortest path (if reachable) from one node in a graph to _every other
+  node_ within the same graph.
 
-* Examples:
-  * GPS - finding fastest route.
-  * Network Routing - finds open shortest path for data.
-  * Biology - used to model the spread of viruses among humans.
-  * Airline tickets - finding cheapest route to your destination.
+  - _Faster than Bellman-Ford_: on average.
 
-1. Every time we look to visit a new node, we pick the node with the smallest known distance to visit first.
+- Examples:
+  - GPS - finding fastest route.
+  - Network Routing - finds open shortest path for data.
+  - Biology - used to model the spread of viruses among humans.
+  - Airline tickets - finding cheapest route to your destination.
+
+1. Every time we look to visit a new node, we pick the node with the smallest known distance to
+   visit first.
 2. Once we’ve moved to the node we’re going to visit, we look at each of its neighbors
-3. For each neighboring node, we calculate the distance by summing the total edges that lead to the node we’re checking from the starting node.
-4. If the new total distance to a node is less than the previous total, we store the new shorter distance for that node.
+3. For each neighboring node, we calculate the distance by summing the total edges that lead to the
+   node we’re checking from the starting node.
+4. If the new total distance to a node is less than the previous total, we store the new shorter
+   distance for that node.
 
 ## Pseudocode
 
@@ -44,9 +49,9 @@ Start looping as long as there is anything in the priority queue
 
 ## Improving Dijkstra's Algorithm
 
-* Dijkstra's algorithm is greedy. That can cause problems.
-* We can improve this algorithm by adding a *heuristics* (a best guess).
+- Dijkstra's algorithm is greedy. That can cause problems.
+- We can improve this algorithm by adding a _heuristics_ (a best guess).
 
 ## Resources
 
-* [Dijkstra's Algorithm Pseudocode](https://cs.slides.com/colt_steele/graphs#/120/0/0)
+- [Dijkstra's Algorithm Pseudocode](https://cs.slides.com/colt_steele/graphs#/120/0/0)

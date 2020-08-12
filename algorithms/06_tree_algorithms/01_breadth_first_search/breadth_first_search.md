@@ -5,18 +5,17 @@
 | space     | ``         |
 | search    | `O(n)`     |
 
-* *Time complexity*: `O(V + E)` where `V` is the number of nodes and E the
-  number of edges. You need to traverse all nodes.
-* *Space complexity*: `O(V)` as well - since at worst case you need to hold all vertices in the queue.
+- _Time complexity_: `O(V + E)` where `V` is the number of nodes and E the number of edges. You need
+  to traverse all nodes.
+- _Space complexity_: `O(V)` as well - since at worst case you need to hold all vertices in the
+  queue.
 
-* **Breadth-first search (BFS)**: algorithm for exploring a tree or a graph. In
-  a BFS, you first explore all the nodes one step away, then all the nodes two
-  steps away, etc.
-* Nodes *ripple out* from the starting point, like throwing a stone in the
-  center of a pond.
-* *Uses a queue*, instead of a stack like *DFS*.
+- **Breadth-first search (BFS)**: algorithm for exploring a tree or a graph. In a BFS, you first
+  explore all the nodes one step away, then all the nodes two steps away, etc.
+- Nodes _ripple out_ from the starting point, like throwing a stone in the center of a pond.
+- _Uses a queue_, instead of a stack like _DFS_.
 
-* Steps:
+- Steps:
   1. Start with the root.
   2. Visit all immediate children.
   3. Move to the children of all those nodes.
@@ -24,13 +23,12 @@
 
 ## Comparison with Depth-first Search
 
-* **Advantages**:
-  * *BFS* will find the *shortest path* between the starting point and any other
-    reachable node. *DFS* will not necessarily find the shortest path.
-* **Disadvantages**:
-  * *Requires more memory* than *DFS* (generally) because we need to take
-    note of all the nodes on a given level while searching that level (track
-    every node and its children in order).
+- **Advantages**:
+  - _BFS_ will find the _shortest path_ between the starting point and any other reachable node.
+    _DFS_ will not necessarily find the shortest path.
+- **Disadvantages**:
+  - _Requires more memory_ than _DFS_ (generally) because we need to take note of all the nodes on a
+    given level while searching that level (track every node and its children in order).
 
 ## Steps
 
@@ -90,17 +88,11 @@ end BFS
 
 ## Resources
 
-* [Breadth-First Search (BFS) and Breadth-First Traversal | Interview Cake](https://www.interviewcake.com/concept/javascript/bfs?)
-* [Breadth-first search - Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
-* [Tree Traversals (Inorder, Preorder and Postorder) - GeeksforGeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
-* [BFS vs DFS for Binary Tree -
-  GeeksforGeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
-* [algorithm - What is the time and space complexity of a breadth first and
-  depth first tree traversal? - Stack
-  Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
-* [Breadth-First Search (BFS) | Brilliant Math & Science
-  Wiki](https://brilliant.org/wiki/breadth-first-search-bfs/)
-* [Algorithms: Graph Search, DFS and BFS -
-  YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
-* [Breadth First Search Tutorials & Notes | Algorithms |
-  HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)
+- [Breadth-First Search (BFS) and Breadth-First Traversal | Interview Cake](https://www.interviewcake.com/concept/javascript/bfs?)
+- [Breadth-first search - Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
+- [Tree Traversals (Inorder, Preorder and Postorder) - GeeksforGeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [BFS vs DFS for Binary Tree - GeeksforGeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
+- [algorithm - What is the time and space complexity of a breadth first and depth first tree traversal? - Stack Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
+- [Breadth-First Search (BFS) | Brilliant Math & Science Wiki](https://brilliant.org/wiki/breadth-first-search-bfs/)
+- [Algorithms: Graph Search, DFS and BFS - YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
+- [Breadth First Search Tutorials & Notes | Algorithms | HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)

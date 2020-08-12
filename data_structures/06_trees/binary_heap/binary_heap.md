@@ -7,36 +7,48 @@
 | delete    | `O(log(n))` |
 | search    | `O(n)`      |
 
-* **Heap**: a *heap* is a small collection or group. It's a specialized tree-based data structure, where the largest or smallest element is at the top.
-  * Used to implement *priority queues*.
-  * Used with *graph traversal algorithms*.
+- **Heap**: a _heap_ is a small collection or group. It's a specialized tree-based data structure,
+  where the largest or smallest element is at the top.
 
-* **Types**:
-  * *Max heap*: parent nodes are always larger than child nodes, the root node has the *highest value* or priority.
-  * *Min heap*: parent nodes are always smaller than child nodes, the root node has the *lowest value* or priority.
+  - Used to implement _priority queues_.
+  - Used with _graph traversal algorithms_.
 
-* **Binary heap**: commonly used when ordering is important, like in *priority queues*.
+- **Types**:
 
-* **Max binary heap**:
-  * Each parent has at most two child nodes.
-  * The value of each parent node is *always* greater than its child nodes.
-  * In a Max Binary Heap the parent is *greater* than the children, but there are no guarantees between sibling nodes.
-  * A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
+  - _Max heap_: parent nodes are always larger than child nodes, the root node has the _highest
+    value_ or priority.
+  - _Min heap_: parent nodes are always smaller than child nodes, the root node has the _lowest
+    value_ or priority.
+
+- **Binary heap**: commonly used when ordering is important, like in _priority queues_.
+
+- **Max binary heap**:
+  - Each parent has at most two child nodes.
+  - The value of each parent node is _always_ greater than its child nodes.
+  - In a Max Binary Heap the parent is _greater_ than the children, but there are no guarantees
+    between sibling nodes.
+  - A binary heap is as compact as possible. All the children of each node are as full as they can
+    be and left children are filled out first.
 
 ## Strenghts and Weaknesses
 
-* **Strenghts**:
-  * *Space efficient*: size is flexible.
-  * *Always balanced*: insertions are always left-to-right, so they preserve insertion order.
-  * *Fast insertions and deletions*: insertion and deletion are very fast (`O(log(n))`).
-  * *Good at comparisons*: binary heaps are good at doing comparative operations, like grabbing a set of values greater than or lesser than `x`. If using a binary-search tree, we would need to traverse the entire tree.
-  * *Good at finding maximum/minimum value*: finding the root node is always `O(1)`.
-* **Weaknesses**:
-  * *Slow searches*: search is `O(n)`, unlike binary-search trees, where the smaller value is on the left child and the greater value is on the right child, in *binary heaps*, the left and right children can be any value as long as it's smaller/greater than the top value, so when traversing we need to check *both sides*, losing `O(log(n))`.
+- **Strenghts**:
+  - _Space efficient_: size is flexible.
+  - _Always balanced_: insertions are always left-to-right, so they preserve insertion order.
+  - _Fast insertions and deletions_: insertion and deletion are very fast (`O(log(n))`).
+  - _Good at comparisons_: binary heaps are good at doing comparative operations, like grabbing a
+    set of values greater than or lesser than `x`. If using a binary-search tree, we would need to
+    traverse the entire tree.
+  - _Good at finding maximum/minimum value_: finding the root node is always `O(1)`.
+- **Weaknesses**:
+  - _Slow searches_: search is `O(n)`, unlike binary-search trees, where the smaller value is on the
+    left child and the greater value is on the right child, in _binary heaps_, the left and right
+    children can be any value as long as it's smaller/greater than the top value, so when traversing
+    we need to check _both sides_, losing `O(log(n))`.
 
 ## Pseudocode
 
-* **Insert**:
+- **Insert**:
 
 ```
 Push the value into the values property on the heap
@@ -48,8 +60,11 @@ Bubble Up:
     Set the index to be the parentIndex, and start over
 ```
 
-* **Remove**: also called `extractMax`.
-  * *Note*: *sink down* is the procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called *down-heap* (also known as *bubble-down*, percolate-down, sift-down, trickle down, heapify-down, cascade-down, and extract-min/max).
+- **Remove**: also called `extractMax`.
+  - _Note_: _sink down_ is the procedure for deleting the root from the heap (effectively extracting
+    the maximum element in a max-heap or the minimum element in a min-heap) and restoring the
+    properties is called _down-heap_ (also known as _bubble-down_, percolate-down, sift-down,
+    trickle down, heapify-down, cascade-down, and extract-min/max).
 
 ```
 Swap the first value in the values property with the last one
@@ -66,9 +81,9 @@ Have the new root "sink down" to the correct spot...​
 
 ## Resources
 
-* [Heap (data structure) - Wikipedia](https://en.wikipedia.org/wiki/Heap_(data_structure))
-* [Data Structures: Heaps - HackerRank](https://www.youtube.com/watch?v=t0Cq6tVNRBA)
-* [c++ - Why are two different concepts both called "heap"? - Stack Overflow](https://stackoverflow.com/questions/1699057/why-are-two-different-concepts-both-called-heap)
-* [Binary Heaps -- Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/appendix2.html)
-* [Learning to Love Heaps - basecs - Medium](https://medium.com/basecs/learning-to-love-heaps-cef2b273a238)
-* [Binary Heaps -- Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/appendix2.html)
+- [Heap (data structure) - Wikipedia](<https://en.wikipedia.org/wiki/Heap_(data_structure)>)
+- [Data Structures: Heaps - HackerRank](https://www.youtube.com/watch?v=t0Cq6tVNRBA)
+- [c++ - Why are two different concepts both called "heap"? - Stack Overflow](https://stackoverflow.com/questions/1699057/why-are-two-different-concepts-both-called-heap)
+- [Binary Heaps -- Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/appendix2.html)
+- [Learning to Love Heaps - basecs - Medium](https://medium.com/basecs/learning-to-love-heaps-cef2b273a238)
+- [Binary Heaps -- Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/appendix2.html)

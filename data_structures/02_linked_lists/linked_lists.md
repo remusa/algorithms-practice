@@ -11,32 +11,37 @@
 | insert            | `O(n)`     | `O()`         |
 | delete            | `O(n)`     | `O()`         |
 
-* **Linked lists**: organizes items sequentially, with each item storing a pointer to the next one.
-* **Node**: item in a linked list.
-  * 2 parts:
-    * A *key*: the value.
-    * The *next* pointer.
-* **Head**: first node of the list.
-* **Tail**: last node of the list.
-* Used for *stacks* and *queues* because they only need fast operations on the ends.
+- **Linked lists**: organizes items sequentially, with each item storing a pointer to the next one.
+- **Node**: item in a linked list.
+  - 2 parts:
+    - A _key_: the value.
+    - The _next_ pointer.
+- **Head**: first node of the list.
+- **Tail**: last node of the list.
+- Used for _stacks_ and _queues_ because they only need fast operations on the ends.
 
 ## Strengths and Weaknesses
 
-* **Strengths**:
-  * *Fast operations on the ends*: adding and removing elements at either end of a linked list is `O(1)`.
-  * *Flexible size*: there's no need to specify how many elements you're going to store ahead of time. You can keep adding elements as long as there's enough space on the machine.
-  * *Ordered*: items can be ordered when they're being inserted.
-* **Weaknesses**:
-  * *Costly lookups*: to access or edit an item in a linked list, you have to take `O(i)` time to walk from the head of the list to the `i`th item.
-  * *Not cache-friendly*: array items are always located next to each other, but nodes in linked lists can be scattered, so iterating through the items in an array is slower even though they're both theoretically `O(n)` time.
+- **Strengths**:
+  - _Fast operations on the ends_: adding and removing elements at either end of a linked list is
+    `O(1)`.
+  - _Flexible size_: there's no need to specify how many elements you're going to store ahead of
+    time. You can keep adding elements as long as there's enough space on the machine.
+  - _Ordered_: items can be ordered when they're being inserted.
+- **Weaknesses**:
+  - _Costly lookups_: to access or edit an item in a linked list, you have to take `O(i)` time to
+    walk from the head of the list to the `i`th item.
+  - _Not cache-friendly_: array items are always located next to each other, but nodes in linked
+    lists can be scattered, so iterating through the items in an array is slower even though they're
+    both theoretically `O(n)` time.
 
 ## Pointer
 
-* **Pointer**: reference to an object.
+- **Pointer**: reference to an object.
 
 ```javascript
 let obj1 = { a: true }
-let obj2 = obj1   // 'obj2' "points" to the same location in memory as 'obj1', so both hold the same values (when 'obj1' is modified so is 'obj2')
+let obj2 = obj1 // 'obj2' "points" to the same location in memory as 'obj1', so both hold the same values (when 'obj1' is modified so is 'obj2')
 console.log(`1`, obj1)
 console.log(`2`, obj2)
 
@@ -61,7 +66,7 @@ console.log(`2`, obj2)
 
 ### Singly Linked List Implementation
 
-* Append:
+- Append:
 
 ```
 Append(value)
@@ -78,7 +83,7 @@ Append(value)
 end Append
 ```
 
-* Prepend:
+- Prepend:
 
 ```
 Prepend(value)
@@ -93,7 +98,7 @@ Prepend(value)
 end Prepend
 ```
 
-* Lookup:
+- Lookup:
 
 ```
 Contains(head, value)
@@ -111,7 +116,7 @@ Contains(head, value)
 end Contains
 ```
 
-* Delete:
+- Delete:
 
 ```
 Remove(head, value)
@@ -145,7 +150,7 @@ Remove(head, value)
 end Remove
 ```
 
-* Traverse:
+- Traverse:
 
 ```
 Traverse(head)
@@ -161,18 +166,18 @@ end Traverse
 
 ## Doubly-Linked Lists
 
-* In a *singly-linked list*, each item stores a single pointer to the `next` element.
-* In a *doubly-linked list*, items have pointers to the `next` and the `previous` nodes.
+- In a _singly-linked list_, each item stores a single pointer to the `next` element.
+- In a _doubly-linked list_, items have pointers to the `next` and the `previous` nodes.
 
-* **Strengths**:
-  * *Traverse from both directions*: doubly-linked lists allows us to traverse the list *backwards*.
-  * *Search from both directions*: can search from both sides.
-* **Weaknesses**:
-  * *Space complexity*: doubly-linked lists take more space because of the added `previous` pointer.
+- **Strengths**:
+  - _Traverse from both directions_: doubly-linked lists allows us to traverse the list _backwards_.
+  - _Search from both directions_: can search from both sides.
+- **Weaknesses**:
+  - _Space complexity_: doubly-linked lists take more space because of the added `previous` pointer.
 
 ### Doubly Linked List Implementation
 
-* Insert:
+- Insert:
 
 ```
 Add(value)
@@ -190,7 +195,7 @@ Add(value)
 end Add
 ```
 
-* Delete:
+- Delete:
 
 ```
 Remove(head, value)
@@ -229,6 +234,6 @@ end Remove
 
 ## Resources
 
-* [Linked List Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/linked-list?)
-* [Arrays vs Linked Lists - Computerphile - YouTube](https://www.youtube.com/watch?v=DyG9S9nAlUM)
-* [Linked List Data Structure | JavaScript - TraversyMedia](https://www.youtube.com/watch?v=ZBdE8DElQQU)
+- [Linked List Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/linked-list?)
+- [Arrays vs Linked Lists - Computerphile - YouTube](https://www.youtube.com/watch?v=DyG9S9nAlUM)
+- [Linked List Data Structure | JavaScript - TraversyMedia](https://www.youtube.com/watch?v=ZBdE8DElQQU)

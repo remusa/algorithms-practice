@@ -1,6 +1,6 @@
 import { Node, inorderTraversal } from '../day_10_binary_tree_inorder_traversal'
 
-describe('binary tree inorder traversal tests', function() {
+describe('binary tree inorder traversal tests', function () {
   it('should return an array with the inorder traversal of a binary tree', () => {
     // Regular binary trees
     const tree2 = new Node(5)

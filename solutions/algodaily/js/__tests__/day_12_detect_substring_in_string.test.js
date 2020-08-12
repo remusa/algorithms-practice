@@ -1,7 +1,4 @@
-import {
-  detectSubstring,
-  detectSubstringImproved,
-} from '../day_12_detect_substring_in_string'
+import { detectSubstring, detectSubstringImproved } from '../day_12_detect_substring_in_string'
 
 describe('detect substring in string tests', () => {
   it('should return the index where the substring starts, otherwise return -1', () => {

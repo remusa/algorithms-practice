@@ -83,15 +83,15 @@ function anotherFunChallenge(input) {
 
 function printAllNumbersThenAllPairSums(numbers) {
   console.log('these are the numbers:') // 1
-  numbers.forEach(function(number) {
+  numbers.forEach(function (number) {
     // n *
     console.log(number) // 1
   })
 
   console.log('and these are their sums:') // 1
-  numbers.forEach(function(firstNumber) {
+  numbers.forEach(function (firstNumber) {
     // n *
-    numbers.forEach(function(secondNumber) {
+    numbers.forEach(function (secondNumber) {
       // n
       console.log(firstNumber + secondNumber) // 1
     })

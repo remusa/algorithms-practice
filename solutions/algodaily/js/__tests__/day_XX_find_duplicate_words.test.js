@@ -1,4 +1,4 @@
-import { findDuplicates } from "../day_XX_find_duplicate_words"
+import { findDuplicates } from '../day_XX_find_duplicate_words'
 
 test('"The dog is the best" returns "the"', () => {
   expect(findDuplicates('The dog is the best')).toEqual(['the'])

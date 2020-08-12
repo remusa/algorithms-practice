@@ -65,5 +65,4 @@ end postorder
 
 ## Resources
 
-* [javascript-algorithms/src/data-structures/tree/binary-search-tree at master ·
-  trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
+- [javascript-algorithms/src/data-structures/tree/binary-search-tree at master · trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)

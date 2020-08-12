@@ -21,9 +21,7 @@ export default class AvlTree extends BinarySearchTree {
    * @return {boolean}
    */
   remove(value) {
-    throw new Error(
-      `Can't remove ${value}. Remove method is not implemented yet`
-    )
+    throw new Error(`Can't remove ${value}. Remove method is not implemented yet`)
   }
 
   /**

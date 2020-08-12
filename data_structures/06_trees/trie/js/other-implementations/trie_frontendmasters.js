@@ -7,7 +7,7 @@ class Trie {
 
   constructor(string) {
     this.value = string[0] || ''
-    
+
     if (string.length > 1) {
       this.children.push(new Trie(string.substr(1)))
     } else {
@@ -45,7 +45,7 @@ class Trie {
     }
 
     this.children.forEach(child =>
-      child._complete(search.substr(1), `${built}${this.value}`, suggestions)
+      child._complete(search.substr(1), `${built}${this.value}`, suggestions),
     )
 
     return suggestions

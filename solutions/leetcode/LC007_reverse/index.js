@@ -9,4 +9,4 @@
 
 function reverse(x) {}
 
-module.exports = reverse;
+module.exports = reverse

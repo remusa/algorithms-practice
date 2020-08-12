@@ -8,23 +8,27 @@
 | insert    | `O(log(n))` |
 | delete    | `O(log(n))` |
 
-* **Binary trees**: tree where every node has two or fewer children (`n < 2`. Children are called `left` and `right`.
-* *Binary trees are very efficient*: by choosing one path we completely eliminate the other one (only 1 possibility needs to be chosen).
+- **Binary trees**: tree where every node has two or fewer children (`n < 2`. Children are called
+  `left` and `right`.
+- _Binary trees are very efficient_: by choosing one path we completely eliminate the other one
+  (only 1 possibility needs to be chosen).
 
 ## Perfect Trees
 
-* *Perfect*: a tree is perfect when there are no *gaps* (every level is full).
+- _Perfect_: a tree is perfect when there are no _gaps_ (every level is full).
 
 ## Properties of Perfect Trees
 
 1. **The number of total nodes on each level doubles as we move down the tree**.
-2. **The number of nodes on the last level is equal to the sum of the number of nodes on all other levels (+ 1)**: about *half* of the nodes are on the last level.
+2. **The number of nodes on the last level is equal to the sum of the number of nodes on all other
+   levels (+ 1)**: about _half_ of the nodes are on the last level.
 
 ### Height of a Tree
 
-* **Height**: number of levels of the tree. If levels are `zero-indexed`, the number of nodes on the `xth` level is `2^x`.
-  * `n`: number of nodes.
-  * `h`: height of the trees.
+- **Height**: number of levels of the tree. If levels are `zero-indexed`, the number of nodes on the
+  `xth` level is `2^x`.
+  - `n`: number of nodes.
+  - `h`: height of the trees.
 
 ```
 1. Level 0: 2^0 nodes = 1,
@@ -40,38 +44,41 @@ log 100 = 2
 10^2 = 100
 ```
 
-* So the total number of nodes is: `n = 2^0 + 2^1 + 2^2 + 2^3 + ... + 2^(h - 1)`.
-* *Logs* can be used to calculate the height of a tree.
-  * `log10(100)` means *what power must you raise 10 to in order to get 100?*.
-    The answer is `2`, because `10^2 = 100`.
+- So the total number of nodes is: `n = 2^0 + 2^1 + 2^2 + 2^3 + ... + 2^(h - 1)`.
+- _Logs_ can be used to calculate the height of a tree.
+  - `log10(100)` means _what power must you raise 10 to in order to get 100?_. The answer is `2`,
+    because `10^2 = 100`.
 
 ## Binary Search Trees
 
-* **Rules**:
-  1. *Right child nodes* must be greater than the parent.
-  2. *Left child nodes* must be smaller than or equal to the parent.
-  3. Parent nodes can only have a *maximum of 2 children*.
+- **Rules**:
 
-* **Strengths**:
-  * *Very efficient*: all operations are `O(log(n))` in average, better than
-    `O(n)`. *Balanced* trees are prefered.
-  * *Ordered*: elements are sorted in hierarchichal order.
-  * *Flexible size*: .
-* **Weaknesses**:
-  * *Unbalanced trees are slow*: if every parent has only one child, it can turn out into a *linked list*, then we have to traverse the entire tree for every operation `O(n)`.
-  * *No `O(1)` operations*: we have to traverse the tree for any operations, which is `O(log(n))`.
+  1. _Right child nodes_ must be greater than the parent.
+  2. _Left child nodes_ must be smaller than or equal to the parent.
+  3. Parent nodes can only have a _maximum of 2 children_.
+
+- **Strengths**:
+  - _Very efficient_: all operations are `O(log(n))` in average, better than `O(n)`. _Balanced_
+    trees are prefered.
+  - _Ordered_: elements are sorted in hierarchichal order.
+  - _Flexible size_: .
+- **Weaknesses**:
+  - _Unbalanced trees are slow_: if every parent has only one child, it can turn out into a _linked
+    list_, then we have to traverse the entire tree for every operation `O(n)`.
+  - _No `O(1)` operations_: we have to traverse the tree for any operations, which is `O(log(n))`.
 
 ## Tree Traversals
 
-* *Inorder*: `left` -> `root` -> `right`.
-  * Useful for **searching** in a tree.
-  * Useful when **sorting** values.
-* *Preorder*: `root` -> `left` -> `right`.
-  * Useful for making a **copy** of a tree (or **exporting** it).
-* *Postorder*: `right` -> `left` -> `root`.
-  * Useful for **deleting** a tree.
+- _Inorder_: `left` -> `root` -> `right`.
+  - Useful for **searching** in a tree.
+  - Useful when **sorting** values.
+- _Preorder_: `root` -> `left` -> `right`.
+  - Useful for making a **copy** of a tree (or **exporting** it).
+- _Postorder_: `right` -> `left` -> `root`.
 
-* Note: trees are typically traversed *inorder*.
+  - Useful for **deleting** a tree.
+
+- Note: trees are typically traversed _inorder_.
 
 ```javascript
 // inorder = left -> root -> right
@@ -134,21 +141,21 @@ log 100 = 2
 
 ## Binary Tree Implementation
 
-* Binary Tree Node:
+- Binary Tree Node:
 
 ```javascript
 class BinaryTreeNode {
-    constructor(value) {
-        this.value = value
-        this.left = null
-        this.right = null
-    }
+  constructor(value) {
+    this.value = value
+    this.left = null
+    this.right = null
+  }
 }
 ```
 
 ### Pseudocode for Basic Operations
 
-* Insertion:
+- Insertion:
 
 ```
 insert(value)
@@ -182,7 +189,7 @@ insertNode(current, value)
 end insertNode
 ```
 
-* Search:
+- Search:
 
 ```
 contains(root, value)
@@ -201,7 +208,7 @@ contains(root, value)
 end contains
 ```
 
-* Deletion:
+- Deletion:
 
 ```
 remove(value)
@@ -252,7 +259,7 @@ remove(value)
 end remove
 ```
 
-* Find parent of node:
+- Find parent of node:
 
 ```
 findParent(value, root)
@@ -282,7 +289,7 @@ findParent(value, root)
 end findParent
 ```
 
-* Find node:
+- Find node:
 
 ```
 findNode(root, value)
@@ -302,7 +309,7 @@ findNode(root, value)
 end findNode
 ```
 
-* Find minimum:
+- Find minimum:
 
 ```
 findMin(root)
@@ -316,7 +323,7 @@ findMin(root)
 end findMin
 ```
 
-* Find maximum:
+- Find maximum:
 
 ```
 findMax(root)
@@ -376,6 +383,5 @@ end postorder
 
 ## Resources
 
-* [Binary Tree Data Structure | Interview Cake](https://www.interviewcake.com/concept/javascript/binary-tree?)
-* [javascript-algorithms/src/data-structures/tree/binary-search-tree at master ·
-  trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
+- [Binary Tree Data Structure | Interview Cake](https://www.interviewcake.com/concept/javascript/binary-tree?)
+- [javascript-algorithms/src/data-structures/tree/binary-search-tree at master · trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)

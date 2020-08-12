@@ -15,9 +15,7 @@ describe('naive first recurring character tests', () => {
     expect(fn.firstRecurringCharacterNaive([2, 3, 4, 5])).toEqual(undefined)
   })
   it('should return the first recurring character', () => {
-    expect(
-      fn.firstRecurringCharacterNaive([2, 5, 1, 2, 3, 5, 1, 2, 4])
-    ).toEqual(2)
+    expect(fn.firstRecurringCharacterNaive([2, 5, 1, 2, 3, 5, 1, 2, 4])).toEqual(2)
     // expect(fn.firstRecurringCharacterNaive([2, 1, 1, 2, 3, 5, 1, 2, 4])).toEqual(1)
   })
 })

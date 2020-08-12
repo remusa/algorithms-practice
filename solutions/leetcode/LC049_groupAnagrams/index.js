@@ -31,10 +31,7 @@ function groupAnagrams(arr) {
     const word = arr[i]
 
     // Split word into array of characters, sort them and put them back together
-    const key = word
-      .split('')
-      .sort()
-      .join('')
+    const key = word.split('').sort().join('')
 
     // If key doesn't exist in map, create it with the value of an empty array
     if (!grouped[key]) {

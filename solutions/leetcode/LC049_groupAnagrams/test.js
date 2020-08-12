@@ -2,7 +2,7 @@ const groupAnagrams = require('./index')
 
 test("['eat', 'tea', 'tan', 'ate', 'nat', 'bat'] returns 3 groups of Anagrams", () => {
   const res = groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']).sort(
-    (a, b) => b.length - a.length
+    (a, b) => b.length - a.length,
   )
 
   res.forEach(subArr => subArr.sort())

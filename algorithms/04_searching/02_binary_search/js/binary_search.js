@@ -35,13 +35,13 @@ function binarySearch(array, value) {
 }
 
 const binarySearchSimple = (arr, target, start, end) => {
-    if (end >= start) {
-        let mid = Math.floor((start+end)/2);
-        if (arr[mid] === target) return mid;
-        else if(arr[mid] > target) return binarySearch(arr, target, start, mid-1);
-        else return binarySearch(arr, target, mid+1, end);
-    }
-    return false;
+  if (end >= start) {
+    let mid = Math.floor((start + end) / 2)
+    if (arr[mid] === target) return mid
+    else if (arr[mid] > target) return binarySearch(arr, target, start, mid - 1)
+    else return binarySearch(arr, target, mid + 1, end)
+  }
+  return false
 }
 
 module.exports = {

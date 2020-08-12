@@ -2,10 +2,10 @@
 
 ## Non-Repeating Character
 
-* Iterate thtough the entire string, character by character.
-* Keep track of the number of ocurrences using a *hash map*.
-* Iterate through the entire string again and find the character in the hash map
-  with an occurence count of 1.
+- Iterate thtough the entire string, character by character.
+- Keep track of the number of ocurrences using a _hash map_.
+- Iterate through the entire string again and find the character in the hash map with an occurence
+  count of 1.
 
 ```
 # O(n)
@@ -27,11 +27,11 @@ def non_repeating(given_string):
 
 ## One Away Strings
 
-* One edit away means one change makes the two strings equivalent.
-* Three allowed operations:
-  * *Change*: take a character and turn it into something else.
-  * *Delete*: delete a character.
-  * *Add*: add a character.
+- One edit away means one change makes the two strings equivalent.
+- Three allowed operations:
+  - _Change_: take a character and turn it into something else.
+  - _Delete_: delete a character.
+  - _Add_: add a character.
 
 ```
 # O(n)
@@ -78,17 +78,21 @@ def is_one_away(s1, s2):
 
 ## Length of Longest Substring
 
-* Can be solved in `O(n)` by using a *sliding window* approach.
-* The *sliding window* will represent the current substring of non-repeating characters.
-* The *sliding window* will be dynamic (grow or shrink in size as we iterate through the string).
-* The current index and value in the for loop will *always be the end* of the sliding window. As the end of the window increases, we conditionally increase the start of the window.
+- Can be solved in `O(n)` by using a _sliding window_ approach.
+- The _sliding window_ will represent the current substring of non-repeating characters.
+- The _sliding window_ will be dynamic (grow or shrink in size as we iterate through the string).
+- The current index and value in the for loop will _always be the end_ of the sliding window. As the
+  end of the window increases, we conditionally increase the start of the window.
 
-* Steps:
+- Steps:
   1. Initialize the window at index 0
   2. Initialize end of window and current iteration of loop at 0
   3. Keep track of the current character and the index it was last seen at in a hash table
-  4. Increment the length of the max substring if the current substring is made of unique characters.
-  5. If we find a repeated character, move the end of the window to the current index, and move the start of the window one index above the last time the repeated character was found (the value of its key in the hash table).
+  4. Increment the length of the max substring if the current substring is made of unique
+     characters.
+  5. If we find a repeated character, move the end of the window to the current index, and move the
+     start of the window one index above the last time the repeated character was found (the value
+     of its key in the hash table).
   6. Update the value of the repeated character key to the current index.
 
 ```
@@ -107,21 +111,21 @@ loop through the input string:
 
 ## Length of Longest Palindrome
 
-* Use the *expand around the center* approach.
-* Make the center be both the character we are iterating on AND the space in between each character.
+- Use the _expand around the center_ approach.
+- Make the center be both the character we are iterating on AND the space in between each character.
 
 ## Valid Palindrome
 
-* Naive solution is reversing the string, but it would be `O(n)`.
-* A palindrome is a word where each half mirrors each other.
+- Naive solution is reversing the string, but it would be `O(n)`.
+- A palindrome is a word where each half mirrors each other.
 
-* Steps:
+- Steps:
   1. Sanitize input by removing non-alphanumeric characters and lowercasing it.
   2. Create a left and right pointers at the start and end of the string.
-  3. While the left pointer is less than the right one, check if characters are equal. If they aren't, return false.
+  3. While the left pointer is less than the right one, check if characters are equal. If they
+     aren't, return false.
   4. Return true.
-
 
 ## Resources
 
-* [Here is a 10-line template that can solve most 'substring' problems - LeetCode Discuss](https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems)
+- [Here is a 10-line template that can solve most 'substring' problems - LeetCode Discuss](https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems)

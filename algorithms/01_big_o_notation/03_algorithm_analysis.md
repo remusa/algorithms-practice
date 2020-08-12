@@ -83,15 +83,14 @@ When the function is called, the value that n refers to is twice the number of i
 
 - when n refers to 10, it prints 5 integers
 - when n refers to 20, it prints 10 integers
-- when n refers to 40, it prints 20 inte
-We can plot this as well:
+- when n refers to 40, it prints 20 inte We can plot this as well:
 
 - plot of linear runtime, steps = n/2
 
 The number of steps is still proportional to n.
 
-Both function 1 and 2 are linear functions: the runtime grows linearly with
-respect to the size of input.
+Both function 1 and 2 are linear functions: the runtime grows linearly with respect to the size of
+input.
 
 ## O(N^2) - Quadratic Functions
 
@@ -137,6 +136,7 @@ The function call above prints 9 pairs of integers.
 ```
 
 Output 3:
+
 ```python
 print_pairs(4)
 1 1
@@ -159,19 +159,21 @@ The function call above prints 16 pairs of integers.
 ```
 
 - For argument n, the print function is called n2 times.
-- When reading the code, notice that the print function call is inside a for loop, which loops n times. This for loop is also within a for loop that executes n times.
+- When reading the code, notice that the print function call is inside a for loop, which loops n
+  times. This for loop is also within a for loop that executes n times.
 - Therefore:
-  - n (iterations of the outside loop) * n (iterations of the inside loop) = n2 iterations
+  - n (iterations of the outside loop) \* n (iterations of the inside loop) = n2 iterations
 
 Plotting the graph, we get:
+
 - plot of quadratic time, steps = n^2
 
 Function 3 is quadratic: the runtime grows quadratically with respect to the size of input.
 
 ## O(log N) - Logarithmic Functions
 
-* **Divide and conquer**: like in binary search, each iteration eliminates *at least*
-  half of the possibilities.
+- **Divide and conquer**: like in binary search, each iteration eliminates _at least_ half of the
+  possibilities.
 
 Function 1
 
@@ -189,7 +191,8 @@ def print_double_step(n):
         i = i * 2
 ```
 
-In this example, the step size varies. It size of the first step is 1, the next step would be 2, then 4, 8, 16, 32...
+In this example, the step size varies. It size of the first step is 1, the next step would be 2,
+then 4, 8, 16, 32...
 
 How many values would be printed for different values of n?
 
@@ -226,18 +229,17 @@ print_double_step(8)
 When n refers to values 8 to 15, there will be 4 integers printed.
 ```
 
-When n refers to 16, 5 integers are printed.
-When n refers to 32, 6 integers are printed.
-When n refers to 64, 8 integers are printed.
+When n refers to 16, 5 integers are printed. When n refers to 32, 6 integers are printed. When n
+refers to 64, 8 integers are printed.
 
 Starting with n referring to 1, each time that n is doubled, it prints one extra line.
 
-This function is logarithmic and as the input size increases, the running time grows more slowly than for linear and quadratic functions.
+This function is logarithmic and as the input size increases, the running time grows more slowly
+than for linear and quadratic functions.
 
 plot of logarithmic time, steps = log(n)
 
 ## Resources
 
-* [Learn to Program: Crafting Quality Code | Coursera](https://www.coursera.org/learn/program-code)
-* [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 -
-  YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)
+- [Learn to Program: Crafting Quality Code | Coursera](https://www.coursera.org/learn/program-code)
+- [Ned Batchelder - Big-O: How Code Slows as Data Grows - PyCon 2018 - YouTube](https://www.youtube.com/watch?v=duvZ-2UK0fc)

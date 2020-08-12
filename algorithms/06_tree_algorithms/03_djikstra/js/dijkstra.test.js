@@ -1,7 +1,7 @@
 import { WeightedGraph } from './dijkstra'
 import { WeightedGraph as ImprovedWeightedGraph } from './dijkstra_improved'
 
-describe('djikstra in weighted graph  tests', function() {
+describe('djikstra in weighted graph  tests', function () {
   it('should perform the operations on a weighted graph', () => {
     const graph = new WeightedGraph()
 

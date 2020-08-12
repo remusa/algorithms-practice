@@ -1,6 +1,6 @@
 import { WeightedGraph } from './dijkstra_2'
 
-describe('djikstra in weighted graph  tests', function() {
+describe('djikstra in weighted graph  tests', function () {
   it('should perform the operations on a weighted graph', () => {
     const graph = new WeightedGraph()
 

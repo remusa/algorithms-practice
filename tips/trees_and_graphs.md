@@ -2,8 +2,8 @@
 
 ## Is This a Binary Search Tree?
 
-* In a binary search tree, the right child must be greater than or equal to
-  the root and the left child must be smaller than the root (for each subtree).
+- In a binary search tree, the right child must be greater than or equal to the root and the left
+  child must be smaller than the root (for each subtree).
 
 ```
 def is_bst(node, lower_lim = null, upper_lim = null):
@@ -26,10 +26,9 @@ def is_bst(node, lower_lim = null, upper_lim = null):
 
 ## Lowest Common Ancestor
 
-* Tree is not necessarily sorted, so finding the nodes will be `O(n)`.
-* Find the paths of both nodes, then compare both paths and find the common
-  nodes traversed.
-* Assume there're no duplicates in the tree.
+- Tree is not necessarily sorted, so finding the nodes will be `O(n)`.
+- Find the paths of both nodes, then compare both paths and find the common nodes traversed.
+- Assume there're no duplicates in the tree.
 
 ```
 lca(head, 8, 7) -> 1
@@ -79,41 +78,44 @@ def lca(root, j, k):
 
 ## Validate Binary Search Tree
 
-* All elements in the right subtree should be larger.
-* Start at the root node and traverse `left` and `right` subtrees.
-* While traversing the `left`, set `max` value to previous value.
-* While traversing the `right`, set `min` value to previous value.
-* Check `current` node has value greater than `min` and less than `max`, if it doesn't, return `false`.
-* Otherwise return true.
+- All elements in the right subtree should be larger.
+- Start at the root node and traverse `left` and `right` subtrees.
+- While traversing the `left`, set `max` value to previous value.
+- While traversing the `right`, set `min` value to previous value.
+- Check `current` node has value greater than `min` and less than `max`, if it doesn't, return
+  `false`.
+- Otherwise return true.
 
 ## Same Tree
 
-* Recursively check both children for different values.
+- Recursively check both children for different values.
 
 ## Binary Tree Level Order Traversal
 
-* `BFS` with changes.
-* Call `helper` function on both children.
+- `BFS` with changes.
+- Call `helper` function on both children.
 
 ## Maximum Depth of Binary Tree
 
-*
+\*
 
 ## Number of Islands
 
-* Everything around the matrix is considered water, so `1`s in corners may count as islands.
-* Iterate over every cell in the matrix.
-* If cell is a `1` (which represents land), iterate over that cell and `sink` surrounding land (`1`s) by converting it to `0`s. Increase `count` by 1.
+- Everything around the matrix is considered water, so `1`s in corners may count as islands.
+- Iterate over every cell in the matrix.
+- If cell is a `1` (which represents land), iterate over that cell and `sink` surrounding land
+  (`1`s) by converting it to `0`s. Increase `count` by 1.
 
 ## Invert Binary Tree
 
-* Switch each node's children (`left` <-> `right`).
-* Children of children are kept the same.
+- Switch each node's children (`left` <-> `right`).
+- Children of children are kept the same.
 
 ## Lowest Common Ancestor of a Binary Search Tree
 
-* Problem occurs in a *binary-search tree*, where all nodes in the left subtree are smaller or equal than the root and all nodes in the right subtree are greater.
-* Start at the `root` node.
-* Check if `root` value is lesser than both input values (`p` and `q`). If it is move `right`.
-* Otherwise, move `left`.
-* If `root` value is neither, we are at `lowest common ancestor`.
+- Problem occurs in a _binary-search tree_, where all nodes in the left subtree are smaller or equal
+  than the root and all nodes in the right subtree are greater.
+- Start at the `root` node.
+- Check if `root` value is lesser than both input values (`p` and `q`). If it is move `right`.
+- Otherwise, move `left`.
+- If `root` value is neither, we are at `lowest common ancestor`.

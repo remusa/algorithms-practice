@@ -8,25 +8,24 @@
 | pop       | `O(1)`     |
 | peek      | `O(1)`     |
 
-* **Stacks**: stores items in a last-in, first-out (*LIFO*) order.
-* **Uses**:
-  * *Depth-first search*: uses a stack to keep track of which nodes to visit next.
-  * *Call stack*: the call stack is a stack that tracks function calls in a
-    program. When a function returns, we "pop" the last one that "pushed" a
-    function call.
-  * *String parsing*: stacks are useful for string parsing.
+- **Stacks**: stores items in a last-in, first-out (_LIFO_) order.
+- **Uses**:
+  - _Depth-first search_: uses a stack to keep track of which nodes to visit next.
+  - _Call stack_: the call stack is a stack that tracks function calls in a program. When a function
+    returns, we "pop" the last one that "pushed" a function call.
+  - _String parsing_: stacks are useful for string parsing.
 
 ## Strengths and Weaknesses
 
-* **Strengths**:
-  * *Fast operations*: all stack operations take  `O(1)` time.
+- **Strengths**:
+  - _Fast operations_: all stack operations take `O(1)` time.
 
 ## Stack Implementation
 
-* Stacks can be implemented either with *linked lists* or *dynamic arrays*.
-  * Using *dynamic arrays* is more *cache-friendly* since the elements are next to
-    each other in memory.
-  * Using *linked lists* is more *memory expensive* due to having to hold the pointers.
+- Stacks can be implemented either with _linked lists_ or _dynamic arrays_.
+  - Using _dynamic arrays_ is more _cache-friendly_ since the elements are next to each other in
+    memory.
+  - Using _linked lists_ is more _memory expensive_ due to having to hold the pointers.
 
 |                | Stack Push     | Stack Pop           |
 | -------------- | -------------- | ------------------- |
@@ -35,4 +34,4 @@
 
 ## Resources
 
-* [Stack Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/stack?)
+- [Stack Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/stack?)

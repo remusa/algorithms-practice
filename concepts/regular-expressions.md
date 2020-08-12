@@ -1,6 +1,3 @@
 # Regular Expressions
 
-
-
 ## Resources
-

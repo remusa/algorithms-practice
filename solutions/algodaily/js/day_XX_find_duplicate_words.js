@@ -10,19 +10,22 @@
 
 // O(n) => iterate once through the array
 function findDuplicates(str) {
-	const dupes = []
+  const dupes = []
 
   const set = new Set()
 
-  str.toLowerCase().split(" ").map(word => {
-  	if (set.has(word)) {
-      dupes.push(word)
-    } else {
-      set.add(word)
-    }
-  })
+  str
+    .toLowerCase()
+    .split(' ')
+    .map(word => {
+      if (set.has(word)) {
+        dupes.push(word)
+      } else {
+        set.add(word)
+      }
+    })
 
-	return dupes
+  return dupes
 }
 
 module.exports = {

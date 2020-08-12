@@ -1,7 +1,4 @@
-import {
-  compactLength,
-  compactLengthO1,
-} from '../day_55_length_of_compact_string'
+import { compactLength, compactLengthO1 } from '../day_55_length_of_compact_string'
 
 describe('length of compact string tests', () => {
   it('should return a compacted version of a string', () => {

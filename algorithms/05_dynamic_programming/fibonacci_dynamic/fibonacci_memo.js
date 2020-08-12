@@ -21,9 +21,7 @@ function fibonacci(n) {
   return fibonacci(n - 2) + fibonacci(n - 1)
 }
 
-console.log(
-  `Original fibonacci: ${fibonacci(30)} | ${calculations} calculations`
-)
+console.log(`Original fibonacci: ${fibonacci(30)} | ${calculations} calculations`)
 
 // Memoized (top-down approach)
 let calculationsMemo = 0
@@ -46,11 +44,7 @@ function memoize() {
 }
 
 const fibonacciMemoized = memoize()
-console.log(
-  `Memoized fibonacci: ${fibonacciMemoized(
-    30
-  )} | ${calculationsMemo} calculations`
-)
+console.log(`Memoized fibonacci: ${fibonacciMemoized(30)} | ${calculationsMemo} calculations`)
 
 // Bottom-up approach (avoids using recursion)
 let calculationsBottomUp = 0
@@ -70,11 +64,7 @@ function fibonacciBottomUp(n) {
   return answer.pop()
 }
 
-console.log(
-  `Bottom-up fibonacci: ${fibonacciBottomUp(
-    30
-  )} | ${calculationsBottomUp} calculations`
-)
+console.log(`Bottom-up fibonacci: ${fibonacciBottomUp(30)} | ${calculationsBottomUp} calculations`)
 
 module.exports = {
   fibonacciMemoized,

@@ -4,18 +4,15 @@
 | ----------- | ---------- | ------------ | --------- | ------ | ------ |
 | complexity  | `O(n^2)`   | `O(n^2)`     | `O(n)`    | `O(1)` | `yes`  |
 
-* **Bubble sort**: comparison algorithm uses the idea of *bubbling up* the
-  largest value using multiple passes.
-* *Stable*: doesn't modify the already sorted elements.
-* *Slow*: bubble sort always requires *2 passes* through the data.
-* Compares each pair of adjacent items and swaps them if they are in the wrong
-  order.
-* It works by taking the first unsorted element of the array and walking through
-  the rest of the array, comparing it with the element in the next index. If the
-  second element is smaller, we *swap* the values until the largest element is
-  sorted at the end.
-* Elements are sorted by the end, moving the largest element to the last
-  unsorted index.
+- **Bubble sort**: comparison algorithm uses the idea of _bubbling up_ the largest value using
+  multiple passes.
+- _Stable_: doesn't modify the already sorted elements.
+- _Slow_: bubble sort always requires _2 passes_ through the data.
+- Compares each pair of adjacent items and swaps them if they are in the wrong order.
+- It works by taking the first unsorted element of the array and walking through the rest of the
+  array, comparing it with the element in the next index. If the second element is smaller, we
+  _swap_ the values until the largest element is sorted at the end.
+- Elements are sorted by the end, moving the largest element to the last unsorted index.
 
 ## Pseudocode
 
@@ -61,21 +58,24 @@ i  			e
 7	3	5	2
 ```
 
-Compare the item at index `i` with the item at `i + 1`. Since `7` is greater than `3`, they are swapped.
+Compare the item at index `i` with the item at `i + 1`. Since `7` is greater than `3`, they are
+swapped.
 
 ```
  	i 		e
 3	7	5	2
 ```
 
-Increase `i` by 1. Compare the item at index `i` with the item at `i + 1`. Since `7` is greater than `5`, they are swapped.
+Increase `i` by 1. Compare the item at index `i` with the item at `i + 1`. Since `7` is greater than
+`5`, they are swapped.
 
 ```
   		i	e
 3	5	7	2
 ```
 
-Increase `i`  1. Compare the item at index `i` with the item at `i + 1`. Since `7` is greater than `2`, they are swapped.
+Increase `i` 1. Compare the item at index `i` with the item at `i + 1`. Since `7` is greater than
+`2`, they are swapped.
 
 ```
    			e
@@ -92,7 +92,8 @@ i 		e  ||
 unsorted   || sorted
 ```
 
-`i` initially refers to `0`. Compare the item at index `i` with the item at `i + 1`. Since `3` is less than `5`, nothing needs to be swapped.
+`i` initially refers to `0`. Compare the item at index `i` with the item at `i + 1`. Since `3` is
+less than `5`, nothing needs to be swapped.
 
 ```
 	i 	e  ||
@@ -100,7 +101,8 @@ unsorted   || sorted
 unsorted   || sorted
 ```
 
-Increase `i` by 1. Compare the item at index `i` with the item at `i + 1`. Since `5` is greater than `2`, they are swapped.
+Increase `i` by 1. Compare the item at index `i` with the item at `i + 1`. Since `5` is greater than
+`2`, they are swapped.
 
 ```
 		e   ||
@@ -118,7 +120,8 @@ This pass is complete. The second largest item in the list, `5`, is in its corre
 unsorted	|| 	 sorted
 ```
 
-`i` initially refers to `0`. Compare the item at index `i` with the item at `i + 1`. Since `3` is greater than `2`, they are swapped.
+`i` initially refers to `0`. Compare the item at index `i` with the item at `i + 1`. Since `3` is
+greater than `2`, they are swapped.
 
 ```
 2	3	5	7
@@ -128,8 +131,7 @@ This pass is complete. The list is now sorted!
 
 ## References
 
-* [Bubble sort - Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
-* [Algorithms: Bubble Sort - HackerRank](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
-* [Bubble Sort - Sorting Algorithm Animations |
-  Toptal](https://www.toptal.com/developers/sorting-algorithms/bubble-sort)
-* [Bubble-sort with Hungarian ("Csángó") folk dance - YouTube](https://www.youtube.com/watch?v=lyZQPjUT5B4)
+- [Bubble sort - Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+- [Algorithms: Bubble Sort - HackerRank](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
+- [Bubble Sort - Sorting Algorithm Animations | Toptal](https://www.toptal.com/developers/sorting-algorithms/bubble-sort)
+- [Bubble-sort with Hungarian ("Csángó") folk dance - YouTube](https://www.youtube.com/watch?v=lyZQPjUT5B4)

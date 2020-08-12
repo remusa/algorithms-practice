@@ -1,4 +1,4 @@
-const letterCombinations = function(digits) {
+const letterCombinations = function (digits) {
   const hashMap = {
     '2': ['a', 'b', 'c'],
     '3': ['d', 'e', 'f'],

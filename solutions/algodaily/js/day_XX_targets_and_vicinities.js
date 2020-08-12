@@ -57,30 +57,30 @@
 
 //
 function getTV(actual, guess) {
-	let targets = 0
-	let vicinities = 0
+  let targets = 0
+  let vicinities = 0
 
   // Fill up the num array with 0s
-	let num = []
-	for (let i = 0; i < 10; i++) {
-		num[i] = 0
-	}
+  let num = []
+  for (let i = 0; i < 10; i++) {
+    num[i] = 0
+  }
 
-	for (let pos in guess) {
-		let actualChar = actual[pos]
-		let guessChar = guess[pos]
+  for (let pos in guess) {
+    let actualChar = actual[pos]
+    let guessChar = guess[pos]
 
-		if (guessChar == actual[pos]) {
-			targets++
-		} else {
-			if (num[actualChar] < 0) vicinities++
-			if (num[guessChar] > 0) vicinities++
-			num[actualChar]++
-			num[guessChar]--
-		}
-	}
+    if (guessChar == actual[pos]) {
+      targets++
+    } else {
+      if (num[actualChar] < 0) vicinities++
+      if (num[guessChar] > 0) vicinities++
+      num[actualChar]++
+      num[guessChar]--
+    }
+  }
 
-	return `${targets}T${vicinities}V`
+  return `${targets}T${vicinities}V`
 }
 
 module.exports = {

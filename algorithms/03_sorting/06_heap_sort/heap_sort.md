@@ -4,21 +4,25 @@
 | ---------- | ------------- | ------------- | ------------- | ------ | ------ |
 | complexity | `O(n log(n))` | `O(n log(n))` | `O(n log(n))` | `O(1)` | `no`   |
 
-* **Heap Sort**: like an improved selection sort.
-  * Divides its input into a `sorted` and an `unsorted` region, and it iteratively shrinks the `unsorted` region by extracting the largest element and moving that to the `sorted` region.
+- **Heap Sort**: like an improved selection sort.
 
-* We can sort an array in `O(n log n)` time and `O(1)` space by making it a heap.
-* The improvement consists of the use of a *heap data structure* rather than a linear-time search to find the maximum.
-* *Comparison-based algorithm*.
-* *Unstable algorithm*: does not distinguish between two or more items, even if they're equivalent.
+  - Divides its input into a `sorted` and an `unsorted` region, and it iteratively shrinks the
+    `unsorted` region by extracting the largest element and moving that to the `sorted` region.
+
+- We can sort an array in `O(n log n)` time and `O(1)` space by making it a heap.
+- The improvement consists of the use of a _heap data structure_ rather than a linear-time search to
+  find the maximum.
+- _Comparison-based algorithm_.
+- _Unstable algorithm_: does not distinguish between two or more items, even if they're equivalent.
 
 ## Pseudocode
 
-* Make the array a max heap (use maxHeapify)
-* Loop over the array, swap the root node with last item in the array.
-* After swapping each item, run maxHeapify again to find the next root node.
-* Next loop you'll swap the root node with the second-to-last item in the array and run maxHeapify again.
-* Once you've run out of items to swap, you have a sorted array.
+- Make the array a max heap (use maxHeapify)
+- Loop over the array, swap the root node with last item in the array.
+- After swapping each item, run maxHeapify again to find the next root node.
+- Next loop you'll swap the root node with the second-to-last item in the array and run maxHeapify
+  again.
+- Once you've run out of items to swap, you have a sorted array.
 
 ## Algorithm
 
@@ -48,12 +52,8 @@ function sink(a,i,n):
 
 ## Resources
 
-* [Heapsort - Wikipedia](https://en.wikipedia.org/wiki/Heapsort)
-* [Heap Sort - Sorting Algorithm Animations |
-  Toptal](https://www.toptal.com/developers/sorting-algorithms/heap-sort)
-* [Heap Sort | Brilliant Math & Science
-  Wiki](https://brilliant.org/wiki/heap-sort/)
-* [algorithm - Quicksort vs heapsort - Stack
-  Overflow](https://stackoverflow.com/questions/2467751/quicksort-vs-heapsort)
-* [HEAP-sort with Hungarian (MEZŐSÉGI) folk dance -
-  YouTube](https://www.youtube.com/watch?v=Xw2D9aJRBY4)
+- [Heapsort - Wikipedia](https://en.wikipedia.org/wiki/Heapsort)
+- [Heap Sort - Sorting Algorithm Animations | Toptal](https://www.toptal.com/developers/sorting-algorithms/heap-sort)
+- [Heap Sort | Brilliant Math & Science Wiki](https://brilliant.org/wiki/heap-sort/)
+- [algorithm - Quicksort vs heapsort - Stack Overflow](https://stackoverflow.com/questions/2467751/quicksort-vs-heapsort)
+- [HEAP-sort with Hungarian (MEZŐSÉGI) folk dance - YouTube](https://www.youtube.com/watch?v=Xw2D9aJRBY4)

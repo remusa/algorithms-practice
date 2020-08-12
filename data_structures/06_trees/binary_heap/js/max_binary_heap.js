@@ -90,10 +90,7 @@ class MaxBinaryHeap {
 
         // Swap if we find an element larger and we haven't already swapped with left child
         // or swap if the right child is greater than the left child
-        if (
-          (swap === null && rightChild > element) ||
-          (swap !== null && rightChild > leftChild)
-        ) {
+        if ((swap === null && rightChild > element) || (swap !== null && rightChild > leftChild)) {
           swap = rightChildIdx
         }
       }

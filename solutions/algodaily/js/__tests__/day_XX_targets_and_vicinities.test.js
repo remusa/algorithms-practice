@@ -1,4 +1,4 @@
-import { getTV } from "../day_XX_targets_and_vicinities"
+import { getTV } from '../day_XX_targets_and_vicinities'
 
 test('getTV tests', () => {
   expect(getTV('345', '135')).toBe('1T1V')

@@ -5,33 +5,33 @@
 | space     | ``         |
 | search    | `O(n)`     |
 
-* *Time complexity*: `O(V + E)` where `V` is the number of nodes and E the
-  number of edges. You need to traverse all nodes.
-* *Space complexity*:
-  * *Recursive*: `O(h)`, where `h` is the height of the tree.
-  * *Iterative*:`O(V)`, same as *BFS*, just using a stack instead of a queue.
+- _Time complexity_: `O(V + E)` where `V` is the number of nodes and E the number of edges. You need
+  to traverse all nodes.
+- _Space complexity_:
 
-* **Depth-first search (BFS)**: algorithm for exploring a tree or a graph. In
-  a DFS, you go as deep as possible down one path before backing up and trying a
-  different node.
-* Similar to walking through a *maze* and exploring each path until hitting a
-  dead end, then going back and trying a different one.
-* *Uses a stack*, instead of a queue like *BFS*.
+  - _Recursive_: `O(h)`, where `h` is the height of the tree.
+  - _Iterative_:`O(V)`, same as _BFS_, just using a stack instead of a queue.
 
-* Steps:
+- **Depth-first search (BFS)**: algorithm for exploring a tree or a graph. In a DFS, you go as deep
+  as possible down one path before backing up and trying a different node.
+- Similar to walking through a _maze_ and exploring each path until hitting a dead end, then going
+  back and trying a different one.
+- _Uses a stack_, instead of a queue like _BFS_.
+
+- Steps:
   1. Start with the root.
   2. Go down the first path until you hit a dead end.
   3. Do the same thing again until you reach the end.
 
 ## Comparison with Depth-first Search
 
-* **Advantages**:
-  * *Requires less memory* than *BFS* (generally), because it's not
-    neccessary to store all the child pointers at each level.
-  * *Will find if a path exists*.
-  * *DFS* can be implemented with **recursion**.
-* **Disadvantages**:
-  * *DFS* doesn't always find the shortest path to a node, while *BFS* does.
+- **Advantages**:
+  - _Requires less memory_ than _BFS_ (generally), because it's not neccessary to store all the
+    child pointers at each level.
+  - _Will find if a path exists_.
+  - _DFS_ can be implemented with **recursion**.
+- **Disadvantages**:
+  - _DFS_ doesn't always find the shortest path to a node, while _BFS_ does.
 
 ## Pseudocode
 
@@ -48,7 +48,7 @@ While S is not empty:
 End process when all nodes have been visited.
 ```
 
-* Recursive:
+- Recursive:
 
 ```
 1  procedure DFS(G,v):
@@ -58,7 +58,7 @@ End process when all nodes have been visited.
 5              recursively call DFS(G,w)
 ```
 
-* Iterative:
+- Iterative:
 
 ```
 1  procedure DFS-iterative(G,v):
@@ -74,19 +74,12 @@ End process when all nodes have been visited.
 
 ## Resources
 
-* [Depth-First Search (DFS) and Depth-First Traversal | Interview Cake](https://www.interviewcake.com/concept/javascript/dfs?)
-* [Breadth-first search and its uses (article) | Khan
-  Academy](https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/breadth-first-search-and-its-uses)
-* [Depth-first search - Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
-* [Tree Traversals (Inorder, Preorder and Postorder) - GeeksforGeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
-* [BFS vs DFS for Binary Tree -
-  GeeksforGeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
-* [algorithm - What is the time and space complexity of a breadth first and
-  depth first tree traversal? - Stack
-  Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
-* [Depth-First Search (DFS) | Brilliant Math & Science
-  Wiki](https://brilliant.org/wiki/depth-first-search-dfs/)
-* [Algorithms: Graph Search, DFS and BFS -
-  YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
-* [Depth First Search Tutorials & Notes | Algorithms |
-  HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)
+- [Depth-First Search (DFS) and Depth-First Traversal | Interview Cake](https://www.interviewcake.com/concept/javascript/dfs?)
+- [Breadth-first search and its uses (article) | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/breadth-first-search-and-its-uses)
+- [Depth-first search - Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
+- [Tree Traversals (Inorder, Preorder and Postorder) - GeeksforGeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [BFS vs DFS for Binary Tree - GeeksforGeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
+- [algorithm - What is the time and space complexity of a breadth first and depth first tree traversal? - Stack Overflow](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
+- [Depth-First Search (DFS) | Brilliant Math & Science Wiki](https://brilliant.org/wiki/depth-first-search-dfs/)
+- [Algorithms: Graph Search, DFS and BFS - YouTube](https://www.youtube.com/watch?v=zaBhtODEL0w)
+- [Depth First Search Tutorials & Notes | Algorithms | HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/)

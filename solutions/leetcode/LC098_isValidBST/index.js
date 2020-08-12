@@ -44,10 +44,7 @@ function isValidBST(root) {
     if (!node) return
 
     // If node isn't valid return
-    if (
-      (min !== null && node.val <= min) ||
-      (max !== null && node.val >= max)
-    ) {
+    if ((min !== null && node.val <= min) || (max !== null && node.val >= max)) {
       valid = false
       return
     }

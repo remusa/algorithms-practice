@@ -8,11 +8,11 @@
 
 class ListNode {
   constructor(val, next = null) {
-    this.val = val;
-    this.next = next;
+    this.val = val
+    this.next = next
   }
 }
 
 function addTwoNumbers(l1, l2) {}
 
-module.exports = addTwoNumbers;
+module.exports = addTwoNumbers
