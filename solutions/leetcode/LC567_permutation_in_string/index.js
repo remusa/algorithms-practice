@@ -74,7 +74,7 @@ function checkInclusion(s1, s2) {
   return false
 }
 
-checkInclusion('ab', 'eidbaooo')
+// checkInclusion('ab', 'eidbaooo')
 // checkInclusion('ab', 'eidboaoo')
 
 module.exports = { checkInclusion }
