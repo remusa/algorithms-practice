@@ -1,9 +1,7 @@
-const prettierConfig = require('./.prettierrc')
-
 module.exports = {
   extends: ['wesbos'],
   rules: {
-    'prettier/prettier': ['error', prettierConfig],
+    'prettier/prettier': ['error', require('./.prettierrc')],
     'no-lonely-if': 0,
     'max-classes-per-file': 0,
     'prefer-destructuring': 0,
