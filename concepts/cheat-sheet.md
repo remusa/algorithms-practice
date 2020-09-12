@@ -25,7 +25,7 @@
      to define the visual presentation of the content.
 - **Use tags correctly**:
   - _Document structure_: `header`, `footer`, `main`, `nav`, `aside`, `article`.
-  - _Textual meaning_: `h1-h6`, `p`, `strong`, `code,`mark`,`cite`,`blockquote`,`time`.
+  - _Textual meaning_: `h1-h6`, `p`, `strong`, `code, `mark`, `cite`, `blockquote`, `time`.
   - _Media type_: `audio`, `video`, `picture`.
   - _Correlation tags_: `ul`, `figure`, `address`.
 
@@ -71,19 +71,13 @@
 - **Falsey values**:
 
 - `false`.
-
 - `0`.
-
 - `0n`.
-
 - ` "", '', `` (empty string) `.
-
 - `null`.
-
 - `undefined`.
-
 - `NaN`.
-
+-
 - **NaN**: invalid numeric operation.
 
   - `Number.isNaN(something)`.
@@ -197,7 +191,6 @@ console.log(teacher) // Kyle
 - **Closure**: a function inside another (parent) function, that remembers the context (and state,
   variables, methods, etc.) of its parent (when a function "remembers" the variables outside of it,
   even if it's passed elsewhere, like a callback).
-
   - Has access to its outer context (the parent's), but not the other way around.
   - Has access to _3 scopes_: local, the parent's and the global.
   - _Uses_:
@@ -225,7 +218,6 @@ console.log(add10(2)) // 12
   - Declarations are initialized as `undefined`.
 
 - **Declaration**: create new identifier (with `undefined`) in memory.
-
 - **Initialization**: assign a value.
 
 - **Scope**: defines where variables/functions are accesible (where to look for things).
@@ -242,6 +234,59 @@ console.log(add10(2)) // 12
   - _let_: block scoped. Protects the outer scope (encapsulation).
   - _const_: block scoped, IMMUTABLE.
 
+- **Shallow vs deep copy**:
+  - _Deep copy_: means that all of the values of the new variable are copied and _disconnected from
+    the original variable_.
+  - _Shallow copy_: means that certain (sub-)values are _still connected_ to the original variable.
+  - **Note**: arrays and objects are stored only once when instantiated, and assigning a variable
+    just creates a _pointer (reference)_ to that value. Changes in the copy trigger changes in the
+    original.
+
+```javascript
+const a = 5
+
+let b = a // this is the copy
+
+b = 6
+
+console.log(b) // 6
+console.log(a) // 5
+
+// Objects -> Shallow copy
+const a = { name: 'John Doe' }
+
+const b = a
+b.name = 'Mary Jane'
+
+console.log(b.name) // Mary Jane
+console.log(a.name) // Mary Jane
+
+// Objects -> Deep copy
+const a = { name: 'John Doe' }
+
+const b = { ...a } // Using the spread operator
+const b = Object.assign({}, a) // Using Object.assign
+const b = JSON.parse(JSON.stringify(a)) // Stringifying the object and then parsing it
+
+b.name = 'Mary Jane'
+
+console.log(a.name) // John Doe
+console.log(b.name) // Mary Jane
+
+// Arrays -> Deep copy
+const a = [1, 2, 3]
+
+const b = [...a] // Using the spread operator
+
+b[1] = 4
+
+console.log(a[1]) // 2
+console.log(b[1]) // 4
+
+// Arrays -> slice, map, filter, reduce -> return new arrays
+// Arrays -> splice -> mutates the original array
+```
+
 - **Constructor**: defines and initializes objects and their features. Called when a class is
   initialized via new.
 
@@ -249,35 +294,67 @@ console.log(add10(2)) // 12
   methods. This means we can use the parents properties and method in the children.
 
 - **Worker**: used to off-load expensive tasks from the main thread to a different thread.
-
   - Helps with not blocking the UI, since JavaScript is single-threaded.
 
 ## Loops
+
+- In JavaSCript there are `enumerable properties` and `iterable objects`.
+  - **Enumerable properties**: the internal `enumerable` flag to true when we assign a property to
+    an object. This is the default value.
+  - **Iterable objects**: an object is iterable if it defines its iteration behavior.
+    - Built-in types that are iterable include `Arrays`, `Strings`, `Sets`, and `Maps`.
+    - An `object` is not iterable because it does not specify an `@iterator method`.
+  - **Note**: in Javascript, all iterables are enumerables, but not all enumerables are iterables.
+    If `typeof` is called and the answer yields `object`, then you can use a `for …in` loop.
+
+```javascript
+const authors = ['Jade', 'Dafe', 'John', 'Daniel']
+
+typeof authors // returns "object" -> can use for..in
+
+// using with a for in loop
+for (const author in authors) {
+  console.log(author)
+}
+// 0, 1, 2, 3
+
+for (const author of authors) {
+  console.log(author)
+}
+// Jade, Dafe, John, Daniel
+```
 
 - **for loops**: 3 statements -> initialize some kind of counter, condition, increment/decrement
 
   - `while` loops-
 
-- **for...of**: used for `iterables` (`arrays`, NOT objects unless converted with `keys()`,
+- **for...of**: used for `iterable objects` (`arrays`, NOT objects unless converted with `keys()`,
   `values()`, `entries()`) specially when length isn't known. Doesn't need to create index
   variables.
 
-- **for...in**: used for objects (`enumerable` properties).
+- **for...in**: used for `enumerable` properties in objects.
 
 - **Array.forEach**: pass a functon and execute it on each item. Pass (value, index, object).
 
   - `Array.every, .some, .map, .filter, .reduce`
 
-- **Note**: differences between `map` and `forEach`:
-
-  - `map` receives a function as a parameter and applies it on each element, returning a new array
-    with the results of applying the function.
-  - `forEach` receives a function as a parameter and executes it once for each array element.
-  - `map` can be chained, `forEach` can't.
-  - Neither directly _mutates_ the array, although the callback function may do so.
-  - `map` returns a new Array, `forEach` returns `undefined`.
-  - Use `map` if the data will be changed or used.
-  - Use `forEach` if you don't need the returned array.
+- **Note**: similarities and differences between `map` and `forEach`:
+  - Both receive a callback function as an argument.
+    - `Map` is a pure function, `forEach` mutates the array.
+    - Neither directly _mutates_ the array, although the callback function may do so.
+    - `map` applies the callback on each element, returning a new array with the results of applying
+      the function. `forEach` executes it once for each array element.
+    - `map` returns a new Array, `forEach` returns `undefined`.
+  - **Chaining**: `map` can be chained, `forEach` can't.
+  - **Performance**:
+    - `map` on average performs better than `forEach`.
+  - **Async**:
+    - `forEach` and `map` perform the callback function asynchronously (i.e. it create 10 promises
+      for an array of 10 elements) and can't be stopped.
+    - Neither can be stopped when executed. If you might need to stop it, use a `for...of` loop.
+  - **Tips**:
+    - Use `map` if the data will be changed or used.
+    - Use `forEach` if you don't need the returned array.
 
 `slice`: returns a new array, _doesn't mutate_ the original. `splice`: _modifies_ original array.
 
@@ -313,7 +390,7 @@ The yield "foo" expression will send the "foo" string value out when pausing the
 
 ### Generator Iterator
 
-- `Iterators` are a special kind of behavior (a design pattern actually() where we step through an
+- `Iterators` are a special kind of behavior (a design pattern actually, where we step through an
   ordered set of values one at a time by calling `next()` until all values have been returned.
 - To step throught the values of a generator function, we need an `iterator` to be constructed.
 - An `object` is returned when calling an iterator with a `value` property and a `done` boolean
@@ -458,7 +535,6 @@ console.log(v) // still `5`, not `6` :(
   - _Unique key_: unique identifier of a record in a table.
 
 - `JOINS`: combines records from two or more tables by using common values.
-
   - `INNER JOIN`: intersection of both tables. Returns rows when there is a match in both tables.
   - `LEFT OUTER JOIN`: returns all rows from the left table, if there are no matches in the right
     table they're returned as `null`.
@@ -519,3 +595,5 @@ CROSS JOIN table2;
 - [Understanding Immutability in JavaScript | CSS-Tricks](https://css-tricks.com/understanding-immutability-in-javascript/)
 - [Making Sense of the Tricky Parts of JavaScript - YouTube](https://www.youtube.com/watch?v=tiRhFGnCltw)
 - [When do you need "bind()"? Indirect vs Direct JavaScript Function Execution Tutorial - YouTube](https://www.youtube.com/watch?v=fP_kA90DgIU)
+- [How to differentiate between deep and shallow copies in JavaScript](https://www.freecodecamp.org/news/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd/)
+- [An overview of technical differences between loops in JavaScript - LogRocket Blog](https://blog.logrocket.com/technical-differences-between-loops-javascript/)

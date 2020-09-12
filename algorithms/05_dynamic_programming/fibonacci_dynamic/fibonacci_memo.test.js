@@ -1,6 +1,6 @@
 const fn = require('./fibonacci_memo')
 
-describe('fibonacci memoized tests', function() {
+describe('fibonacci memoized tests', function () {
   it('should return correct fibonacci sequence value using memoization', () => {
     expect(fn.fibonacciMemoized(0)).toEqual(0)
     expect(fn.fibonacciMemoized(1)).toEqual(1)

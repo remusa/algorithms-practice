@@ -1,6 +1,6 @@
 const fn = require('./reverse_string')
 
-describe('test palindrome (string reversal)', function() {
+describe('test palindrome (string reversal)', function () {
   it('should reverse string using built in functions', () => {
     expect(fn.reverseStringOneLiner('hello')).toEqual('olleh')
     expect(fn.reverseStringOneLiner('Hello, World!')).toEqual('!dlroW ,olleH')

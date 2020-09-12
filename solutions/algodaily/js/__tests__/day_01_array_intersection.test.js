@@ -1,6 +1,6 @@
 import { intersection, intersection2 } from '../../day_1_array_intersection'
 
-describe('array intersection tests', function() {
+describe('array intersection tests', function () {
   it('should return an array', () => {
     expect(intersection([1, 2, 2, 1], [2, 2])).toEqual([2])
     expect(intersection([4, 9, 5], [9, 4, 9, 8, 4])).toEqual([4, 9])

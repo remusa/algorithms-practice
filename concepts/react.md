@@ -15,6 +15,18 @@
 
 - **VirtualDOM** the ideal representation of the UI. Kept in memory and synced to the real DOM using
   `ReactDOM`.
+
+- **React phases**:
+  - The _render_ phase: create React elements `React.createElement`.
+  - The _reconciliation_ phase: compare previous elements with the new - ones.
+  - The _commit_ phase: update the DOM (if needed).
+
+```javascript
+render → reconcilitation → commit
+      ↖                   ↙
+           state change
+```
+
 - **Reconciliation**: process through which React updates the DOM.
 
   - **Diffing algorithm**: React compares the root elements:
@@ -68,3 +80,4 @@
 - [React job interview - Questions - YouTube](https://www.youtube.com/watch?v=nRI0dn6GTj8)
 - [When to use Component or PureComponent - codeburst](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
 - [React Top-Level API – React](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+- [Fix the slow render before you fix the re-render](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render)

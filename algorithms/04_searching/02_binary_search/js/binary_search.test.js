@@ -1,6 +1,6 @@
 const bs = require('./binary_search')
 
-describe('linear search tests', function() {
+describe('linear search tests', function () {
   it('should return the correct index when the value is found', () => {
     expect(bs.binarySearch([2, 3, 5, 7], 2)).toEqual(0)
     expect(bs.binarySearch([2, 3, 5, 7], 7)).toEqual(3)

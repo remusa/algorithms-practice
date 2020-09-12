@@ -22,6 +22,7 @@ function reverseString(str) {
   }
 
   const length = str.length - 1
+  const reversed = []
 
   for (let i = length; i >= 0; i--) {
     reversed.push(str[i])

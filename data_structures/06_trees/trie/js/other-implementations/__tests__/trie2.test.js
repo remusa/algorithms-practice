@@ -6,7 +6,7 @@ const createTrie = words => {
   return root
 }
 
-describe('tries', function() {
+describe('tries', function () {
   it('dataset of 10 – san', () => {
     const root = createTrie(CITY_NAMES.slice(0, 10))
     const completions = root.complete('san')

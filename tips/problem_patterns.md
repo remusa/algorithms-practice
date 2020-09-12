@@ -295,3 +295,4 @@ function search(array, val) {
 
 - [JavaScript Algorithms and Data Structures Masterclass | Udemy](https://www.udemy.com/js-algorithms-and-data-structures-masterclass/)
 - [Problem Solving Patterns](https://cs.slides.com/colt_steele/problem-solving-patterns)
+- [Ranking Interview Questions by Cram Score | Jeremy Aguilon](https://jeremyaguilon.me/blog/ranking_interview_questions_by_cram_score)
