@@ -1,4 +1,4 @@
-import { maxDepth, maxDepth2 } from './index'
+import { maxDepth, maxDepth2, maxDepth3 } from './index'
 
 class Node {
   constructor(value) {
@@ -78,6 +78,7 @@ describe('maximum depth of a binary tree', () => {
 
     examples.forEach(({ input, output }) => {
       expect(maxDepth2(input)).toEqual(output)
+      expect(maxDepth3(input)).toEqual(output)
     })
   })
 })
