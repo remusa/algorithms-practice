@@ -1,5 +1,6 @@
 /*
-	912. Sort an Array
+  912. Sort an Array
+  Medium
 	https://leetcode.com/problems/sort-an-array/
 
   Given an array of integers nums, sort the array in ascending order.

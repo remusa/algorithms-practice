@@ -1,7 +1,7 @@
 import { sortArray } from './index'
 
 describe('sortArray', () => {
-  it('return true if output is the sorted input', () => {
+  it('returns the sorted input', () => {
     const examples = [
       {
         input: [5, 2, 3, 1],
