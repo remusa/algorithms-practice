@@ -63,7 +63,7 @@ describe('binary tree level order traversal', () => {
     this.left = this.right = null
   }
 
-  it.only('should traverse the tree in level order', () => {
+  it('should traverse the tree in level order', () => {
     const examples = [
       {
         input: [3, 9, 20, null, null, 15, 7],

@@ -27,16 +27,16 @@ return its depth = 3.
 function maxDepth(root) {
   let maxDepth = 0
 
-  function dive(node, currentDepth) {
+  function dive(node, depth) {
     if (!node) {
-      // If node is null then currentDepth is invalid but depth above was valid
-      maxDepth = Math.max(currentDepth - 1, maxDepth)
+      // If node is null then 'depth' is invalid but depth above was valid
+      maxDepth = Math.max(maxDepth, depth - 1)
       return
     }
 
     // Recursively call helper function on children
-    dive(node.left, currentDepth + 1)
-    dive(node.right, currentDepth + 1)
+    dive(node.left, depth + 1)
+    dive(node.right, depth + 1)
   }
 
   dive(root, 1)
@@ -44,4 +44,10 @@ function maxDepth(root) {
   return maxDepth
 }
 
-module.exports = maxDepth
+function maxDepth(root) {
+  let maxDepth = 0
+
+  return maxDepth
+}
+
+export { maxDepth }

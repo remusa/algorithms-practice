@@ -1,4 +1,4 @@
-const maxDepth = require('./index')
+import { maxDepth, maxDepth2 } from './index'
 
 class Node {
   constructor(value) {
@@ -60,4 +60,24 @@ test('Works for Binary Trees of with 1, 2, and 3 levels.', () => {
 test('Works for Binary Tree with 0 levels', () => {
   const BST = new BinarySearchTree()
   expect(maxDepth(BST.root)).toEqual(0)
+})
+
+describe('maximum depth of a binary tree', () => {
+  function TreeNode(val) {
+    this.val = val
+    this.left = this.right = null
+  }
+
+  it('should traverse the tree in level order', () => {
+    const examples = [
+      {
+        input: [3, 9, 20, null, null, 15, 7],
+        output: 3,
+      },
+    ]
+
+    examples.forEach(({ input, output }) => {
+      expect(maxDepth2(input)).toEqual(output)
+    })
+  })
 })
