@@ -1,20 +1,20 @@
 /*
-5. Longest Palindromic Substring
-https://leetcode.com/problems/longest-palindromic-substring/
-Medium
+  5. Longest Palindromic Substring
+  https://leetcode.com/problems/longest-palindromic-substring/
+  Medium
 
-Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+  Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
-Example 1:
+  Example 1:
 
-Input: "babad"
-Output: "bab"
-Note: "aba" is also a valid answer.
+  Input: "babad"
+  Output: "bab"
+  Note: "aba" is also a valid answer.
 
-Example 2:
+  Example 2:
 
-Input: "cbbd"
-Output: "bb"
+  Input: "cbbd"
+  Output: "bb"
 */
 
 // Time complexity: O(n^2) -> expanding a palindrome around its center could take up to O(n) and we do this for each character

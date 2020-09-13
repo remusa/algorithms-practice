@@ -33,13 +33,11 @@ function subsets(nums) {
   const queue = [[]]
 
   for (const num of nums) {
-    // n
-    // Keep track of the size of the queue
+    // Iterate through each element in the original array -> O(n)
     let size = queue.length
 
-    // Iterate through each element in the queue
+    // Iterate through each element in the queue -> O(2 ^ n)
     for (const current of queue) {
-      // 2^n
       if (!size) break
 
       // Copy the current elements and append the current number
@@ -53,15 +51,16 @@ function subsets(nums) {
   return queue
 }
 
+// Time complexity -> O(n * 2^n) = exponential
+// Space complexity ->
 function subsets2(nums) {
   const queue = [[]]
 
+  // Iterate through each element in the original array -> O(n)
   for (const num of nums) {
-    // n
-    // Iterate through each element in the queue
+    // Iterate through each element in the queue -> O(2 ^ n)
     // Make a copy of the queue to freeze it
     for (const current of [...queue]) {
-      // 2^n
       queue.push([...current, num])
     }
   }

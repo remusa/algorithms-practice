@@ -1,4 +1,4 @@
-const levelOrder = require('./index')
+import { levelOrder, levelOrder2 } from './index'
 
 class Node {
   constructor(value) {
@@ -55,4 +55,24 @@ test('Works.', () => {
   //      / \      \
   //     1   6     14
   expect(levelOrder(BST.root)).toEqual([[8], [3, 10], [1, 6, 14]])
+})
+
+describe('binary tree level order traversal', () => {
+  function TreeNode(val) {
+    this.val = val
+    this.left = this.right = null
+  }
+
+  it.only('should traverse the tree in level order', () => {
+    const examples = [
+      {
+        input: [3, 9, 20, null, null, 15, 7],
+        output: [[3], [9, 20], [15, 7]],
+      },
+    ]
+
+    examples.forEach(({ input, output }) => {
+      expect(levelOrder2(input)).toEqual(output)
+    })
+  })
 })
