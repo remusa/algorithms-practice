@@ -47,4 +47,40 @@ function removeNthFromEnd(head, n) {
   return dummyHead.next
 }
 
-module.exports = removeNthFromEnd
+// Time complexity: O(n) -> traverse the linked-list once
+// Space complexity: O(1) -> for the pointers, size of LL doesn't matter
+function removeNthFromEnd2(head, n) {
+  let curr = head
+  // Assume the min. size of the LL is at least 1
+  let length = 1
+
+  // Measure linked list length
+  while (curr) {
+    length++
+    curr = curr.next
+  }
+
+  // Get the index of the node to delete
+  let leftIndex = length - 1 - n
+
+  // Edge case: delete the head
+  if (leftIndex === 0) {
+    return head.next
+  }
+
+  // Reset pointer to the start of the LL
+  curr = head
+
+  // Move pointer to the node to be deleted
+  while (leftIndex > 1) {
+    curr = curr.next
+    leftIndex--
+  }
+
+  // Delete the node by pointing around it
+  curr.next = curr.next.next
+
+  return head
+}
+
+export { removeNthFromEnd, removeNthFromEnd2 }

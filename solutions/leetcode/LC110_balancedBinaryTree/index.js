@@ -40,21 +40,13 @@
  *     this.left = this.right = null;
  * }
  */
-/**
- * @param {TreeNode} root
- * @return {boolean}
- */
+
 function getHeight(root) {
   // base case when binary tree is empty
-  if (root === null) {
-    return 0
-  }
-
-  const leftSubtreeHeight = getHeight(root.left)
-  const rightSubtreeHeight = getHeight(root.right)
+  if (!root) return 0
 
   // return the height of the longest branch, which is determined by recursively traversing the tree using getHeight()
-  return 1 + Math.max(leftSubtreeHeight, rightSubtreeHeight)
+  return 1 + Math.max(getHeight(root.left), getHeight(root.right))
 }
 
 export function isBalanced(root) {
@@ -71,20 +63,14 @@ export function isBalanced(root) {
   const difference = Math.abs(leftHeight - rightHeight)
 
   // allowed values for (leftHeight - rightHeight) are 1, -1, 0
-  if (difference > 1) {
+  const balanced = difference > 1
+
+  if (balanced) {
     return false
   }
 
   // if it is, let's repeat the process on both the left and right branches
-  const isLeftBalanced = isBalanced(root.left)
-
-  if (!isLeftBalanced) {
-    return false
-  }
-
-  const isRightBalanced = isBalanced(root.right)
-
-  if (!isRightBalanced) {
+  if (!isBalanced(root.left) || !isBalanced(root.right)) {
     return false
   }
 
@@ -132,7 +118,7 @@ export function isBalanced2(root) {
   return isBalanced2(root.right)
 }
 
-function maxDepth(root) {
+function getDepth(root) {
   let max = 0
 
   function dive(node, depth = 1) {
@@ -150,9 +136,9 @@ function maxDepth(root) {
   return max
 }
 
-function maxDepth2(root) {
+function getDepth2(root) {
   if (!root) return 0
-  return 1 + Math.max(maxDepth2(root.left), maxDepth2(root.right))
+  return 1 + Math.max(getDepth2(root.left), getDepth2(root.right))
 }
 
 // Time complexity: O(n^2) -> maxDepth is O(n), calculated n times for each node
@@ -160,10 +146,11 @@ function maxDepth2(root) {
 export function isBalanced3(root) {
   if (!root) return true
 
-  const leftDepth = maxDepth(root.left)
-  const rightDepth = maxDepth(root.right)
+  const leftDepth = getDepth(root.left)
+  const rightDepth = getDepth(root.right)
+  const isBalanced = Math.abs(leftDepth - rightDepth) > 1
 
-  if (Math.abs(leftDepth - rightDepth) > 1) {
+  if (!isBalanced) {
     return false
   }
 

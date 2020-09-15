@@ -37,4 +37,4 @@ function reverseList(head) {
   return previous
 }
 
-module.exports = reverseList
+export { reverseList }

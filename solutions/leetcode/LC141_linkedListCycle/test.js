@@ -1,4 +1,4 @@
-const hasCycle = require('./index')
+import { hasCycle } from './index'
 
 class Node {
   constructor(data, next = null) {
@@ -93,4 +93,17 @@ test('returns false for non-circular linked lists', () => {
   l.push('c')
 
   expect(hasCycle(l)).toEqual(false)
+})
+
+it('should remove the Nth node from the end of the linked list', () => {
+  const examples = [
+    {
+      input: { head: [3, 2, 0, -4], pos: 1 },
+      output: true,
+    },
+  ]
+
+  examples.forEach(({ input, output }) => {
+    expect(hasCycle(input.head, input.pos)).toEqual(output)
+  })
 })
