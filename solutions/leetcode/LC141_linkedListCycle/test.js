@@ -1,4 +1,4 @@
-import { hasCycle } from './index'
+import { hasCycle, hasCycle2 } from './index'
 
 class Node {
   constructor(data, next = null) {
@@ -98,12 +98,21 @@ test('returns false for non-circular linked lists', () => {
 it('should return true if the linked list has a cycle', () => {
   const examples = [
     {
-      input: { head: [3, 2, 0, -4], pos: 1 },
+      input: { head: [3, 2, 0, -4], pos: 0 },
       output: true,
+    },
+    {
+      input: { head: [1, 2], pos: 0 },
+      output: true,
+    },
+    {
+      input: { head: [1], pos: -1 },
+      output: false,
     },
   ]
 
   examples.forEach(({ input, output }) => {
     expect(hasCycle(input.head)).toEqual(output)
+    expect(hasCycle2(input.head)).toEqual(output)
   })
 })
