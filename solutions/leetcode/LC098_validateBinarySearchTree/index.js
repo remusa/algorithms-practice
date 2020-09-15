@@ -11,8 +11,6 @@ Assume a BST is defined as follows:
     The right subtree of a node contains only nodes with keys greater than the node's key.
     Both the left and right subtrees must also be binary search trees.
 
-
-
 Example 1:
 
     2
@@ -40,7 +38,7 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 function isValidBST(root) {
   let valid = true
 
-  function helper(node, min, max) {
+  function validate(node, min = null, max = null) {
     if (!node) return
 
     // If node isn't valid return
@@ -50,13 +48,74 @@ function isValidBST(root) {
     }
 
     // Node is valid
-    helper(node.left, min, node.val)
-    helper(node.right, node.val, max)
+    validate(node.left, min, node.val)
+    validate(node.right, node.val, max)
   }
 
-  helper(root, null, null)
+  validate(root)
 
   return valid
 }
 
-module.exports = isValidBST
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> O(n) if recursive calls count
+function isValidBST2(root, min = Number.MIN_SAFE_INTEGER, max = Number.MAX_SAFE_INTEGER) {
+  if (!root) return true
+
+  // Validate current node
+  if (root.val <= min || root.val >= max) return false
+
+  // Traverse throught both subtrees
+  return isValidBST2(root.left, min, root.val) && isValidBST2(root.right, root.val, max)
+}
+
+// inorder: left -> root -> right
+function inOrder(root) {
+  const output = []
+
+  function traverse(node) {
+    // Left
+    if (node.left) traverse(node.left)
+    // Root
+    output.push(node.value)
+    // Right
+    if (node.right) traverse(node.right)
+  }
+
+  traverse(root)
+
+  return output
+}
+
+// Traversing tree in order and using a stack for keeping track
+// Time complexity: O(n) -> traverse every node in the tree
+// Space complexity: O(1) -> O(n) if recursive calls count
+function isValidBST3(root) {
+  if (!root) return true
+
+  const stack = []
+
+  // Inorder traversal -> left-root-right
+  function traverse(node) {
+    if (node.left) traverse(node.left)
+    stack.push(node.val)
+    if (node.right) traverse(node.right)
+  }
+
+  // When traversing in-order, stack should be sorted
+  traverse(root)
+
+  // If the popped node is smaller or equal than the current last node in the stack, it means the stack isn't sorted, so it isn't a BST
+  while (stack.length) {
+    const popped = stack.pop()
+    const last = stack[stack.length - 1]
+
+    if (popped <= last) {
+      return false
+    }
+  }
+
+  return true
+}
+
+export { isValidBST, isValidBST2, isValidBST3 }

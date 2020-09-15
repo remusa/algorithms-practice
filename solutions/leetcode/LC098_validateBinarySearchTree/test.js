@@ -1,4 +1,4 @@
-const isValidBST = require('./index')
+import { isValidBST, isValidBST2 } from './index'
 
 class Node {
   constructor(value) {
@@ -74,4 +74,21 @@ test('Returns false for invalid BST.', () => {
   //            /
   //           6
   expect(isValidBST(BST.root)).toEqual(false)
+})
+
+it('should return true if the BST is valid', () => {
+  const examples = [
+    {
+      input: [2, 1, 3],
+      output: true,
+    },
+    {
+      input: [0, null, -1],
+      output: false,
+    },
+  ]
+
+  examples.forEach(({ input, output }) => {
+    expect(isValidBST(input)).toEqual(output)
+  })
 })

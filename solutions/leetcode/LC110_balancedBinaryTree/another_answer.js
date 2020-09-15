@@ -1,4 +1,4 @@
-function isBalanced(root) {
+function isBalanced2(root) {
   // base case: we've hit end of a branch while still balanced
   if (root === null) {
     return true

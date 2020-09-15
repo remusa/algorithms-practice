@@ -18,23 +18,23 @@ export class Node {
 }
 
 // inorder: left -> root -> right
-function inOrder(node) {
+function inOrder(root) {
   const output = []
 
-  function traverse(currNode) {
+  function traverse(node) {
     // Left
-    if (currNode.left) {
-      traverse(currNode.left)
+    if (node.left) {
+      traverse(node.left)
     }
     // Root
-    output.push(currNode.value)
+    output.push(node.value)
     // Right
-    if (currNode.right) {
-      traverse(currNode.right)
+    if (node.right) {
+      traverse(node.right)
     }
   }
 
-  traverse(node)
+  traverse(root)
 
   return output
 }
