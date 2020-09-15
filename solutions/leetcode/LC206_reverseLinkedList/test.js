@@ -1,4 +1,4 @@
-import { reverseList } from './index'
+import { reverseList, reverseListIterative, reverseListRecursive } from './index'
 
 test('reverses the list', () => {
   const head = { val: 'A', next: null }
@@ -20,5 +20,7 @@ it('should reverse the linked list', () => {
 
   examples.forEach(({ input, output }) => {
     expect(reverseList(input)).toEqual(output)
+    expect(reverseListIterative(input)).toEqual(output)
+    expect(reverseListRecursive(input)).toEqual(output)
   })
 })

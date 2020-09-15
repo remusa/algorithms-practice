@@ -95,7 +95,7 @@ test('returns false for non-circular linked lists', () => {
   expect(hasCycle(l)).toEqual(false)
 })
 
-it('should remove the Nth node from the end of the linked list', () => {
+it('should return true if the linked list has a cycle', () => {
   const examples = [
     {
       input: { head: [3, 2, 0, -4], pos: 1 },
@@ -104,6 +104,6 @@ it('should remove the Nth node from the end of the linked list', () => {
   ]
 
   examples.forEach(({ input, output }) => {
-    expect(hasCycle(input.head, input.pos)).toEqual(output)
+    expect(hasCycle(input.head)).toEqual(output)
   })
 })
