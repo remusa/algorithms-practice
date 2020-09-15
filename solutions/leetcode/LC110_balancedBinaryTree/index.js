@@ -155,6 +155,8 @@ function maxDepth2(root) {
   return 1 + Math.max(maxDepth2(root.left), maxDepth2(root.right))
 }
 
+// Time complexity: O(n^2) -> maxDepth is O(n), calculated n times for each node
+// Space complexity: O(n) -> max number of stack frames
 export function isBalanced3(root) {
   if (!root) return true
 
