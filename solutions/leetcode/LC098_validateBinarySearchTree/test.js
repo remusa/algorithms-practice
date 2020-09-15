@@ -1,4 +1,4 @@
-import { isValidBST, isValidBST2 } from './index'
+import { isValidBST, isValidBST2, isValidBST3 } from './index'
 
 class Node {
   constructor(value) {
@@ -90,5 +90,7 @@ it('should return true if the BST is valid', () => {
 
   examples.forEach(({ input, output }) => {
     expect(isValidBST(input)).toEqual(output)
+    expect(isValidBST2(input)).toEqual(output)
+    expect(isValidBST3(input)).toEqual(output)
   })
 })

@@ -1,5 +1,6 @@
 /*
   110. Balanced Binary Tree
+  Easy
   https://leetcode.com/problems/balanced-binary-tree/
   https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/
   https://docs.google.com/document/d/1-bwNBbL5USfLz3lEjCfLCuDu5dHBo3Dws7RZnXyAwsI/edit
@@ -56,7 +57,7 @@ function getHeight(root) {
   return 1 + Math.max(leftSubtreeHeight, rightSubtreeHeight)
 }
 
-function isBalanced(root) {
+export function isBalanced(root) {
   // base case: we've hit end of a branch while still balanced
   if (root === null) {
     return true
@@ -88,4 +89,84 @@ function isBalanced(root) {
   }
 
   return true
+}
+
+export function isBalanced2(root) {
+  // base case: we've hit end of a branch while still balanced
+  if (root === null) {
+    return true
+  }
+
+  function getTreeHeight(root, height = 0, maxHeight = 0) {
+    // recursive tree measuring function
+    if (height > maxHeight) {
+      maxHeight = height
+    }
+
+    if (!root || (!root.left && !root.right)) {
+      // check to make sure there is a root and at least one branch
+      return maxHeight
+    }
+
+    const leftSubtree = getTreeHeight(root.left, height + 1, maxHeight)
+    const rightSubtree = getTreeHeight(root.right, height + 1, maxHeight)
+
+    // return the height of the longest branch, which is determined by recursively traversing the tree using getTreeHeight()
+    return Math.max(leftSubtree, rightSubtree)
+  }
+
+  // make sure there's a left branch, height is zero if there isn't
+  const leftHeight = root.left ? getTreeHeight(root.left) + 1 : 0
+  const rightHeight = root.right ? getTreeHeight(root.right) + 1 : 0
+
+  // check if the current root node is a balanced tree
+  if (Math.abs(leftHeight - rightHeight) > 1) {
+    return false
+  }
+
+  // if it is, let's repeat the process on both the left and right branches
+  if (!isBalanced2(root.left)) {
+    return false
+  }
+
+  return isBalanced2(root.right)
+}
+
+function maxDepth(root) {
+  let max = 0
+
+  function dive(node, depth = 1) {
+    if (!node) {
+      max = Math.max(max, depth - 1)
+      return
+    }
+
+    dive(node.left, depth + 1)
+    dive(node.right, depth + 1)
+  }
+
+  dive(root)
+
+  return max
+}
+
+function maxDepth2(root) {
+  if (!root) return 0
+  return 1 + Math.max(maxDepth2(root.left), maxDepth2(root.right))
+}
+
+export function isBalanced3(root) {
+  if (!root) return true
+
+  const leftDepth = maxDepth(root.left)
+  const rightDepth = maxDepth(root.right)
+
+  if (Math.abs(leftDepth - rightDepth) > 1) {
+    return false
+  }
+
+  isBalanced3(root.left)
+  isBalanced3(root.right)
+
+  return isBalanced(root.left) && isBalanced(root.right)
 }

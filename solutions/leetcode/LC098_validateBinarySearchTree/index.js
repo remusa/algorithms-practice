@@ -69,25 +69,8 @@ function isValidBST2(root, min = Number.MIN_SAFE_INTEGER, max = Number.MAX_SAFE_
   return isValidBST2(root.left, min, root.val) && isValidBST2(root.right, root.val, max)
 }
 
-// inorder: left -> root -> right
-function inOrder(root) {
-  const output = []
-
-  function traverse(node) {
-    // Left
-    if (node.left) traverse(node.left)
-    // Root
-    output.push(node.value)
-    // Right
-    if (node.right) traverse(node.right)
-  }
-
-  traverse(root)
-
-  return output
-}
-
 // Traversing tree in order and using a stack for keeping track
+// If BST is valid, stack should be ordered
 // Time complexity: O(n) -> traverse every node in the tree
 // Space complexity: O(1) -> O(n) if recursive calls count
 function isValidBST3(root) {
