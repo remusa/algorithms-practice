@@ -1,9 +1,15 @@
-const twoSum = require('./index')
+import { twoSum, twoSum2, twoSum3 } from './index'
 
-test('twoSum([2,7,11,15], 9) returns [0,1]', () => {
-  expect(twoSum([2, 7, 11, 15], 9).sort((a, b) => (a < b ? -1 : 1))).toEqual([0, 1])
-})
+it('returns the indices of the two numbers that add up to the target', () => {
+  const examples = [
+    { input: { nums: [2, 7, 11, 15], target: 9 }, output: [0, 1] },
+    { input: { nums: [3, 2, 4], target: 6 }, output: [1, 2] },
+    { input: { nums: [3, 3], target: 6 }, output: [0, 1] },
+  ]
 
-test('twoSum([3, 2, 4], 6) returns [1,2]', () => {
-  expect(twoSum([3, 2, 4], 6).sort((a, b) => (a < b ? -1 : 1))).toEqual([1, 2])
+  examples.forEach(({ input: { nums, target }, output }) => {
+    expect(twoSum(nums, target)).toEqual(output)
+    expect(twoSum2(nums, target)).toEqual(output)
+    expect(twoSum3(nums, target)).toEqual(output)
+  })
 })
