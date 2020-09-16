@@ -44,10 +44,13 @@
 
 - **typeof**: returns the type of the passed value. `type of 42 -> number`
 
-- **Primitives**: data that is not an object and has no methods. There are 7 primitive data types:
-  `string`, `number`, `bigint`, `boolean`, `null`, `undefined`, and `symbol`.
+- Values can be of 2 types of data:
 
-  - `Symbol`: every symbol value is **unique**, used in private properties to avoid name clashes.
+  - **Reference**: `typeof "object"`. Objects, arrays, functions, etc. Compared by their reference.
+  - **Primitives**: data that is not an object and has no methods. Compared by their value. They're
+    _immutable_, modifying them replaces the in-memory value. There are 7 primitive data types:
+    `string`, `number`, `bigint`, `boolean`, `null`, `undefined`, and `symbol`.
+    - `Symbol`: every symbol value is **unique**, used in private properties to avoid name clashes.
 
 - **Undeclared, undefined and null**:
 
@@ -70,14 +73,14 @@
 
 - **Falsey values**:
 
-- `false`.
-- `0`.
-- `0n`.
-- ` "", '', `` (empty string) `.
-- `null`.
-- `undefined`.
-- `NaN`.
--
+  - `false`.
+  - `0`.
+  - `0n`.
+  - ` "", '', `` (empty string) `.
+  - `null`.
+  - `undefined`.
+  - `NaN`.
+
 - **NaN**: invalid numeric operation.
 
   - `Number.isNaN(something)`.
@@ -325,15 +328,11 @@ for (const author of authors) {
 ```
 
 - **for loops**: 3 statements -> initialize some kind of counter, condition, increment/decrement
-
-  - `while` loops-
-
+  - `while` loops.
 - **for...of**: used for `iterable objects` (`arrays`, NOT objects unless converted with `keys()`,
   `values()`, `entries()`) specially when length isn't known. Doesn't need to create index
   variables.
-
 - **for...in**: used for `enumerable` properties in objects.
-
 - **Array.forEach**: pass a functon and execute it on each item. Pass (value, index, object).
 
   - `Array.every, .some, .map, .filter, .reduce`
@@ -597,3 +596,4 @@ CROSS JOIN table2;
 - [When do you need "bind()"? Indirect vs Direct JavaScript Function Execution Tutorial - YouTube](https://www.youtube.com/watch?v=fP_kA90DgIU)
 - [How to differentiate between deep and shallow copies in JavaScript](https://www.freecodecamp.org/news/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd/)
 - [An overview of technical differences between loops in JavaScript - LogRocket Blog](https://blog.logrocket.com/technical-differences-between-loops-javascript/)
+- [Primitive vs Reference Values in JavaScript - YouTube](https://www.youtube.com/watch?v=39_swwtNJgw)
