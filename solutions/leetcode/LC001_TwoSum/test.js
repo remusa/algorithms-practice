@@ -8,8 +8,8 @@ it('returns the indices of the two numbers that add up to the target', () => {
   ]
 
   examples.forEach(({ input: { nums, target }, output }) => {
-    expect(twoSum(nums, target)).toEqual(output)
-    expect(twoSum2(nums, target)).toEqual(output)
-    expect(twoSum3(nums, target)).toEqual(output)
+    expect(twoSum(nums, target).sort()).toEqual(output)
+    expect(twoSum2(nums, target).sort()).toEqual(output)
+    expect(twoSum3(nums, target).sort()).toEqual(output)
   })
 })
