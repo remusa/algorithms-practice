@@ -1,21 +1,16 @@
-const isValid = require('./index')
+import { isValid, isValid2 } from './index'
 
-test("'(', ')', '{', '}', '[', ']' should return false", () => {
-  expect(isValid('(')).toEqual(false)
-  expect(isValid(')')).toEqual(false)
-  expect(isValid('{')).toEqual(false)
-  expect(isValid('}')).toEqual(false)
-  expect(isValid('[')).toEqual(false)
-  expect(isValid(']')).toEqual(false)
-})
+it('should return true if parenthesis are valid', () => {
+  const examples = [
+    { input: '()', output: true },
+    { input: '()[]{}', output: true },
+    { input: '(]', output: false },
+    { input: '([)]', output: false },
+    { input: '{[]}', output: true },
+  ]
 
-test("'(]', '([)]' should return false", () => {
-  expect(isValid('(]')).toEqual(false)
-  expect(isValid('([)]')).toEqual(false)
-})
-
-test("'()', '()[]{}', '{[]}' should return true", () => {
-  expect(isValid('()')).toEqual(true)
-  expect(isValid('()[]{}')).toEqual(true)
-  expect(isValid('{[]}')).toEqual(true)
+  examples.forEach(({ input, output }) => {
+    expect(isValid(input)).toEqual(output)
+    expect(isValid2(input)).toEqual(output)
+  })
 })
