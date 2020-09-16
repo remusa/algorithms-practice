@@ -21,7 +21,6 @@ Output: false
 // A palindrome is a word where each half mirrors each other
 
 // Time complexity: O(n) -> naive solution is reversing the string, but it would be O(n)
-
 // Space complexity: O(1) -> pointers take constant space
 function isPalindrome(str) {
   // Sanitize the input by cleaning non-alphanumeric characters and spaces
