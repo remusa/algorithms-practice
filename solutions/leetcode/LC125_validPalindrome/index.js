@@ -18,13 +18,12 @@ Input: "race a car"
 Output: false
 */
 
-// Naive solution is reversing the string, but it would be O(n)
+// A palindrome is a word where each half mirrors each other
 
-// Time complexity: O(n) ->
+// Time complexity: O(n) -> naive solution is reversing the string, but it would be O(n)
+
 // Space complexity: O(1) -> pointers take constant space
 function isPalindrome(str) {
-  // A palindrome is a word where each half mirrors each other
-
   // Sanitize the input by cleaning non-alphanumeric characters and spaces
   const sanitized = str.toLowerCase().replace(/[\W_]/g, '')
 
@@ -43,4 +42,28 @@ function isPalindrome(str) {
   return true
 }
 
-module.exports = isPalindrome
+// Time complexity: O(n) -> iterate through the string once
+// Space complexity: O(1) -> 2 pointers take constant space
+function isPalindrome2(s) {
+  // Remove non-alphanumeric characters (like spaces)
+  // We can reuse the original string to optimize for space
+  const sanitized = s.toLowerCase().replace(/[\W_]/g, '')
+
+  // Use 2 pointers at each end of the string
+  let left = 0
+  let right = sanitized.length - 1
+
+  // Move pointers towards each other
+  while (left < right) {
+    if (sanitized[left] !== sanitized[right]) {
+      return false
+    }
+
+    left++
+    right--
+  }
+
+  return true
+}
+
+export { isPalindrome, isPalindrome2 }
