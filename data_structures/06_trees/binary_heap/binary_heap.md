@@ -87,3 +87,4 @@ Have the new root "sink down" to the correct spot...​
 - [Binary Heaps -- Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/appendix2.html)
 - [Learning to Love Heaps - basecs - Medium](https://medium.com/basecs/learning-to-love-heaps-cef2b273a238)
 - [Binary Heaps -- Eloquent JavaScript](https://eloquentjavascript.net/1st_edition/appendix2.html)
+- [Binary Heaps and Priority Queues via JavaScript | DigitalOcean](https://www.digitalocean.com/community/tutorials/js-binary-heaps)

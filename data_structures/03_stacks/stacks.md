@@ -35,3 +35,4 @@
 ## Resources
 
 - [Stack Data Structure | Interview Cake](https://www.interviewcake.com/concept/python/stack?)
+- [Exploring Stacks and Queues via JavaScript | DigitalOcean](https://www.digitalocean.com/community/tutorials/js-stacks-queues)

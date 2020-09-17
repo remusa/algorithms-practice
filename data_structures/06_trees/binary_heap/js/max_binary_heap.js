@@ -15,15 +15,15 @@ class MaxBinaryHeap {
   }
 
   bubbleUp() {
-    let idx = this.size() - 1
+    let index = this.size() - 1
 
     // Fetch the element that has to be moved
-    const element = this.values[idx]
+    const element = this.values[index]
 
     // When at 0, an element can not go up any further
-    while (idx > 0) {
+    while (index > 0) {
       // Compute the parent element's score, and fetch it
-      let parentIdx = Math.floor((idx - 1) / 2)
+      let parentIdx = Math.floor((index - 1) / 2)
       let parent = this.values[parentIdx]
 
       // If the parent has a higher score, things are in order and we are done
@@ -33,8 +33,8 @@ class MaxBinaryHeap {
 
       // Otherwise, swap the parent with the current element and continue
       this.values[parentIdx] = element
-      this.values[idx] = parent
-      idx = parentIdx
+      this.values[index] = parent
+      index = parentIdx
     }
   }
 
