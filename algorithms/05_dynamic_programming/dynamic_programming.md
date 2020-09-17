@@ -1,8 +1,11 @@
 # Dynamic Programming
 
 - **Dynamic programming**: optimization technique using _caching_.
+
   - Breaking down a problem into a collection of subproblems, solving each subproblem once and
     saving the solution in case it occurs again.
+  - A way to track how a problem evolves.
+
 - **Dynamic Programming vs. Divide-and-Conquer**:
 
   - _Divide-and-Conquer_:

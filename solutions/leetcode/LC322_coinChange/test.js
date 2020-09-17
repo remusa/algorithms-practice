@@ -1,13 +1,27 @@
-const coinChange = require('./index')
+import { coinChange, coinChange2 } from './index'
 
-test('[1, 2, 5], 11 should return 3 for 5 + 5 + 1', () => {
-  expect(coinChange([1, 2, 5], 11)).toEqual(3)
-})
+it('should return the max profit', () => {
+  const examples = [
+    {
+      input: { nums: [1, 2, 5], amount: 11 },
+      output: 3,
+    },
+    {
+      input: { nums: [2], amount: 3 },
+      output: -1,
+    },
+    {
+      input: { nums: [2, 5, 10, 1], amount: 27 },
+      output: 4,
+    },
+    {
+      input: { nums: [2, 5, 10, 1], amount: 0 },
+      output: 0,
+    },
+  ]
 
-test('[2, 5, 10, 1], 27 should return 4 for 10 + 10 + 5 + 2', () => {
-  expect(coinChange([2, 5, 10, 1], 27)).toEqual(4)
-})
-
-test('[2], 3 should return -1 since change is not possible', () => {
-  expect(coinChange([2], 3)).toEqual(-1)
+  examples.forEach(({ input: { nums, amount }, output }) => {
+    expect(coinChange(nums, amount)).toEqual(output)
+    expect(coinChange2(nums, amount)).toEqual(output)
+  })
 })
