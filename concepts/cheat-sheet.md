@@ -200,6 +200,10 @@ console.log(teacher) // Kyle
     - Extends behavior of the parent function.
     - Hides implementation details.
     - Preserves values created in the parent function.
+  - When do we have closures?
+    - We must _have a nested function_ (function inside a function).
+    - The nested function must _refer to a value defined in the enclosing function_.
+    - The enclosing function must _return the nested function_.
 
 ```javascript
 function makeAdder(x) {
@@ -597,3 +601,4 @@ CROSS JOIN table2;
 - [How to differentiate between deep and shallow copies in JavaScript](https://www.freecodecamp.org/news/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd/)
 - [An overview of technical differences between loops in JavaScript - LogRocket Blog](https://blog.logrocket.com/technical-differences-between-loops-javascript/)
 - [Primitive vs Reference Values in JavaScript - YouTube](https://www.youtube.com/watch?v=39_swwtNJgw)
+- [Python Closures: How to use it and Why?](https://www.programiz.com/python-programming/closure)
