@@ -46,7 +46,7 @@ function isPalindrome(str) {
 function isPalindrome2(s) {
   // Remove non-alphanumeric characters (like spaces)
   // We can reuse the original string to optimize for space
-  const sanitized = s.toLowerCase().replace(/[\W_]/g, '')
+  const sanitized = s.toLowerCase().replace(/[\W]/g, '')
 
   // Use 2 pointers at each end of the string
   let left = 0
