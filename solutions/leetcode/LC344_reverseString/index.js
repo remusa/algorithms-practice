@@ -57,4 +57,14 @@ function reverseString2(s) {
   return s
 }
 
-export { reverseString, reverseString2 }
+// Time complexity: O(n) -> iterate through the array once
+// Space complexity: O(1) -> reverse array in-place
+function reverseString3(s) {
+  if (s === '') {
+    return s
+  }
+
+  return reverseString3(s.substr(1)) + s.charAt(0)
+}
+
+export { reverseString, reverseString2, reverseString3 }

@@ -1,4 +1,4 @@
-import { reverseString, reverseString2 } from './index'
+import { reverseString, reverseString2, reverseString3 } from './index'
 
 it('should reverse string array', () => {
   const examples = [
@@ -75,5 +75,6 @@ it('should reverse string array', () => {
   examples.forEach(({ input, output }) => {
     // expect(reverseString(input)).toEqual(output)
     expect(reverseString2(input)).toEqual(output)
+    expect(reverseString3(input)).toEqual(output)
   })
 })
