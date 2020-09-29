@@ -35,3 +35,4 @@ Else if target_element > middle item
 - [Binary search (article) | Algorithms | Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
 - [BINARY search with FLAMENCO dance - YouTube](https://www.youtube.com/watch?v=iP897Z5Nerk)
   [Notes on algorithms - DEV Community 👩‍💻👨‍💻](https://dev.to/hexangel616/notes-on-algorithms-36pi)
+- [Introduction to Binary Search (Data Structures & Algorithms #10) - YouTube](https://www.youtube.com/watch?v=6ysjqCUv3K4)

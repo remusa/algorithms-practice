@@ -574,3 +574,4 @@ public class DecoratorPatternDemo {
 - [Design Patterns - Decorator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm)
 - [Design Patterns - Mediator Pattern - Tutorialspoint](https://www.tutorialspoint.com/design_pattern/mediator_pattern.htm)
 - [React Hooks and the “Observer” Pattern - JavaScript in Plain English - Medium](https://medium.com/javascript-in-plain-english/react-hooks-and-the-observer-pattern-1e4274f0e5f5)
+- [The Composition Over Inheritance Principle](https://python-patterns.guide/gang-of-four/composition-over-inheritance/)

@@ -118,3 +118,5 @@
 - [Common Misconceptions About Inheritance in JavaScript](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a)
 - [How prototype-based OOP is different from class-based?](http://developer-interview.com/p/oop-ood/how-prototype-based-oop-is-different-from-class-based-13)
 - [Inheritance and Composition: A Python OOP Guide – Real Python](https://realpython.com/inheritance-composition-python/)
+- [The Composition Over Inheritance Principle](https://python-patterns.guide/gang-of-four/composition-over-inheritance/)
+- [Closures And Objects Are Equivalent](https://wiki.c2.com/?ClosuresAndObjectsAreEquivalent)

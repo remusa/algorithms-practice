@@ -51,3 +51,4 @@ sort a[k+1,n]
 - [Algorithms: Quicksort - HackerRank](https://www.youtube.com/watch?v=SLauY6PpjW4)
 - [Quick Sort - Sorting Algorithm Animations | Toptal](https://www.toptal.com/developers/sorting-algorithms/quick-sort)
 - [Quick-sort with Hungarian (Küküllőmenti legényes) folk dance - YouTube](https://www.youtube.com/watch?v=ywWBy6J5gz8)
+- [A Complete Overview of Quicksort (Data Structures & Algorithms #11) - YouTube](https://www.youtube.com/watch?v=0SkOjNaO1XY)
