@@ -219,6 +219,8 @@ console.log(add5(2)) // 7
 console.log(add10(2)) // 12
 ```
 
+![variables](../images/9cd830adf9f9165814d71dd12ae764236600a78d40667a1a14edf01e24485a38.png)
+
 - **Hoisting**: variable and function declarations are moved to the top of the code.
 
   - The variable and function declarations are put into memory during the `compile phase`.
@@ -602,3 +604,5 @@ CROSS JOIN table2;
 - [An overview of technical differences between loops in JavaScript - LogRocket Blog](https://blog.logrocket.com/technical-differences-between-loops-javascript/)
 - [Primitive vs Reference Values in JavaScript - YouTube](https://www.youtube.com/watch?v=39_swwtNJgw)
 - [Python Closures: How to use it and Why?](https://www.programiz.com/python-programming/closure)
+- [var, let, and const in JavaScript: a cheatsheet.](https://www.valentinog.com/blog/var/)
+- [5 Awesome JavaScript Promise Tricks](https://davidwalsh.name/javascript-promise-tricks)
