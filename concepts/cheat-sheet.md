@@ -606,3 +606,6 @@ CROSS JOIN table2;
 - [Python Closures: How to use it and Why?](https://www.programiz.com/python-programming/closure)
 - [var, let, and const in JavaScript: a cheatsheet.](https://www.valentinog.com/blog/var/)
 - [5 Awesome JavaScript Promise Tricks](https://davidwalsh.name/javascript-promise-tricks)
+- [Closures Explained in 100 Seconds // Tricky JavaScript Interview Prep - YouTube](https://www.youtube.com/watch?v=vKJpN5FAeF4)
+- [JavaScript object immutability: Object.freeze vs. Object.seal - LogRocket Blog](https://blog.logrocket.com/javascript-object-immutability-object-freeze-vs-object-seal/)
+- [Methods for deep cloning objects in JavaScript - LogRocket Blog](https://blog.logrocket.com/methods-for-deep-cloning-objects-in-javascript/)
