@@ -270,11 +270,12 @@ b.name = 'Mary Jane'
 console.log(b.name) // Mary Jane
 console.log(a.name) // Mary Jane
 
-// Objects -> Deep copy
 const a = { name: 'John Doe' }
 
 const b = { ...a } // Using the spread operator
 const b = Object.assign({}, a) // Using Object.assign
+
+// Objects -> Deep copy
 const b = JSON.parse(JSON.stringify(a)) // Stringifying the object and then parsing it
 
 b.name = 'Mary Jane'
@@ -282,7 +283,7 @@ b.name = 'Mary Jane'
 console.log(a.name) // John Doe
 console.log(b.name) // Mary Jane
 
-// Arrays -> Deep copy
+// Arrays -> Shallow copy
 const a = [1, 2, 3]
 
 const b = [...a] // Using the spread operator
@@ -583,6 +584,24 @@ FROM table1
 CROSS JOIN table2;
 ```
 
+## APIs and Interfaces
+
+- What is an interface?: **An interface is a point where two things** (people, systems, objects,
+  etc) **meet and interact**.
+- When you write JavaScript, you are provided with many keywords you can use.
+  - One example is `location` where you can interact with the URL in the browser.
+  - Another example is `fetch`, where you can interact with other websites or servers via a request.
+  - **Both `location` and `fetch` are interfaces** – they provide you with a thing (a set of code)
+    you can use to talk to something else (the browser).
+- **You need to use Rest APIs through another interface** like `fetch` or `axios`. In this sense,
+  **Rest APIs are more like a set of rules and formats you need to follow**.
+- What **an API** actually is: **it is the rules and formats you need to follow in order to use an
+  interface.**
+- **Conclusion: Just two points to sum up:**
+  - Interfaces are the wrapper object you’re provided with.
+  - Application Programming Interfaces are a set of rules you need to follow to use the thing you
+    want to use.
+
 ## Resources
 
 - [What Is Semantic HTML and Why You Should Use It](https://www.lifewire.com/why-use-semantic-html-3468271)
@@ -609,3 +628,5 @@ CROSS JOIN table2;
 - [Closures Explained in 100 Seconds // Tricky JavaScript Interview Prep - YouTube](https://www.youtube.com/watch?v=vKJpN5FAeF4)
 - [JavaScript object immutability: Object.freeze vs. Object.seal - LogRocket Blog](https://blog.logrocket.com/javascript-object-immutability-object-freeze-vs-object-seal/)
 - [Methods for deep cloning objects in JavaScript - LogRocket Blog](https://blog.logrocket.com/methods-for-deep-cloning-objects-in-javascript/)
+- [Deep Copy vs Shallow Copy in JavaScript - Mastering JS](https://masteringjs.io/tutorials/fundamentals/shallow-copy)
+- [What's the difference between an Interface and an API?](about:reader?url=https%3A%2F%2Fzellwk.com%2Fblog%2Finterface-vs-api%2F)
